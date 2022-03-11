@@ -1,2 +1,3 @@
-# Documenta-es
-Documentação do que aprendi sobre as linguagens de programação
+# Documentação
+Aqui documento sobre algumas opções de uso de funcoes, classes, navegação etc...
+
