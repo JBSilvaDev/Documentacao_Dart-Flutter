@@ -24,7 +24,7 @@
 >Controle de estado - Atualização de conteudo de tela
 - setState: [Clique Aqui](./Apoio_Widgets/SetState_navegação.md)
 - ChangeNotifier: [Clique Aqui](./Apoio_Widgets/ChangeNotifier_navegação.md)
-- ValueNotifier: [Clique Aqui](./Apoio_Widgets/ChangeNotifier_navegação.md)
+- ValueNotifier: [Clique Aqui](./Apoio_Widgets/ValueNotifier_navegação.md)
 
 ## Navegação
 ### Por nomeacao de paginas
