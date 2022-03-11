@@ -414,6 +414,10 @@ Form(
             inputFormatters: [Widget()]
             // Formatação do formulario
             decoration: InputDecoration(
+                // Adiciona icone a direita do campo do form
+                suffixIcon: Icon(Icons.done),
+                // Adiciona icone a esquerda do campo do form
+                prefixIcon: Icon(Icons.done),
                 labelText: 'Nome do campo',
                 // Formatação do texto do campo
                 labelStyle: TextStyle(
