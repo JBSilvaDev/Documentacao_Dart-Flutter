@@ -18,6 +18,8 @@
 - routes: {'/caminho': (_) => NomeClassePage()}
 >Ocultar msg de debug
 - debugShowCheckedModeBanner: false,
+>Alinhamento to titulo ao centro
+- centerTitle: true
 
 # HomePage
 ## Controle de estado da aplicação
