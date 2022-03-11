@@ -1,6 +1,6 @@
 # ChangeNotifier
 ## Aplicação
-> É usado para atualização de parte da tela, tem um processamento mais rapido que o setState
+> É usado para atualização de partes da tela, tem um processamento mais rapido que o setState (mais de um item)
 - É uma função que em seu corpo recebe o que ira ser atualizado, seja uma variavel, funcao, classe widget...
 ## Modelo - Criar uma classe que servira de controlador para o que deseja atualizar na tela
 > Necessário importar o pacote cupertino
