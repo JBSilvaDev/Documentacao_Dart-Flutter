@@ -69,3 +69,10 @@ ElevatedButton(onPressed: (valor){
     texto = valor;
 }, child: Text('Botão'))
 ```  
+> Exemplo tela antiga (nao atualizada)<br>
+
+![Old Screen](/Flutter/assets/Tela/oldScreen.jpg)
+
+> Exemplo tela nova (atualizada) <br>
+
+![New Screen](/Flutter/assets/Tela/newScreen.jpg)

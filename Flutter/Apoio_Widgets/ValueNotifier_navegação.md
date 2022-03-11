@@ -42,4 +42,10 @@ class _HomePageState extends State<HomePage> {
   }
 }
 ```
-![Logo do Markdown](./Flutter/assets/Tela/oldScreen.jpg)
+> Exemplo tela antiga (nao atualizada)<br>
+
+![Old Screen](/Flutter/assets/Tela/oldScreen.jpg)
+
+> Exemplo tela nova (atualizada) <br>
+
+![New Screen](/Flutter/assets/Tela/newScreen.jpg)
