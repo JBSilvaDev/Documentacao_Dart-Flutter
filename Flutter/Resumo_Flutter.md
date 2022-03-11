@@ -114,6 +114,7 @@ body: Widget('Conteudo da pagina')
 >Widget de texto
 ```dart
 Text('Texto aqui', 
+    textAlign: TextAlign.center,
     style: TextStyle(
     color: Colors.red, 
     fontWeight: 
