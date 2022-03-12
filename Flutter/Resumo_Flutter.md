@@ -66,6 +66,10 @@ Navigator.of(context).pop();
 ```
 
 ## Scaffold/AppBar
+>Nao redimencionar imagem de fundo
+>```dart
+resizeToAvoidBottomInset: false,
+```
 >Nome da AppBar
 ```dart
 title: Text('Nome aqui')
