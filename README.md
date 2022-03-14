@@ -4,4 +4,7 @@ Aqui documento sobre algumas opções de uso de funcoes, classes, navegação et
 <br><br>
 >Flutter
 [Clique aqui](./Flutter/Resumo_Flutter.md)
+<br><br>
+>Dart
+[Clique aqui](./Dart/Resumo_Dart.md)
 
