@@ -5,6 +5,11 @@ Manipuladores - [Clique aqui.](./Manipuladores.md)
 ```dart
 String texto = 'texto';
 ```
+>num - Recebe qualquer valor numerico<br>
+Manipuladores - [Clique aqui.](./Manipuladores.md)
+```dart
+num numero = 1234;
+```
 >int - Recebe valores numericos inteiros positivos e negativos
 ```dart
 int inteiro = 10;
@@ -35,10 +40,6 @@ Object objeto = 'Qualquer valor';
 >dynamic - Recebe qualquer tipo de valor
 ```dart
 dynamic dinamico = 'Qualquer valor';
-```
->num - Recebe qualquer valor numerico
-```dart
-num numero = 1234;
 ```
 
 ### Null Safety
