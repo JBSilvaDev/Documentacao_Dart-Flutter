@@ -18,6 +18,8 @@
 - routes: {'/caminho': (_) => NomeClassePage()}
 >Ocultar msg de debug
 - debugShowCheckedModeBanner: false,
+>Alinhamento to titulo ao centro
+- centerTitle: true
 
 # HomePage
 ## Controle de estado da aplicação
@@ -64,6 +66,10 @@ Navigator.of(context).pop();
 ```
 
 ## Scaffold/AppBar
+>Nao redimencionar imagem de fundo
+>```dart
+resizeToAvoidBottomInset: false,
+```
 >Nome da AppBar
 ```dart
 title: Text('Nome aqui')
@@ -112,6 +118,7 @@ body: Widget('Conteudo da pagina')
 >Widget de texto
 ```dart
 Text('Texto aqui', 
+    textAlign: TextAlign.center,
     style: TextStyle(
     color: Colors.red, 
     fontWeight: 
@@ -414,6 +421,10 @@ Form(
             inputFormatters: [Widget()]
             // Formatação do formulario
             decoration: InputDecoration(
+                // Adiciona icone a direita do campo do form
+                suffixIcon: Icon(Icons.done),
+                // Adiciona icone a esquerda do campo do form
+                prefixIcon: Icon(Icons.done),
                 labelText: 'Nome do campo',
                 // Formatação do texto do campo
                 labelStyle: TextStyle(
