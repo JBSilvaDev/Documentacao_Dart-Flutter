@@ -2,7 +2,7 @@
 - Fundamentos: [Clique Aqui](./Fundamentos.md)
 ## Controle de estado da aplicação
 >Principais interações da linguagem
-- Lista: [Clique Aqui](./_.md)
+- Lista: [Clique Aqui](./Lista_Map_Set/Listas.md)
 - Map: [Clique Aqui](./_.md)
 - Set: [Clique Aqui](./_.md)
 - For: [Clique Aqui](./_.md)
