@@ -6,6 +6,6 @@
 - Map: [Clique Aqui](./_.md)
 - Set: [Clique Aqui](./_.md)
 - For: [Clique Aqui](./Loops/For.md)
-- While: [Clique Aqui](./_.md)
+- While: [Clique Aqui](./Loops/While_DoWhile.md)
 - Funcoes: [Clique Aqui](./_.md)
 - Classes: [Clique Aqui](./_.md)
