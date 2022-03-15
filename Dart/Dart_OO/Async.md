@@ -25,5 +25,4 @@ Future<void> nomeFuncao() async {
   Future.delayed(Duration(seconds: 2), () => print('Algo'));
 }
 ```
-> Continuar em: <br>
-https://github.com/JBSilvaDev/Flutter/blob/master/Flutter/Aprendizagem/Academia%20do%20flutter/Dart/dart_async/lib/2_futures/1_futuro.dart
+

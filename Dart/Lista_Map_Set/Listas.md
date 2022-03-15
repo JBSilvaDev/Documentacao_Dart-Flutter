@@ -45,3 +45,27 @@ var lista = [1,2,3];
 var listaNova = [...numerica, 4,5,6];
 // Resultado > [1, 2, 3, 4, 5, 6]
 ```
+>expand - Desmenbra lista dentro de lista e tranforma em uma unica
+```dart
+var lista = [[1, 2],[3, 4]];
+  
+var novaLista = lista.expand((numero) => numero).toList();
+print(novaLista);
+```
+>any - Retorna true ou false caso encontre o conteudo informado dentro da lista
+```dart
+final lista = ['JB', 'Graci', 'José'];
+bool retorno = lista.any((nome) => nome == 'JB');
+```
+>sort - Organiza a lista
+```dart
+final lista = [99, 88, 55, 01, 102, 150, 200];
+lista.sort();
+```
+>contains - Verifica se o conteudo informado esta na lista, retorna true ou false
+```dart
+final lista = [99, 88, 55, 01, 102, 150, 200];
+lista.contains(99);
+```
+
+

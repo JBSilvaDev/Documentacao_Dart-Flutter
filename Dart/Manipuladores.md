@@ -45,3 +45,21 @@ double.tryParse('10.45x'); // retorna null
 // Define quantidade de casas decimais pelo valor passado
 var valor = 10.985985;
 valor..toStringAsFixed(2);
+```
+## Funcoes
+>then<br>
+- Obtem o que é retornado numa funcao
+- Usado com funcoes tipo Future (async)
+```dart
+void main() {
+
+  var mensage = processo1().then((mensage) {
+    print(mensage);
+  });
+}
+
+Future<String> processo1() {
+  print('inicio p1');
+  return Future.delayed(Duration(seconds: 2), () => 'Fim do p1');
+}
+```
