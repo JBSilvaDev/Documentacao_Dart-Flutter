@@ -67,5 +67,9 @@ lista.sort();
 final lista = [99, 88, 55, 01, 102, 150, 200];
 lista.contains(99);
 ```
+>Transformar lista em set
+```dart
+pessoas.toSet()
+```
 
 

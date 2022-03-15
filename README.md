@@ -10,5 +10,5 @@ Aqui documento sobre algumas opções de uso de funcoes, classes, navegação et
 
 
 
-Continuar aqui: [Memoria..](https://github.com/JBSilvaDev/Flutter/blob/master/Flutter/Aprendizagem/Academia%20do%20flutter/Dart/dart_funcoes_e_colecoes/lib/3_memoria/1_memoria.dart)
+Continuar aqui: [POO..](https://github.com/JBSilvaDev/Flutter/blob/master/Flutter/Aprendizagem/Academia%20do%20flutter/Dart/dart_orientado_a_objeto/lib/1_classes/1_classes.dart)
 
