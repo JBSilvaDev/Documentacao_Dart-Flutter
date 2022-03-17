@@ -1,5 +1,6 @@
 # Set
 >Sets sao listas que nao aceitam duplicidades
+- A maioria dos itens usado em listas vao funcionar em sets, abaixo alguns que la nao estão
 - Declaração de um set é por chaves {}
 ```dart
 var sets = <int?>{};
