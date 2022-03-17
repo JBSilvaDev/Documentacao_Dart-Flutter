@@ -18,7 +18,7 @@ print(n1.difference(n2));
 // Exibe os numeros que tem no n1 e nao tem no n2
 print(n2.difference(n1));
 ```
->Verifica valores iguais entre Sets
+>Verifica e retorna valores iguais entre dois sets
 ```dart
 n1.intersection(n2);
 ```
