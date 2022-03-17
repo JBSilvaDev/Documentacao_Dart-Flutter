@@ -11,5 +11,5 @@
 - Interables: [Clique Aqui](./Loops/Interables.md)
 >Dart OO
 - Async: [Clique Aqui](./Dart_OO/Async.md)
-- Funcoes: [Clique Aqui](./_.md)
+- Funcoes: [Clique Aqui](./Dart_OO/Funcao.md)
 - Classes: [Clique Aqui](./_.md)
