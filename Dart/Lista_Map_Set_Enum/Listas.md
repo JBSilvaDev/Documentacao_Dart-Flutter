@@ -11,6 +11,10 @@ print(lista[1]);
 // Exibe o primeiro e ultimo item da lista
 print(lista.first);
 print(lista.last);
+// Metodos de percorrer toda lista exibindo seus itens um a um
+lista.forEach(print);
+for(var item in lista){
+  print(item);}
 ```
 >Adicona conteudo a lista
 ```dart
@@ -56,6 +60,10 @@ print(novaLista);
 ```dart
 final lista = ['JB', 'Graci', 'José'];
 bool retorno = lista.any((nome) => nome == 'JB');
+```
+>every - Retorna true ou false caso encontre o conteudo informado dentro de todos itens da lista
+```dart
+lista.every((nome) => nome.contains('J'))
 ```
 >sort - Organiza a lista
 ```dart
