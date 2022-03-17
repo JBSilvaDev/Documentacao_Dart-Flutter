@@ -70,6 +70,7 @@ lista.every((nome) => nome.contains('J'))
 // Ordenação simples
 final lista = [99, 88, 55, 01, 102, 150, 200];
 lista.sort();
+
 // Ordenação composta
 final lista = ["Juliano|30","Graci|35","Dylan|5"];
 
@@ -92,7 +93,20 @@ lista.sort((nome1, nome2){
     return -1;
   }
 });
-  print(lista);
+
+// Ordenação composta CompareTo
+lista.sort((nome1, nome2){
+  // Separa cada item da lista pelo caractere indicado "|", 
+  // Retornando uma nova lista com index 0 e 1(neste caso por serem 2 itens que serao separados)
+  var nd1 = nome1.split("|");
+  var nd2 = nome2.split("|");
+  
+  // Tranforma o item 1 do retorno em numero inteiro
+  var idade1 = int.parse(nd1[1]);
+  var idade2 = int.parse(nd2[1]);
+  
+  return idade1.compareTo(idade2);
+});
 ```
 >contains - Verifica se o conteudo informado esta na lista, retorna true ou false
 ```dart
