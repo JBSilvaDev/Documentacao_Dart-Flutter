@@ -10,5 +10,5 @@ Aqui documento sobre algumas opções de uso de funcoes, classes, navegação et
 
 
 
-Continuar aqui: [POO..](https://github.com/JBSilvaDev/Flutter/blob/master/Flutter/Aprendizagem/Academia%20do%20flutter/Dart/dart_orientado_a_objeto/lib/1_classes/1_classes.dart)
+Continuar aqui: [AULAS DART](https://academiadoflutter20.club.hotmart.com/lesson)
 
