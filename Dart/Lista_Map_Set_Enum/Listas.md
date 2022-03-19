@@ -4,26 +4,37 @@
 var lista = <int> [1,2,3];
 ```
 ## Interações com a lista
->Exibindo itens da lista
+>indice - Exibindo itens da lista
 ```dart
 // Exibe o item de index 1 da lista
 print(lista[1]);
 // Exibe o primeiro e ultimo item da lista
+```
+>first/last - Exibindo primeiro e ultimo item da lista
+```dart
 print(lista.first);
 print(lista.last);
+```
+>forEach - Percorre e exibe cada item da lista
+```dart
 // Metodos de percorrer toda lista exibindo seus itens um a um
 lista.forEach(print);
 for(var item in lista){
   print(item);}
 ```
->Adicona conteudo a lista
+>add - Adicona conteudo a ultima posicao na lista
+- Usar addAll() para adiconar mais de um item, passar em formato de lista
 ```dart
-// Adiciona novo item ao final da lista
-lista.add(4)
-// Adicona novo item na posicao indicada
-lista.insert(0,6);
+var lista = [1,2,3];
+lista.add(4);
 ```
->Removendo conteudo da lista
+>insert - Adiciona conteudo a lista numa posicao desejada
+- Usar insertAll() para adiconar mais de um item numa posicao especifica, passar em formato de lista
+```dart
+var lista = [0,1,2,3];
+lista.insert(0, -1); // Adiciona -1 na posisao 0 retornando -> [-1, 0, 1, 2, 3]
+```
+>remove - Removendo conteudo da lista
 ```dart
 // Remove o item indicado
 lista.remove(6);
@@ -43,7 +54,7 @@ lista.removeWhere((item) {
 var lista = List.generate(10, (index) => index +1);
 // Resultado > [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
->Adiciona conteudo de uma lista dentro da outra
+>spred operator - Adiciona conteudo de uma lista dentro da outra
 ```dart
 var lista = [1,2,3];
 var listaNova = [...numerica, 4,5,6];
@@ -56,6 +67,12 @@ var lista = [[1, 2],[3, 4]];
 var novaLista = lista.expand((numero) => numero).toList();
 print(novaLista);
 ```
+>join - Junta conteudo de uma lista e os separa pelo informado
+```dart
+var lista = [1, 2, 3, 4, 5, 6];
+print(lista.join(' '));
+// Retorno 1 2 3 4 5 6
+```
 >any - Retorna true ou false caso encontre o conteudo informado dentro da lista
 ```dart
 final lista = ['JB', 'Graci', 'José'];
@@ -65,7 +82,20 @@ bool retorno = lista.any((nome) => nome == 'JB');
 ```dart
 lista.every((nome) => nome.contains('J'))
 ```
+>where - filtra a lista onde corresponde a uma condição passada
+```dart
+var lista = [1, 2, 3, 4, 5, 6];
+// Exibe somente itens da lista que sao pares (resto da divisao seja igual a 0)
+print(lista.where((element) => element % 2 == 0));
+```
+>fold - Soma os valores na lista
+```dart
+var lista = [1, 2, 3, 4, 5, 6];
+var soma = lista.fold<int>(0,(valor, numero)=> valor = valor + numero);
+// Retorno -> 21
+```
 >sort - Organiza a lista
+- Sort organiza a lista original por padrão
 ```dart
 // Ordenação simples
 final lista = [99, 88, 55, 01, 102, 150, 200];
@@ -74,15 +104,16 @@ lista.sort();
 // Ordenação composta
 final lista = ["Juliano|30","Graci|35","Dylan|5"];
 
-lista.sort((nome1, nome2){
-  // Separa cada item da lista pelo caractere indicado "|", 
-  // Retornando uma nova lista com index 0 e 1(neste caso por serem 2 itens que serao separados)
-  var nd1 = nome1.split("|");
-  var nd2 = nome2.split("|");
+// Percorre toda lista comparando seus itens
+lista.sort((nome1, nome2){ // Obtem de 2 em 2 itens da lista
+
+  var nd1 = nome1.split("|"); // Recebe o valor do item 1 obtido (nome1)
+  var nd2 = nome2.split("|"); // Recebe o valor do item 1 obtido (nome2)
+  // Retorna duas novas listas com os itens da lista anterior, separando o conteudo de cada item pelo |,
   
-  // Tranforma o item 1 do retorno em numero inteiro
-  var idade1 = int.parse(nd1[1]);
-  var idade2 = int.parse(nd2[1]);
+  // Tranforma o item 1  em numero inteiro
+  var idade1 = int.parse(nd1[1]); // Pega item 1 da nova lista gerada no split
+  var idade2 = int.parse(nd2[1]); // Pega item 1 da nova lista gerada no split
   
   // Verifica se o numero 1 é maior que numero 2 e define sua posicao na nova lista index -1, 0 1
   if(idade1 > idade2){
@@ -96,22 +127,37 @@ lista.sort((nome1, nome2){
 
 // Ordenação composta CompareTo
 lista.sort((nome1, nome2){
-  // Separa cada item da lista pelo caractere indicado "|", 
-  // Retornando uma nova lista com index 0 e 1(neste caso por serem 2 itens que serao separados)
-  var nd1 = nome1.split("|");
-  var nd2 = nome2.split("|");
+
+  var nd1 = nome1.split("|"); // Recebe o valor do item 1 obtido (nome1)
+  var nd2 = nome2.split("|"); // Recebe o valor do item 1 obtido (nome2)
+  // Retorna duas novas listas com os itens da lista anterior, separando o conteudo de cada item pelo |,
   
-  // Tranforma o item 1 do retorno em numero inteiro
-  var idade1 = int.parse(nd1[1]);
-  var idade2 = int.parse(nd2[1]);
+  // Tranforma o item 1  em numero inteiro
+  var idade1 = int.parse(nd1[1]); // Pega item 1 da nova lista gerada no split
+  var idade2 = int.parse(nd2[1]); // Pega item 1 da nova lista gerada no split
   
-  return idade1.compareTo(idade2);
+  return idade1.compareTo(idade2); // Compara as idades ordenando por elas
 });
 ```
+- Se idade1.compareTo(idade2);
+  - retorna do menor para o maior
+- Se idade2.compareTo(idade1);
+  - retorna do maior para o menor
+
 >contains - Verifica se o conteudo informado esta na lista, retorna true ou false
 ```dart
 final lista = [99, 88, 55, 01, 102, 150, 200];
 lista.contains(99);
+```
+>map - Adiciona os itens de uma lista em uma nova lista e execulta funcao ou condicao em cada item.
+```dart
+final pessoas = ["Juliano|30","Graci|35","Dylan|5"];
+// Acessa cada item da lista e execulta uma funcao
+// Separa cada | de item acessado por , criando uma nova lista e adicionaodo a n
+final n = pessoa.map((e) => e.split("|")).toList();
+print(n);
+//! Retorno - [[Juliano, 30], [Graci, 35], [Dylan, 5]]
+// Retorno é uma lista com listas o que pode facilitar a busca de informações especificas pelo index de cada item dentro da lista principal, exemplo quero acesso somente a idade de Dylan, faria isso print(n[2][1])
 ```
 >Transformar lista em set
 ```dart
