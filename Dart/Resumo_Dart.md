@@ -15,7 +15,7 @@
 - Funcoes: [Clique Aqui](./Dart_OO/Funcao.md)
 - Classes: [Clique Aqui](./_.md)
 >Desafios
-- Desafio 1: [Clique Aqui](./Desafios/Desafio_1.dart)
+- Desafio 1: [Clique Aqui](/Desafios/Desafio_1.dart)
 -   Baseado no array abaixo monte um relatório onde:
     - Apresente os pacientes com mais de 20 anos e print o nome deles
     - Apresente quantos pacientes existem para cada profissão (desenvolvedor, estudante, dentista, jornalista)
