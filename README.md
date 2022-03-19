@@ -10,5 +10,5 @@ Aqui documento sobre algumas opções de uso de funcoes, classes, navegação et
 
 
 
-Continuar aqui: [AULAS DART](https://academiadoflutter20.club.hotmart.com/lesson)
+Continuar aqui: [Continuação](https://academiadoflutter20.club.hotmart.com/lesson)
 
