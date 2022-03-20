@@ -1,0 +1,24 @@
+Instalação Flutter
+1. Instalar o chocolatey
+	> https://chocolatey.org/install
+	> Abrir powersell como adm
+	> Colar codigo:
+		Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+		Ou outro disponibilizado no site
+2. Instalar o Git
+	> choco install git
+3. Instalar o Java
+	> choco install jdk8
+4. Instalar flutter
+	> via git
+		. Navegar ate a pasta onde quer instalar
+		. Criar uma nova pasta no local com: mkdir NomeDaPasta
+		. Navegar ate a pasta criada
+		. Colar comando git: git clone https://github.com/flutter/flutter.git -b stable
+			Ou qualquer outro disponivel no site: https://docs.flutter.dev/get-started/install/windows
+5. Adicionar variavel de ambiente
+	> Criar uma nova variavel de nome FLUTTER_HOME
+	> Adicionar o caminho da instalação do flutter a variavel (E:\Flutter\flutter)
+	> Configurar o Path
+		. Editar o Path e adicionar um novo caminho, o caminho da pasta bin do flutter ou %FLUTTER_HOME%\bin
+	> No PowerShell rodar comando flutter doctor para checagem, verificar o que pede e corrigir

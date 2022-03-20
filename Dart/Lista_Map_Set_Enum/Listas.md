@@ -154,10 +154,60 @@ lista.contains(99);
 final pessoas = ["Juliano|30","Graci|35","Dylan|5"];
 // Acessa cada item da lista e execulta uma funcao
 // Separa cada | de item acessado por , criando uma nova lista e adicionaodo a n
-final n = pessoa.map((e) => e.split("|")).toList();
+final n = pessoas.map((e) => e.split("|")).toList();
 print(n);
 //! Retorno - [[Juliano, 30], [Graci, 35], [Dylan, 5]]
 // Retorno é uma lista com listas o que pode facilitar a busca de informações especificas pelo index de cada item dentro da lista principal, exemplo quero acesso somente a idade de Dylan, faria isso print(n[2][1])
+```
+>reduce - Recebe uma funcao e passa 2 atributos a ela
+- Reduce, recebe uma funcao e envia para a mesma ate dois argumentos, sendo estes argumentos itens da lista
+  - um atributo acumulativo que salva o ultimo valor enviado
+    - usado por exemplo para fazer somas ou ou concatenar strings
+  - um atributo de valor que recebe o proximo valor a ser usado pelo acumulativo
+```dart
+// Exemplo com soma (Funcao externa)
+// Ira percorrer toda lista mostrando a soma de seus itens
+var notas = [7.3, 5.4, 7.7, 8.1, 5.5, 4.9, 9.1, 10.0];
+var total = notas.reduce(somar);
+print(total);
+
+// Funcao externa invocada no reduce
+double somar(double acumulador, double elemento) {
+  // Aqui pode-se criar alguma regra que se  faça necessario
+  return acumulador + elemento; // retorna Soma os valores da lista
+}
+// retorno - 58.0
+```
+```dart
+// Exemplo com soma (Arrow Function - Diretamente no reduce/Interna)
+// Ira percorrer toda lista mostrando a soma de seus itens
+var notas = [7.3, 5.4, 7.7, 8.1, 5.5, 4.9, 9.1, 10.0];
+// Recebe os valores e ja efetua a soma dos mesmos
+var total = notas.reduce(((value, element) => value + element));
+print(total);
+// retorno - 58.0
+```
+```dart
+// Exemplo de concatecanao (funcao externa)
+// Ira percorrer toda lista mostrando a juncao de seus itens
+var nomes = ['Ana', 'Bia', 'Carlos', 'Daniel', 'Maria', 'Pedro'];
+varnome = nomes.reduce(juntar);
+print(nome);
+ 
+
+String juntar(String acumulador, String elemento) {
+  // Aqui pode-se criar alguma regra que se  faça necessario
+  return "$acumulador, $elemento";
+  }
+// retorno - Ana, Bia, Carlos, Daniel, Maria, Pedro
+```
+```dart
+// Exemplo de concatecanao (Arrow Function - Diretamente no reduce/Interna)
+// Ira percorrer toda lista mostrando a juncao de seus itens
+var nomes = ['Ana', 'Bia', 'Carlos', 'Daniel', 'Maria', 'Pedro'];
+// Recebe os valores e ja efetua a jução dos mesmos
+print(nomes.reduce((acumulador, proximo)=>'$acumulador, $proximo'));
+// retorno - Ana, Bia, Carlos, Daniel, Maria, Pedro
 ```
 >Transformar lista em set
 ```dart

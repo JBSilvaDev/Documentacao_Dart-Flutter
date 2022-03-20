@@ -23,6 +23,9 @@ nome.contains('s');
 // Faz quebra da String com base num caractere informado, retorna uma lista
 var profissao = 'JB Silva|Analista de logista|Estudante Flutter';
 var dados = profissao.split('|');
+
+// Caso a String seja menor do que o informado, ira completar com o caracter passado
+var nome = "JB Silva".padRight(15, '!');
 ```
 ## Numeros
 

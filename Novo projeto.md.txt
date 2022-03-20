@@ -1,0 +1,3 @@
+flutter create --project-name=flutter_primeiros_passos --org br.com.jbtec --platforms android,ios -a kotlin -i swift ./flutter_primeiros_passos
+
+via CMD

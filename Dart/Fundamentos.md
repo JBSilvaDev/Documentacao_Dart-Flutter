@@ -111,6 +111,19 @@ switch(idade){
         print('Idade diferente de 17 e 18');
 }
 ```
+## Console
+>print - Escreve textos, numero, variaveis, tipos, etc.. no console
+```dart
+print('Hello World");
+```
+>stdout.write - Posibilita escrever algo no console
+```dart
+stdout.write("Escreva algo ");
+```
+>stdin.readLineSync() - Obtem o que foi escrito no console
+```dart
+print(stdin.readLineSync());
+```
 
 
 
