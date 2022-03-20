@@ -13,7 +13,7 @@
 >Dart OO
 - Async: [Clique Aqui](./Dart_OO/Async.md)
 - Funcoes: [Clique Aqui](./Dart_OO/Funcao.md)
-- Classes: [Clique Aqui](./_.md)
+- Classes: [Clique Aqui](./Dart_OO/Classe.md)
 >Desafios
 - Desafio 1 : [Clique Aqui](/Desafios/Desafio_1.dart)
 -   Baseado no array abaixo monte um relatório onde:

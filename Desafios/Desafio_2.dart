@@ -79,17 +79,21 @@ Há ${sexoF.length} pessoas do sexo feminino.
 
   print('=' * 50);
   print('Encontre a pessoa mais velha e apresente o nome dela.');
-
+  //! Transformando cada item da newLista em uma nova lista
+  //! Saindo disso: [Rodrigo Rahman|35|Masculino, Jose|56|Masculino]
+  //! Para isso: [[Rodrigo Rahman, 35, Masculino], [Jose, 56 ,Masculino]]
   var maisVelha = newPessoa.map((e) => e.split('|')).toList();
-
+  // Percorre toda lista pegando de 2 em 2 itens
   maisVelha.sort((a, b) {
+    // Obtem a idade e a transforma em inteiro (obtem 2, uma para cada argumento)
     int idade_1 = int.tryParse(a[1]) ?? 0;
     int idade_2 = int.tryParse(b[1]) ?? 0;
-
-    return idade_2.compareTo(idade_1);
+    //! Retorna o valor da comparação entre as duas idades obtidas
+    return idade_2.compareTo(idade_1); // Ordena do maior para menor pois a idade 2 esta sendo comparada a idade 1
   });
-
+  // Cria nova lista somente com a pessoa mais velha obtida na comparação
   var pessoaMaisVelha = maisVelha.first;
+  //! Resolução, exibindo o nome da pessoa mais velha
   print(
       'A pessoa mais velha é ${pessoaMaisVelha[0]} com ${pessoaMaisVelha[1]} anos');
 }
