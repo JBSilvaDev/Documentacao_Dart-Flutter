@@ -15,7 +15,7 @@
 - Funcoes: [Clique Aqui](./Dart_OO/Funcao.md)
 - Classes: [Clique Aqui](./Dart_OO/Classes.md)
 >Desafios
-- Desafio 1 : [Clique Aqui](/Desafios/Desafio_1.dart)
+- Desafio 1 : [Clique Aqui](/Desafios/Desafio_Dart/Desafio_1.dart)
 -   Baseado no array abaixo monte um relatório onde:
     - Apresente os pacientes com mais de 20 anos e print o nome deles
     - Apresente quantos pacientes existem para cada profissão (desenvolvedor, estudante, dentista, jornalista)
@@ -33,7 +33,7 @@
     'João Rahman|55|jornalista|SP',
   ];
 ```
-- Desafio 2 : [Clique Aqui](/Desafios/Desafio_2.dart)
+- Desafio 2 : [Clique Aqui](/Desafios/Desafio_Dart/Desafio_2.dart)
 - Baseado na lista acima.
   - 1 - Remova os pacientes duplicados e apresente a nova lista
   - 2 - Me mostre a quantidade de pessoas por sexo (Masculino e Feminino) e depois me apresente o nome delas
