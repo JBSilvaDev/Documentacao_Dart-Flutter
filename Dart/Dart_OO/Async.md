@@ -91,4 +91,6 @@ Future<void> nomeFuncao() async {
   Future.delayed(Duration(seconds: 2), () => print('Algo'));
 }
 ```
+>forEach - percorrer listas futuras
+
 
