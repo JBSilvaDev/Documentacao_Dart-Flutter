@@ -92,5 +92,44 @@ Future<void> nomeFuncao() async {
 }
 ```
 >forEach - percorrer listas futuras
+ - Exemplo de uso:
+    - Buscar em um BD uma lista que precisa ser percorrida.
 
+Exemplo 1 : 
+```dart
+// Lista a ser percorrida
+var nomes = ['JB', 'Graci', 'Dylan', 'Dora'];
+```
+```dart
+// Percorre a lista e exibe o nome com saudação
+await Future.forEach<String>(nomes, (nome) async {
+    print(await saudacao(nome));
+  });
+// Saudação para cada nome invocado, intervalo de 1 segundo
+Future<String> saudacao(String nome) {
+  return Future.delayed(Duration(seconds: 1), () => 'Óla $nome');
+}
+```
+```dart
+// Percorre a lista e exibe o nome com saudação
+for(var nome in nomes){
+  print(await saudacao(nome))
+}
+// Saudação para cada nome invocado, intervalo de 1 segundo
+Future<String> saudacao(String nome) {
+  return Future.delayed(Duration(seconds: 1), () => 'Óla $nome');
+}
+```
+Exemplo 2: 
+```dart
+// Retorna todo o conteudo da lista com map e exibe uma lista com conteudo final
+// Variavel nomeFuturo recebe todo o conteudo de nomes assim => ('JB', 'Graci', 'Dylan', 'Dora')
+// Chama a funcao saudacao e adiciona o Ola $nome para cada item ficando assim ('Óla JB', 'Óla Graci', 'Óla Dylan', 'Óla Dora')
+// O converte para lista ficando assim ['Óla JB', 'Óla Graci', 'Óla Dylan', 'Óla Dora']
+var nomesFuturo = nomes.map((nome) => saudacao(nome)).toList();
+// Variavel saudacoes aguarda o tempo necessario para o nomesFuturo concluir a opecao e salva o valor final ou seja ['Óla JB', 'Óla Graci', 'Óla Dylan', 'Óla Dora']
+var saudacoes = await Future.wait(nomesFuturo);
+// Exibe valor final
+print(saudacoes);
+```
 

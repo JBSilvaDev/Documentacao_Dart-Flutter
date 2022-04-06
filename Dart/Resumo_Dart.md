@@ -9,6 +9,7 @@
 - Exceptions: [Clique Aqui](./Lista_Map_Set_Enum/Exceptions.md)
 - For: [Clique Aqui](./Loops/For.md)
 - While: [Clique Aqui](./Loops/While_DoWhile.md)
+- Event Loop: [Clique Aqui](./Loops/Event_Loop.md)
 - Interables: [Clique Aqui](./Loops/Interables.md)
 >Dart OO
 - Async: [Clique Aqui](./Dart_OO/Async.md)
