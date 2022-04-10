@@ -2,12 +2,7 @@
 ## Configuração de inicialização do app
 >Verificar .yaml para utilizar:
 - Assets (Imagens, Fontes)
-- Dependencias
-    - Http > [HTTP](./Dependencias/http.md)
-    - Formatação Moeda > [Currency Formatter](./Dependencias/Currency_formatter.md)
-    - Conversao de valores txt/num > [intl](./Dependencias/intl.md)
-    - Graficos tipo conometro/acelerador > [Gauges](./Dependencias/Gauges_Visual_Acelerometros.md)
-    
+- Dependencias (Pacotes terceiros) [Pub.Dev](https://pub.dev)
 >Titulo do app
 - title : 'Titulo aqui'
 >Tema/Cor
@@ -486,8 +481,3 @@ ElevatedButton(
         ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text(message)));},
 ```
->Desafios
-- Desafio 1 : [Clique aqui](/Desafios/Desafio_Flutter/1.flutter_clone_instagram/)
-    - Efetuar clone de uma tela do instagram
-
-Desafios/Desafio_Flutter/1.flutter_clone_instagram/lib/main.dart

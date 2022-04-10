@@ -10,6 +10,9 @@ Aqui documento sobre algumas opções de uso de funcoes, classes, navegação et
 <br><br>
 >Flutter: - 
 [Clique aqui](./Flutter/Resumo_Flutter.md)
+<br><br>
+>Dependencias: - 
+[Clique aqui](./Dependencias/Dependencias.md)
 
 # Desafios
 Desafios concluidos durante o curso
