@@ -1,14 +1,13 @@
 # Instalar Android Studio
+    - https://developer.android.com/studio
+# Instalar VSCode
+    - https://code.visualstudio.com/download
+# Instalar Visual Studio Community
+    - https://visualstudio.microsoft.com/pt-br/vs/community/
+    - Avançar e marcar a opção desenvolvimento para desktop c++
 # Baixar o zip no site
     - https://docs.flutter.dev/get-started/install/windows
-# Extrair o zip no local desejado
-# Atualizar o Path com variaveis de sistema
-    - Abrir o .bat na pasta bin
-    - Pesquisa variaveis de sistema no menu iniciar
-        - Ir em variaveis de ambiente
-        - Editar a variavel Path (Caso nao tenha deve-se cria-la)
-            - Clicar em novo, e informar o caminho da pasta bin
-            - Ok, OK
+    - Extrair o zip no local desejado
 # Configuração Flutter
 >Variaveis de ambiente
 - Crie uma nova variavel de ambiente com nome _FLUTTER_HOME_
@@ -37,9 +36,6 @@
 - Ainda na variavel de ambiente *Path* adicione outro caminho *%ANDROID_HOME%\platform-tools*
 - No CMD rodar comando *adb --version* se mostrar a versao do adb a configuração foi concluida.
 >Rodar *flutter doctor*
-# Instalar VSCode
-    - Baixar Visual Studio Community
-    - Avançar e marcar a opção desenvolvimento para desktop c++
 # Configuração Visual Studio Code
 >Plugins
 - Baixar *Plugin flutter*
