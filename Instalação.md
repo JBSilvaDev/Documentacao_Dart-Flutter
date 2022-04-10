@@ -9,6 +9,42 @@
         - Editar a variavel Path (Caso nao tenha deve-se cria-la)
             - Clicar em novo, e informar o caminho da pasta bin
             - Ok, OK
+# Configuração Flutter
+>Variaveis de ambiente
+- Crie uma nova variavel de ambiente com nome _FLUTTER_HOME_
+    - De o caminho no valor da variavel do local onde foi instalado o arquivo baixado *E:\Flutter\flutter*
+- Dentro da variavel de ambiente *Path* adicione um novo caminho *%FLUTTER_HOME%\bin*
+# Configuração Android Studio
+>SDK
+- Va em configurações selecione *SDK Manager*
+    - Selecione a *ultima versao do Android*
+- SDK Tools
+    - Selecione *Android SDK Command-line Tools*
+    - Selecione *Android SDK Build-Tools*
+>Plugins
+- Va para plugins
+    - Instale o *Plugin Flutter*
+    - Instale o *Plugin Dart*
+>Emulador
+- Selecione *Virtual Device Manager*
+    - Crie um novo device ou configure um ja existente
+>Variaveis de ambiente
+- Crie uma nova variavel de ambiente com nome *ANDROID_HOME*
+    - Va em configurações selecione *SDK Manager*
+    - Copie o caminho da instacação do SDK *C:\Users\usuarioNome\AppData\Local\Android\Sdk*
+    - Cole o caminho do SDK copiado no valor da variavel
+- Dentro da variavel de ambiente *Path* adicione um novo caminho *%ANDROID_HOME%\tools\bin*
+- Ainda na variavel de ambiente *Path* adicione outro caminho *%ANDROID_HOME%\platform-tools*
+- No CMD rodar comando *adb --version* se mostrar a versao do adb a configuração foi concluida.
+>Rodar *flutter doctor*
+# Instalar VSCode
+    - Baixar Visual Studio Community
+    - Avançar e marcar a opção desenvolvimento para desktop c++
+# Configuração Visual Studio Code
+>Plugins
+- Baixar *Plugin flutter*
+- Baixar *Plugin dart*
+>Rodar *flutter doctor*
 # Verificar se instalação esta OK
     - Abra CMD fora da pasta bin e digite flutter
     - Rodar flutter doctor
@@ -23,36 +59,8 @@
             - Aceitar todas as licensas (Y)
     - Rodar comando: flutter doctor -v
         - Tudo verde, basta seguir
-# Instalar plugins no Android Studio
-- Abra android studio
-    - Configure / Plugins
-        - Flutter plugin / Install
-        - Reiniciar Android Studio
 # Habilitar IDE VSCode
-- No VSCode
-    - Baixar plugin: Flutter
-    - View / Command palette
+- Abra VSCode:
+    - Vá em: View / Command palette
         - Flutter: Run Flutter Doctor
         - Navegar ate pasta bin onde instalou flutter ou seguir mesmos passos para atualizar Path, porem usando caminho ate a pasta flutter uma antes da bin
-# Instalar Android Studio
-    - Configurar SDK maneger
-        - Selecionar a ultima versao do Android em SDK platform
-        - Selecionar Android SDK comand line tools e Android SDK Biuld tools em SDK Tools
-    - Instalar plugins do flutter
-        - Instalar plugin do Flutter e Dart
-    - Configurar variaveis de ambiente do SDK
-        - Em SDK maneger, va em Android SDK.
-        - Copie o link do SDK Location
-        - Em variaveis de ambiente cria uma nova com nome de ANDROID_HOME, com link copiado do SDK
-        - Adiconar duas variaveis ao Path
-            - %ANDROID_HOME%\tools\bin
-            - %ANDROID_HOME%\platform-tools
-    - Repetir flutter doctor para verificar pendencias
-# Instalar VSCode
-    - Baixar Visual Studio Community
-    - Avançar e marcar a opção desenvolvimento para desktop c++
-# Configurar emulador
-    - No Android Studio ir em:
-        - Configure, Virtual devices manager, Create new device.
-    
-
