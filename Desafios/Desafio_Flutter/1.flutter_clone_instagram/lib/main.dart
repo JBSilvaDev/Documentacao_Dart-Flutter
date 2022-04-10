@@ -14,10 +14,8 @@ class MyApp extends StatelessWidget {
       title: 'Instagram',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.black,
-          foregroundColor: Colors.black
-          ),
-          ),
+            backgroundColor: Colors.black, foregroundColor: Colors.black),
+      ),
       routes: {
         '/': (_) => const HomePage(),
       },

@@ -3,7 +3,7 @@
 Aqui documento sobre algumas opções de uso de funcoes, classes, navegação etc...
 <br><br>
 >Instalação: - 
-[Clique aqui](./Instalacao/Instacao.md)
+[Clique aqui](./Instalacao/Instalação.md)
 <br><br>
 >Dart: - 
 [Clique aqui](./Dart/Resumo_Dart.md)
