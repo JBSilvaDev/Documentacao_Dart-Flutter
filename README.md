@@ -11,6 +11,17 @@ Aqui documento sobre algumas opções de uso de funcoes, classes, navegação et
 >Flutter: - 
 [Clique aqui](./Flutter/Resumo_Flutter.md)
 
+# Desafios
+Desafios concluidos durante o curso
+>Dart: - Listas e tratamento de strings
+[Clique aqui](./Desafios\Desafio_Dart\Desafio_1.dart)
+
+>Dart: - Listas e tratamento de strings obter dados da lista
+[Clique aqui](./Desafios\Desafio_Dart\Desafio_2.dart)
+
+>Flutter: - Instagram clone (página estática)
+[Clique aqui](./Desafios\Desafio_Flutter\1.flutter_clone_instagram)
+
 
 
 Continuar aqui: [Continuação](https://academiadoflutter20.club.hotmart.com/lesson)
