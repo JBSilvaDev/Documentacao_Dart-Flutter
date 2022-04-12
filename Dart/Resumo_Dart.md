@@ -10,6 +10,8 @@
 - While: [Clique Aqui](./Loops/While_DoWhile.md)
 - Event Loop: [Clique Aqui](./Loops/Event_Loop.md)
 - Interables: [Clique Aqui](./Loops/Interables.md)
+- Dependencias HTTP: [Clique Aqui](../Dependencias/Rest-RestFull/HTTP.md)
+- Dependencias HTTP Models: [Clique Aqui](../Dependencias/Rest-RestFull/HTTP_Models.md)
 >Dart OO
 - Async: [Clique Aqui](./Dart_OO/Async.md)
 - Funcoes: [Clique Aqui](./Dart_OO/Funcao.md)
