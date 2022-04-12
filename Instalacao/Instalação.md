@@ -31,6 +31,14 @@
     - De o caminho no valor da variavel do local onde foi instalado o arquivo baixado *E:\Flutter\flutter*
 - Dentro da variavel de ambiente *Path* adicione um novo caminho *%FLUTTER_HOME%\bin*
 # Configuração Android Studio
+>Variaveis de ambiente
+- Crie uma nova variavel de ambiente com nome *ANDROID_HOME*
+    - Va em configurações selecione *SDK Manager*
+    - Copie o caminho da instacação do SDK *C:\Users\usuarioNome\AppData\Local\Android\Sdk*
+    - Cole o caminho do SDK copiado no valor da variavel
+- Dentro da variavel de ambiente *Path* adicione um novo caminho *%ANDROID_HOME%\tools\bin*
+- Ainda na variavel de ambiente *Path* adicione outro caminho *%ANDROID_HOME%\platform-tools*
+- No CMD rodar comando *adb --version* se mostrar a versao do adb a configuração foi concluida.
 >SDK
 - Va em configurações selecione *SDK Manager*
     - Selecione a *ultima versao do Android*
@@ -44,14 +52,6 @@
 >Emulador
 - Selecione *Virtual Device Manager*
     - Crie um novo device ou configure um ja existente
->Variaveis de ambiente
-- Crie uma nova variavel de ambiente com nome *ANDROID_HOME*
-    - Va em configurações selecione *SDK Manager*
-    - Copie o caminho da instacação do SDK *C:\Users\usuarioNome\AppData\Local\Android\Sdk*
-    - Cole o caminho do SDK copiado no valor da variavel
-- Dentro da variavel de ambiente *Path* adicione um novo caminho *%ANDROID_HOME%\tools\bin*
-- Ainda na variavel de ambiente *Path* adicione outro caminho *%ANDROID_HOME%\platform-tools*
-- No CMD rodar comando *adb --version* se mostrar a versao do adb a configuração foi concluida.
 >Rodar *flutter doctor*
 # Configuração Visual Studio Code
 >Plugins
