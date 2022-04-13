@@ -185,7 +185,7 @@ double somar(double acumulador, double elemento) {
 // Ira percorrer toda lista mostrando a soma de seus itens
 var notas = [7.3, 5.4, 7.7, 8.1, 5.5, 4.9, 9.1, 10.0];
 // Recebe os valores e ja efetua a soma dos mesmos
-var total = notas.reduce(((value, element) => value + element));
+var total = notas.reduce((value, element) => value + element);
 print(total);
 // retorno - 58.0
 ```
