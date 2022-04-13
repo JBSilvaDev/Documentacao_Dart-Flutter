@@ -100,7 +100,8 @@ var soma = lista.fold<int>(0,(valor, numero)=> valor = valor + numero);
 // Ordenação simples
 final lista = [99, 88, 55, 01, 102, 150, 200];
 lista.sort();
-
+```
+```dart
 // Ordenação composta
 final lista = ["Juliano|30","Graci|35","Dylan|5"];
 
@@ -124,7 +125,8 @@ lista.sort((nome1, nome2){ // Obtem de 2 em 2 itens da lista
     return -1;
   }
 });
-
+```
+```dart
 // Ordenação composta CompareTo
 lista.sort((nome1, nome2){
 
