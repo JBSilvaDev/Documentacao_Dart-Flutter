@@ -55,7 +55,7 @@ var novMapa = mapa.map((key, value) {
 >Percorrer mapas dentro de lista
 - Pegar todos os nomes nos maps e os adicionar em uma nova lista
 ```dart
-var mapas = [
+var alunos = [
     {'nome': 'Alfredo', 'nota': 9.9},
     {'nome': 'Wilson', 'nota': 9.3},
     {'nome': 'Mariana', 'nota': 8.7},
@@ -68,7 +68,7 @@ String Function(Map) pegarApenasONome = (aluno) => aluno['nome']; // Obtem os no
 var resultado = alunos.map(pegarApenasONome).toList(); // Converte o objeto em um map e depois em uma lista
 
 // Metodo 2
-var listaComNomes = mapas.map((nome) => nome['nome']).toList(); // Acessa todos os itens na lista, e obtem todos os valores na chave nome
+var listaComNomes = alunos.map((nome) => nome['nome']).toList(); // Acessa todos os itens na lista, e obtem todos os valores na chave nome
 // Retorno - [Alfredo, Wilson, Mariana, Guilherme, Ana, Ricardo]
 ```
 >Percorrer mapas dentro de lista
