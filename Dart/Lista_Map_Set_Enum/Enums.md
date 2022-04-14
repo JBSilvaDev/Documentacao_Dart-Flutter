@@ -1,6 +1,6 @@
 # Enum
 > Enum sao classes que usamos para facilitar preenchimento de informações
-- Enumeradores sao uma classe que recebe imformações que sao utilizadas com uma lista de itens que as pertencem
+- Enumeradores sao classes que recebem informações que sao utilizadas com uma lista de itens que as pertencem
 >Criando enum
 ```dart
 enum Cores {

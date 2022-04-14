@@ -100,7 +100,8 @@ var soma = lista.fold<int>(0,(valor, numero)=> valor = valor + numero);
 // Ordenação simples
 final lista = [99, 88, 55, 01, 102, 150, 200];
 lista.sort();
-
+```
+```dart
 // Ordenação composta
 final lista = ["Juliano|30","Graci|35","Dylan|5"];
 
@@ -124,7 +125,8 @@ lista.sort((nome1, nome2){ // Obtem de 2 em 2 itens da lista
     return -1;
   }
 });
-
+```
+```dart
 // Ordenação composta CompareTo
 lista.sort((nome1, nome2){
 
@@ -183,7 +185,7 @@ double somar(double acumulador, double elemento) {
 // Ira percorrer toda lista mostrando a soma de seus itens
 var notas = [7.3, 5.4, 7.7, 8.1, 5.5, 4.9, 9.1, 10.0];
 // Recebe os valores e ja efetua a soma dos mesmos
-var total = notas.reduce(((value, element) => value + element));
+var total = notas.reduce((value, element) => value + element);
 print(total);
 // retorno - 58.0
 ```
