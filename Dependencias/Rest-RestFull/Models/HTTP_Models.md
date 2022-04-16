@@ -180,11 +180,13 @@ Future<void> buscarUser() async {
 }
 ```
 ## Usando A IDE a seu favor
-- Instalar extensão : <i><b>Dart Data Class Generator</b></i>
+- Instalar extensão : <b>[Dart Data Class Generator](https://marketplace.visualstudio.com/items?itemName=dotup.dart-data-class-generator)</b>
 - Com a classe ja criada com seus atributos
     - clique sobre o nome da classe, use <i><b>CTRL+ .</i></b> ou clique na lampada amarela
     - clique em [Generate contructor](../../../Dart/Img/genereteconstructor.png)
         - Irar criar o contrutor para a sua classe automaticamente
     - clique em [Generate JSON serialization](../../../Dart/Img/generetejsonserialization.png)
         - Ira criar basicamente todo o conteudo visto até aqui (sobre models), pode ser necessario efetuar alguns ajustes
+    - clique em [Generate toString](../../../Dart/Img/generatetostring.png)
+        - Ira criar um @override para exibição do retorno da classe
 
