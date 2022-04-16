@@ -1,7 +1,7 @@
 # HTTP
 >HTTP é um pacote do dart que usamos para efetuar requisicoes a um banco de dados atrasvez de API<br>
 Docs: [Clique aqui](https://pub.dev/packages/http)<br>
-Models: [Clique Aqui](/Dependencias/Rest-RestFull/Models/HTTP_Models.md)
+Models: [Clique Aqui](/Dependencias/Rest-RestFull/Modelos/HTTP_Models.md)
 ## Utilização
 - Importar dependencias no arquivo pubspec.yaml
 ```yaml
