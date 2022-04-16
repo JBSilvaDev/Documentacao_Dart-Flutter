@@ -183,8 +183,8 @@ Future<void> buscarUser() async {
 - Instalar extensão : <i><b>Dart Data Class Generator</b></i>
 - Com a classe ja criada com seus atributos
     - clique sobre o nome da classe, use <i><b>CTRL+ .</i></b> ou clique na lampada amarela
-    - clique em [Generate contructor](Dart\Img\genereteconstructor.png)
+    - clique em [Generate contructor](../../../Dart/Img/genereteconstructor.png)
         - Irar criar o contrutor para a sua classe automaticamente
-    - clique em [Generate JSON serialization](\Dart\Img\generetejsonserialization.md)
+    - clique em [Generate JSON serialization](../../../Dart/Img/generetejsonserialization.png)
         - Ira criar basicamente todo o conteudo visto até aqui (sobre models), pode ser necessario efetuar alguns ajustes
 
