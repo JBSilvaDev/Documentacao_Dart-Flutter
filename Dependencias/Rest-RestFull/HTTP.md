@@ -37,7 +37,7 @@ import 'dart:convert';
 
 >Invocando uma funcao de requição
 
-O metodo de invocar uma requisicao HTTP é o mesmo de um async/await comum
+O metodo de invocar uma requisicao HTTP é o mesmo de um [async/await](../../Dart/Dart_OO/Async.md) comum
 ```dart
 Future<void> main() async {
   await requisicaoHTTP();
@@ -47,7 +47,7 @@ Future<void> main() async {
 >Efetuando uma requisicao HTTP - (API de exemplo Via CEP)<br>
 
 Para efetuar uma requisão HTTP é necessario converter a URL da API em URI<br>
-Como é uma requisao de API é necessario usar o Async/Await para aguardar a resposta da API, pois o retorno é um "futuro"
+Como é uma requisao de API é necessario usar o [Async/Await](../../Dart/Dart_OO/Async.md) para aguardar a resposta da API, pois o retorno é um "futuro"
 ```dart
 Future<void> requisicaoHTTP() async {
 var urlAPI = 'https://viacep.com.br/ws/45936000/json'; // Link da API
