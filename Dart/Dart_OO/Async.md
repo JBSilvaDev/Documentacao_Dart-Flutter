@@ -1,6 +1,8 @@
 # Async
 - Async Sao processoas ascincronos, ou seja, pode execultar em paraleto ao arquivo principal
 - Quando chamamos uma funcao Future dentro do main, o main nao aguarda aquela funcao terminar para seguir o fluxo, sao execultados quase ao mesmo tempo.
+- Usamos Async para aguardar um retorno do que foi passado, pois a funcao Future é basicamente uma promessa que algo ira retornar.
+- Em um futuro voce recebera um unico resultado, seja ele um sucesso ou um erro.
 >Exemplo 1 - funcao com future:
 - Aguarda a funcao para finalizar programa, porem o main nao é interrompido
 ```dart

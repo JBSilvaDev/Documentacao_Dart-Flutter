@@ -12,6 +12,7 @@
 - Interables: [Clique Aqui](./Loops/Interables.md)
 >Dart OO
 - Async: [Clique Aqui](./Dart_OO/Async.md)
+- Streams: [Clique Aqui](./Dart_OO/Streams.md)
 - Funcoes: [Clique Aqui](./Dart_OO/Funcao.md)
 - Classes: [Clique Aqui](./Dart_OO/Classes.md)
 - Repository-Pattern: [Clique Aqui](./Dart_OO/Repository_pattern/Repository_pattern.md)
