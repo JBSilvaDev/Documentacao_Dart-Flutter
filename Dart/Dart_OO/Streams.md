@@ -115,7 +115,7 @@ print(data);
 >listen
 - O Main continua sua execução porem a porta da stream se mantem aberta
 - A stream fica "escutando" o que lhe foi passado, e é executada mesmo apos o fim do main
-- Usado take no exemplo apenas para nao manter um loop continuo
+- Usado take no exemplo apenas para nao manter um loop continuo.
 
 ```dart
   var stream = Stream<int>.periodic(interval, callback);
