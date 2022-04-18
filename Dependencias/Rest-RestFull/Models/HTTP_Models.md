@@ -1,9 +1,9 @@
 # Models Estrutura basica
 > Segue mesmos principios do [HTTP](/Dependencias/Rest-RestFull/HTTP.md), alterando apenas o metodo de uso.
 
->Usa-se classes para representar o que o json ira retornar, nos exemplos uso [Cidade](.\ClassesModels\cidade.dart).
+>Usa-se classes para representar o que o json ira retornar, nos exemplos uso [Cidade](./ClassesModels/cidade.dart).
 
-- Os atributos da classe [Cidade](.\ClassesModels\cidade.dart):
+- Os atributos da classe [Cidade](./ClassesModels/cidade.dart):
     - sao alguns dos items que estao retornando do json [API via CEP](https://viacep.com.br/ws/45936000/json) - [Img Retorno API](../../../Dart/Img/ViaCepAPI.png)..
 - O construtor:
     - usa o required para dizer que os itens sao obrigatorios
@@ -82,14 +82,14 @@ Future<void> buscaCep() async {
   
 > Segue mesmos principios do [HTTP](/Dependencias/Rest-RestFull/HTTP.md), alterando apenas o metodo de uso.
 
->Usa-se classes para representar o que o json ira retornar, nos exemplos uso [User Types](.\ClassesModels\user_type.dart).
+>Usa-se classes para representar o que o json ira retornar, nos exemplos uso [User Types](./ClassesModels/user_type.dart).
 
-- Os atributos da classe [User](.\ClassesModels\user.dart):
+- Os atributos da classe [User](./ClassesModels/user.dart):
     - sao alguns dos items que estao retornando do json [Mocki API](https://5f7cba02834b5c0016b058aa.mockapi.io/api/users/1) - [Img Retorno API](../../../Dart/Img/MockAPI.png).
     - uma das chaves desta API retorna como valor uma lista que possui um map como um dos itens
     - foi necessario criar duas classes, uma para tratamento da API outra para tratamento do retorno como Lista
-    - a classe [User Types](.\ClassesModels\user_type.dart) fara todo tratamento da lista que contem um map, o models usado é o padrao, o mesmo usado na [API via CEP](https://viacep.com.br/ws/45936000/json), como o conteudo da lista é uma string modelo json/map o tratamento foi o mesmo.
-    - a classe [User](.\ClassesModels\user.dart) fara o tratamento da API de modo geral porem um de seus atributos é do tipo List assim como é no [Retorno API](../../../Dart/Img/MockAPI.png), e esta lista ira ser do tipo [User Types](.\ClassesModels\user_type.dart), ou seja, ira receber o que foi tratado na classe irmã como conteudo para assim montar um objeto unico dando o retorno desejado ao usuario final
+    - a classe [User Types](./ClassesModels/user_type.dart) fara todo tratamento da lista que contem um map, o models usado é o padrao, o mesmo usado na [API via CEP](https://viacep.com.br/ws/45936000/json), como o conteudo da lista é uma string modelo json/map o tratamento foi o mesmo.
+    - a classe [User](./ClassesModels/user.dart) fara o tratamento da API de modo geral porem um de seus atributos é do tipo List assim como é no [Retorno API](../../../Dart/Img/MockAPI.png), e esta lista ira ser do tipo [User Types](./ClassesModels/user_type.dart), ou seja, ira receber o que foi tratado na classe irmã como conteudo para assim montar um objeto unico dando o retorno desejado ao usuario final
         - ```dart
             class User {
                 final String id;
@@ -98,7 +98,7 @@ Future<void> buscaCep() async {
                 final List<UserTypes> userTypes;
             ```
 ## Metodos
-- foram criados 4 metodos, assim como no exemplo anterior, porem o tratamento para uma das chaves é diferenciado pois o valor da mesma é uma lista que esta sendo tratada em outra [classe](.\ClassesModels\user_type.dart)
+- foram criados 4 metodos, assim como no exemplo anterior, porem o tratamento para uma das chaves é diferenciado pois o valor da mesma é uma lista que esta sendo tratada em outra [classe](./ClassesModels/user_type.dart)
 
 >Metodo 1
 
@@ -117,9 +117,9 @@ Future<void> buscaCep() async {
         ```
 - a chave userTypes esta mapeando o valor recebido:
     - map['user_types']? <i>(Se o valor nao for nulo)</i>
-    - .map< UserTypes >((type) <i>(Converta para um mapa do tipo [UserTypes](.\ClassesModels\user_type.dart)</i>)
-    - return UserTypes.fromMap(type);}).toList()<i> (Retorna a invocação de fromMap dentro de [UserTypes](.\ClassesModels\user_type.dart) e o transforma em uma lista) </i>
-    -  ??< UserTypes >[] <i>(Ou retorna uma lista do tipo [UserTypes](.\ClassesModels\user_type.dart) vazia, caso seja um conteudo invalido/nulo)</i>
+    - .map< UserTypes >((type) <i>(Converta para um mapa do tipo [UserTypes](./ClassesModels/user_type.dart)</i>)
+    - return UserTypes.fromMap(type);}).toList()<i> (Retorna a invocação de fromMap dentro de [UserTypes](./ClassesModels/user_type.dart) e o transforma em uma lista) </i>
+    -  ??< UserTypes >[] <i>(Ou retorna uma lista do tipo [UserTypes](./ClassesModels/user_type.dart) vazia, caso seja um conteudo invalido/nulo)</i>
 
 >Metodo 2
 
@@ -142,7 +142,7 @@ Future<void> buscaCep() async {
 - Ira converter a instancia/conteudo de Cidade em um mapa, ou seja o conteudo passado para o contrutor ira ser convertido em um mapa, assim sendo possivel usa-lo de modo convencional.
 - user_types:
     - userTypes.map((e) <i> (Percorre todo o conteudo)</i>
-    - => e.toMap()).toList() <i> (Passa o conteudo para o metodo toMap dentro de [UserTypes](.\ClassesModels\user_type.dart) e o converte em lista) </i>
+    - => e.toMap()).toList() <i> (Passa o conteudo para o metodo toMap dentro de [UserTypes](./ClassesModels/user_type.dart) e o converte em lista) </i>
 >Metodo 4
 
 - ```dart
