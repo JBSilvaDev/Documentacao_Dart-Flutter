@@ -22,3 +22,4 @@
 >Conexão BD
 - HTTP (Models): [Clique Aqui](../Dependencias/Rest-RestFull/Models/HTTP_Models.md)
 - FireBase: [Clique Aqui](../Dependencias/Rest-RestFull/FireBase/HTTP_FireBase.md)
+- MySQL: [Clique Aqui](../Dependencias/Rest-RestFull/MYSQL.md)
