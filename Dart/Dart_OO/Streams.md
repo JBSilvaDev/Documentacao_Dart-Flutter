@@ -6,15 +6,15 @@
 ## Stream periodic
 - Stream periodic recebe um intervalo que quando concluido execulta o segundo parametro que é uma funcao
 - Exemplo usado é que a cada 2 segundo, a stream chama a funcao callback
->Intervalo
-```dart
-final interval = Duration(seconds: 2);
-```
 >Funcao (poderia ser uma funcao anonima dentro da propria stream (){})
 ```dart
 int callback(int value) {
   return (value + 1);
 }
+```
+>Intervalo
+```dart
+final interval = Duration(seconds: 2);
 ```
 >Utilização
 - await for fica "escutando" a stream, e sempre que um valor novo é atribuida a ela printa o valor
@@ -26,4 +26,27 @@ await for (var i in stream) {
     print('Valor de i é: $i');
 }
 ```
-
+## Stream take
+- Take é um comando onde podemos transformar a stream
+- É passado um valor inteiro que determina quantas requisições a stream ira receber
+- Quando chegar a quantidade de requisições determinada a "porta" da stream é fechada.
+>Seguindo dados do Stream periodic
+```dart
+final stream = Stream<int>.periodic(interval, callback);
+// Apos 5 requisições ou seja, apos callback ser chamado 5 vezes ira encerrar a stream
+stream = stream.take(5);
+// await for
+await for (var i in stream) {
+  print('${i - 1} + 1 = $i');
+}
+  ```
+- Take While tem o mesmo principio do take, porem nao recebe um numero inteiro e sim uma funcao onde seu retorno é uma condição
+- Exemplo abaixo, ira continuar a stream enquanto o numero for menor que 6
+```dart
+ var stream = Stream<int>.periodic(interval, callback);
+// Apos 5 requisições ou seja, apos callback ser chamado 5 vezes ira encerrar a stream, pois a proxima seria igual/maior que 6
+stream = stream.takeWhile((int numero) => numero < 6);
+// await for
+await for (var i in stream) {
+  print('${i - 1} + 1 = $i');
+}
