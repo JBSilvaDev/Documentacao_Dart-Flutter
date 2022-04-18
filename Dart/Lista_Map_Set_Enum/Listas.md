@@ -152,6 +152,7 @@ final lista = [99, 88, 55, 01, 102, 150, 200];
 lista.contains(99);
 ```
 >map - Adiciona os itens de uma lista em uma nova lista e execulta funcao ou condicao em cada item.
+- map sao comumente usados com lista que contem mapas em seus index
 ```dart
 final pessoas = ["Juliano|30","Graci|35","Dylan|5"];
 // Acessa cada item da lista e execulta uma funcao
