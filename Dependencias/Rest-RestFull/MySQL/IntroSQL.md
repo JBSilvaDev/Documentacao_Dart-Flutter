@@ -61,7 +61,7 @@ UPDATE clientes SET nome = 'Rafael', email = 'contato@rlsystem.com.br' WHERE id 
 ```
 No exemplo acima, somente será atualizado o registro que conter o id 1.
 
-## DELETE
+## DELETE & TRUNCATE
 
 O comando delete nunca deve ser utilizado sem a clasula WHERE. Caso contrário, irá deletar todos os registros da tabela. Sempre que você deseja apagar um registro, provalvelmente quer apagar um em espeficio. Assim, sempre é importante usar o WHERE, conforme o exemplo abaixo.
 ```sql
@@ -72,6 +72,17 @@ Exemplo:
 DELETE FROM clientes WHERE id = 1;
 ```
 Nota 1: desta forma, você estará excluindo o registro que conter o id 1.
+
+O comando truncate é usado para limpar todo conteudo da tabela, apagando todos os registros linha a linha
+```sql
+TRUNCATE TABLE NOME_DA_TABELA;
+```
+Exemplo:
+```sql
+TRUNCATE TABLE clientes;
+/* OU */
+TRUNCATE TABLE bdName.clientes;
+```
 
 <br>
 <br>

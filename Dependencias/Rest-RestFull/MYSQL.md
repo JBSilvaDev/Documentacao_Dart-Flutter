@@ -16,6 +16,9 @@ import 'package:mysql1/mysql1.dart';
 - Criando conexão com banco SQL
     - Seguir os passos acima
     - [Modelo](../Rest-RestFull/MySQL/Modelos/Criando_ConexaoBD.md)
+- Criando um banco de dados
+    - Caso nao esteja no mesmo arquivo, importar o arquivo com classe de criação de BD
+    - [Modelo](../Rest-RestFull/MySQL/Modelos/Criando_database.md)
 - Criando uma tabela em um BD
     - Caso nao esteja no mesmo arquivo, importar o arquivo com classe de criação de BD
     - [Modelo](../Rest-RestFull/MySQL/Modelos/Criando_tabela_no_BD.md)
@@ -31,3 +34,25 @@ import 'package:mysql1/mysql1.dart';
 - Deleta uma tabela no BD
     - Caso nao esteja no mesmo arquivo, importar o arquivo com classe de criação de BD
     - [Modelo](../Rest-RestFull/MySQL/Modelos/Deleta_tabela_no_BD.md)
+>Tratamento de erros
+- Para tratar erro usamos o try/catch exemplo:
+    - ```dart
+        try {
+            await mysqlConnection
+                .query('update aluno set nome = ? where id = ?', [1 ,'JB Silvaaaa']);
+        } on MySqlException catch(e) {
+            print(e);
+            print('Erro ao atualizar dados do aluno');
+        }
+        ```
+>Validação de conteudo/codigo
+- Usamos o transaction para efetuar uma validação, onde os dados só serao salvos no BD se todos forem executados sem erros.
+- Isso é importante como exemplo efetuar uma transferencia entre bancos, os dados so podem ser deduzidos de um banco se for recebido em outro.
+    - ```dart
+        await mysqlConnection.transaction((_) async{
+            await mysqlConnection
+                .query('Comando de saida de dados']);
+            await mysqlConnection
+                .query('Comando de entrada de dados']);
+        });
+        ```
