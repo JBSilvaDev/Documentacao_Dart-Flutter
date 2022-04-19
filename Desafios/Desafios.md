@@ -50,11 +50,11 @@ Desafios concluidos durante o curso
         |São Paulo|SP   |
     - Cidades, salvar nesta tabela todos as cidades do Brasil com a sigla correspondente a seu estado.
     - Exemplo:
-        |Cidade   |Estado|
-        |-------  |----- |
-        |Salvador |BA    |
-        |Ilheus   |BA    |
-        |Santos   |SP    |
+        |Id Cidade   |id Estado|Nome cidade|
+        |-------     |-----    |-----      |
+        |Salvador    |BA       |Salvador   |
+        |Ilheus      |BA       |Ilheus     |
+        |Santos      |SP       |Santos     |
     - Fonte Estados: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados)
     - Fonte Cidades: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados/<idEstado>/distritos)
 - Resolução: [Clique aqui](../Desafios/Desafio_Dart/desafio_3)
