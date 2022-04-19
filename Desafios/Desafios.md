@@ -37,6 +37,27 @@ Desafios concluidos durante o curso
     - Filtrar e deixar a lista somente com pessoas maiores de 18 anos e apresente essas pessoas pelo nome
     - Encontre a pessoa mais velha e apresente o nome dela
 - Resolução: [Clique aqui](./Desafio_Dart/Desafio_2.dart)
+<br>
+
+>Desafio 3
+- Trabalhando com banco de dados SQL
+    - Preencher no MySQL duas tabelas
+    - Estado salvar nesta tabela todos os estados do Brasil
+    - Exemplo:
+        |Estado   |Sigla|
+        |-------  |-----|
+        |Bahia    |BA   |
+        |São Paulo|SP   |
+    - Cidades, salvar nesta tabela todos as cidades do Brasil com a sigla correspondente a seu estado.
+    - Exemplo:
+        |Cidade   |Estado|
+        |-------  |----- |
+        |Salvador |BA    |
+        |Ilheus   |BA    |
+        |Santos   |SP    |
+    - Fonte Estados: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados)
+    - Fonte Cidades: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados/<idEstado>/distritos)
+- Resolução: [Clique aqui](../Desafios/Desafio_Dart/desafio_3)
 
 <br><b>Flutter:</b>
 >Desafio 1: 
