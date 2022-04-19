@@ -1,8 +1,6 @@
 # Dependências
 ## Conexão com BD
 - Http - [HTTP](./Rest-RestFull/HTTP.md)
-- Http (Models) - [Models](./Rest-RestFull/Models/HTTP_Models.md)
-- Http (Firebase) - [Fbase](./Rest-RestFull/FireBase/HTTP_FireBase.md)
 - MYSQL - [SQL](./Rest-RestFull/MYSQL.md)
 ## Formatação
 - Formatação Moeda - [Currency Formatter](./Dependencias/Currency_formatter.md)

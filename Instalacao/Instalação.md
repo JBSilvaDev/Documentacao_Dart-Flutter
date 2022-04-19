@@ -79,8 +79,14 @@
         - Navegar ate pasta bin onde instalou flutter ou seguir mesmos passos para atualizar Path, porem usando caminho ate a pasta flutter uma antes da bin
 # Iniciando novo projeto
 > Via CMD
-- flutter create --project-name=flutter_primeiros_passos --org br.com.jbtec --platforms android,ios -a kotlin -i swift ./flutter_primeiros_passos
-
+- Flutter
+    - ```dart
+      $ flutter create --project-name=nome_do_projeto --org br.com.jbtec --platforms android,ios -a kotlin -i swift ./local/name=nome_do_projeto
+        ```
+- Dart
+    - ```cmd
+      $ dart create nome_do_projeto
+        ```
 > Via VSCode
 - Ctrl+Shift+P (View - Command Palette)
     - Flutter: New Project.

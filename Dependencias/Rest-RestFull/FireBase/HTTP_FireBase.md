@@ -97,3 +97,27 @@
         responseData.values.forEach((a) => print(a["nome"]));
       }
       ```
+>Exemplo comleto
+- Mostrando primeiro item de cada registro no BD
+```dart
+Future<void> main() async {
+  await consultaFirebase(); // Invoca a função
+}
+
+Future<void> consultaFirebase() async {
+  String consulta = 'Tenis'; // Valor que sera retornado para cada registro
+  final baseUrl = 'https://testedart-10a61-default-rtdb.firebaseio.com/test.json';
+  final url = Uri.parse(baseUrl);
+  final response = await get(url);
+  final responseData = jsonDecode(response.body);
+  final produto = responseData.values.toList(); // Converte os valores retornados em lista
+  final _escolhidos =
+      produto.where((item) => item['nome'] == consulta).toList(); // Filtra os registros na lista que contem em sua chave nome o mesmo valor da variavel consulta (Tenis) e os converte em lista
+  print("Meus produtos encontrados foram: ");
+  for (var escolha in _escolhidos) {
+    // Percorre toda lista e exibe para cada mapa nela o valor da chave nome e preço
+    print(" ${escolha['nome']} com valor de ${escolha['preço']}");
+  }
+}
+```
+- [Retorno](../../../Dart/Img/retornoFirebase.png)
