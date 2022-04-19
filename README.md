@@ -1,5 +1,4 @@
 # Documentação
-
 Aqui documento sobre algumas opções de uso de funcoes, classes, navegação etc...
 <br><br>
 >Instalação: - 
@@ -13,3 +12,7 @@ Aqui documento sobre algumas opções de uso de funcoes, classes, navegação et
 <br><br>
 >Dependencias: - 
 [Clique aqui](./Dependencias/Dependencias.md)
+<br><br>
+>Desafios: - 
+[Clique aqui](./Desafios/Desafios.md)
+
