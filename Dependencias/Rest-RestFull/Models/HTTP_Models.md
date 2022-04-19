@@ -29,6 +29,7 @@
 - Em seu conteudo tera uma variavel onde ira converter esta String recebida em modelo de mapa
 - Ira retornar o método Cidade.fromMap passando a variavel como parametro que irá efetuar a criação do objeto solicitado:
     - ```dart
+        var jsonMap = jsonDecode(source); // Converte a String recebida da API em um mapa
         return Cidade.fromMap(jsonMap);
         ```
 >Metodo 3
