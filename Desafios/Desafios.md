@@ -52,9 +52,9 @@ Desafios concluidos durante o curso
     - Exemplo:
         |Id Cidade   |id Estado|Nome cidade|
         |-------     |-----    |-----      |
-        |Salvador    |BA       |Salvador   |
-        |Ilheus      |BA       |Ilheus     |
-        |Santos      |SP       |Santos     |
+        |Salvador    |29       |Salvador   |
+        |Ilheus      |29       |Ilheus     |
+        |Santos      |35       |Santos     |
     - Fonte Estados: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados)
     - Fonte Cidades: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados/<idEstado>/distritos)
 - Resolução: [Clique aqui](../Desafios/Desafio_Dart/desafio_3)
