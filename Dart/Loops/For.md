@@ -21,3 +21,11 @@ for(var nome in nomes){
     }
   }
 ```
+>Percorrendo lista com forEach
+```dart
+nomes.forEach((nome){
+  print(nome);
+})
+```
+```dart
+nomes.forEach((nome)=>print(nome));

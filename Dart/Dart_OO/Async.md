@@ -3,6 +3,8 @@
 - Quando chamamos uma funcao Future dentro do main, o main nao aguarda aquela funcao terminar para seguir o fluxo, sao execultados quase ao mesmo tempo.
 - Usamos Async para aguardar um retorno do que foi passado, pois a funcao Future é basicamente uma promessa que algo ira retornar.
 - Em um futuro voce recebera um unico resultado, seja ele um sucesso ou um erro.
+>Observação:
+- Quando há uma lista a ser percorrida de modo ascincrono, nao usar o <i>forEach</i> pois o mesmo nao aceita o await, deve-se usar o <i>for in</i>.
 >Exemplo 1 - funcao com future:
 - Aguarda a funcao para finalizar programa, porem o main nao é interrompido
 ```dart
