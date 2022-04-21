@@ -119,5 +119,11 @@
             final nomeAluno = alunosAdf['nome'] as String;
             final aluno = Aluno(nome: nomeAluno, cursos: cursos, endereco: endereco);
             ```
+    - Para obter somente um metodo da classe Aluno masta interar a invocação
+        - ```dart
+            print(aluno.nome);
+            print(aluno.curso);
+            print(aluno.endereco);
+            ```
 [Resultado consulta Map/List OO](../Img/mapaComLista.png)
 
