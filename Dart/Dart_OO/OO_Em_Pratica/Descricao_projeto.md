@@ -85,7 +85,7 @@
 - <b>A classe nesta instancia espera receber um objeto [Cidade](./models/cidade.md)/[Telefone](./models/telefone.md)</b>
     - fromMap()  
         - É passado na chave cidade/telefone os objetos [Cidade](./models/cidade.md)/[Telefone](./models/telefone.md).fromMap() pois se faz necessario realizar conversao do mapa retornado da [API](./backend/db.json) para objeto pois é o tipo que a classe espera receber.
-<br>
+
 ***
 ### Classe [Aluno](./models/aluno.md)
 #### Item nomeCurso
