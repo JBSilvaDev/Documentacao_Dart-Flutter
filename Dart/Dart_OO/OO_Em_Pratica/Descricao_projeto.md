@@ -1,5 +1,4 @@
 # OO Em Prática
-## Descrição do projeto
 
 - Usado estilo [Repository Pattern](../Repository_pattern/Repository_pattern.md)
 - Usando o package [Dartion](https://pub.dev/packages/dartion) que cria um servidor local onde ira aceitar os comandos [HTTP](./../../../Dependencias/Rest-RestFull/Models/HTTP_Models.md).
@@ -9,6 +8,7 @@
     - PATCH
     - DELETE
 - Json Modelo usado em servidor local, arquivo bruto [aqui](./backend/db.json)
+## Models
 - Para cada objeto dentro da API é criado uma classe, para o modelo usado criamos as seguintes classes, <b>cada classe em um arquivo diferente</b>:
 - Cada classe contendo os itens no json/map que desejamos obter
     - [Aluno](./models/aluno.md)
@@ -123,3 +123,12 @@
         - A [API](./backend/db.json) nesta chave retorna uma lista de mapas, entao foi necessario percorrer esta lista pegando mapa a mapa tipando-os para o esperado na classe <[Curso](./models/curso.md)> e retornando cada um desses mapas como objeto ao final usa-se o .toList() para adicionar estes objetos em uma lista, se tornando assim o que a classe mãe espera receber
 ***
 ---
+## Repositories
+- Neste arquivo foi trabalhada a conexão com a [API](./backend/db.json) usando a classe [AlunosRepositories{}](./repositories/alunos_repositories.md)
+- Dentro da classe foram criadas funcoes para execultar alguma ação no conteudo da [API](./backend/db.json)
+- Todas as funcoes foram criadas para serem [ascincronas](../Async.md)
+- Abra o arquivo com codigo compl
+    - findALL()
+        - Funcao do tipo <List<[Aluno](./models/aluno.md)>> que retorna uma lista de alunos contidos na [API](./backend/db.json)
+    - findById()
+        - Funcao do tipo <[Aluno](./models/aluno.md)> que recebe como parametro um id
