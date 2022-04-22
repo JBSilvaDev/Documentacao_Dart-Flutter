@@ -132,7 +132,6 @@
         - Uso do GET
         - Funcao do tipo <List<[Aluno](./models/aluno.md)>> que retorna uma lista de alunos contidos na [API](./backend/db.json)
     - findById()
-<<<<<<< HEAD
         - Uso do GET
         - Funcao do tipo <[Aluno](./models/aluno.md)> que recebe como parametro um id e retorna um mapa de alunos que passa pelo fromMap() convertendo em um objeto [Aluno](./models/aluno.md)
     - update()
@@ -144,6 +143,3 @@
 
 ### Observações sobre conteudos dentro das funcoes
 Note que em alguns valores para evitar que seja passado valor nulo foi usado o aware operator ?? '' onde é definido um valor default para cada instacia
-=======
-        - Funcao do tipo <[Aluno](./models/aluno.md)> que recebe como parametro um id
->>>>>>> 11e105d260720c5c03f8ca5a7398e0a6ca4e5630
