@@ -64,7 +64,7 @@
         - Processo reverso do toMap() - Normalmente usado quando recebemos dados da [API](./backend/db.json) neste contrutor recebemos um *Map* e retorna seus itens (key, value) para o contrutor da classe mãe, transformando assim em um objeto
             - <b>*{"id": id} -> Objeto.id*</b>
     - toJson() É um metodo que retorna uma string do objeto (converte o objeto em string)
-        - Normalmente usado para enviar dados a API (*Post, Patch*) pois devemos enviar dados no formato de *MAP* porem como uma *String*, este método Encoda o o que é retornado no toMap() ou seja transforma um mapa em uma string 
+        - Normalmente usado para enviar dados a API (*Post, Patch/Put*) pois devemos enviar dados no formato de *MAP* porem como uma *String*, este método Encoda o o que é retornado no toMap() ou seja transforma um mapa em uma string 
             - <b>*{'key':value} -> "{'key':value}"*</b>
     - fromJson() É um contrutor que baseado no json, retorna um objeto
         - Processo reverso to toJson() - Normalmente os valores retornados da API chegam como String as este construtor Decodifica a stringo recebida e a transforma em um mapa usando o fromMap() que por sua vez transforma o mapa em objeto
