@@ -64,7 +64,7 @@
         - Processo reverso do toMap() - Normalmente usado quando recebemos dados da [API](./backend/db.json) neste contrutor recebemos um *Map* e retorna seus itens (key, value) para o contrutor da classe mãe, transformando assim em um objeto
             - <b>*{"id": id} -> Objeto.id*</b>
     - toJson() É um metodo que retorna uma string do objeto (converte o objeto em string)
-        - Normalmente usado para enviar dados a API (*Post, Patch*) pois devemos enviar dados no formato de *MAP* porem como uma *String*, este método Encoda o o que é retornado no toMap() ou seja transforma um mapa em uma string 
+        - Normalmente usado para enviar dados a API (*Post, Patch/Put*) pois devemos enviar dados no formato de *MAP* porem como uma *String*, este método Encoda o o que é retornado no toMap() ou seja transforma um mapa em uma string 
             - <b>*{'key':value} -> "{'key':value}"*</b>
     - fromJson() É um contrutor que baseado no json, retorna um objeto
         - Processo reverso to toJson() - Normalmente os valores retornados da API chegam como String as este construtor Decodifica a stringo recebida e a transforma em um mapa usando o fromMap() que por sua vez transforma o mapa em objeto
@@ -72,7 +72,7 @@
     - @override toString()
         - Este método é apenas para retornar o conteudo da classe, assim podemos ver o resultado no console por exemplo, sem este metodo o retorno da classe sera uma Instancia.
 
-## Observações sobre alguns dos conteudos passados nos metodos
+## Observações sobre conteudos passados nas instancias dos metodos
 - Note que em alguns valores para evitar que seja passado valor nulo foi usado o aware operator *?? ''* onde é definido um valor *default* para cada instacia
 ***
 ### Classe [Endereco](./models/endereco.md)
@@ -132,6 +132,7 @@
         - Uso do GET
         - Funcao do tipo <List<[Aluno](./models/aluno.md)>> que retorna uma lista de alunos contidos na [API](./backend/db.json)
     - findById()
+<<<<<<< HEAD
         - Uso do GET
         - Funcao do tipo <[Aluno](./models/aluno.md)> que recebe como parametro um id e retorna um mapa de alunos que passa pelo fromMap() convertendo em um objeto [Aluno](./models/aluno.md)
     - update()
@@ -143,3 +144,6 @@
 
 ### Observações sobre conteudos dentro das funcoes
 Note que em alguns valores para evitar que seja passado valor nulo foi usado o aware operator ?? '' onde é definido um valor default para cada instacia
+=======
+        - Funcao do tipo <[Aluno](./models/aluno.md)> que recebe como parametro um id
+>>>>>>> 11e105d260720c5c03f8ca5a7398e0a6ca4e5630
