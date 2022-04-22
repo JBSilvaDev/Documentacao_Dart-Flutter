@@ -1,0 +1,148 @@
+{
+    "alunos": [
+        {
+            "id": "1",
+            "nome": "JB Silva",
+            "idade": 39,
+            "nomeCursos": [
+                "Academia do Flutter",
+                "Imersao GetX",
+                "Imersao a Json"
+            ],
+            "cursos": [
+                {
+                    "id": 1,
+                    "nome": "Academia do Flutter",
+                    "isAluno": true
+                },
+                {
+                    "id": 2,
+                    "nome": "Imersao GetX",
+                    "isAluno": false
+                }
+            ],
+            "endereco": {
+                "rua": "Rua Oliva",
+                "numero": 350,
+                "cep": "45936-888",
+                "cidade": {
+                    "id": 1,
+                    "nome": "Mucuri"
+                },
+                "telefone": {
+                    "ddd": 73,
+                    "telefone": "999056979"
+                }
+            }
+        },
+        {
+            "id": "2",
+            "nome": "Felipe",
+            "idade": 15,
+            "nomeCursos": [
+                "Academia do Flutter",
+                "Imersao GetX",
+                "Imersao a Json",
+                "Imersao a Json"
+            ],
+            "cursos": [
+                {
+                    "id": 1,
+                    "nome": "Academia do Flutter",
+                    "isAluno": false
+                },
+                {
+                    "id": 2,
+                    "nome": "Imersao GetX",
+                    "isAluno": true
+                }
+            ],
+            "endereco": {
+                "rua": "Rua Coqueiro",
+                "numero": 150,
+                "cep": "5689-888",
+                "cidade": {
+                    "id": 1,
+                    "nome": "Mucuri"
+                },
+                "telefone": {
+                    "ddd": 73,
+                    "telefone": "99558750"
+                }
+            }
+        },
+        {
+            "id": "3",
+            "nome": "Dylan",
+            "idade": 5,
+            "nomeCursos": [
+                "Academia do Flutter",
+                "Imersao GetX"
+            ],
+            "cursos": [
+                {
+                    "id": 1,
+                    "nome": "Academia do Flutter",
+                    "isAluno": false
+                },
+                {
+                    "id": 2,
+                    "nome": "Imersao GetX",
+                    "isAluno": false
+                }
+            ],
+            "endereco": {
+                "rua": "Rua Palmeira",
+                "numero": 200,
+                "cep": "46889-888",
+                "cidade": {
+                    "id": 1,
+                    "nome": "Mucuri"
+                },
+                "telefone": {
+                    "ddd": 73,
+                    "telefone": "0000-0000",
+                    "cidade": {
+                        "id": 1,
+                        "nome": "Mucuri"
+                    }
+                }
+            }
+        },
+        {
+            "id": "6e15f8d0-c19e-11ec-a4fe-ef3a76fb1eae",
+            "nome": "Graciele",
+            "idade": 0,
+            "nomeCursos": [
+                "Fundamental",
+                "Médio",
+                "Vendas Online"
+            ],
+            "endereco": {
+                "rua": "Rua de barro",
+                "numero": 50,
+                "cep": "45785-000",
+                "cidade": {
+                    "id": 1,
+                    "nome": "Vitorioa"
+                },
+                "telefone": {
+                    "ddd": 73,
+                    "telefone": "789448754"
+                }
+            },
+            "cursos": [
+                {
+                    "id": 1,
+                    "nome": "Médio",
+                    "isAluno": false
+                },
+                {
+                    "id": 2,
+                    "nome": "Vendas Online",
+                    "isAluno": true
+                }
+            ]
+        }
+    ]
+}
