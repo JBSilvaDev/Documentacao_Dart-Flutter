@@ -128,7 +128,7 @@
 - Dentro da classe foram criadas funcoes para execultar alguma ação no conteudo da [API](./backend/db.json)
 - Todas as funcoes foram criadas para serem [ascincronas](../Async.md)
 - Abra o arquivo com codigo completo [aqui](./repositories/alunos_repositories.md)
-    - findALL()
+    - findAll()
         - Uso do GET
         - Funcao do tipo <List<[Aluno](./models/aluno.md)>> que retorna uma lista de alunos contidos na [API](./backend/db.json)
     - findById()
@@ -142,4 +142,33 @@
         - Funcao sem retorno que recebe como parametro um objeto [Aluno](./models/aluno.md) que dentro do post é passado como valor do *body* que passa pelo .toJson Encodando a string passada para o objeto [Aluno](./models/aluno.md) em json e o json para string inserindo assim um novo aluno ao BD.
 
 ### Observações sobre conteudos dentro das funcoes
-Note que em alguns valores para evitar que seja passado valor nulo foi usado o aware operator ?? '' onde é definido um valor default para cada instacia
+- findALL()
+    - Foi feito um mapeamento tipando o retorno da [API](./backend/db.json) como <[Aluno](./models/aluno.md)> onde cada item foi convertido em um objeto do mesmo tipo ao final com .toList() salva estes objetos retornados em uma lista, assim dando o retorno final da funcao como uma <List< Aluno >>
+
+***
+---
+## Controlers
+- Neste arquivo foi defina uma classe [AlunosController](./controller/alunos_controller.md) onde foi criado uma variavel privada que recebe o conteudo de [AlunosRepositories{}](./repositories/alunos_repositories.md).
+- Dentro da classe tambem foram criadas funcoes que chamam as funcoes do repositories passando informações a mesma para consulta, atualização, e inclusao de dados.
+    - findAll()
+        - Funcao sem retorno
+        - Criada variavel onde aguarda um retorno dos repositorio chamando a variavel privada.findAll()
+        - Percorre o conteudo retornado e printa os nomes dos alunos
+    - findById()
+        - Funcao sem retorno que recebe um id
+        - Criada variavel onde aguarda um retorno dos repositorio chamando a variavel privada.findById(id) passando um id existente na [API](./backend/db.json) para identificar um aluno expecifico
+    - update()
+        - Funcao sem retorno que recebe um id
+        - Criada variavel onde aguarda um retorno dos repositorio chamando a variavel privada.findById(id) passando um id existente na [API](./backend/db.json) para identificar um aluno expecifico
+        - Apos identificar um aluno é instanciado o .nomeCursos como esta instancia é uma lista de string usamos o metodo .add() para adionar um novo conteudo a esta lista
+            - Em caso de setar um valor diretamente basta instanciar o objeto e passar seu valor de acordo com que a instancia pede, neste caso pede um objeto [Cidade](./models/cidade.md)
+                ```dart
+                aluno.endereco.cidade = Cidade(id: 9, nome: 'Posto da mata');
+                ```
+        - Passado o conteudo a ser atualizado,  é invocada a variavel privada.update(aluno) passando no paramentro o objeto identificado pelo id
+    - insert()
+        - Criada variavel onde é passado o Objeto [Aluno](./models/aluno.md)
+        - Neste objeto é preenchido os campos requeridos com seus respectivos tipos
+        - Passando todo o requerido para adionar um novo conteudo a [API](./backend/db.json), é invocada a variavel privada.insert(aluno) passando no paramentro o objeto que sera inserido no BD.
+
+
