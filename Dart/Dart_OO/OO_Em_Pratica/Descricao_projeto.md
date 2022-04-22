@@ -127,8 +127,19 @@
 - Neste arquivo foi trabalhada a conexão com a [API](./backend/db.json) usando a classe [AlunosRepositories{}](./repositories/alunos_repositories.md)
 - Dentro da classe foram criadas funcoes para execultar alguma ação no conteudo da [API](./backend/db.json)
 - Todas as funcoes foram criadas para serem [ascincronas](../Async.md)
-- Abra o arquivo com codigo compl
+- Abra o arquivo com codigo completo [aqui](./repositories/alunos_repositories.md)
     - findALL()
+        - Uso do GET
         - Funcao do tipo <List<[Aluno](./models/aluno.md)>> que retorna uma lista de alunos contidos na [API](./backend/db.json)
     - findById()
-        - Funcao do tipo <[Aluno](./models/aluno.md)> que recebe como parametro um id
+        - Uso do GET
+        - Funcao do tipo <[Aluno](./models/aluno.md)> que recebe como parametro um id e retorna um mapa de alunos que passa pelo fromMap() convertendo em um objeto [Aluno](./models/aluno.md)
+    - update()
+        - Uso do PUT
+        - Funcao sem retorno que recebe como parametro um objeto [Aluno](./models/aluno.md) que dentro do put é passado como valor do *body* que passa pelo .toJson Encodando a string passada para o objeto [Aluno](./models/aluno.md) em json e o json para string, atualizando assim o BD pelo id do aluno
+    - insert()
+        - Uso do POST
+        - Funcao sem retorno que recebe como parametro um objeto [Aluno](./models/aluno.md) que dentro do post é passado como valor do *body* que passa pelo .toJson Encodando a string passada para o objeto [Aluno](./models/aluno.md) em json e o json para string inserindo assim um novo aluno ao BD.
+
+### Observações sobre conteudos dentro das funcoes
+Note que em alguns valores para evitar que seja passado valor nulo foi usado o aware operator ?? '' onde é definido um valor default para cada instacia
