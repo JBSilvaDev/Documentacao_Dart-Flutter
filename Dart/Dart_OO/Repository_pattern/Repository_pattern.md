@@ -1,6 +1,11 @@
 # Repository Patern
 É um padrão de projeto, onde seguimos um "modelo" que foi criado para sanar algum problema assim nao é necessario "reinventar a roda", refazer algo que ja existe, apenas usamos um metodo que outra pessoa ja desenvolveu.<br>
-Com a criação deste modelo, o codigo main fica ainda mais limpo, ou seja a manutenção do codigo fica melhor e mais rapida, visto que identificar erros em menos codigo é mais facil
+Com a criação deste modelo, o codigo main fica ainda mais limpo, ou seja a manutenção do codigo fica melhor e mais rapida, visto que identificar erros em menos codigo é mais facil.
+Este modelo consiste em organizar os arquivos de codigos em pastas que os representem, e no arquivo principal fazemos as chamadas dos conteudos destes arquivos "externos".<br>
+- Exemplos:
+    - Pasta *repositories* => é a pasta que ira conter o repositorio, ou seja o arquivo de conexao com BD, e funcoes de interação com o mesmo
+    - Pasta *models* => é a pasta onde ira conter as classe que irão tratar o json/map/list vindo do BD e metodos de conversao de um para outro
+    - Pasta *controller* => ...
 
 >Dependencias
 - A implementação inicial para este caso de uso, é similar ao [HTTP](../Dependencias/Rest-RestFull/HTTP.md).
