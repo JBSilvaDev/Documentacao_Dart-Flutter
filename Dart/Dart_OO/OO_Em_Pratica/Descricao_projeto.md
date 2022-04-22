@@ -72,7 +72,7 @@
     - @override toString()
         - Este método é apenas para retornar o conteudo da classe, assim podemos ver o resultado no console por exemplo, sem este metodo o retorno da classe sera uma Instancia.
 
-## Observações sobre alguns dos conteudos passados nos metodos
+## Observações sobre conteudos passados nas instancias dos metodos
 - Note que em alguns valores para evitar que seja passado valor nulo foi usado o aware operator *?? ''* onde é definido um valor *default* para cada instacia
 ***
 ### Classe [Endereco](./models/endereco.md)
