@@ -1,3 +1,7 @@
-void main(List<String> arguments) {
-  print('Hello world!');
+import 'controller/users_controller.dart';
+
+void main() {
+  //UsersController().buscaUsers();
+  UsersController().buscaId('2');
+  UsersController().novoUser();
 }
