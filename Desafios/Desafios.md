@@ -42,7 +42,7 @@ Desafios concluidos durante o curso
 >Desafio 3
 - Trabalhando com banco de dados SQL
     - Preencher no MySQL duas tabelas
-    - Estado salvar nesta tabela todos os estados do Brasil
+    - Estado, salvar nesta tabela todos os estados do Brasil
     - Exemplo:
         |Estado   |Sigla|
         |-------  |-----|
@@ -58,6 +58,16 @@ Desafios concluidos durante o curso
     - Fonte Estados: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados)
     - Fonte Cidades: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados/<idEstado>/distritos)
 - Resolução: [Clique aqui](../Desafios/Desafio_Dart/desafio_3)
+<br>
+
+>Desafio 4 - [Dart OO](../Dart/Dart_OO/)
+- Trabalhando com API
+    - [Json Modelo](./Desafio_Dart/desafio_4/backend/db.json)
+    - Criar modelos para cada objeto dentro da API
+    - Trabalhar com HTTP para conexão com API
+    - Execultar comandos de Get para obter informações da API
+        - Opcional fazer comandos de Post e Put
+    - Usando Dartion para criar servidor local com as informações do [Json](./Desafio_Dart/desafio_4/backend/db.json)
 
 <br><b>Flutter:</b>
 >Desafio 1: 

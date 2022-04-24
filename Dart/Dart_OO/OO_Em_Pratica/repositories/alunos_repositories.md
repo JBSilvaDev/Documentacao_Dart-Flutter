@@ -25,6 +25,8 @@ class AlunosRepositories {
     final alunoMap = jsonDecode(alunosResponse.body);
 
     return Aluno.fromMap(alunoMap);
+    // Para este caso como o retorno ja é um Objeto entre aspas, ou seja é um objeto string, pode-se passar diretamente para o fromJson no retorno
+    // return Aluno.fromJson(alunosResponse.body)
   }
 
   Future<void> update(Aluno aluno) async {

@@ -212,6 +212,13 @@ var nomes = ['Ana', 'Bia', 'Carlos', 'Daniel', 'Maria', 'Pedro'];
 print(nomes.reduce((acumulador, proximo)=>'$acumulador, $proximo'));
 // retorno - Ana, Bia, Carlos, Daniel, Maria, Pedro
 ```
+>Converter uma lista para um tipo
+- Usando o .cast<tipagem>()
+  ```dart
+  var lista = ['1', '2', '3', '4', '5', '3'];
+  var lista2 = nomes.cast<int>()
+  // nomes2 retornara como inteiro
+  ```
 >Transformar lista em set
 ```dart
 pessoas.toSet()

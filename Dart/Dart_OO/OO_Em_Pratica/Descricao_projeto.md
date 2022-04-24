@@ -148,21 +148,45 @@
 - Todas as funcoes foram criadas para serem [ascincronas](../Async.md)
 - Abra o arquivo com codigo completo [aqui](./repositories/alunos_repositories.md)
     - findAll()
+        - Função ajustada para comandos [HTTP](./../../../Dependencias/Rest-RestFull/Models/HTTP_Models.md).
+            - get(Uri.parse('http://linkdaAPI/'))
+            - jsonDecode(response.body)
         - Uso do GET
         - Funcao do tipo <List<[Aluno](./models/aluno.md)>> que retorna uma lista de alunos contidos na [API](./backend/db.json).
-        - O uso deste funcçao esta atrelada ao findAll() em controller
+        - O uso deste funçao esta atrelada ao findAll() em controller
     - findById()
+        - Função ajustada para comandos [HTTP](./../../../Dependencias/Rest-RestFull/Models/HTTP_Models.md).
+            - get(Uri.parse('http://linkdaAPI/'))
+            - jsonDecode(response.body)
         - Uso do GET
         - Funcao do tipo <[Aluno](./models/aluno.md)> que recebe como parametro um id e retorna um mapa de alunos que passa pelo fromMap() convertendo em um objeto [Aluno](./models/aluno.md)
-        - O uso deste funcçao esta atrelada ao findAll() em controller
+        - O uso deste funçao esta atrelada ao findById() em controller
+        - Para este caso como o retorno ja é um Objeto entre aspas, ou seja é um objeto string, podederia passar diretamente para o fromJson no retorno
+            -   ```dart
+                returno Aluno.fromJson(alunosResponse.body)
+                ```
     - update()
+        - Função ajustada para comandos [HTTP](./../../../Dependencias/Rest-RestFull/Models/HTTP_Models.md).
+            - get(Uri.parse('http://linkdaAPI/'))
+            - jsonDecode(response.body)
         - Uso do PUT
-        - Funcao sem retorno que recebe como parametro um objeto [Aluno](./models/aluno.md) que dentro do put é passado como valor do *body* que passa pelo .toJson Encodando a string passada para o objeto [Aluno](./models/aluno.md) em json e o json para string, atualizando assim o BD pelo id do aluno.
-        - O uso deste funcçao esta atrelada ao update() em controller (#-controlers)
+        - Funcao sem retorno que recebe como parametro um objeto [Aluno](./models/aluno.md) que dentro do put é passado como valor do *body* que passa pelo .toJson(), assim o .toJson(toMap()) invoca o toMap() que ira tranformar o objeto [Aluno](./models/aluno.md) em um mapa, este mapa retorna para o toJson() que o Encoda, transformando-o em uma string json, atualizando assim o BD pelo id do aluno.
+        - Dependendo do tipo da API pode ser necessario incluir no put os headers, necessario ler documentação da API usada para entender suas necessidades
+            - ```dart
+                put(Uri.parse('http://localhost:3031/alunos/${aluno.id}'),body: aluno.toJson(), headers: {'content-type': 'application/json'});
+                ```
+        - O uso deste funçao esta atrelada ao update() em controller
     - insert()
+        - Função ajustada para comandos [HTTP](./../../../Dependencias/Rest-RestFull/Models/HTTP_Models.md).
+            - get(Uri.parse('http://linkdaAPI/'))
+            - jsonDecode(response.body)
         - Uso do POST
-        - Funcao sem retorno que recebe como parametro um objeto [Aluno](./models/aluno.md) que dentro do post é passado como valor do *body* que passa pelo .toJson Encodando a string passada para o objeto [Aluno](./models/aluno.md) em json e o json para string inserindo assim um novo aluno ao BD.
-        - O uso deste funcçao esta atrelada ao insert() em controller
+        - Funcao sem retorno que recebe como parametro um objeto [Aluno](./models/aluno.md) que dentro do post é passado como valor do *body* que passa pelo .toJson(), assim o .toJson(toMap()) invoca o toMap() que ira tranformar o objeto [Aluno](./models/aluno.md) em um mapa, este mapa retorna para o toJson() que o Encoda, transformando-o em uma string json, inserindo assim um novo aluno ao BD.
+        - Dependendo do tipo da API pode ser necessario incluir no put os headers, necessario ler documentação da API usada para entender suas necessidades
+            - ```dart
+                post(Uri.parse('http://localhost:3031/alunos/'),body: aluno.toJson(), headers: {'content-type': 'application/json'});
+                ```
+        - O uso deste funçao esta atrelada ao insert() em controller
 
 ### Observações sobre conteudos dentro das funcoes
 - findALL()
@@ -171,27 +195,31 @@
 ***
 ---
 ## Controlers
-- Neste arquivo foi defina uma classe [AlunosController](./controller/alunos_controller.md) onde foi criado uma variavel privada que recebe o conteudo de [AlunosRepositories{}](./repositories/alunos_repositories.md).
+- Neste arquivo foi defina uma classe [AlunosController](./controller/alunos_controller.md) onde foi criado uma variavel _privada que recebe o conteudo de [AlunosRepositories{}](./repositories/alunos_repositories.md).
 - Dentro da classe tambem foram criadas funcoes que chamam as funcoes do repositories passando informações a mesma para consulta, atualização, e inclusao de dados.
     - findAll()
         - Funcao sem retorno
-        - Criada variavel onde aguarda um retorno dos repositorio chamando a variavel privada.findAll()
+        - Criada variavel onde aguarda um retorno dos repositorio chamando a variavel _privada.findAll()
         - Percorre o conteudo retornado e printa os nomes dos alunos
     - findById()
         - Funcao sem retorno que recebe um id
-        - Criada variavel onde aguarda um retorno dos repositorio chamando a variavel privada.findById(id) passando um id existente na [API](./backend/db.json) para identificar um aluno expecifico
+        - Criada variavel onde aguarda um retorno dos repositorio chamando a variavel _privada.findById(id) passando um id existente na [API](./backend/db.json) para identificar um aluno expecifico.
+        - Retorna somente um aluno que corresponde ao id passado como parametro
     - update()
         - Funcao sem retorno que recebe um id
-        - Criada variavel onde aguarda um retorno dos repositorio chamando a variavel privada.findById(id) passando um id existente na [API](./backend/db.json) para identificar um aluno expecifico
+        - Criada variavel onde aguarda um retorno dos repositorio chamando a variavel _privada.findById(id) passando um id existente na [API](./backend/db.json) para identificar um aluno expecifico
         - Apos identificar um aluno é instanciado o .nomeCursos como esta instancia é uma lista de string usamos o metodo .add() para adionar um novo conteudo a esta lista
             - Em caso de setar um valor diretamente basta instanciar o objeto e passar seu valor de acordo com que a instancia pede, neste caso pede um objeto [Cidade](./models/cidade.md)
                 ```dart
                 aluno.endereco.cidade = Cidade(id: 9, nome: 'Posto da mata');
                 ```
-        - Passado o conteudo a ser atualizado,  é invocada a variavel privada.update(aluno) passando no paramentro o objeto identificado pelo id
+        - Passado o conteudo a ser atualizado,  é invocada a variavel *_privada.update(aluno)*
     - insert()
         - Criada variavel onde é passado o Objeto [Aluno](./models/aluno.md)
         - Neste objeto é preenchido os campos requeridos com seus respectivos tipos
-        - Passando todo o requerido para adionar um novo conteudo a [API](./backend/db.json), é invocada a variavel privada.insert(aluno) passando no paramentro o objeto que sera inserido no BD.
+        - Passando todo o requerido para adionar um novo conteudo a [API](./backend/db.json), é invocada a variavel _privada.insert(aluno) passando no paramentro o objeto que sera inserido no BD.
+
+> Arquivo main
+- No [arquivo principal main](./oo_em_pratica.md) invocamos a classe [AlunosController{}](./controller/alunos_controller.md) instanciando a funcao desejada
 
 
