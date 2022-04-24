@@ -1,7 +1,7 @@
 # Fundamentos
 ## Variaveis
 >String - Recebe valores de textos<br>
-Manipuladores - [Clique aqui.](./Manipuladores.md)
+Manipuladores - [Clique aqui.](./Manipuladores.md#string)
 ```dart
 String texto = 'texto';
 ```
