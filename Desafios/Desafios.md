@@ -68,6 +68,7 @@ Desafios concluidos durante o curso
     - Execultar comandos de Get para obter informações da API
         - Opcional fazer comandos de Post e Put
     - Usando Dartion para criar servidor local com as informações do [Json](./Desafio_Dart/desafio_4/backend/db.json)
+- Resolução: [Clique aqui](./Desafio_Dart/desafio_4/)
 
 <br><b>Flutter:</b>
 >Desafio 1: 
