@@ -93,9 +93,12 @@ print('$i é ${i.runtimeType} e $i é ${d.runtimeType}');
 // Resultado -> null é Null e null é Null (pois contem letras que nao podem ser convertidas em numeros)
 ```
 
-// Define quantidade de casas decimais pelo valor passado
+- Define quantidade de casas decimais pelo valor passado
+```dart
 var valor = 10.985985;
-valor..toStringAsFixed(2);
+var n = valor.toStringAsFixed(2);
+print(n);
+// Resultado -> 10.99
 ```
 ## Funcoes
 >then<br>
@@ -103,14 +106,12 @@ valor..toStringAsFixed(2);
 - Usado com funcoes tipo Future (async)
 ```dart
 void main() {
-
   var mensage = processo1().then((mensage) {
     print(mensage);
   });
 }
 
 Future<String> processo1() {
-  print('inicio p1');
-  return Future.delayed(Duration(seconds: 2), () => 'Fim do p1');
+  return Future.delayed(Duration(seconds: 2), () => 'Retorna isto apos 2 segundos');
 }
 ```
