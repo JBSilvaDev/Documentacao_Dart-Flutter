@@ -6,7 +6,7 @@ Manipuladores - [Clique aqui.](./Manipuladores.md#string)
 String texto = 'texto';
 ```
 >num - Recebe qualquer valor numerico<br>
-Manipuladores - [Clique aqui.](./Manipuladores.md)
+Manipuladores - [Clique aqui.](./Manipuladores.md#numeros)
 ```dart
 num numero = 1234;
 ```
