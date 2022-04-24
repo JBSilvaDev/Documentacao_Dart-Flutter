@@ -1,6 +1,6 @@
 # Trabalhando com arquivos
 Toda leitura de arquivo é feita pelo pacote [dart.io](https://api.dart.dev/stable/2.16.1/dart-io/dart-io-library.html), esta importação de pacote deve ser feita manualmente sem ajuda da IDE para evitar importação de pacote errado, ou caso deseje usar a IDE a seu favor prestar bastante atenção ao que esta sendo importado por ela<br>
-Em caso de leituras assincrona nao esquecer de o main ou classe onde estara fazendo a leitura em um Future com [async](./Dart_OO/Async.md).
+Em caso de leituras assincrona nao esquecer de o main ou classe onde estara fazendo a leitura em um Future com [async](../Async.md).
 
 ## Leitura
 - Importando o pacote io do dart
