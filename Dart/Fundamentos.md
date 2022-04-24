@@ -26,13 +26,6 @@ bool vOUf = true;
 ```dart
 var qualquerTipo = '';
 ```
->List - Recebe valores tipo lista []
-```dart
-List lista  = ['A', 'B'];
-// É uma boa pratica tipar o tipo que for usar
-List <String> lista  = ['A', 'B'];
-var lista  = <String> ['A', 'B'];
-```
 >Object - Recebe qualquer tipo de valor
 ```dart
 Object objeto = 'Qualquer valor';
@@ -41,35 +34,22 @@ Object objeto = 'Qualquer valor';
 ```dart
 dynamic dinamico = 'Qualquer valor';
 ```
-
-### Null Safety
->Declarar variaveis sem atribuir valores
-- Usar "?" apos a declaração de tipo
+>List - Recebe valores tipo lista []
 ```dart
-String? variavel;
+var lista  = ['A', 'B'];
+List lista  = ['A', 'B'];
 ```
->Verificar se o valor é nulo
+- Tipando tipo de conteudo da lista
+  - < Object > - Pode ter qualque valor no seu conteudo
+  - < dynamic > - Pode ter qualque valor no seu conteudo
+  - < String > - Recebe apenas textos
+  - < int > - Recebe apenas inteiros
+  - < double > - Recebe apenas decimal
 ```dart
-if(variavel != null){
-  print("Não é nulo");
-  }
-  else{
-    print("É nulo");
-  }
-// Ou
-  if (variavel == null){
-    print("É nulo");
-  }else{
-    print("Não é nulo");
-  }
-// Ou
-print(variavel = null? 'É nulo' : 'Não é nulo')
-// OU
-print(variavel != null? 'Não é nulo' : 'É nulo')
-// Ou
-print(variavel ?? "É nulo") // Neste caso, exiba o valor da variavel, se for nulo exibra "é nulo"
+var lista  = <String> ['A', 'B'];
+List <String> lista  = ['A', 'B'];
 ```
-### Constantes e Finais
+## Constantes e Finais
 >const
 - São imutaveis, ou seja o valor é definido na criação da variavel e nao pode ser alterado, mesmo se for criaca como nula nao aceitara novo valor.
 ```dart
@@ -110,6 +90,33 @@ switch(idade){
     default:
         print('Idade diferente de 17 e 18');
 }
+```
+## Null Safety
+>Declarar variaveis sem atribuir valores
+- Usar "?" apos a declaração de tipo
+```dart
+String? variavel;
+```
+>Verificar se o valor é nulo
+```dart
+if(variavel != null){
+  print("Não é nulo");
+  }
+  else{
+    print("É nulo");
+  }
+// Ou
+  if (variavel == null){
+    print("É nulo");
+  }else{
+    print("Não é nulo");
+  }
+// Ou
+print(variavel = null? 'É nulo' : 'Não é nulo')
+// OU
+print(variavel != null? 'Não é nulo' : 'É nulo')
+// Ou
+print(variavel ?? "É nulo") // Neste caso, exiba o valor da variavel, se for nulo exibra "é nulo"
 ```
 ## Console
 >print - Escreve textos, numero, variaveis, tipos, etc.. no console
