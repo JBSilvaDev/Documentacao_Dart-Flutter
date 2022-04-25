@@ -16,3 +16,5 @@ Aqui documento sobre algumas opções de uso de funcoes, classes, navegação et
 >Desafios: - 
 [Clique aqui](./Desafios/Desafios.md)
 
+
+Verificar typeDef nas funcoes
