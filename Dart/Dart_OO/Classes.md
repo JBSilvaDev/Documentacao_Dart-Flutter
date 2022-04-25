@@ -1,5 +1,5 @@
 # Classes
->Classes sao representações do mundo real dentro do dart<br>
+>Classes sao representações do mundo real dentro do dart, o famoso OBJETO<br>
 ## Criando uma classe
 ```dart
 class NomeDaClasse {}
