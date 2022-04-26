@@ -71,7 +71,6 @@ var resultado = alunos.map(pegarApenasONome).toList(); // Converte o objeto em u
 var listaComNomes = alunos.map((nome) => nome['nome']).toList(); // Acessa todos os itens na lista, e obtem todos os valores na chave nome
 // Retorno - [Alfredo, Wilson, Mariana, Guilherme, Ana, Ricardo]
 ```
->Percorrer mapas dentro de lista
 - Pegar todos as notas nos maps e soma com *reduce* ( mais detalhes em [Listas](./Listas.md) ) e faz uma media.
 ```dart
   var alunos = [

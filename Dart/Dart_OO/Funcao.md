@@ -5,7 +5,7 @@
 // Sem parametros
 nomeFuncao();
 // Com parametros
-nomeFuncao('parametros aqui nao ordem solicitada');
+nomeFuncao('parametros aqui na ordem solicitada');
 // Opcionais nomeados, nao precisa ser em ordem
 nomeFuncao(paran1: valor, paran2: valor);
 // Opcionais nao nomeados, necessario ser em ordem
