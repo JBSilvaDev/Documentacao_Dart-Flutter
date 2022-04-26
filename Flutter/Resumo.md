@@ -1,8 +1,4 @@
 # MaterialApp
-## Configuração de inicialização do app
->Verificar .yaml para utilizar:
-- Assets (Imagens, Fontes)
-- Dependencias (Pacotes terceiros) [Pub.Dev](https://pub.dev)
 >Titulo do app
 - title : 'Titulo aqui'
 >Tema/Cor
