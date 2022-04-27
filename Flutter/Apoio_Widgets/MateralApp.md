@@ -1,0 +1,18 @@
+# MaterialAPP
+-   É a porta de entrada do aplicativo
+-   Inicia no return do build
+- [Documentação](https://api.flutter.dev/flutter/material/MaterialApp-class.html)
+-   Compoe:
+    - >Titulo do app
+        - title : 'Titulo aqui'
+    - >Tema/Cor
+        - theme: ThemeData(appBarTheme: AppBarTheme(backgroundColor: Colors.blue, foregroundColor: Colors.black))
+    - >Pagina inicial
+        - home: [MyHomePage](./HomePage.md) (title:'Nome da HomePage')
+        - initialRoute: '/nome da pagina'
+    - >Telas/Paginas do app (Navegacao entre paginas)
+        - routes: {'/caminho': (_) => NomeClassePage()}
+    - >Ocultar msg de debug
+        - debugShowCheckedModeBanner: false,
+    - >Alinhamento to titulo ao centro
+        - centerTitle: true

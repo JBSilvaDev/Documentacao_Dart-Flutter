@@ -1,0 +1,10 @@
+# AppBar
+- É a barra superior do aplicativo
+- [Documentação](https://api.flutter.dev/flutter/material/AppBar-class.html)
+- Compoe:
+    - >Titulo do app
+        - title : Recebe Widget de texto
+    -   > Cor de fundo
+        - backgroundColor : Colors.cor
+    - >Adicionar conteudo a AppBar
+        - actions: [] Recebe uma lista de items que deseja adicionar, icones e botoes por exemplo
