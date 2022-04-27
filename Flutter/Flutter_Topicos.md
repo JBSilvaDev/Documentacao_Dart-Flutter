@@ -1,6 +1,7 @@
 # Flutter
 - Fundamentos (Acesse [Fundamentos DART](../Dart/Fundamentos.md) )
-- Resumo: [Clique Aqui](../Flutter/Resumo.md)## Configuração de inicialização do app
+- Resumo: [Clique Aqui](../Flutter/Resumo.md)
+## Configuração de inicialização do app
 >Verificar .yaml para utilizar:
 - Assets (Imagens, Fontes)
 - Dependencias (Pacotes terceiros) [Pub.Dev](https://pub.dev)
@@ -22,6 +23,10 @@
         ```
     - É um componente estatico, nao sofre alterações de estado
     - Aceita variaveis em seu corpo
+    - Ciclo de vida StatelessWidget:
+        -   Construor
+        -   Build
+        -   
 - StatefulWidget
     - É uma extenção de classes -> *class Nome extends StatefuWidget*
     - Dentro desta classe é obrigatório criar metodo createState
@@ -44,5 +49,17 @@
                     return WidgetQueDesejaRetornar();
                 }
                 ```
+        -   Ciclo de vida StatefulWidget
+            - Construtor
+            - CreateState
+                -   State<StatefulWidget> 
+                -   Construtor
+                -   InitState
+                -   DidChangeDependecies
+                -   Build
+            -   SetState
+                -   Build
+    
+    
 
 
