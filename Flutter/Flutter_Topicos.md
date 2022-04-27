@@ -63,7 +63,7 @@
     - initState(){}
         -  É um metódo que é chamado sempre que o aplicativo é inicado
         -  Dentro deste metodo nao pode ser invocada outra funcao ou navegação pois ira provocar um erro devido a pagina nao esta completamente carregada.
-        -  Para fazer o processo aguardar conclusao do builder usar-se o WidgetBinding
+        -  Para fazer o processo aguardar conclusao do builder usar-se o WidgetBinding/addPostFrameCallback
             ```dart
                 WidgetBinding.instance?.addPostFrameCallback((timeStamp){'O que deseja fazer apos pagina completar carregamento}
             ```
