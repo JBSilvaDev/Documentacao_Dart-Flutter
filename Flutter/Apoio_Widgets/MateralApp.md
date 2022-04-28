@@ -6,7 +6,9 @@
     - >Titulo do app
         - title : 'Titulo aqui'
     - >Tema/Cor
-        - theme: ThemeData(appBarTheme: AppBarTheme(backgroundColor: Colors.blue, foregroundColor: Colors.black))
+        - theme: Recebe ThemeData que é composto por:
+            -   appBarTheme: Configurações da AppBar -> AppBarTheme(backgroundColor: Colors.blue, foregroundColor: Colors.black)
+            -   textTheme: Configurações do tema de texto padrao
     - >Pagina inicial
         - home: [MyHomePage](./HomePage.md) (title:'Nome da HomePage')
         - initialRoute: '/nome da pagina'

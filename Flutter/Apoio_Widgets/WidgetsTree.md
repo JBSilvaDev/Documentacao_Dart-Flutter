@@ -9,13 +9,13 @@
     -   image: Recebe Widget de imagem
         - NetworkImage ou AssetsImage que irão receber o link da imagem
 - Pode ser passado da seguinte forma:
-    - Image.asset() recebe link local da imagem
+    -   Image.asset() recebe link local da imagem
     -   Image.network() recebe link online da imagem
 ***
 ## Text
 - Usado para exibir textos nos aplicativos, texto passado diretamente nos ()
 - Compoe:
-    - style: Rebece um TextStyle()
+    - style: Rebece um [TextStyle()](WidgetsTree.md#TextStyle)
 ### TextStyle
 - Usado para estilizar textos
 - Compoe:
@@ -36,17 +36,17 @@
 - É um conjunto de conficurações para o widget pai
 - Compoe:
     -   color: Colors.cor,
-    -   image: Recebe DecorationImage
-    -   borderRadius: Recebe BorderRadius,
-    -   boxShadow: Recebe uma lista de configurações para sombreamento como BoxShadow()
-    -   image: Recebe um DecorationImage() *Necessario ter configurado o .yaml **assets**
+    -   image: Recebe [DecorationImage()](WidgetsTree.md#DecorationImage)
+    -   borderRadius: Recebe [BorderRadius()](WidgetsTree.md#BorderRadius),
+    -   boxShadow: Recebe uma lista de configurações para sombreamento como [BoxShadow()](WidgetsTree.md#BorderRadius)
+    -   image: Recebe um [DecorationImage()](WidgetsTree.md#DecorationImage) *Necessario ter configurado o .yaml **assets**
 ### BorderRadius
 - Usado para passar valores que definem arrendondamento das bordas de um widget
     - BorderRadius.
-        - BorderRadius.all(Recebe Radius)
-        - BorderRadius.horizontal(left:Recebe Radius, right: Recebe Radius)
-        - BorderRadius.vertical(top:Recebe Radius, buttom: Recebe Radius)
-        - BorderRadius.only(topLeft:Recebe Radius, topRight: Recebe Radius, buttomLetf: Recebe Radius, buttomRight: Recebe Radius)
+        - BorderRadius.all(Recebe [Radius()](WidgetsTree.md#Radius))
+        - BorderRadius.horizontal(left:Recebe [Radius()](WidgetsTree.md#Radius), right: Recebe [Radius()](WidgetsTree.md#Radius))
+        - BorderRadius.vertical(top:Recebe [Radius()](WidgetsTree.md#Radius), buttom: Recebe [Radius()](WidgetsTree.md#Radius))
+        - BorderRadius.only(topLeft:Recebe [Radius()](WidgetsTree.md#Radius), topRight: Recebe [Radius()](WidgetsTree.md#Radius), buttomLetf: Recebe [Radius()](WidgetsTree.md#Radius), buttomRight: Recebe [Radius()](WidgetsTree.md#Radius))
 #### Radius
 - Usado para passar valores ao BorderRadius
     - Radius.
@@ -59,18 +59,9 @@
     - fit: Recebe um BoxFit... que define o preenchimento da imagem
 #### BoxShadow
 - Usado para passar valores de sombreamento
-<<<<<<< HEAD
 - Compoe:
     - color: Recebe uma cor (Colors.black)
     - blurRadius: Recebe um inteiro para tonalidade da sombra
     - offset: Recebe Offset(int, int) posicao da sombra, int positivo = button, right, int negativo = top, left
 - É possivel definir mais de um BoxShadow
 ***
-=======
-    - Compoe:
-        - color: Recebe uma cor (Colors.black)
-        - blurRadius: Recebe um inteiro para tonalidade da sombra
-        - offset: Recebe Offset(int, int) posicao da sombra, int positivo = button, right, int negativo = top, left
-    - É possivel definir mais de um BoxShadow
-***
->>>>>>> 63529272f97333641cca1413017b047025fc5faa

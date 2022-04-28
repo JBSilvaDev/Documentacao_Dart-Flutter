@@ -9,11 +9,14 @@
 -   [Drawers](./Apoio_Widgets/Drawers.md)
 -   [Demais Widgets de composição](./Apoio_Widgets/WidgetGeral.md)
 -   [Arvores de Widgets](./Apoio_Widgets/WidgetsTree.md)
+-   [Navegação](./Navegacao.md)
+-   [Parametros de Navegação](./Parametros_Navegacao.md) (Obter dados de uma pagina em outra)
 ## Configuração de inicialização do app
 >Verificar .yaml para utilizar:
 - Assets (Imagens, arquivos)
     -   [Imagem](./img/imagem.png) adicona a pasta assets tag assets do .yaml para acessar todos, ou adiciona um a um com seu caminho relativo completo (assets/) ou (/assets/image.jpg)
     - [Fonts](./img/fonts.png), adicona a pasta assets tag fonts do .yaml, na tag deve informar a famila da fonte, e na sua identação o caminho asset onde foi instalada (compativel com formatos .ttf e .otf)
+        -   Tambem é possivel efetuar a instação do pacote [google fonts](https://pub.dev/packages/google_fonts)
 - Dependencias (Pacotes terceiros) [Pub.Dev](https://pub.dev)
 ## Iniciando projeto flutter
 -   runApp()
@@ -69,14 +72,14 @@
                 -   Build
             -   SetState
                 -   Build
-    ## Iniciando carregamento de dados na tela
-    - initState(){}
-        -  É um metódo que é chamado sempre que o aplicativo é inicado
-        -  Dentro deste metodo nao pode ser invocada outra funcao ou navegação pois ira provocar um erro devido a pagina nao esta completamente carregada.
-        -  Para fazer o processo aguardar conclusao do builder usar-se o WidgetBinding/addPostFrameCallback
-            ```dart
-                WidgetBinding.instance?.addPostFrameCallback((timeStamp){'O que deseja fazer apos pagina completar carregamento}
-            ```
+## Iniciando carregamento de dados na tela
+- initState(){}
+    -  É um metódo que é chamado sempre que o aplicativo é inicado
+    -  Dentro deste metodo nao pode ser invocada outra funcao ou navegação pois ira provocar um erro devido a pagina nao esta completamente carregada.
+    -  Para fazer o processo aguardar conclusao do builder usar-se o WidgetBinding/addPostFrameCallback
+        ```dart
+            WidgetBinding.instance?.addPostFrameCallback((timeStamp){'O que deseja fazer apos pagina completar carregamento}
+        ```
     
     
 
