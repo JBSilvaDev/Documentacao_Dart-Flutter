@@ -11,7 +11,9 @@
 -   [Arvores de Widgets](./Apoio_Widgets/WidgetsTree.md)
 ## Configuração de inicialização do app
 >Verificar .yaml para utilizar:
-- Assets (Imagens, Fontes)
+- Assets (Imagens, arquivos)
+    -   [Imagem](./img/imagem.png) adicona a pasta assets tag assets do .yaml para acessar todos, ou adiciona um a um com seu caminho relativo completo (assets/) ou (/assets/image.jpg)
+    - [Fonts](./img/fonts.png), adicona a pasta assets tag fonts do .yaml, na tag deve informar a famila da fonte, e na sua identação o caminho asset onde foi instalada (compativel com formatos .ttf e .otf)
 - Dependencias (Pacotes terceiros) [Pub.Dev](https://pub.dev)
 ## Iniciando projeto flutter
 -   runApp()
