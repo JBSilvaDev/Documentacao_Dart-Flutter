@@ -15,5 +15,6 @@
     -   height: Altura do container, caso nao seja definica ele tomara todo espaço disponivel
     -   color: Cor do container
     -   margin: Recebe um valor em [EdgeInserts](./WidgetsTree.md) para definir as margens,
-    -   padding: Recebe um valor em [EdgeInserts](./WidgetsTree.md) para definir as margens,
+    -   padding: Recebe um valor em [EdgeInserts](./WidgetsTree.md) para definir as padding,
     -   decoration: Quando usado a opção color do widget nao ira mais funcionar pois este parametro tem sua propria definição de cor, Usado com [BoxDecoration](./WidgetsTree.md)
+    -   
