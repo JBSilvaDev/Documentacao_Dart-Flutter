@@ -59,9 +59,18 @@
     - fit: Recebe um BoxFit... que define o preenchimento da imagem
 #### BoxShadow
 - Usado para passar valores de sombreamento
+<<<<<<< HEAD
 - Compoe:
     - color: Recebe uma cor (Colors.black)
     - blurRadius: Recebe um inteiro para tonalidade da sombra
     - offset: Recebe Offset(int, int) posicao da sombra, int positivo = button, right, int negativo = top, left
 - É possivel definir mais de um BoxShadow
 ***
+=======
+    - Compoe:
+        - color: Recebe uma cor (Colors.black)
+        - blurRadius: Recebe um inteiro para tonalidade da sombra
+        - offset: Recebe Offset(int, int) posicao da sombra, int positivo = button, right, int negativo = top, left
+    - É possivel definir mais de um BoxShadow
+***
+>>>>>>> 63529272f97333641cca1413017b047025fc5faa
