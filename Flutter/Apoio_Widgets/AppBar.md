@@ -8,3 +8,5 @@
         - backgroundColor : Colors.cor
     - >Adicionar conteudo a AppBar
         - actions: [] Recebe uma lista de items que deseja adicionar, icones e botoes por exemplo
+        - Exemplo botao com ações na actions
+            - [PopupMenuButton](./PopupMenuButton.md)
