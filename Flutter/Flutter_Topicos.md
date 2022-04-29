@@ -11,6 +11,7 @@
 -   [Arvores de Widgets](./Apoio_Widgets/WidgetsTree.md)
 -   [Navegação](./Navegacao.md)
 -   [Parametros de Navegação](./Parametros_Navegacao.md) (Obter dados de uma pagina em outra)
+-   [Media Query](./MediaQuery.md)
 ## Configuração de inicialização do app
 >Verificar .yaml para utilizar:
 - Assets (Imagens, arquivos)
