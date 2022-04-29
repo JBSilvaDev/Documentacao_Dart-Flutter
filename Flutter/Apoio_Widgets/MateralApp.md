@@ -12,9 +12,11 @@
     - >Pagina inicial
         - home: [MyHomePage](./HomePage.md) (title:'Nome da HomePage')
         - initialRoute: '/nome da pagina'
-    - >Telas/Paginas do app (Navegacao entre paginas)
+    - >Telas/Paginas do app -> [Navegacao entre paginas](../Navegacao.md))
         - routes: {'/caminho': (_) => NomeClassePage()}
     - >Ocultar msg de debug
         - debugShowCheckedModeBanner: false,
     - >Alinhamento to titulo ao centro
         - centerTitle: true
+    - >Navegação avançada por rotas -> [Navegacao](../Navegacao.md)
+        - onGenerateRoute: (RouteSettings settings){Condicionais para navegação}

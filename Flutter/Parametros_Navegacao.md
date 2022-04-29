@@ -64,3 +64,28 @@ Navigator.of(context).pushNamed('/detalhe', arguments: {'id': 15});
 ```
 - No exemplo como estou passando um map no arguments, é necessario efetuar a tipagem do valor passado nos arguments onde os dados serão recebidos.
 - A Recuperação do valor é realizada das mesmas formas mostradas acima
+## Obtendo parametro, execultando ação entre paginas
+- Estrategia usada pra execultar alguma ação quando o usuario voltar da pagina navegada
+- No mesmo pressed de um botao ou similar, usa-se o [Async/Await](../Dart/Dart_OO/Async.md)
+- Ao clicar no botao a função ira navegar para pagina indicada, porem a mesma ficara aguardando um retorno para execultar alguma outra ação
+```dart
+// Pagina
+onPressed: () async {
+    print('Essa mensagem quando navega para pagina indicada');
+    final retorno = await Navigator.of(context).pushNamed('/pagina');
+    print('Esta mensagem quando retorna da pagina indicada');
+    print('Retorno da pagina foi $retorno');
+    await Navigator.of(context).pushNamed('/outraPagina');
+    },
+```
+```dart
+// Outra pagina
+onPressed: () {
+    Navigator.of(context).pop('Voltei');},
+```
+-   Printa uma msg
+    -   Navega para pagina indicada
+-   Aguarda retorno
+-   Printa outra msg
+-   Printa o retorno da pagina feito no pop do pressed *(Voltei)*
+    -   Navega para outra pagina

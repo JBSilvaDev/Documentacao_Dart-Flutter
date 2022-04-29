@@ -100,7 +100,7 @@ ElevatedButton(
     ```
 ***
 ## Navegação por rotas
-- Necessario configuração das rodas no [MaterialApp](./Apoio_Widgets/MateralApp.md)
+- Necessario configuração de routers no [MaterialApp](./Apoio_Widgets/MateralApp.md)
 - O MaterialApp nao pode ser const
 >pushNamed
 - Dentro de onPressed ou similar de um botão passa-se a funcao Navigator.of
@@ -123,4 +123,30 @@ Navigator.of(context).pushNamed('/page2');
     ```dart
     Navigator.of(context).pushNamedAndRemoveUntil('/page1',ModalRoute.withName('/page2'));
     ```
-
+---
+# Navegaçao avançada
+- Necessario fazer configuração de onGenerateRoute no [MaterialApp](./Apoio_Widgets/MateralApp.md)
+- Dentro da função RouteSettings passa-se os condicionais:
+    - Se o paran for igual a '/' retorna o MaterialPageRoute que é composta por settings e builder
+    - O settings recebe o parametro da funcao que é param
+    - O builder recebe uma funcao anonima que recebe context e retorna a pagina que ira navegar
+    - Esta ação ira empilhar a pagina informada sobre a pagina atual
+    -   ```dart
+        onGenerateRoute: (RouteSettings param) {
+                if (param.name == '/') {
+                    return MaterialPageRoute(
+                    settings: param,
+                    builder: (context) => HomePage(),
+                    );
+                }
+                if (settings.name == '/detalhe') {
+                    return MaterialPageRoute(
+                    settings: settings,
+                    builder: (context) => DetalhePage(),
+                    );}},
+        ```
+- Feita a configuração no [MaterialApp](./Apoio_Widgets/MateralApp.md) e passa das condicionais para navegação, o proceço para invocar a pagina é o mesmo da nevegação nomeada
+    ```dart
+    Navigator.of(context).pushNamed('/page2');
+    ```
+- Para obter dados nos parametros em ambos os modos de navegação seguir [Parametros de navegação](./Parametros_Navegacao.md)
