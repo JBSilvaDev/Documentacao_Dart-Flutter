@@ -87,4 +87,4 @@
 -   Faz a rotação de outro widget
 -   Compoe:
     -   quarterTurns: Recebe o valor da rodação (negativo esquerda, positivo direira)
-    -   child: Recebe o widget que sera rotacionado
+    -   child: Recebe o widget que sera rotacionado.
