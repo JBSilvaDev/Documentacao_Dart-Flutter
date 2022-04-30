@@ -16,7 +16,7 @@
     -   color: Cor do container
     -   margin: Recebe um valor em [EdgeInserts](./WidgetsTree.md) para definir as margens,
     -   padding: Recebe um valor em [EdgeInserts](./WidgetsTree.md) para definir as padding,
-    -   decoration: Quando usado a opção color do widget nao ira mais funcionar pois este parametro tem sua propria definição de cor, Usado com [BoxDecoration](./WidgetsTree.md)
+    -   decoration: Quando usado a opção color do widget nao ira mais funcionar pois este parametro tem sua propria definição de cor, Usado com [BoxDecoration](./WidgetsTree.md#boxdecoration)
     -   child: Recebe o widget filho para composição
     -   OBS: É possivel adicionar um Container dentro do outro
 >Rows & Columns
