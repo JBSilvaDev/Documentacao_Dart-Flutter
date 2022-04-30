@@ -48,5 +48,5 @@ print('App Bar ${appbarra.preferredSize.width}'); // Largura
         ```dart
         Container(
             color: Colors.red,
-            height: 1000 * .5,
+            height: (Total - Barra Status - AppBar) * .5,
         ```

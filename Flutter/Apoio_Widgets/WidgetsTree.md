@@ -32,14 +32,20 @@
         -   EdgeInsets.fromLTRB(leftValor, topValor, rightValor, bottomValor)
         -   EdgeInsets.only(left: valor, top: valor, right: valor, bottom: valor)
 ***
+
 ## BoxDecoration
 - É um conjunto de conficurações para o widget pai
 - Compoe:
+    -   gradient: Recebe [LinearGradient()](WidgetsTree.md#LinearGradient)
     -   color: Colors.cor,
     -   image: Recebe [DecorationImage()](WidgetsTree.md#DecorationImage)
     -   borderRadius: Recebe [BorderRadius()](WidgetsTree.md#BorderRadius),
     -   boxShadow: Recebe uma lista de configurações para sombreamento como [BoxShadow()](WidgetsTree.md#BorderRadius)
     -   image: Recebe um [DecorationImage()](WidgetsTree.md#DecorationImage) *Necessario ter configurado o .yaml **assets**
+### LinearGradient
+-   Usado para passar mais de uma cor a um widget
+-   Compoe:
+    -   colors: Recebe uma lista de cores -> [Colors.red, Colors.green, Colors.blue]
 ### BorderRadius
 - Usado para passar valores que definem arrendondamento das bordas de um widget
     - BorderRadius.
@@ -47,7 +53,7 @@
         - BorderRadius.horizontal(left:Recebe [Radius()](WidgetsTree.md#Radius), right: Recebe [Radius()](WidgetsTree.md#Radius))
         - BorderRadius.vertical(top:Recebe [Radius()](WidgetsTree.md#Radius), buttom: Recebe [Radius()](WidgetsTree.md#Radius))
         - BorderRadius.only(topLeft:Recebe [Radius()](WidgetsTree.md#Radius), topRight: Recebe [Radius()](WidgetsTree.md#Radius), buttomLetf: Recebe [Radius()](WidgetsTree.md#Radius), buttomRight: Recebe [Radius()](WidgetsTree.md#Radius))
-#### Radius
+### Radius
 - Usado para passar valores ao BorderRadius
     - Radius.
         - Radius.circular(Valor a ser passado)
@@ -57,7 +63,7 @@
 - Compoe:   
     - image: Recebe um AssetImage(Link da imagem) ou um NertWorkImage(Url da imagem)
     - fit: Recebe um BoxFit... que define o preenchimento da imagem
-#### BoxShadow
+### BoxShadow
 - Usado para passar valores de sombreamento
 - Compoe:
     - color: Recebe uma cor (Colors.black)
@@ -65,5 +71,50 @@
     - offset: Recebe Offset(int, int) posicao da sombra, int positivo = button, right, int negativo = top, left
 - É possivel definir mais de um BoxShadow
 ***
-
-
+## Buttons
+- Widgets recebidos nas composições de botoes
+### TextButton.styleFrom()
+- Recebido em TextButton()
+- Compoe:
+    -   primary: Recebe a cor do texto,
+    -   padding: Recebe um [EdgeInsets](./WidgetsTree.md#EdgeInsets)
+    -   minimumSize: Recebe tamanho minimo -> Size(largura, altura),
+    -   shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#RoundedRectangleBorder) para formatação do botao ao ser clicado.
+### ElevatedButton.styleFrom()
+- Recebido em ElevatedButton()
+- Compoe:
+    -   primary: Recebe a cor do texto,
+    -   padding: Recebe um [EdgeInsets](./WidgetsTree.md#EdgeInsets)
+    -   minimumSize: Recebe tamanho minimo -> Size(largura, altura),
+    -   shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#RoundedRectangleBorder) para formatação do botao.
+### RoundedRectangleBorder
+- Usado em estilização
+    - Compoe:
+        -   borderRadius: Recebe [BorderRadius](./WidgetsTree.md#BorderRadius)
+        -   shadowColor: Recebe a cor da sombra
+### Icons
+- Usado para icones
+-   Compoe:
+    - Icon.icone_desejado
+    - size: Recebe o tamanho do icone
+    - color: Recebe Colors.cor
+### ButtonStyle
+- Usado para estilização
+    - Compoe:
+        -   shadowColor: Recebe a cor da sombra do botao -> MaterialStateProperty,
+        -   minimumSize: Recebe o tamanho minimo do botao - MaterialStateProperty,
+        -   backgroundColor: Recebe a cor de fundo do botao em MaterialStateProperty
+        -   shape: Recebe formatação do MaterialStateProperty
+### MaterialStateProperty
+- Usado para passar propriedades para [ButtonStyle](./WidgetsTree.md#ButtonStyle)
+- Compoe:
+    -   MaterialStateProperty.all(Recebe propriedades a ser passada para o botao, aceita outros widgets),
+        -   MaterialStateProperty.all(Colors.cor),
+        -   MaterialStateProperty.all(Size(largura, altura)),
+        -   MaterialStateProperty.all([RoundedRectangleBorder()](./WidgetsTree.md#RoundedRectangleBorder)),
+    -   MaterialStateProperty.resolveWith([Pode receber uma funcao com condições para aplicar uma propriedade](../img/MaterialStateProperty.png))
+## RoundedRectangleBorder
+-   Usado para passar formatação de bordas para widget
+-   Compoe:
+    -   borderRadius: Recebe [BorderRadius](./WidgetsTree.md#BorderRadius)
+    -   side: Recebe BorderSide(color: Colors.red) para cor das bordas

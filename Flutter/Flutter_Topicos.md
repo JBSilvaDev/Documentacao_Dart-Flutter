@@ -10,8 +10,9 @@
 -   [Demais Widgets de composição](./Apoio_Widgets/WidgetGeral.md)
 -   [Arvores de Widgets](./Apoio_Widgets/WidgetsTree.md)
 -   [Navegação](./Navegacao.md)
--   [Parametros de Navegação](./Parametros_Navegacao.md) (Obter dados de uma pagina em outra)
--   [Media Query](./MediaQuery.md)
+-   [Parametros de Navegação](./Parametros_Navegacao.md) - (Obter dados de uma pagina em outra)
+-   [Media Query](./MediaQuery.md) - (Configurações e dimenções de tela)
+-   [Layout Builder](./Layout_Builder.md) - (Configurações e dimenções de tela)
 ## Configuração de inicialização do app
 >Verificar .yaml para utilizar:
 - Assets (Imagens, arquivos)
