@@ -54,7 +54,6 @@
             -   CrossAxisAlignment.center = No meio da linha coluna
             -   CrossAxisAlignment.start = Direita da linha da coluna
             -   CrossAxisAlignment.end = Esquerda da linha da coluna
-<<<<<<< HEAD
 >Buttons
 -   TextButton()
 -   Compoe:
@@ -89,6 +88,3 @@
 -   Compoe:
     -   quarterTurns: Recebe o valor da rodação (negativo esquerda, positivo direira)
     -   child: Recebe o widget que sera rotacionado
-=======
-        
->>>>>>> 70aa1d998e43c3e44612ba3c5c0e33c4c0ff9ef2
