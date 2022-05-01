@@ -7,8 +7,19 @@
         - title : 'Titulo aqui'
     - >Tema/Cor
         - theme: Recebe ThemeData que é composto por:
-            -   appBarTheme: Configurações da AppBar -> AppBarTheme(backgroundColor: Colors.blue, foregroundColor: Colors.black)
-            -   textTheme: Configurações do tema de texto padrao
+            -   appBarTheme: Configurações da AppBar -> AppBarTheme(
+                - backgroundColor: Colors.blue, foregroundColor: Colors.black)
+            -   textTheme: Configurações do tema de texto padrao -> TextTheme(
+                - bodyText1: [TextStyle](./WidgetsTree.md#textstyle)(color: Colors.amber)),
+            -   elevatedButtonTheme: Configurações de tema para botoes -> ElevatedButtonThemeData(
+                - style: ElevatedButton.styleFrom(
+                - primary: Colors.green)),
+            -   iconTheme: Configurações para icones -> IconThemeData(
+                - color: Colors.green),
+            -   snackBarTheme: Configurações para SnakBar -> SnackBarThemeData(
+                - backgroundColor: Colors.amber,)
+        - Mais em [flutter.dev](https://api.flutter.dev/flutter/material/ThemeData-class.html)
+            
     - >Pagina inicial
         - home: [MyHomePage](./HomePage.md) (title:'Nome da HomePage')
         - initialRoute: '/nome da pagina'

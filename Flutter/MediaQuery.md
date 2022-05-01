@@ -1,6 +1,6 @@
 # Media Query
 -   Usado para obter informações sobre a tela do dispositivo
-## Utulização
+## Utlização
 - Dentro do build da pagina definir uma variavel que ira receber informações da MediaQuery.of(context)
 ```dart
 final midiaQuery = MediaQuery.of(context);

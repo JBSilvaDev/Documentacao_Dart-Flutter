@@ -3,6 +3,7 @@
 
 -   [Documentação](https://docs.flutter.dev/reference/widgets)
 -   Widgets em sua maioria *filhos e netos* do [Scaffold](Scaffold.md)
+-   Modelos usados sao para Android, para IOS usar [Cupertino](https://docs.flutter.dev/development/ui/widgets/cupertino)
 >SizedBox()
 -   Usado para dar espaçamento entre widgets
 -   Compoe:

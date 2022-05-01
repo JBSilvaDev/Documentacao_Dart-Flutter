@@ -11,6 +11,11 @@
 - Pode ser passado da seguinte forma:
     -   Image.asset() recebe link local da imagem
     -   Image.network() recebe link online da imagem
+## CircleAvatar()
+- Usado para definir imagens em formato circular (comuns em imagens de perfil)
+- Compoe:
+    -   backgroundImage: Recebe Widget de [imagem](./WidgetsTree.md#image)
+    -   child: Recebe widget para exibição no circleavatar
 ***
 ## Text
 - Usado para exibir textos nos aplicativos, texto passado diretamente nos ()
@@ -87,11 +92,6 @@
     -   padding: Recebe um [EdgeInsets](./WidgetsTree.md#EdgeInsets)
     -   minimumSize: Recebe tamanho minimo -> Size(largura, altura),
     -   shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#RoundedRectangleBorder) para formatação do botao.
-### RoundedRectangleBorder
-- Usado em estilização
-    - Compoe:
-        -   borderRadius: Recebe [BorderRadius](./WidgetsTree.md#BorderRadius)
-        -   shadowColor: Recebe a cor da sombra
 ### Icons
 - Usado para icones
 -   Compoe:
@@ -118,3 +118,13 @@
 -   Compoe:
     -   borderRadius: Recebe [BorderRadius](./WidgetsTree.md#BorderRadius)
     -   side: Recebe BorderSide(color: Colors.red) para cor das bordas
+    -   shadowColor: Recebe a cor da sombra
+***
+## Divider
+- Usado para efetuar separação de itens (comum em listas)
+- Compoe:
+    - color: Recebe a cor do divisor
+    - thickness: Recebe a espessura do divisor
+    - height: Recebe a altura de cada item dividido
+    - indent: Recebe onde a linha divisora ira iniciar,
+    - endIndent: Recebe onde a linha divisora ira terminar

@@ -1,6 +1,6 @@
 # Layout Builder
 -   Usado para obter informações sobre a tela do dispositivo
-## Utulização
+## Utilização
 - Subistituir o widget principal pelo LayoutBuilder() e repassa-lo no return
     - Compoe:
         - builder: Função que recebe dois parametros (context, constraints) e retorna o widget principal
