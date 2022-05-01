@@ -9,7 +9,7 @@
 - Device preview - [Preview](../Dependencias/Device_preview.md)
 - Graficos tipo conometro/acelerador - [Gauges](./Dependencias/Gauges_Visual_Acelerometros.md)
 ***
-## Verificação de sistema
+## Verificação de plataforma em uso
 - Importar pacote
 ```dart
 import 'dart:io';

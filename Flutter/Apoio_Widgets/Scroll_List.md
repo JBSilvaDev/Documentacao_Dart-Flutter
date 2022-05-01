@@ -9,18 +9,18 @@
 - Usado empilhar os itens em formato de lista evitando assim que "estourem" o limite da tela
 - Compoe:
     - children: Recebe uma lista de widgets
-## ListTitle
+## ListTile
 - Usado para itens de lista
 - Compoe:
     -   title: Recebe widget de texto par titulo
     -   subtitle: Recebe widget de texto com subtitulo
-    -   leading: Recebe um widget de [imagem](./WidgetsTree.md#image) para lado esquedo
-    -   trailing: Recebe um widget de [imagem](./WidgetsTree.md#image) para lado direito
+    -   leading: Recebe um widget para lado esquedo
+    -   trailing: Recebe um widget para lado direito
 ## ListView.builder()
 - Usado para empilhar itens de um contexto, carregando-os conforme a necessidade
 - Compoe:
     - itemCount: Recebe a quantidade de itens que tera na lista
-    - itemBuilder: Recebe uma funcao anonima de (context, index){} onde seu retorno é um widget com conteudo da lista, como um [Container](./WidgetGeral.md) ou um [ListTitle](./Scroll_List.md#listtitle)
+    - itemBuilder: Recebe uma funcao anonima de (context, index){} onde seu retorno é um widget com conteudo da lista, como um [Container](./WidgetGeral.md) ou um [ListTile](./Scroll_List.md#listtile)
 ## ListView.separated
 - Usado para empilhar itens de um contexto, carregando-os conforme a necessidade
 - Compoe:

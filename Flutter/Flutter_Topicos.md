@@ -1,20 +1,6 @@
 # Flutter
 - Fundamentos (Acesse [Fundamentos DART](../Dart/Fundamentos.md) )
 - Resumo: [Clique Aqui](../Flutter/Resumo.md)
-## Widgets
--   [MaterialApp](./Apoio_Widgets/MateralApp.md)
--   [HomePage](./Apoio_Widgets/HomePage.md)
--   [Scaffold](./Apoio_Widgets/Scaffold.md)
--   [AppBar](./Apoio_Widgets/AppBar.md)
--   [Drawers](./Apoio_Widgets/Drawers.md)
--   [Widgets](./Apoio_Widgets/WidgetGeral.md)
--   [Widgets Composicao](./Apoio_Widgets/WidgetsTree.md)
--   [Caixas de dialogo (popup)](./Apoio_Widgets/Dialogs.md)
--   [Navegação](./Navegacao.md)
--   [Parametros de Navegação](./Parametros_Navegacao.md) - (Obter dados de uma pagina em outra)
--   [Scroll - List](./Apoio_Widgets/Scroll_List.md) - (Rolagem de tela)
--   [Media Query](./MediaQuery.md) - (Configurações e dimenções de tela)
--   [Layout Builder](./Layout_Builder.md) - (Configurações e dimenções de tela)
 ## Configuração de inicialização do app
 >Verificar .yaml para utilizar:
 - Assets (Imagens, arquivos)
@@ -52,6 +38,11 @@
                 return _ClassCriadaPrivada();
             }
             ```
+        - OU
+        -   ```dart
+            @override
+            _NomeDaClasse createState() => _NomeDaClasseState();
+            ```
     - É um componente que pode sofrer alterações de estado
     - Uma nova classe criada como privada, esta classe ira extender State passando a class que extente o StatefulWidget como tipo
         -   ```dart
@@ -79,9 +70,9 @@
 - initState(){}
     -  É um metódo que é chamado sempre que o aplicativo é inicado
     -  Dentro deste metodo nao pode ser invocada outra funcao ou navegação pois ira provocar um erro devido a pagina nao esta completamente carregada.
-    -  Para fazer o processo aguardar conclusao do builder usar-se o WidgetBinding/addPostFrameCallback
+    -  Para fazer o processo aguardar conclusao do builder usar-se o WidgetsBinding/addPostFrameCallback
         ```dart
-            WidgetBinding.instance?.addPostFrameCallback((timeStamp){'O que deseja fazer apos pagina completar carregamento}
+            WidgetsBinding.instance?.addPostFrameCallback((timeStamp){'O que deseja fazer apos pagina completar carregamento}
         ```
 ## BuildContext
 - É uma classe utilitaria dentro do flutter onde esta registrado TODOS os widgets de nossa estrutura

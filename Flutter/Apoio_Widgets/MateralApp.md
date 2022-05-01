@@ -6,7 +6,7 @@
     - >Titulo do app
         - title : 'Titulo aqui'
     - >Tema/Cor
-        - theme: Recebe ThemeData que é composto por:
+        - theme: Recebe *ThemeData* que é composto por:
             -   appBarTheme: Configurações da AppBar -> AppBarTheme(
                 - backgroundColor: Colors.blue, foregroundColor: Colors.black)
             -   textTheme: Configurações do tema de texto padrao -> TextTheme(
@@ -19,6 +19,8 @@
             -   snackBarTheme: Configurações para SnakBar -> SnackBarThemeData(
                 - backgroundColor: Colors.amber,)
         - Mais em [flutter.dev](https://api.flutter.dev/flutter/material/ThemeData-class.html)
+        - Para acessar o tema em um item especifico, *Theme.of(context).ItemDoTema*
+        - Para definir um tema em cada pagina/tela, usaro o *Theme(data: Themedata(configuração do tema))*, no body da pagina
             
     - >Pagina inicial
         - home: [MyHomePage](./HomePage.md) (title:'Nome da HomePage')

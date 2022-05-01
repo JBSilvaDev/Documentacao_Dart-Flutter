@@ -4,16 +4,16 @@
 -   [Documentação](https://docs.flutter.dev/reference/widgets)
 -   Widgets em sua maioria *filhos e netos* do [Scaffold](Scaffold.md)
 -   Modelos usados sao para Android, para IOS usar [Cupertino](https://docs.flutter.dev/development/ui/widgets/cupertino)
->SizedBox()
+## SizedBox()
 -   Usado para dar espaçamento entre widgets
 -   Compoe:
     -   height: Recebe altura
     -   width: Recebe largura
->Center()
+## Center()
 -  Todo conteudo deste widget fica centralizado na tela
 -  Recebe um unico filho
     - child: Widget
->Container()
+## Container()
 -   Conteiner representa uma caixa que pode conter um ou varios conteudos
 - Compoe:
     -   width: Largura do container, caso nao seja definica ele tomara todo espaço disponivel
@@ -24,7 +24,7 @@
     -   decoration: Quando usado a opção color do widget nao ira mais funcionar pois este parametro tem sua propria definição de cor, Usado com [BoxDecoration](./WidgetsTree.md#boxdecoration)
     -   child: Recebe o widget filho para composição
     -   OBS: É possivel adicionar um Container dentro do outro
->Rows() & Columns()
+## Rows() & Columns()
 - Rows
     -   Organiza seus filhos em linhas da esqueda para direitra
     -   Compoe:
@@ -55,7 +55,7 @@
             -   CrossAxisAlignment.center = No meio da linha coluna
             -   CrossAxisAlignment.start = Direita da linha da coluna
             -   CrossAxisAlignment.end = Esquerda da linha da coluna
->Buttons
+## Buttons
 -   TextButton()
 -   Compoe:
     -   onPressed: Recebe uma função de ação ao clicar (){}
@@ -82,10 +82,41 @@
     -   onTap: Recebe uma função de ação ao clicar (){}
     -   ao fazer algo: Recebe uma funcao que execulta uma ação ao fazer algo (onHorizontalDragStart, onVerticalDragStart, etc...)
 
->Text()
-
->RotatedBox()
+## Text()
+- Usado para definir strings na aplicação
+- Compoe:
+    - *Conteudo String*
+    - style: Recebe um [TextStyle](./WidgetsTree.md#textstyle)
+## RotatedBox()
 -   Faz a rotação de outro widget
 -   Compoe:
     -   quarterTurns: Recebe o valor da rodação (negativo esquerda, positivo direira)
     -   child: Recebe o widget que sera rotacionado.
+## SnackBar()
+- Usado para mensagens rapidas na tela, pode ou nao conter interações com usuario.
+- Dentro do onPressed ou similar invocamos a snackbar e enviamos seu conteudo para o ScaffoldMessenger
+- Declarada uma variavel que recebe SnackBar() <= O snackbar pode ser passado diretamente no paramentro do .showSnackBar
+- Por padrão as SnackBar sao fixas, para alterar adicione a propriedade behavior *Complet compose*
+    - Quando a snackbar esta fixa o width nao funciona.
+- [Simple compoe](../img/simpleSnack.png):
+    - context: Conteudo da snackbar
+- [Action compoe](../img/actionSnack.png):
+    - context: Conteudo da snackbar
+    - action: Recebe SnackBarAction que compoe:
+        - label: Texto exibido (string solta sem uso do Text())
+        - onPressed: Funcao anonima de ação ao ser clicada
+- [Complet compose](../img/completSnack.png):
+    - context: Conteudo da snackbar, aceita widgets
+    - action: Recebe SnackBarAction que compoe:
+        - label: Texto exibido (string solta sem uso do Text())
+        - onPressed: Funcao anonima de ação ao ser clicada
+        - duration: Recebe um [Duration](./WidgetsTree.md#duration)
+        - padding: Recebe [EdgeInserts](WidgetsTree.md#edgeinsets)
+        - behavior: Recebe SnackBarBehavior.floating
+        - width: Largura da SnackBar
+        - shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#roundedrectangleborder)
+- Invoca-se o *ScaffoldMessenger.of(context).showSnackBar(snackbar);*
+    - Passa como parametro do .of o [context](../Flutter_Topicos.md#buildcontext)
+    - Passa como paramentro do .showSnackBar a variavel que a contem.
+
+
