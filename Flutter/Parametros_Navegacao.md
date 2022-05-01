@@ -33,7 +33,7 @@
     -   Dentro do initial state *(classe privada principal da pagina _NomeDaPagina)*
     -   Definida uma variavel do tipo int? pois pode ser nula
     -   Criado um @override initState(){} que estara sobrepondo a ele mesmo com super.initState();
-    -   Dentro do initState foi usado o [WidgetBinding](Flutter_Topicos.md) explicado no top de carregamento de dados na tela
+    -   Dentro do initState foi usado o [WidgetBinding](Flutter_Topicos.md#iniciando-carregamento-de-dados-na-tela) explicado no top de carregamento de dados na tela
     -   Dentro do WidgetBingind criada uma variavel que ira receber o ModelRoute.of
     -   Este ModalRouter.of ira receber um context que pode ser nulo?
     -   Ainda dentro do WidgetBingind usa-se o setState para passar o valor do argumento para a variavel definda anteriormente *(int? id)*.

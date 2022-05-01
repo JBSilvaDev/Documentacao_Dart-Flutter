@@ -19,9 +19,9 @@
     -   width: Largura do container, caso nao seja definica ele tomara todo espaço disponivel
     -   height: Altura do container, caso nao seja definica ele tomara todo espaço disponivel
     -   color: Cor do container
-    -   margin: Recebe um valor em [EdgeInserts](./WidgetsTree.md) para definir as margens,
-    -   padding: Recebe um valor em [EdgeInserts](./WidgetsTree.md) para definir as padding,
-    -   decoration: Quando usado a opção color do widget nao ira mais funcionar pois este parametro tem sua propria definição de cor, Usado com [BoxDecoration](./WidgetsTree.md#BoxDecoration)
+    -   margin: Recebe um valor em [EdgeInserts](./WidgetsTree.md#edgeinsets) para definir as margens,
+    -   padding: Recebe um valor em [EdgeInserts](./WidgetsTree.md#edgeinsets) para definir as padding,
+    -   decoration: Quando usado a opção color do widget nao ira mais funcionar pois este parametro tem sua propria definição de cor, Usado com [BoxDecoration](./WidgetsTree.md#boxdecoration)
     -   child: Recebe o widget filho para composição
     -   OBS: É possivel adicionar um Container dentro do outro
 >Rows() & Columns()
@@ -60,12 +60,12 @@
 -   Compoe:
     -   onPressed: Recebe uma função de ação ao clicar (){}
     -   child: Recebe widget de texto,
-    -   style: Formatação do texto, recebe um [TextButton.styleFrom()](./WidgetsTree.md#TextButton.styleFrom()) ou [ButtonStyle](./WidgetsTree.md#ButtonStyle)
+    -   style: Formatação do texto, recebe um [TextButton.styleFrom()](./WidgetsTree.md#textbuttonstylefrom) ou [ButtonStyle](./WidgetsTree.md#ButtonStyle)
 -   ElevatedButton()
 -   Compoe:
     -   onPressed: Recebe uma função de ação ao clicar (){}
     -   child: Recebe widget de texto,
-    -   style: Formatação do texto, recebe um [ElevatedButton.styleFrom()](./WidgetsTree.md#ElevatedButton.styleFrom()) ou [ButtonStyle](./WidgetsTree.md#ButtonStyle)
+    -   style: Formatação do texto, recebe um [ElevatedButton.styleFrom()](./WidgetsTree.md#elevatedbuttonstylefrom)) ou [ButtonStyle](./WidgetsTree.md#ButtonStyle)
 -   ElevatedButton.icon()
 -   Compoe:
     -   onPressed: Recebe uma função de ação ao clicar (){}

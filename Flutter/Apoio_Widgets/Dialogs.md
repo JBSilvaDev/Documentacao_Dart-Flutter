@@ -99,7 +99,7 @@ onPressed: () {
 - O builder recebe uma funcao anonima que recebe um parametro qualquer
 - Seu retorno é um AlertDialog() que é composto por:
     - title: Titulo da caixa de dialogo
-    - content: Recebe um conteudo para a caixa de dialogo, no exemplo -> [SingleChildScrollView](Scroll_List.md) que em seu child recebe [ListBody](Scroll_List.md#listbody)
+    - content: Recebe um conteudo para a caixa de dialogo, no exemplo -> [SingleChildScrollView](Scroll_List.md#singlechildscrollview) que em seu child recebe [ListBody](Scroll_List.md#listbody)
     - actions: Recebe lista de Widgets que ira conter dentro da caixa de dialogo como botoes para execultar alguma ação.
 - O context passado no [navigator](../Navegacao.md#utilização) é o mesmo que esta no builder
 ```dart
