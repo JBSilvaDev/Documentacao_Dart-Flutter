@@ -20,8 +20,6 @@
 - Tratamento/Acesso conteudo List/Map (<i> .map() </i>): [Clique Aqui](../Dart/Dart_OO/TratamentoListMap.md)
 - Tratamento Map estilo Json: [Clique Aqui](../Dart/Dart_OO/Tratamento_Map_Estilo_Json.md)
 - Dart OO em pratica: [Clique Aqui](../Dart/Dart_OO/OO_Em_Pratica/Descricao_projeto.md)
-## Complementos
-- Dependencias: [Clique Aqui](../Dependencias/Dependencias.md)
 ## Conexão BD
 - HTTP (Models): [Clique Aqui](../Dependencias/Rest-RestFull/Models/HTTP_Models.md)
 - FireBase: [Clique Aqui](../Dependencias/Rest-RestFull/FireBase/HTTP_FireBase.md)
