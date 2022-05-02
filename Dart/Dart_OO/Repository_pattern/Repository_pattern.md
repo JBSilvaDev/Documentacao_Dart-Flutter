@@ -9,10 +9,10 @@ Este modelo consiste em organizar os arquivos de codigos em pastas que os repres
     - Pasta 📁 *models* => é a pasta onde ira conter as classe que irão tratar o json/map/list vindo do BD e metodos de conversao de um para outro
 
 >Dependencias
-- A implementação inicial para este caso de uso, é similar ao [HTTP](../Dependencias/Rest-RestFull/HTTP.md).
-- Foi criada uma classe assim como mostrado no modolo [HTTP](../Dependencias/Rest-RestFull/HTTP.md).
+- A implementação inicial para este caso de uso, é similar ao [HTTP](../../../Dependencias/Rest-RestFull/HTTP.md).
+- Foi criada uma classe assim como mostrado no modolo [HTTP](../../../Dependencias/Rest-RestFull/HTTP.md).
 - Usado a mesma [API via CEP](https://viacep.com.br/ws/45936000/json) para esta classe
-- A classe importa outro arquivo dart [cidade](./arquivos/cidade.dart) e tambem o pacote [HTTP](../Dependencias/Rest-RestFull/HTTP.md).
+- A classe importa outro arquivo dart [cidade](./arquivos/cidade.dart) e tambem o pacote [HTTP](../../../Dependencias/Rest-RestFull/HTTP.md).
 - Pasta 📁 *repositories*
     - ```dart
         import "package:http/http.dart" as http;
@@ -47,5 +47,5 @@ Este modelo consiste em organizar os arquivos de codigos em pastas que os repres
             }
         }
       ```
-- O codigo foi importado o repositorio e criada uma função future, explicada [aqui](./Dart_OO/Async.md).
+- O codigo foi importado o repositorio e criada uma função future, explicada [aqui](../Async.md).
 - Esta funcao cria uma nova instacia de CidadeRepository() e faz uma solicitação a mesma, caso tenha sucesso na busca, retorna a cidade, caso nao, exibe uma mensagem de erro.
