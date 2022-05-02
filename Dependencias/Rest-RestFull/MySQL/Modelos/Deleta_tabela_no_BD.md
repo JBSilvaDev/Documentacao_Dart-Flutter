@@ -1,4 +1,4 @@
-# Exibe dados de uma tabela no BD
+# Deleta dados de uma tabela no BD
 - Seguir primeiramente os passos indicados em [MySQL](../../MYSQL.md)
 - É possivel adicionar o comando em uma variavel, assim pode-se verificar por exemplo quantas linhas foram atingidas, ou numero do id criado.
 - Outra funcao para variavel é quando se usa o select, assim é possivel armazenar o conteudo do BD na variavel criada em formato de lista com mapas ["": {}, {}], Exemplo : [Usando SELECT](../Modelos/Exibindo_dados_do_BD.md).
