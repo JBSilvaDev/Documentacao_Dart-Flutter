@@ -20,13 +20,13 @@
 - Usado para empilhar itens de um contexto, carregando-os conforme a necessidade
 - Compoe:
     - itemCount: Recebe a quantidade de itens que tera na lista
-    - itemBuilder: Recebe uma funcao anonima de (context, index){} onde seu retorno é um widget com conteudo da lista, como um [Container](./WidgetGeral.md) ou um [ListTile](./Scroll_List.md#listtile)
+    - itemBuilder: Recebe uma funcao anonima de (context, index){} onde seu retorno é um widget com conteudo da lista, como um [Container](./WidgetGeral.md#container) ou um [ListTile](./Scroll_List.md#listtile)
 ## ListView.separated
 - Usado para empilhar itens de um contexto, carregando-os conforme a necessidade
 - Compoe:
-    - separatorBuilder: Recebe uma funcao anonima de (context, index){} onde seu retorno é um [divisor](./WidgetsTree.md#divider) ou qualquer outro widget que sirva para separar os itens, [Container](./WidgetGeral.md) por exemplo.
+    - separatorBuilder: Recebe uma funcao anonima de (context, index){} onde seu retorno é um [divisor](./WidgetsTree.md#divider) ou qualquer outro widget que sirva para separar os itens, [Container](./WidgetGeral.md#container) por exemplo.
     - itemCount: Recebe a quantidade de itens que tera na lista
-    - itemBuilder: Recebe uma funcao anonima de (context, index){} onde seu retorno é um widget com conteudo da lista, como um [Container](./WidgetGeral.md) ou um [ListTitle](./Scroll_List.md#listtitle)
+    - itemBuilder: Recebe uma funcao anonima de (context, index){} onde seu retorno é um widget com conteudo da lista, como um [Container](./WidgetGeral.md#container) ou um [ListTitle](./Scroll_List.md#listtitle)
 ## ListBody
 - Usado para empilhar itens em listas (um abaixo d outro)
 - Compoe:
