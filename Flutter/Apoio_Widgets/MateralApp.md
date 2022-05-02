@@ -12,7 +12,7 @@
             -   textTheme: Configurações do tema de texto padrao -> TextTheme(
                 - bodyText1: [TextStyle](./WidgetsTree.md#textstyle)(color: Colors.amber)),
             -   elevatedButtonTheme: Configurações de tema para botoes -> ElevatedButtonThemeData(
-                - style: ElevatedButton.styleFrom(
+                - style: [ElevatedButton.styleFrom](./WidgetsTree.md##elevatedbuttonstylefrom)(
                 - primary: Colors.green)),
             -   iconTheme: Configurações para icones -> IconThemeData(
                 - color: Colors.green),
