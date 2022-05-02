@@ -117,8 +117,8 @@ Future<void> buscaCep() async {
                 <UserTypes>[]);
         ```
 - a chave userTypes esta mapeando o valor recebido:
-    - map['user_types']? <i>(Se o valor nao for nulo)</i>
-    - .map< UserTypes >((type) <i>(Converta para um mapa do tipo [UserTypes](./ClassesModels/user_type.dart)</i>)
+    - map['user_types']? <i>(Indica que o valor pode ser nulo)</i>
+    - .map< UserTypes >((type) <i>(Converte para um mapa do tipo [UserTypes](./ClassesModels/user_type.dart)</i>)
     - return UserTypes.fromMap(type);}).toList()<i> (Retorna a invocação de fromMap dentro de [UserTypes](./ClassesModels/user_type.dart) e o transforma em uma lista) </i>
     -  ??< UserTypes >[] <i>(Ou retorna uma lista do tipo [UserTypes](./ClassesModels/user_type.dart) vazia, caso seja um conteudo invalido/nulo)</i>
 
@@ -127,9 +127,8 @@ Future<void> buscaCep() async {
 - ```dart
     factory User.fromJSON(String source) => User.fromMap(jsonDecode(source));
     ```
-- Faz a mesma coisa do modelo anterior, porem em arrow function e sem uso de variaveis
-- Ira receber uma String de nome source
-- Ira retornar o método Cidade.fromMap passando a variavel como parametro que irá efetuar a criação do objeto solicitado:
+- Recebe uma String/Json e a converte em Json, passando para fromMap a decodificação do json transformando em Map
+- O método fromMap irá efetuar a conversao do Map para o objeto solicitado:
 
 >Metodo 3
 
