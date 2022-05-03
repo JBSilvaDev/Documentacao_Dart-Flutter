@@ -1,5 +1,8 @@
 # Dependências
-## Conexão com BD
+## Conexão com BD 
+- Dartion - [Local Server](https://pub.dev/packages/dartion)
+    - Usado para criar servidor local com as informações do Json
+      Para uso necessario configurar o Path do caminho (C:\Users\Usuario\AppData\Local\Pub\Cache\bin)
 - Http - [HTTP](./Rest-RestFull/HTTP.md)
 - MYSQL - [SQL](./Rest-RestFull/MYSQL.md)
 ## Formatação
