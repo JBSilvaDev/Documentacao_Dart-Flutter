@@ -17,3 +17,5 @@
 -   [Layout Builder](./Layout_Builder.md) - (Configurações e dimenções de tela)
 ## Conexao com BD (Interação com usuario)
 -   [Transformando Json em ListView](./Apoio_Widgets/JsonToList.md)
+    -  Para leitura de Json Local usar a mesma estrutura apresentada substituindo os comando HTTP (get, put, post) por rootBundle.loadString('Caminho json')
+    -  Necessario efetuar configuração no .yaml para acesso a pasta assets
