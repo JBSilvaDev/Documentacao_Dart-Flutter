@@ -164,3 +164,21 @@
     -   errorBorder: Formatação da borda quando ha erro no campo, recebe *OutlineInputBorder()* que é composto por:
         -   borderRadius: Recebe [BorderRadius](./WidgetsTree.md#borderradius)
         -   borderSide: Recebe [BorderSide](./WidgetsTree.md#borderside)
+## Align
+- Usado para alinhamento de widgets
+- Compoe:
+    - alignment: Recebe Alignment.posicao
+    - child: Recebe o widget que sera alinhado
+## Positioned
+- Usado para alinhamento de widget em posições especificas
+- Compoe:
+    - bottom: Recebe um valor da posição debaixo
+    - left: Recebe um valor da posição a esquerda
+    - right: Recebe um valor da posição a direita
+    - top: Recebe um valor da posição do topo
+    - child: Recebe o widget que sera alinhado
+## BottomNavigationBarItem
+- Usado como item do [BottomNavigationBar](./WidgetGeral.md#bottomnavigationbar)
+- Compoe:
+    - icon: Recebe icone comum que sera exibido como botao na barra
+    - label: Recebe uma String que sera exibida na barra

@@ -10,3 +10,5 @@
         - endDrawer: Recebe um outro widget [Drawers](./Drawers.md)
     - >Corpo do aplicativo (conteudo da tela)
         - body : Recebe um outro widget que podem conter outros widges [Demais Widgets de composição](./WidgetGeral.md)
+    - > Barra inferior com icones(botoes)
+        - bottomNavigationBar: Recebe [BottomNavigationBar](./WidgetGeral.md#bottomnavigationbar)

@@ -118,5 +118,41 @@
 - Invoca-se o *ScaffoldMessenger.of(context).showSnackBar(snackbar);*
     - Passa como parametro do .of o [context](../Flutter_Topicos.md#buildcontext)
     - Passa como paramentro do .showSnackBar a variavel que a contem.
+## Stack()
+- Usado para posicionar widgets em locais desejados
+- Stack nao alinha os widget um ao lado do outro ou debaixo do outro, ele sobrepoe um ao outro, cabe ao usuario definir uma posição para cada widget dentro do stack.
+- Compoe:
+    - children: Recebe um ou mais widgets
+        - Os widgets sao empilhados um sobre o outro
+        - Para definir a posição de cada widget usa-se o [Align](./WidgetsTree.md#align) ou [Positioned](./WidgetsTree.md#positioned) como pai
+            - Stakc => Align => Widget
+## IndexedStack()
+- Usado para posicionar widgets um sobre o outro, exibindo um por vez de acordo com o index passado
+- Compoe: 
+    - index: Recebe o index de um dos itens da lista para ser exibido (padrao é 0)
+    - children: Recebe um ou mais widgets que serao exibidos de acordo com seu index
+## Card()
+- Sua exibição ao usuario é similar a [container](./WidgetGeral.md#container)
+- Compoe:
+    - elevation: Recebe valor da sombra do card
+    - shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#roundedrectangleborder)
+    - child: Recebe widget
+## BottomNavigationBar()
+- Usado para passar botes na barra inferior da pagina
+- Compoe:
+    - items: Recebe uma lista de [BottomNavigationBarItem](./WidgetsTree.md#bottomnavigationbaritem), Necessario ter 2 ou mais itens na lista
+    - onTap: Recebe Funcao anonima que em seu paramentro recebe o index de cada icone na lista de itens 
+    - currentIndex: Recebe o valor do index de um dos itens da lista
 
-
+## MaterialBanner
+- Possue a mesma estrutura da [snackBar](./WidgetGeral.md#snackbar)
+- Invoca-se o *ScaffoldMessenger.of(context).showMaterialBanner(materialBanner);*
+- Ocultar o *ScaffoldMessenger.of(context).hideCurrentMaterialBanner();*
+    - Passa como parametro do .of o [context](../Flutter_Topicos.md#buildcontext)
+    - Passa como paramentro do .showMaterialBanner a variavel que a contem o MaterialBanner()
+- Compoe:
+    - actions: Recebe uma lista de ações (exemplo botoes) - *Obrigatorio*
+    - content: Recebe o conteudo a ser exibido no banner
+    - backgroundColor: Recebe Colors.cor
+    - forceActionsBelow: Recebe true ou false, para determinar se botoes de ação ficam na parte debaixo do banner ou nao, padrao é false
+- Banners nao somem automaticamente da tela apos serem exibidos, esta ação deve ser feita por um botao de ação dentro das actions

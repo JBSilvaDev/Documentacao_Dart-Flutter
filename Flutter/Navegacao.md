@@ -150,3 +150,35 @@ Navigator.of(context).pushNamed('/page2');
     Navigator.of(context).pushNamed('/page2');
     ```
 - Para obter dados nos parametros em ambos os modos de navegação seguir [Parametros de navegação](./Parametros_Navegacao.md)
+
+# Navegação por [BottomNavigationBar](./Apoio_Widgets/WidgetGeral.md#bottomnavigationbar)
+- Necessario pagina ser [Stateful](./Flutter_Topicos.md#tipos-basicos-widgets) pois há alteração de estado
+- É definido dentro do [Scaffold](./Apoio_Widgets/Scaffold.md)
+    -   ```dart
+        bottomNavigationBar: BottomNavigationBar()
+        ```
+- Dentro do State< NomePage > definida uma variavel int que sera alterada conforme o clique na barra de navegação
+    -   ```dart
+        int indice = 0;
+        ```
+- Dentro do [BottomNavigationBar](./Apoio_Widgets/WidgetGeral.md#bottomnavigationbar) no seu currentIndex é passado a variavel definida (indice) em seu onTap é passado um setState para alterar o valor da variavel indice, passando seu novo a ser o index do icone clicado na barra
+    -   ```dart
+        bottomNavigationBar: BottomNavigationBar(
+        currentIndex: indice,
+        onTap: (index) {
+          setState(() {
+            indice = index;
+          });
+        },
+        ```
+- No body do [Scaffold](./Apoio_Widgets/Scaffold.md) foi passado um  [IndexedStack](./Apoio_Widgets/WidgetGeral.md#indexedstack) que em seu index foi recebido o valor do indice, ou seja, quando um icone for clicado o index mudara, alterando assim o item da lista que sera exibido.
+- Ainda no [IndexedStack](./Apoio_Widgets/WidgetGeral.md#indexedstack), em seu children foi passado duas paginas, estas paginas sao alternadas de acordo com o valor do index.
+    -   ```dart
+        body: IndexedStack(
+            index: indice,
+            children: [
+            Page1(),
+            Page2(),
+            ],
+        ),
+        ```
