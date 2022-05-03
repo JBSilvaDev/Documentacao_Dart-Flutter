@@ -68,6 +68,7 @@ Desafios concluidos durante o curso
     - Execultar comandos de Get para obter informações da API
         - Opcional fazer comandos de Post e Put
     - Usando Dartion para criar servidor local com as informações do [Json](./Desafio_Dart/desafio_4/backend/db.json)
+        - Para uso necessario configurar o Path do caminho (C:\Users\Usuario\AppData\Local\Pub\Cache\bin)
 - Resolução: [Clique aqui](./Desafio_Dart/desafio_4/)
 - Resolução 4_2: [Clique aqui](./Desafio_Dart/desafio_4_2/)
 - Resolução 4_: [Clique aqui](./Desafio_Dart/desafio4_3/)
