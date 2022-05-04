@@ -78,4 +78,5 @@ Desafios concluidos durante o curso
 - Instagram clone (página estática)
 - Descrição:
     - Modelo a seguir [pag instagram](../Dart/Img/instaClone.png)
-- Resolução: [Clique aqui](./Desafio_Flutter/1.flutter_clone_instagram)
+    - Resultado [pag instagram](../Dart/Img/ConclusaoInstaClone.jpg)
+- Resolução: [Clique aqui](./Desafio_Flutter/a_instagram_clone/)
