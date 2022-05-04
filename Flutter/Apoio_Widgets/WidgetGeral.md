@@ -71,6 +71,10 @@
     -   onPressed: Recebe uma função de ação ao clicar (){}
     -   Recebe um widget de [icone](WidgetsTree.md#Icons)
     -   label: Recebe widget de texto,
+-   IconButton()
+-   Compoe:
+    -   onPressed: Recebe uma função de ação ao clicar (){}
+    -   icon: Recebe um widget de [icone](WidgetsTree.md#Icons)
 -   InkWell()
 -   Compoe:
     -   onTap: Recebe uma função de ação ao clicar (){}

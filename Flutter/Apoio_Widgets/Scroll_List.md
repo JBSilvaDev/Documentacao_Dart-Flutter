@@ -4,6 +4,7 @@
 - Usado para rolegem dos itens na tela evitando que "estourem" o limite da tela
 - Compoe:
     - child: Recebe widget
+    - scrollDirection: Axis.direcao scroll (padrao vertical)
 ---
 ## ListView
 - Usado empilhar os itens em formato de lista evitando assim que "estourem" o limite da tela
