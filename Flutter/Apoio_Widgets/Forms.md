@@ -53,6 +53,7 @@ onPressed: () {
 - Compoe:
     - controller: Recebe o controlador definido no State< NomePagina >
     - autovalidateMode: Recebe um *AutovalidateMode.onUserInteraction*, ira validar o campo quando houver uma interação do usuario, exibindo a mensagem do validador
+    - keyboardType: Recebe o tipo de teclado => *TextInputType.number*
     - maxLines: Maximo de quebra de linhas dentro do campo, null para ilimitado (caso nao usado todo conteudo ficara em uma unica linha)
     - decoration: [InputDecoration](WidgetsTree.md#inputdecoration) para formatação do campo
     - validator: Recebe uma funcao anonima que em seu parametro é passado um valor, efetuando a verificação com if, pode constatar se o valor é igual a null ou valor.isEmpty, caso seja retorna uma mensagem ou uma ação.

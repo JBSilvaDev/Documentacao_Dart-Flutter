@@ -31,11 +31,11 @@ SfRadialGauge(
                         fontWeight: FontWeight.bold))),
             angle: 90,
             positionFactor: 0.5)],
-      showAxisLine: false,
-      showLabels: false,
-      showTicks: false,
-      minimum: 12.5,
-      maximum: 47.9,
+      showAxisLine: false, // Para nao exibir linhas
+      showLabels: false, // Para nao exibir textos
+      showTicks: false, //Para nao exibir linhas de ponteiro
+      minimum: 12.5, // Valor minimo do "grafico"
+      maximum: 47.9, // Valor maximo do "grafico"
       // Exibição do conometro/grafico/acelerador
       ranges: [
         // Cada GaugeTange determina o inicio e fim de uma parte da composicao

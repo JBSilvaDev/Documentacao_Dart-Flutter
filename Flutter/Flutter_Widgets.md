@@ -12,6 +12,7 @@
 -   [Caixas de dialogo (popup)](./Apoio_Widgets/Dialogs.md)
 -   [Navegação](./Navegacao.md)
 -   [Parametros de Navegação](./Parametros_Navegacao.md) - (Obter dados de uma pagina em outra)
+-   [Gerenciamento de estado - setState](./Gerenciamento_estado_setState.md)
 -   [Scroll - List](./Apoio_Widgets/Scroll_List.md) - (Rolagem de tela)
 -   [Media Query](./MediaQuery.md) - (Configurações e dimenções de tela)
 -   [Layout Builder](./Layout_Builder.md) - (Configurações e dimenções de tela)
