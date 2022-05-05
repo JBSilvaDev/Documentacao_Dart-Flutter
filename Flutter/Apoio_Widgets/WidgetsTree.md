@@ -137,6 +137,7 @@
     - endIndent: Recebe onde a linha divisora ira terminar
 ***
 ## Duration
+- Usado em conjunto com *Future.delayed(Duration aqui)*
 - Usado para daley de itens ou aguardar algum tempo para continuar algo
 - Compoe:
     - days: Recebe numero inteiro indormando quantos ***dias*** ira aguardar

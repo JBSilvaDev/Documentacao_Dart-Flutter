@@ -13,6 +13,8 @@
 -   [Navegação](./Navegacao.md)
 -   [Parametros de Navegação](./Parametros_Navegacao.md) - (Obter dados de uma pagina em outra)
 -   [Gerenciamento de estado - setState](./Gerenciamento_estado_setState.md)
+-   [Gerenciamento de estado - ValueNotifier](./Gerenciamento_estado_ValueNotifier.md)
+-   [Gerenciamento de estado - ChanceNotifier](./Gerenciamento_estado_ChanceNotifier.md)
 -   [Scroll - List](./Apoio_Widgets/Scroll_List.md) - (Rolagem de tela)
 -   [Media Query](./MediaQuery.md) - (Configurações e dimenções de tela)
 -   [Layout Builder](./Layout_Builder.md) - (Configurações e dimenções de tela)
