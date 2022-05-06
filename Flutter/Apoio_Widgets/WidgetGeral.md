@@ -160,3 +160,8 @@
     - backgroundColor: Recebe Colors.cor
     - forceActionsBelow: Recebe true ou false, para determinar se botoes de ação ficam na parte debaixo do banner ou nao, padrao é false
 - Banners nao somem automaticamente da tela apos serem exibidos, esta ação deve ser feita por um botao de ação dentro das actions
+## Visibility
+- Usado para exibir widget se uma condição for atendida (similar ao if)
+- Compoe:
+    - visible: condição a ser atendida
+    - child: widget que sera exbido se a condição for true

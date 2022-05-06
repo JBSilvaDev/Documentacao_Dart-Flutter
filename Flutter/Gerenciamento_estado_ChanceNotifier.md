@@ -40,8 +40,9 @@ controller.variavel
 ```
 <br>
 <br>
-- Caso o valor quando for fazer uma nova atualização precise ser "resetado" usar a funcao dispose() => Controladores de [formularios](./Apoio_Widgets/Forms.md#form) por exemplo
+- Caso o valor quando for fazer uma nova atualização precise ser "resetado" usar a funcao dispose()=> Controladores de [formularios](./Apoio_Widgets/Forms.md#form) por exemplo
 - Em seu corpo passar o que precisa ser "resetado" .dispose(), dependendo da aplicação ira precisar resetar a pagina como um todo, passando o super.dispose().
+
 ```dart
 @override
 void dispose(){
