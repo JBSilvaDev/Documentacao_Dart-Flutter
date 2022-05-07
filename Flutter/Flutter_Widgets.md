@@ -16,6 +16,7 @@
 -   [Gerenciamento de estado - ValueNotifier](./Gerenciamento_estado_ValueNotifier.md)
 -   [Gerenciamento de estado - ChanceNotifier](./Gerenciamento_estado_ChanceNotifier.md)
 -   [Gerenciamento de estado - Block Pattern](./Gerenciamento_estado_BlockPatternPage.md)
+-   [Inherited widget - Add curstom class in tree componets](./Inherited_widget.md)
 -   [Scroll - List](./Apoio_Widgets/Scroll_List.md) - (Rolagem de tela)
 -   [Media Query](./MediaQuery.md) - (Configurações e dimenções de tela)
 -   [Layout Builder](./Layout_Builder.md) - (Configurações e dimenções de tela)
@@ -23,3 +24,4 @@
 -   [Transformando Json em ListView](./Apoio_Widgets/JsonToList.md)
     -  Para leitura de Json Local usar a mesma estrutura apresentada substituindo os comando HTTP (get, put, post) por rootBundle.loadString('Caminho json')
     -  Necessario efetuar configuração no .yaml para acesso a pasta assets
+-   [Flutter SQLite](../Dependencias/Rest-RestFull/SQLite/SQLite.md)
