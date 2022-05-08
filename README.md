@@ -8,7 +8,7 @@ Aqui documento sobre algumas opções de uso de funcoes, classes, navegação et
 [Clique aqui](./Dart/Resumo_Dart.md)
 <br><br>
 >Flutter: - 
-[Clique aqui](./Flutter/Flutter_Widgets.md) (Atualizando...)
+[Clique aqui](./Flutter/Resumo_Flutter.md)
 <br><br>
 >Dependências: - 
 [Clique aqui](./Dependencias/Dependencias.md)
@@ -16,5 +16,3 @@ Aqui documento sobre algumas opções de uso de funcoes, classes, navegação et
 >Desafios: - 
 [Clique aqui](./Desafios/Desafios.md)
 
-
-Verificar typeDef nas funcoes

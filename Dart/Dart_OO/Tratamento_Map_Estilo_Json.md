@@ -125,5 +125,5 @@
             print(aluno.curso);
             print(aluno.endereco);
             ```
-[Resultado consulta Map/List OO](../Img/mapaComLista.png)
+[Resultado consulta Map/List OO](../../Img/mapaComLista.png)
 

@@ -4,21 +4,21 @@
     - Usado para criar servidor local com as informações do Json
       Para uso necessario configurar o Path do caminho (C:\Users\Usuario\AppData\Local\Pub\Cache\bin)
 - Http - [HTTP](./Rest-RestFull/HTTP.md)
-- MYSQL - [SQL](./Rest-RestFull/MYSQL.md)
-- SQLite - [SQL](./Rest-RestFull/SQLite.md)
+- MYSQL - [MySQL](./Rest-RestFull/MYSQL.md)
+- SQLite - [SQLite](./Rest-RestFull/SQLite.md)
 ***
 ## Localização de pastas
 - Path - [Path](./Rest-RestFull/Path.md)
     - Usado para encontrar, definir caminho dos arquivos salvos pela aplicação
-    - Modelo de utilização em [SQLite](./Rest-RestFull/SQLite.md)
+    - Modelo de utilização em [SQLite](../Dependencias/Rest-RestFull/SQLite/Modelos/database_sqlite.md)
 ***
 ## Formatação
-- Formatação Moeda - [Currency Formatter](./Dependencias/Currency_formatter.md)
-- Conversao de valores txt/num - [intl](./Dependencias/intl.md)
+- Formatação Moeda - [Currency Formatter](../Dependencias/Packages/Currency_formatter.md)
+- Conversao de valores txt/num - [intl](../Dependencias/Packages/intl.md)
 ***
 ## Interação visual
 - Device preview - [Preview](../Dependencias/Device_preview.md)
-- Graficos tipo conometro/acelerador - [Gauges](./Dependencias/Gauges_Visual_Acelerometros.md)
+- Graficos tipo conometro/acelerador - [Gauges](../Dependencias/Packages/Gauges_Visual_Acelerometros.md)
 ***
 ## Verificação de plataforma em uso
 - Importar pacote

@@ -28,7 +28,7 @@ await for (var i in stream) {
     print('Valor de i é: $i');
 }
 ```
-<i>[Resultado periodic](../Img/periodic.png)</i>
+<i>[Resultado periodic](../../Img/periodic.png)</i>
 
 ## Stream take
 >Take 
@@ -45,7 +45,7 @@ await for (var i in stream) {
   print('${i - 1} + 1 = $i');
 }
 ```
-<i>[Resultado take](../Img/take.png)</i>
+<i>[Resultado take](../../Img/take.png)</i>
 
 >Take While 
 - Tem o mesmo principio do take, porem nao recebe um numero inteiro e sim uma funcao onde seu retorno é uma condição
@@ -59,7 +59,7 @@ await for (var i in stream) {
   print('${i - 1} + 1 = $i');
 }
 ```
-<i>[Resultado take while](../Img/take_while.png)</i>
+<i>[Resultado take while](../../Img/take_while.png)</i>
 
 ## Stream Skip
 >Skip
@@ -75,7 +75,7 @@ await for (var i in stream) {
   - ```dart
     stream = stream.skip(2); 
     ```
-<i>[Resultado skip](../Img/skip.png)</i>
+<i>[Resultado skip](../../Img/skip.png)</i>
 
 >Skip while
 - Pula toda chamada enquanto a condição for atendida pelo retorno ou seja, quanto o retorno for false, no caso toda requisicao onde o numero é menor que 5.
@@ -97,7 +97,7 @@ await for (var i in stream) {
       return numero < 5;
     });
     ```
-<i>[Resultado skip while](../Img/skip_while.png)</i>
+<i>[Resultado skip while](../../Img/skip_while.png)</i>
 
 ## Stream toList()
 >toList()
@@ -112,7 +112,7 @@ final data = await stream.toList();
 
 print(data);
 ```
-<i>[Resultado toList()](../Img/stream_toList.png)</i>
+<i>[Resultado toList()](../../Img/stream_toList.png)</i>
 
 ## Stream Listen
 >listen
@@ -129,7 +129,7 @@ stream.listen((numero) => print('Escutei o numero $numero'));
 
 print('Fim do main!');
 ```
-<i>[Resultado listen](../Img/listen.png)</i>
+<i>[Resultado listen](../../Img/listen.png)</i>
 
 ## Stream where
 >Where
@@ -147,7 +147,7 @@ stream = stream.where((numero) => numero < 3 || numero > 6  ).take(5);
 stream.listen((numero) => print('Escutei o numero $numero'));
 print('Fim do main!');
 ```
-<i>[Resultado where](../Img/where.png)</i>
+<i>[Resultado where](../../Img/where.png)</i>
 
 ## Stream asBroadcast
 >Função callback usada neste modulo
@@ -173,7 +173,7 @@ stream.listen((numero) => print('Listen value $numero'));
 
 stream.listen((numero) => print('Listen value 2 $numero'));
 ```
-<i>[Resultado asBroadcastStream](../Img/asBroadcast.png)</i>
+<i>[Resultado asBroadcastStream](../../Img/asBroadcast.png)</i>
 
 ## Stream Controller
 - Não foi usado a funcao callback neste topico
@@ -222,7 +222,7 @@ outStream
 ```dart
 await streamController.close();
 ```
-<i>[Resultado StreamController com numero](../Img/StreamController.png)</i>
+<i>[Resultado StreamController com numero](../../Img/StreamController.png)</i>
 
 ## Stream Controller (Com classe)
 - Não foi usado a funcao callback neste topico
@@ -255,7 +255,7 @@ Future<void> main() async {
   await streamController.close();
 }
 ```
-<i>[Resultado StreamController com Classes](../Img/StreamControllerClass.png.png)</i>
+<i>[Resultado StreamController com Classes](../../Img/StreamControllerClass.png)</i>
 
 ## Stream Controller (String)
 - Não foi usado a funcao callback neste topico
@@ -288,7 +288,7 @@ Future<void> main() async {
   await streamController.close();
 }
 ```
-<i>[Resultado StreamController com String](../Img/StreamControllerClass.png.png)</i>
+<i>[Resultado StreamController com String](../../Img/StreamControllerClass.png)</i>
 
 
 

@@ -56,7 +56,7 @@ Desafios concluidos durante o curso
         | Ilheus    | 29        | Ilheus      |
         | Santos    | 35        | Santos      |
     - Fonte Estados: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados)
-    - Fonte Cidades: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados/<idEstado>/distritos)
+    - Fonte Ditritos: [IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados/35/distritos)
 - Resolução: [Clique aqui](../Desafios/Desafio_Dart/desafio_3)
 <br>
 
@@ -77,6 +77,6 @@ Desafios concluidos durante o curso
 >Desafio 1: 
 - Instagram clone (página estática)
 - Descrição:
-    - Modelo a seguir [pag instagram](../Dart/Img/instaClone.png)
-    - Resultado [pag instagram](../Dart/Img/ConclusaoInstaClone.jpg)
+    - Modelo a seguir [pag instagram](../Img/instaClone.png)
+    - Resultado [pag instagram](../Img/ConclusaoInstaClone.jpg)
 - Resolução: [Clique aqui](./Desafio_Flutter/a_instagram_clone/)

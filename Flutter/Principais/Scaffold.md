@@ -1,0 +1,14 @@
+# Scaffold
+- É o responsavel por estruturar a pagina
+- Esta no return do build na [HomePage](./HomePage.md)
+- [Documentação](https://api.flutter.dev/flutter/material/Scaffold-class.html)
+- Compoe:
+    - >Barra superior da tela
+        - appBar : Recebe um outro widget [AppBar](./AppBar.md)
+    - >Menu lateral (drawer)
+        - drawer: Recebe um outro widget [Drawers](../Widgets/Drawers.md)
+        - endDrawer: Recebe um outro widget [Drawers](../Widgets/Drawers.md)
+    - >Corpo do aplicativo (conteudo da tela)
+        - body : Recebe um outro widget que podem conter outros widges [Demais Widgets de composição](../Widgets/WidgetGeral.md)
+    - > Barra inferior com icones(botoes)
+        - bottomNavigationBar: Recebe [BottomNavigationBar](../Widgets/WidgetGeral.md#bottomnavigationbar)
