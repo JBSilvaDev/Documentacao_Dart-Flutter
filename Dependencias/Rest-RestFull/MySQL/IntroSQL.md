@@ -1,11 +1,11 @@
 # Indrodução a MySQL
 
 ## Modelo de tabela SQL
-| Nome do campo  | Tipo do campo   | Descricao|
-| ------- | -------- | -------- |
-| id   | INT- AUTO_INCREMENT    | Linha tipo inteira numeracao automarica |
-| nome   | 	VARCHAR(100)    | Tipo e tamanho permido do campo |
-| idade   | VARCHAR    | Tipo e tamanho permido do campo |
+| Nome do campo | Tipo do campo       | Descricao                               |
+|---------------|---------------------|-----------------------------------------|
+| id            | INT- AUTO_INCREMENT | Linha tipo inteira numeracao automarica |
+| nome          | VARCHAR(100)        | Tipo e tamanho permido do campo         |
+| idade         | VARCHAR             | Tipo e tamanho permido do campo         |
 
 
 ## SELECT
