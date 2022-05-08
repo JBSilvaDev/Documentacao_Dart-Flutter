@@ -5,8 +5,9 @@
 >Desabilitar backup automatico ANDROID
 -   Dentro da pasta Android no aplicativo navegue para:
     -   app -> src -> main -> AndroidManifest.xml
--   Na tag <application incluir uma linha com:
+-   Na tag <application incluir linhas com:
     -   android:allowBackup="false"
+    -   android:fullBackupOnly="false"
 >Verificar .yaml para utilizar:
 - Assets (Imagens, arquivos)
     -   [Imagem](./img/imagem.png) adicona a pasta assets tag assets do .yaml para acessar todos, ou adiciona um a um com seu caminho relativo completo (assets/) ou (/assets/image.jpg)
