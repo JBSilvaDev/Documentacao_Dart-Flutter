@@ -5,6 +5,7 @@
     - Em resumo, o Inherited Widget permite que declaremos um objeto na classe pai (main) e que seus filhos cosigam acessar estes dados.
     - Esta classe (OBJ) sera pai do [MaterialApp](../Principais/MateralApp.md)
 - É necessario uma classe model que ira tratar o conteudo do contex podendo assim exibi-lo onde for chamado.
+- Para modo simplificado usar o [Provider](../../Dependencias/Rest-RestFull/Provider.md)
 ## Criando a classe(OBJETO) model que controla o conteudo do acesso
 ```dart
 class UserModel extends InheritedWidget {

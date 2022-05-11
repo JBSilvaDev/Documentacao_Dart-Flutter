@@ -40,3 +40,6 @@ if (Platform.isIOS) {
     - isWindows
     - isIOS
 ***
+## Demais dependencias
+- Provider - [Provider](./Provider.md)
+***

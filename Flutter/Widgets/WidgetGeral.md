@@ -109,7 +109,7 @@
     - action: Recebe SnackBarAction que compoe:
         - label: Texto exibido (string solta sem uso do Text())
         - onPressed: Funcao anonima de ação ao ser clicada
-- [Complet compose](../img/../completSnack.png):
+- [Complet compose](../../img/completSnack.png):
     - context: Conteudo da snackbar, aceita widgets
     - action: Recebe SnackBarAction que compoe:
         - label: Texto exibido (string solta sem uso do Text())

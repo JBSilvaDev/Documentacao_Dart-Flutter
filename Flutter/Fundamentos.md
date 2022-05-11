@@ -1,6 +1,6 @@
 # Flutter
 - Fundamentos (Acesse [Fundamentos DART](../Dart/Fundamentos.md) )
-- Resumo: [Clique Aqui](../Flutter/Resumo.md)
+- Resumo: [Clique Aqui](../Flutter/Resumo_Flutter.md)
 ## Configuração de inicialização do app
 >Desabilitar backup automatico ANDROID
 -   Dentro da pasta Android no aplicativo navegue para:
@@ -10,8 +10,8 @@
     -   android:fullBackupOnly="false"
 >Verificar .yaml para utilizar:
 - Assets (Imagens, arquivos)
-    -   [Imagem](./img/imagem.png) adicona a pasta assets tag assets do .yaml para acessar todos, ou adiciona um a um com seu caminho relativo completo (assets/) ou (/assets/image.jpg)
-    - [Fonts](./img/fonts.png), adicona a pasta assets tag fonts do .yaml, na tag deve informar a famila da fonte, e na sua identação o caminho asset onde foi instalada (compativel com formatos .ttf e .otf)
+    -   [Imagem](../Img/imagem.png) adicona a pasta assets tag assets do .yaml para acessar todos, ou adiciona um a um com seu caminho relativo completo (assets/) ou (/assets/image.jpg)
+    - [Fonts](../img/fonts.png), adicona a pasta assets tag fonts do .yaml, na tag deve informar a famila da fonte, e na sua identação o caminho asset onde foi instalada (compativel com formatos .ttf e .otf)
         -   Tambem é possivel efetuar a instação do pacote [google fonts](https://pub.dev/packages/google_fonts)
 - Dependencias (Pacotes terceiros) [Pub.Dev](https://pub.dev)
 ## Iniciando projeto flutter
@@ -34,7 +34,7 @@
     - Aceita variaveis em seu corpo
     - Ciclo de vida StatelessWidget:
         -   Construor
-        -   [Build](./Flutter_Topicos.md#buildcontext)
+        -   [Build](./Fundamentos.md#buildcontext)
 - StatefulWidget
     - É uma extenção de classes -> *class Nome extends StatefuWidget*
     - Dentro desta classe é obrigatório criar metodo createState
@@ -69,7 +69,7 @@
                 -   Construtor
                 -   InitState
                 -   DidChangeDependecies
-                -   [Build](./Flutter_Topicos.md#buildcontext)
+                -   [Build](./Fundamentos.md#buildcontext)
             -   SetState
                 -   Build
 ## Iniciando carregamento de dados na tela
@@ -85,12 +85,12 @@
 - Todo widget recebe em seu construtor o build context, pois seu conteudo precisa ser registrado na arvore de componentes
 - Serve para encontrar/passar informações
 - Quando passamos o context do build para uma classe, estamos passando todas informações da nossa aplicação, para a classe buscar nela o que ela foi programada para buscar.
-- Usando o [MediaQuery](MediaQuery.md#utilização) como exemplo:
+- Usando o [MediaQuery](./Principais/MediaQuery.md#utilização) como exemplo:
     -   ```dart
         MediaQuery.of(context)
         ```
     - Neste caso estamos solicitando que a classe procure dentro do builder informações sobre a tela do dispositivo
-- Usando o [Navigator](Navegacao.md#utilização) como exemplo:
+- Usando o [Navigator](./Principais/Navegacao.md#utilização) como exemplo:
     -   ```dart
         Navigator.of(context).pushNamed('/page2');
         ```
