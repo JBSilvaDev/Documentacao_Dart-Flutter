@@ -13,12 +13,15 @@
 	> https://chocolatey.org/install
 	> Abrir powersell como adm
 	> Colar codigo:
+		```
 		Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-		Ou outro disponibilizado no site
+		```
+	> Ou outro disponibilizado no site
 2. Instalar o Git.
 	> choco install git
 3. Instalar o Java
 	> choco install jdk8
+		. Necessario para conseguir chave SSH
 4. Instalar flutter
 	> via git
 		. Navegar ate a pasta onde quer instalar
