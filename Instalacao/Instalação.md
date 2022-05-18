@@ -9,25 +9,25 @@
     - https://docs.flutter.dev/get-started/install/windows
     - Extrair o zip no local desejado
 > Via CMD
-1. Instalar o chocolatey
-	> https://chocolatey.org/install
-	> Abrir powersell como adm
-	> Colar codigo:
-		```
-		Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-		```
-	> Ou outro disponibilizado no site
-2. Instalar o Git.
-	> choco install git
-3. Instalar o Java
-	> choco install jdk8
-		. Necessario para conseguir chave SSH
-4. Instalar flutter
-	> via git
-		. Navegar ate a pasta onde quer instalar
-		. Criar uma nova pasta no local com: mkdir NomeDaPasta
-		. Navegar ate a pasta criada
-		. Colar comando git: git clone https://github.com/flutter/flutter.git -b stable
+- Instalar o chocolatey
+	- https://chocolatey.org/install
+	- Abrir powersell como adm
+	- Colar codigo:
+		-  ```
+			 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+		  	```
+	-  Ou outro disponibilizado no site
+- Instalar o Git.
+	- ``` choco install git ```
+- Instalar o Java
+	- ``` choco install jdk8 ```
+	- Necessario para conseguir chave SSH
+- Instalar flutter
+	- via git
+		- Navegar ate a pasta onde quer instalar
+		- Criar uma nova pasta no local com: mkdir NomeDaPasta
+		- Navegar ate a pasta criada
+		- Colar comando git: git clone https://github.com/flutter/flutter.git -b stable
 # Configuração Flutter
 >Variaveis de ambiente
 - Crie uma nova variavel de ambiente com nome _FLUTTER_HOME_
