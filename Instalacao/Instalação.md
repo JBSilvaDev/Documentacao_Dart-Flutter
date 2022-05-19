@@ -21,6 +21,7 @@
 	- ``` choco install git ```
 - Instalar o Java
 	- ``` choco install jdk8 ```
+	- ``` choco install jdk11 ``` <- Flutter 3
 	- Necessario para conseguir chave SSH
 - Instalar flutter
 	- via git
