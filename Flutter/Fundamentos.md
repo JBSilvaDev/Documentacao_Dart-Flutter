@@ -8,18 +8,20 @@
 -   Na tag <application incluir linhas com:
     -   android:allowBackup="false"
     -   android:fullBackupOnly="false"
->Permitir que o emulador acesse sites "nao seguros"
-    
+>Permitir que o emulador acesse sites "nao seguros" 
 -    Dentro da pasta Android no aplicativo navegue para:
     -   app -> src -> debug -> AndroidManifest.xml
     
--   Na tag <manifest xmlns:android... :
-    -       
-``` 
-    <application android:usesCleartextTraffic="true">
-    <!-- possibly other elements -->
-    </application> 
-```
+-   Na tag <manifest xmlns:android... :      
+        -   ```
+            <application android:usesCleartextTraffic="true">
+            <!-- possibly other elements -->
+            </application>
+         ```
+-   Dentro da pasta Android no aplicativo navegue para:
+    -   app -> src -> main -> AndroidManifest.xml
+-   Na tag <application incluir linhas com:
+    -   android:usesCleartextTraffic="true"
 >Verificar .yaml para utilizar:
 - Assets (Imagens, arquivos)
     -   [Imagem](../Img/imagem.png) adicona a pasta assets tag assets do .yaml para acessar todos, ou adiciona um a um com seu caminho relativo completo (assets/) ou (/assets/image.jpg)
