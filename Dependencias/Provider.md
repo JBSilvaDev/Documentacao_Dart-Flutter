@@ -12,7 +12,7 @@ dependencies:
 ```dart
 import 'package:provider/provider.dart';
 ```
-## Retorno do MyApp (main)
+## Retorno da classe principal build
 - Abaixo os widgets que devem ser retornados na classe principal dentro do arquivo main
   1. [Single Provider](./Provider.md#provider-unico-statelessflutterfundamentosmdtipos-basicos-widgets)
   2. [Multi Providers](./Provider.md#multiplos-providers-statefulflutterfundamentosmdtipos-basicos-widgets)
@@ -30,6 +30,7 @@ Provider(
 ```
 ### Multiplos Providers [stateless](../../Flutter/Fundamentos.md#tipos-basicos-widgets)
 - Para utilizar mais de um provider sem atualização de widget
+- Quando usado a lista de providers nao pode ser vazia!
 ```dart
 MultiProvider(
       providers: [
