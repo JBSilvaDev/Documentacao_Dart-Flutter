@@ -18,6 +18,8 @@
 ***
 >[Desafios](./Desafios/Desafios.md)
 ***
+>[Mini Projetos](./Apps/README.md)
+***
 <br><br>
 <br><br>
 <br><br>
