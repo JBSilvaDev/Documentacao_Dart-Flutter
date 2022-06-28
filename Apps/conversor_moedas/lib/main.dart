@@ -3,8 +3,6 @@ import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
 
-const request = "https://api.hgbrasil.com/finance?format=json&key=2e983837";
-
 void main() async {
   print(await getData());
 
@@ -25,8 +23,11 @@ void main() async {
 }
 
 Future<Map> getData() async {
-  http.Response response = await http.get(request);
-  return json.decode(response.body);
+  const request = 'https://api.hgbrasil.com/finance?format=json&key=2e983837';
+  var convertURI = Uri.parse(request);
+  var response = await http.get(convertURI);
+  
+  return jsonDecode(response.body);
 }
 
 class Home extends StatefulWidget {
