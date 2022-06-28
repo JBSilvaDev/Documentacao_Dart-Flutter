@@ -1,3 +1,3 @@
 # Aplicativos construidos durante a academia
 
-1. [Instalação](./CalculadoraIMC/)
+1. [Calculadora IMC](./calculadora_imc/)
