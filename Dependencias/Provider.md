@@ -31,17 +31,20 @@ Provider(
 ### Multiplos Providers [stateless](../Flutter/Fundamentos.md#tipos-basicos-widgets)
 - Para utilizar mais de um provider sem atualização de widget
 - Quando usado a lista de providers nao pode ser vazia!
+- A lista de MultiProviders por padrao nao pode ser vazia
 ```dart
 MultiProvider(
       providers: [
         Provider(),
         Provider(),
+        ],
       child: MaterialApp()
 ```
 ### Multiplos Providers [stateful](../Flutter/Fundamentos.md#tipos-basicos-widgets)
 - Para utilizar mais de um provider com atualização de widget
 - Necessario retornar o [controlador](../Flutter/Principais/Provider_Modelo.md)
 - Usado juntamente com [ChangeNotifier](../Flutter/Principais/Gerenciamento_estado_ChanceNotifier.md) que é o extensor do controlador
+- A lista de MultiProviders por padrao nao pode ser vazia
 ```dart
 MultiProvider(
       providers: [

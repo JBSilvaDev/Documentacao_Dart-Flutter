@@ -24,7 +24,7 @@
             
     - >Pagina inicial
         - home: Recebe a pagina inicial -> [MyHomePage](./HomePage.md)  
-            - Pode ser necessario definir o titulo desta pagina *(title:'Nome da HomePage')*
+            - Pode ser necessário definir o titulo desta pagina *(title:'Nome da HomePage')*
         - initialRoute: Recebe a pagina inicial definida em routes '/nome da pagina'
     - >Telas/Paginas do app -> [Formas de navegação](./Navegacao.md#formas-de-navegação)
         - routes: {'/caminho': (_) => NomePage()}

@@ -1,6 +1,12 @@
 # Códigos e funções
+- lib:
+    - main:
+        - Recebe em seu runApp o app_module
 - lib/app/services
     - app_widget:
-        - Classe stateless
+        - Classe stateless, widget principal que ira retornaro o [materialapp](../../../../Flutter/Principais/MateralApp.md)
     - app_module:
-        - Classe stateless que retorna um [multiprovider](../../../../Dependencias/Provider.md), que é a estrutura base o app, em seu child recebe o app_widget.
+        - Classe stateless que retorna um [multiprovider](../../../../Dependencias/Provider.md#multiplos-providers-statelessflutterfundamentosmdtipos-basicos-widgets), que é a estrutura base o app, em seu child recebe o app_widget.
+- lib/app/modules/splash:
+    - splash_page:
+        - 
