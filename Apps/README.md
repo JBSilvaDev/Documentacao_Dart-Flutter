@@ -8,3 +8,9 @@
     - Converte moedas R$, $ e £
 4. [Calculadora IMC (Gráfico)](./calcular_imc/)
     - Calculadora mais completa de IMC com 4 tipos de navegação
+5. [Todo-List](./todo_list_provider/README.md)
+    - Aplicativo de anotações e compromissos
+    - Utilização do firebase para autenticação do usuário
+    - Utilização do provider para gerenciamento de estado
+    - Utilização de SQLite para banco de dados
+    - Arquitetura de módulos

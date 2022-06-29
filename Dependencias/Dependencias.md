@@ -6,6 +6,7 @@
 - Http - [HTTP](./Rest-RestFull/HTTP.md)
 - MYSQL - [MySQL](./Rest-RestFull/MYSQL.md)
 - SQLite - [SQLite](./Rest-RestFull/SQLite.md)
+- SqfLite - [SqfLite](./Rest-RestFull/SqfLite.md)
 ***
 ## Localização de pastas
 - Path - [Path](./Rest-RestFull/Path.md)
@@ -40,6 +41,6 @@ if (Platform.isIOS) {
     - isWindows
     - isIOS
 ***
-## Demais dependencias
+## Gerenciamento de estado
 - Provider - [Provider](./Provider.md)
 ***

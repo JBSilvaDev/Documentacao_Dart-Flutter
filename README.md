@@ -20,6 +20,8 @@
 ***
 >[Mini Projetos](./Apps/README.md)
 ***
+>[Erros](./Erros/README.md)
+***
 <br><br>
 <br><br>
 <br><br>
