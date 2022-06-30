@@ -3,7 +3,7 @@
 - Usado para atualizar um widget especifico, um rebuild parcial diferente do [setState](./Gerenciamento_estado_setState.md).
 - O que deve ser atualizado deve ser passado dentro da classe ValueNotifie(Valor dynamic a ser atualizado)
 ```dart
-var variavel = ValueNotifier(0.0);
+var variavel = ValueNotifier(valorQualquer);
 ```
 - O widget que ira ser atualizado com o valor deve ser passando dentro da funcao ValueListenableBuilder< Tipagem >(), onde ira receber:
     - valueListenable: Recebe a variavel que sera atualizada

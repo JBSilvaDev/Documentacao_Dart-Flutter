@@ -1,5 +1,15 @@
 # Widgets de composição para parametros que compoe outros widgets
-
+***
+## ClipOval
+- Usado para deixar seu filho envolvido em uma area circular/oval
+- Compoe:
+    - child: Recebe widget
+***
+## FittedBox
+- Usado para redimensionamento automatico de seus filhos de acordo com a tela do usuario
+- Compoe:
+    - child: Recebe widget que sera redimencionado de acordo com a tela (normalmente uma imagem)
+    - fit: Recebe BoxFit.DIMENSAO
 ***
 ## Image
 - Usado para adionar imagens ***Importante configurar a tag assets no .yaml***
@@ -36,6 +46,7 @@
         -   EdgeInsets.all(todos os lados receberar o valor passado)
         -   EdgeInsets.fromLTRB(leftValor, topValor, rightValor, bottomValor)
         -   EdgeInsets.only(left: valor, top: valor, right: valor, bottom: valor)
+        -   EdgeInsets.symmetric(horizontal: valor, vertical: valor)
 ***
 
 ## BoxDecoration
@@ -46,7 +57,15 @@
     -   image: Recebe [DecorationImage()](./WidgetsTree.md#DecorationImage)
     -   borderRadius: Recebe [BorderRadius()](./WidgetsTree.md#BorderRadius),
     -   boxShadow: Recebe uma lista de configurações para sombreamento como [BoxShadow()](./WidgetsTree.md#BorderRadius)
-    -   image: Recebe um [DecorationImage()](./WidgetsTree.md#DecorationImage) *Necessario ter configurado o .yaml **assets**
+    -   image: Recebe um [DecorationImage()](./WidgetsTree.md#DecorationImage)
+    -   border: Recebe um [Border()](./WidgetsTree.md#border)
+## Border
+- Usado para configurações de bordas especificas
+- Compoe:
+    - top: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda superior
+    - bottom: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda inferior
+    - left: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda esquerda
+    - right: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda direita
 ## BorderSide
 - Usado para formatação de bordas
     - Compoe:
@@ -140,12 +159,12 @@
 - Usado em conjunto com *Future.delayed(Duration aqui)*
 - Usado para daley de itens ou aguardar algum tempo para continuar algo
 - Compoe:
-    - days: Recebe numero inteiro indormando quantos ***dias*** ira aguardar
-    - hours: Recebe numero inteiro indormando quantas ***horas*** ira aguardar
-    - microseconds: Recebe numero inteiro indormando quantos ***microsegundos*** ira aguardar
-    - milliseconds: Recebe numero inteiro indormando quantos ***milissegundos*** ira aguardar
-    - minutes: Recebe numero inteiro indormando quantos ***minutos*** ira aguardar
-    - seconds: Recebe numero inteiro indormando quantos ***segundos*** ira aguardar
+    - days: Recebe numero inteiro informando quantos ***dias*** ira aguardar
+    - hours: Recebe numero inteiro informando quantas ***horas*** ira aguardar
+    - microseconds: Recebe numero inteiro informando quantos ***microsegundos*** ira aguardar
+    - milliseconds: Recebe numero inteiro informando quantos ***milissegundos*** ira aguardar
+    - minutes: Recebe numero inteiro informando quantos ***minutos*** ira aguardar
+    - seconds: Recebe numero inteiro informando quantos ***segundos*** ira aguardar
 ***
 ## InputDecoration
 - Usado para formatação de campos de formularios

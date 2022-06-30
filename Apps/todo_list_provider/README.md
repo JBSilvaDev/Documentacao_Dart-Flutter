@@ -1,15 +1,7 @@
 # todo_list_provider
 
-- [Dados Gerais](./archive/Gerais/Dados_gerais.md)
-    - Pastas e arquivos
-    - Dependências
+- [Dependências usadas](./archive/Gerais/Dados_gerais.md)
 <br>
-<br>
-- [Códigos e funções](./archive/CodFunc/Codigos_Funcoes.md)
-    - Widgets
-    - Funções e conexões
-    - BD
-
 <br>
 <br>
 

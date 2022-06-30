@@ -121,4 +121,11 @@ void nomeFuncao(NomeDaFuncao funcaoParam) {
   funcaoParam(variavel);
 /* Para chamar chamarFuncao((nome) => print(nome)); */
 }
+```
+# Factory
+- São funções nomeadas que retorna uma instância ja criada dentro da própria classe
+- Construtores onde é possível fazer alguma regra ou condição para ser criado o objeto a qual se refere
+- Mais detalhes em [classes](Classes.md)
+# Static
+- São usados em variáveis e funções para serem acessadas externamente no estilo Enum Classe.static
 

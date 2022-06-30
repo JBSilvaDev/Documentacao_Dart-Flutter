@@ -6,7 +6,6 @@
 - Http - [HTTP](./Rest-RestFull/HTTP.md)
 - MYSQL - [MySQL](./Rest-RestFull/MYSQL.md)
 - SQLite - [SQLite](./Rest-RestFull/SQLite.md)
-- SqfLite - [SqfLite](./Rest-RestFull/SqfLite.md)
 ***
 ## Localização de pastas
 - Path - [Path](./Rest-RestFull/Path.md)
@@ -15,11 +14,17 @@
 ***
 ## Formatação
 - Formatação Moeda - [Currency Formatter](../Dependencias/Packages/Currency_formatter.md)
-- Conversao de valores txt/num - [intl](../Dependencias/Packages/intl.md)
+- Conversão de valores txt/num - [intl](../Dependencias/Packages/intl.md)
+- Fontes do google - [Google Fonts](../Dependencias/Packages/google_fonts.md)
 ***
 ## Interação visual
 - Device preview - [Preview](../Dependencias/Device_preview.md)
 - Graficos tipo conometro/acelerador - [Gauges](../Dependencias/Packages/Gauges_Visual_Acelerometros.md)
+- Botões para logins com redes sociais - [FSButton](../Dependencias/Packages/flutter_signin_button.md)
+- Icones personalizados - [FlutterIcon](../Dependencias/Packages/flutter_icon.md)
+***
+## Gerenciamento de estado
+- Provider - [Provider](./Provider.md)
 ***
 ## Verificação de plataforma em uso
 - Importar pacote
@@ -41,6 +46,4 @@ if (Platform.isIOS) {
     - isWindows
     - isIOS
 ***
-## Gerenciamento de estado
-- Provider - [Provider](./Provider.md)
-***
+

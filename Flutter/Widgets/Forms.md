@@ -19,6 +19,20 @@ class _FormsPageState extends State<FormsPage> {
     super.dispose();
   }
 ```
+- Em um botao, para validação dos dados digitados nos campos dentro do formulario
+```dart
+ElevatedButton(
+    onPressed: () {
+    final formValid =
+        _formKey.currentState?.validate() ?? false;
+    if (formValid) {
+        final email = _emailEC.text;
+        final password = _passwordEC.text;    }
+    },
+    child: Text('Login'),
+    ),
+),
+```                                
 - Chamando a validação em um botao
 - Dentro do onPressed ou similar definir nova variavel onde recebe a chave do form, seu estado atual (que pode ser nulo) e se o mesmo é valido, caso nao seja, retorna false
 - Fazendo a verificação com if que recebe no parametro a variavel de validação (passo anterior) e retorna uma [snackbar](./WidgetGeral.md#snackbar) em caso de formulario validado contendo uma mensagem com o valor digitado usando a variavel recebeDados passada no controller do [TextFormField](./Forms.md#textformfield).
@@ -58,6 +72,7 @@ onPressed: () {
     - decoration: [InputDecoration](./WidgetsTree.md#inputdecoration) para formatação do campo
     - validator: Recebe uma funcao anonima que em seu parametro é passado um valor, efetuando a verificação com if, pode constatar se o valor é igual a null ou valor.isEmpty, caso seja retorna uma mensagem ou uma ação.
     - obscureText: recebe true ou false para ocultar o conteudo digitado
+
 ## DropdownButtonFormField < Tipo de conteudo >()
 - Usado para conteudo pre definido em uma lista de itens
 - Compoe:

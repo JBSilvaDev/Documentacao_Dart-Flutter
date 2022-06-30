@@ -34,11 +34,11 @@ class NomeDaClasse{
 }
 ```
 >Atributos com _ a frente de seu nome, sao privados
-- Usa-se get/set para acessalos
+- Usa-se get/set para acessados
 - Se a classe estiver no mesmo arquivo que o main pode ser acessado diretamente
 - Se a classe estiver em arquivo separado so pode acessar com get/set
     - Neste get/set pode-se colocar alguma condicao para aceitar o valor passado ou nao
-    - Exemplo abaixo se o valor da idade for iguaal a 0 retorna um erro e nao aceita
+    - Exemplo abaixo se o valor da idade for igual a 0 retorna um erro e nao aceita
 ```dart
 class NomeDaClasse {
 // Caracteristica
