@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "454421095265",
+    "project_id": "anotacao-a2d12",
+    "storage_bucket": "anotacao-a2d12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454421095265:android:842ee993e51f8674fddb20",
+        "android_client_info": {
+          "package_name": "com.jbtec.anotacao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454421095265-4pdguv2inf6jifidahaea3euatq2pac9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jbtec.anotacao",
+            "certificate_hash": "7b1489f5d75801857d0c81d21f458d977805cc9a"
+          }
+        },
+        {
+          "client_id": "454421095265-3860sln8931c8qhiji8v6phj53mkognb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1g4BNVZFBv5fOvXNsw99M604QMMBvRkY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454421095265-3860sln8931c8qhiji8v6phj53mkognb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

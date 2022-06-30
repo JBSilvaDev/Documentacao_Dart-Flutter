@@ -134,5 +134,19 @@
     - backgroundColor: Cor de fundo
     - leading: Recebe widget (novo botao voltar)
   - body recebe todo o conteudo restante da pagina como formularios e botoes
+- Exceções personalizadas
+  - Classe que implementa Exception
+  - Criada uma variavel que ira receber a msg de exceções
+  - Criado construtor para passar a msg
+  - Usa-se a classe chamando o throw NomeClasse(message: "Messagem de erro")
+```dart
+  class AuthExceptions implements Exception {
+  final String message;
+  AuthExceptions({
+    required this.message,
+  });
+}
+```
+
   
 

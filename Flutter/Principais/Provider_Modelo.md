@@ -5,13 +5,13 @@
     - lazy-loading
     - redução considerável de código desnecessário toda vez que se cria uma class
     - compatível com devtools
-    - uma maneira comum de consumir [InheritedWidget]s (consulte [Provider.of]/[Consumer]/[Selector])
-    - maior escalabilidade para classes com um mecanismo de escuta que cresce exponencialmente em complexidade (como [ChangeNotifier], que é O(N) para notificações de despacho).
+    - uma maneira comum de consumir [InheritedWidget's](./Inherited_widget.md)
+    - maior escalabilidade para classes com um mecanismo de escuta que cresce exponencialmente em complexidade como [ChangeNotifier](./Gerenciamento_estado_ChanceNotifier.md), que é usado para notificação de valores alterados, assim quando houver uma mudança num texto por exemplo uma notificação é emitida para o flutter atualiza-lo.
 
     Para ler mais sobre o `provider`, veja a [documentação](https://pub.dev/documentation/provider/latest/provider/provider-library.html).
 
 ## Configuração main
-- Dentro do arquivo main o retorno do build é alterado por um [provider](../../Dependencias/Provider.md)
+- Dentro do arquivo de build inicial da tela, o retorno é um [provider](../../Dependencias/Provider.md) ou [multiprovider](../../Dependencias/Provider.md#multiplos-providers-statelessflutterfundamentosmdtipos-basicos-widgets)
 
 ## Utilização
 ***
@@ -65,7 +65,7 @@
                 }),
                 ```
     3. Atualizar somente o widget que tiver sido alterado
-        - Basta chamar o Selector passando seu tipo < Controlador > que é composto por:
+        - Basta chamar o Selector passando seu tipo < Controlador, TipoWidgetAtualizado > que é composto por:
             - selector: Recebe funcao com 2 paramentros (_, controller) e retorna o item do objeto que ira ser atualizado
             - builder: Recebe funcao com 3 paramentros (_, nome, __) e retorna o widget que ira ser atualizado
             - ```dart
@@ -75,3 +75,18 @@
                   return Text(nome);
                 }),
                 ```
+    4. Atualizar somente os widgets que foram alterados
+        - Necessário package [tuple](https://pub.dev/packages/tuple)
+        - Usado para buildar mais de um item da controller
+        - Basta chamar o Selector passando seu tipo < Controlador Tupla2< TipoWidgetAtualizado1, TipoWidgetAtualizado1 > > que é composto por:
+            - selector: Recebe funcao com 2 paramentros (_, controller) e retorna a Tupla passando os itens a serem atualizados
+            - builder: Recebe funcao com 3 paramentros (_, dados, __) onde dados ira conter os itens passados no selector, retorna widget que ira conter os dados.item1, ou dados.item2
+            - ```dart
+                    Selector<ProviderController, Tuple2<String, String>>(
+                        selector: (_, controller) => Tuple2(controller.instaciaDoModelo, controller.instaciaDoModelo),
+                        builder: (_, dados, __) {
+                          return Text(dados.item2); // OU Text(dados.item1);
+                        }),
+                ```
+- mais em [doc](https://pub.dev/documentation/provider/latest/provider/ChangeNotifierProvider-class.html)
+

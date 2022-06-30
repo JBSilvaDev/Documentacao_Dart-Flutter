@@ -1,6 +1,7 @@
 # Gerenciamento de estado
 ## ChanceNotifier()
 - Usado para atualizar um ou mais widgets na tela, um rebuild parcial diferente do [setState](./Gerenciamento_estado_setState.md).
+- Paginas/Telas que contem itens quem precisam ser atualizados devem ser [stafulwidget](../Fundamentos.md#tipos-basicos-widgets)
 - É usada com controlador, uma classe que extente o ChangeNotifier
 - Esta classe ira conter o valor que sera atualizazdo juntamente com uma funcao que ira execultar a efetuar a atualização notificando seus ouvintes
 ```dart
@@ -27,10 +28,11 @@ controller.variavel
 ```
 - Para chamar a funcao de controle usa a instancia pela variavel passando o novo valor que a variavel ira ter e atualizando na tela
 ```dart
- controller.calcularIMC(parametro: 50);
+ controller.funcaChange(parametro: 50);
  ```
 - A funcao ira receber o valor 50 passado e ira atualizar a variavel, repassando o valor para o controller.
-- Para exbir os novor valors atualizados na tela é necessrio envolver o widget em um AnimatedBuilder que é composto por:
+- Para exbir os novos valores atualizados na tela é necessario chamar um ```notifyListeners()```, isto ira notificar os widgets que foram alterados que precisam ser atualizados.
+Em caso de animações envolver o widget em um AnimatedBuilder que é composto por:
     - animatio: Recebe a variavel a ser atualizada
     - builder: Recebe por default (context, child) e retorna o widget que sera atualizado, assim como é feito no [ValueListenableBuilder](./Gerenciamento_estado_ValueNotifier.md)
 ```dart

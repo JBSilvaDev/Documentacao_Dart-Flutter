@@ -20,11 +20,7 @@ import 'package:provider/provider.dart';
 - Para utilizar apenas um provider
 ```dart
 Provider(
-    create: (_) {
-    return Objeto(
-        // Itens do objeto e seus valores
-    );
-    },
+    create: (_) => Objeto();
     child: MaterialApp()
 ),
 ```
@@ -53,3 +49,26 @@ MultiProvider(
         ChangeNotifierProvider(create: (_)=>ObjetoControlador()),
       child: MaterialApp()
 ```
+### Metodos de utilização
+- Atravez de variavel que recebe o Provider tipado, instanciando o context
+  - ```dart
+    // Metodo raiz, escuta alterações
+    var nomeVariavel = Provider.of<Modelo>(context) 
+    // Obtem os dados e nao escuta alterações
+    var nomeVariavel = context.read<Modelo>() 
+    // Obtem os dados e escuta alterações
+    var nomeVariavel = context.watch<Modelo>();
+    ```
+- Chamada
+  - ```dart
+    nomeVariavel.instaciaDoModelo
+    ```
+- Atravez de variavel que recebe apenas o item desejado
+  - ```dart
+    var nomeVariavel = context.select<Modelo, TipoDoItemDesejado>((value) => value.instaciaDoModelo)
+    ```
+- Chamada
+  - ```dart
+    nomeVariavel
+    ```
+- Para alterar widgets especificos veja os metodos [2 e 3](../Flutter/Principais/Provider_Modelo.md)

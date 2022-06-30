@@ -71,3 +71,5 @@
     - em caso de inativo, pausado ou desanexado(fechado) ira fechar a conexao com bd
 
 
+
+
