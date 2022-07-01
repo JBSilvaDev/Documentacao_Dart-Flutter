@@ -44,7 +44,7 @@ class NomeDaClasse {
 // Caracteristica
 String? nome;
 int? _idade;
-//Get/Set
+// Get/Set
 int? get idade => _idade;
 set idade(int? idade) {
     if (idade == 0) {
@@ -53,6 +53,18 @@ set idade(int? idade) {
 }
 }
 ```
+>Atributos statics devem ser imutaveis, e sao acessados diretamente instaciando a classe, nao sendo necessario criar o objeto em uma variavel
+- static só podem acessar static
+- Se um static for alterado, todos os objetos criados pela classe irão receber o novo valor
+- Exemplo de atributo:
+```dart static const nomeAtributo = 'ValorDoAtributo';```
+- Exemplo de metodo: 
+```dart
+  static const String nome = 'Camiseta';
+  static void recuperarNome(String n) => print('$nome de $n');
+ ```
+ - Chamada : ```dart Camiseta.recuperarNome('JB'); ```
+ - Resultado = ***Camiseta de JB***
 >Contrutores
 - Por padrão contrutor tem o mesmo nome que a classe
 - Seguem o mesmo padrao das funcoes
