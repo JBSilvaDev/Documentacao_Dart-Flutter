@@ -63,7 +63,7 @@ set idade(int? idade) {
   static const String nome = 'Camiseta';
   static void recuperarNome(String n) => print('$nome de $n');
  ```
- - Chamada : ```dart Camiseta.recuperarNome('JB'); ```
+ - Chamada : ```Camiseta.recuperarNome('JB'); ```
  - Resultado = ***Camiseta de JB***
 >Contrutores
 - Por padrão contrutor tem o mesmo nome que a classe
