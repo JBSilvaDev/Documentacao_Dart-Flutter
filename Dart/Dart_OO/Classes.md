@@ -57,7 +57,7 @@ set idade(int? idade) {
 - static só podem acessar static
 - Se um static for alterado, todos os objetos criados pela classe irão receber o novo valor
 - Exemplo de atributo:
-```dart static const nomeAtributo = 'ValorDoAtributo';```
+```static const nomeAtributo = 'ValorDoAtributo';```
 - Exemplo de metodo: 
 ```dart
   static const String nome = 'Camiseta';
