@@ -147,6 +147,24 @@
   });
 }
 ```
+- Get & Set
+- Usados para passar ou pegar valores de atributos privados dentro da classe
+- Get obtem o valor de algo e atribui esse valor no metodo da classe
+    - get:
+        - Dentro da classe ```Tipo get atributoClasse => _atributoClassePrivado;```
+    - Get esta pegando o atributo da classe e retornando ele para o set
+- Set passa um valor de um metodo da classe para outro atributo na mesma classe
+    - set:
+        - Dentro da classe ```set atributoClasse(Tipo atributoClasse) => atributoClasse = _atributoClassePrivado;```
+    - Set esta passando o valor de seu atributo para o atributo privado da classe
+    - É possivel criar uma regra de negocio nos setes, atribuindo alguma condição para aceitar ou nao o valor passado para o atributo
+        - ```dart
+             set atributoClasse(String? atributoClasse) {
+                if(atributoClasse != null && atributoClasse.length > 3){
+                  _atributoClassePrivado = atributoClasse;
+                }}
+           ```
+        - Acima, so ira aceitar o valor passado se o tamanho dele for maior que 3
 
   
 
