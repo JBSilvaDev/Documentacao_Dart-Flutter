@@ -117,7 +117,7 @@ class NomeDaClasse {
   NomeDaClasse(int idadeConstrutor) : _idade = idadeConstrutor;
 }
 ```
->Herança - extends - super
+>Herança - extends - super - abstract
 - Uma classe pode extender outra usando o extends
     - Essa nova classe vai herdar os atribubos, caracteriscas, etc... do que esta sendo extendido
     - Ao extender uma classe em outra, se faz necessario passar as informações do "filho" para o "pai" utilizando a super junto com um construtor
@@ -128,6 +128,35 @@ class SobreNome extends NomeDaClasse{
 
 }
 ```
+- Quando uma classe é abstract, ela esta "ordenando" que outras classes que a extendem (modelo acima) tenha caracteristicas
+- exemplo classe pai:
+```dart
+abstract class Animal {
+  Animal({required this.idade});
+  final int idade;
+  int calcularIdadeHumana();
+}
+```
+- exemplo classes extends filha que são obrigadas a terem um metodo ```calcularIdadeHumana()```
+```dart
+class Cachorro extends Animal {
+  Cachorro({required int idade}) : super(idade: idade);
+  @override
+  int calcularIdadeHumana() {
+      return idade * 7;
+  }
+}
+class Gato extends Animal {
+  Gato({required int idade}) : super(idade: idade);
+  @override
+  int calcularIdadeHumana() {
+      return idade * 15;
+  }
+}
+```
+- Chamando ```Cachorro(idade: 1).calcularIdadeHumana());``` terei o retorno de **7**
+- Chamando ```Gato(idade: 1).calcularIdadeHumana());``` terei o retorno de **15**
+- Todas classes que extenderem uma abstract é obrigada a ter um medodo que seu pai pede, porem o que esse metodo ira fazer cada classe ira determinar suas proprias ações, acima a classe animal exige um calculo com base na idade humana, porem o calculo é diferente em cada um de seus filhos.
 > Extensions
 - É um tipo de classe que usa pra adicionar funcao a outra funcao
 - exemplo 1:
