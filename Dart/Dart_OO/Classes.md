@@ -128,3 +128,46 @@ class SobreNome extends NomeDaClasse{
 
 }
 ```
+> Extensions
+- É um tipo de classe que usa pra adicionar funcao a outra funcao
+- exemplo 1:
+  ```dart
+  extension ThemeExtension on BuildContext {
+    Color get primaryColor => Theme.of(this).primaryColor;
+    }
+    ```
+- Acima estou adicionando uma variavel que recebe a cor primaria de theme e extendendo esta variavel para o buildercontext, assim posso acessar a cor primaria do app chamando o ```context.primaryColor```
+- exemplo 2
+  ```dart
+  extension Texto on BuildContext {
+    String get saudacao => 'JBS';
+  }
+  ```
+- Chamando ```context.saudacao```, obtenho o valor *'JBS'*, uma string que poderia ser passada num ```print(context.saudacao)``` ou num ```Text(context.saudacao)```
+- exemplo 3:
+```dart
+class Pessoa {
+  String? nome;
+  Pessoa({
+    this.nome,
+  });
+}
+extension PessoaExtension on Pessoa {
+    String saudacao() {
+    return 'Ola $nome bem vindo a academia';
+  }
+}
+```
+- Acima estou extendendo uma classe propria, passando o solicitado no parametro e obtendo o retorno da extenção
+- Chamando ```Pessoa(nome: 'JB').saudacao()``` obtenho *Ola **JB** bem vindo a academia*
+- exemplo 4
+```dart
+extension saudacoesString on String {
+  String saudacao() {
+    return 'Ola $this bem vindo a academia do flutter';
+  }
+}
+```
+- Acima estou extendendo uma classe nativa, passando seu tipo e instanciando a funcao que a extende
+- Chamando ```'JB'.saudacao()``` obtenho *Ola **JB** bem vindo a academia do flutter*
+
