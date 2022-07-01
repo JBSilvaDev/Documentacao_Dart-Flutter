@@ -31,9 +31,8 @@ controller.variavel
  controller.funcaChange(parametro: 50);
  ```
 - A funcao ira receber o valor 50 passado e ira atualizar a variavel, repassando o valor para o controller.
-- Para exbir os novos valores atualizados na tela é necessario chamar um ```notifyListeners()```, isto ira notificar os widgets que foram alterados que precisam ser atualizados.
-Em caso de animações envolver o widget em um AnimatedBuilder que é composto por:
-    - animatio: Recebe a variavel a ser atualizada
+- Para exbir os novos valores atualizados na tela é necessario envolver o widget em um AnimatedBuilder que é composto por:
+    - animatio: Recebe a variavel que esta invocando a classe controladora que extends ChangeNotifier
     - builder: Recebe por default (context, child) e retorna o widget que sera atualizado, assim como é feito no [ValueListenableBuilder](./Gerenciamento_estado_ValueNotifier.md)
 ```dart
     AnimatedBuilder(animation: controller, builder: (context, child){
