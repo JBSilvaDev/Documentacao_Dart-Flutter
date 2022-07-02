@@ -9,3 +9,4 @@
 - [Flutter Signin Button](../../../../Dependencias/Dependencias.md#formatação)
 - [Flutter Icons](../../../../Dependencias/Dependencias.md#formatação)
 - [Tuple](https://pub.dev/packages/tuple) - Criar doc pendente.
+- [Validatorless](../../../../Dependencias/Validatorless.md)
