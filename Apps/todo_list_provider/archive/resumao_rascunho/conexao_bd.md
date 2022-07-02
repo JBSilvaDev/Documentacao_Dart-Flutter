@@ -68,7 +68,7 @@
 - criada variavel para conexao com bd que recebe o SqliteConnectionFactory
 - criado um switch que verifica o estado da aplicação, e ira executar uma ação para cada estado
     - em caso de ativo (resume) apenas para a funcao e nao executa nada
-    - em caso de inativo, pausado ou desanexado(fechado) ira fechar a conexao com bd
+    - em caso de inativo, pausado ou desanexado(fechado) ira fechar a conexao com bd.
 
 
 
