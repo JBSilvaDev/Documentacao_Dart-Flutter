@@ -41,7 +41,7 @@
     ```html
         android:usesCleartextTraffic="true"
     ```
-    - ATENCAO A ABERTURA E FECHAMENTO DE TASG
+    - ATENCAO A ABERTURA E FECHAMENTO DE TAGS
 - Rodar no terminal do app flutter pub add firebase_auth
 - Rodar no terminal do app flutter run
 - Importar import 'package:firebase_auth/firebase_auth.dart';

@@ -10,3 +10,4 @@
 - [Flutter Icons](../../../../Dependencias/Dependencias.md#formatação)
 - [Tuple](https://pub.dev/packages/tuple) - Criar doc pendente.
 - [Validatorless](../../../../Dependencias/Validatorless.md)
+- [OverlayLoader](../../../../Dependencias/OverlayLoader.md)

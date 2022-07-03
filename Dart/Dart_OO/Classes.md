@@ -54,6 +54,7 @@ set idade(int? idade) {
 }
 ```
 >Atributos statics devem ser imutaveis, e sao acessados diretamente instaciando a classe, nao sendo necessario criar o objeto em uma variavel
+- statics por serem atributos da classe, porem ser instanciados diretamente, sem a necessidade de criar um objeto da classe.
 - static só podem acessar static
 - Se um static for alterado, todos os objetos criados pela classe irão receber o novo valor
 - Exemplo de atributo:
