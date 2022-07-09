@@ -12,4 +12,20 @@ dependencies:
 import 'package:date_time_picker/date_time_picker.dart';
 ```
 ## Utilização
-
+```dart
+DatePicker(              
+    DateTime.now() //Data inicial,
+    height: // altura
+    locale: 'pt-BR', //Local referencia
+    initialSelectedDate: //Data inicial selecionada,
+    selectionColor: //Cor ao selecionar,
+    selectedTextColor: //Cor texto selecionado,
+    daysCount: //Tamanho do calendario em dias,
+    monthTextStyle: //Tamanho texto mes
+    dayTextStyle: //Tamanho texto dia
+    dateTextStyle: //Tamanho texto dia da semana
+    onDateChange: (date) {
+    context.read<HomeController>().filterByDay(date);
+    },
+);
+```
