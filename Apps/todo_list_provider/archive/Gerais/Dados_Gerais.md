@@ -11,3 +11,4 @@
 - [Tuple](https://pub.dev/packages/tuple) - Criar doc pendente.
 - [Validatorless](../../../../Dependencias/Validatorless.md)
 - [OverlayLoader](../../../../Dependencias/OverlayLoader.md)
+- [DateTimer Picker](../../../../Dependencias/Datetime.md)
