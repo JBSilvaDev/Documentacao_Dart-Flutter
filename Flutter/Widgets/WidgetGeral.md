@@ -149,10 +149,25 @@
     - child: Recebe widget
 ## BottomNavigationBar()
 - Usado para passar botes na barra inferior da pagina
-- Compoe:
-    - items: Recebe uma lista de [BottomNavigationBarItem](./WidgetsTree.md#bottomnavigationbaritem), Necessario ter 2 ou mais itens na lista
-    - onTap: Recebe Funcao anonima que em seu paramentro recebe o index de cada icone na lista de itens 
-    - currentIndex: Recebe o valor do index de um dos itens da lista
+- Para navegacao ou troca de widget na tela
+    - Necessario lista de items a serem exibidos ou executados para cada botao na barra
+        - Cada item possui um index na lista.
+    - Necessario uma variavel int para ser o index dos itens na lista -> ```int _indiceAtual = 0;```
+    - Necessario funcao que ira receber o index atual e passar o valor para varaivel
+    - Exemplo -> [Clique aqui](../../Img/listaItems.jpg)
+    - Compoe:
+        - items: Recebe uma lista de [BottomNavigationBarItem](./WidgetsTree.md#bottomnavigationbaritem), ***Necessario ter 2 ou mais itens na lista***
+        - onTap: Recebe index do botao clicado passando-o para outra funcao que ira executar uma acao de acordo com o valor de index 
+        - currentIndex: Recebe a variavel
+        - Exemplo -> [Clique aqui](../../Img/listaItems2.jpg)
+- Para açõe na tela
+    - Necessario uma funcao para receber o index do onTap
+    - Necessario um comparador como o switch case para execultar algo de acordo com o index recebido
+    - Exemplo -> [Clique aqui](../../Img/listaItems3.jpg)
+    - Compoe:
+        - items: Recebe uma lista de [BottomNavigationBarItem](./WidgetsTree.md#bottomnavigationbaritem),
+        - onTap: Recebe index do botao clicado passando-o para outra funcao que ira executar uma acao de acordo com o valor de index
+        - Exemplo -> [Clique aqui](../../Img/listaItems4.jpg)
 
 ## MaterialBanner
 - Possue a mesma estrutura da [snackBar](./WidgetGeral.md#snackbar)

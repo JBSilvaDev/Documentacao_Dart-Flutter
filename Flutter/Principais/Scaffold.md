@@ -13,3 +13,4 @@
     - > Barra inferior com icones(botoes)
         - bottomNavigationBar: Recebe [BottomNavigationBar](../Widgets/WidgetGeral.md#bottomnavigationbar)
         - floatingActionButton: Recebe Widget que comportam [botoes](../Widgets/WidgetGeral.md#buttons) na parte inferior da tela.
+        - floatingActionButtonLocation: Recebe ```FloatingActionButtonLocation.ALGUMACOISA```,

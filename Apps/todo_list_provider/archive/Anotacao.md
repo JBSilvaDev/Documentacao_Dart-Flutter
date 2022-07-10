@@ -251,4 +251,31 @@
 
       )
     ```
+- Dismissible (Arrasta para alguma ação)
+- Usado para executar alguma ação ao arrastar um item de uma lista, é composto por:
+  - background: Recebe um widget que é exibido ao arastar um item da lista
+  - direction: Recebe ```DismissDirection.ALGO``` que determina a direção do arrastar
+  - confirmDismiss: Recebe funcao que retorna algo para confirmar a ação
+  - key: Recebe uma ```final _formKey = GlobalKey<FormState>();```
+  - child: Recebe view em lista dos items que a ação do dismiss tera efeito
+
+```dart
+Dismissible(
+        background: Container(color: Colors.red),
+        direction: DismissDirection.endToStart,
+        confirmDismiss: (DismissDirection direction) {
+          return showDialog(
+              context: context,
+              builder: (_) {
+                final int id = model.id;
+                return RemoveTask(context, model.description, id);
+              });
+        },
+        key: _formKey,
+        child: IntrinsicHeight(
+          child: ListTile(),
+        ),
+      ),``
+
+```
 
