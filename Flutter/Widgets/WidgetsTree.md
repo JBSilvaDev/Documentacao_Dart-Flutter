@@ -39,6 +39,7 @@
     -   fontFamily: Familia a qual a fonte que vai usar pertence
     -   color: Recebe Colors.cor (cor do texto)
     -   fontWeight: Tonalidade do texto (negrito, normal...)
+    -   decoration: Recebe TextDecoration.ALGO
 ***
 ## EdgeInsets
 - Usado para passar valores em margin e padding

@@ -34,3 +34,10 @@
         - centerTitle: true
     - >Navegação avançada por rotas -> [Navegação avançada](./Navegacao.md#navegaçao-avançada)
         - onGenerateRoute: (RouteSettings settings){Condicionais para navegação}
+    - >Configuração do [flutter Localizations](../../Dependencias/Packages/FlutterLocale.md)
+        - localizationsDelegates: Recebe uma lista de configurações a ser aplicadas no aplicativo
+            - ```GlobalMaterialLocalizations.delegate,```
+            - ```GlobalWidgetsLocalizations.delegate```
+        - supportedLocales: Recebe lista de idiomas que o aplicativo suportará
+            - ```const Locale('pt', 'BR'),```
+

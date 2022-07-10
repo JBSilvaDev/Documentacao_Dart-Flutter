@@ -59,18 +59,23 @@
 -   TextButton()
 -   Compoe:
     -   onPressed: Recebe uma função de ação ao clicar (){}
-    -   child: Recebe widget de texto,
+    -   child: Recebe widget de texto ou icone para exibir dentro do botao,
     -   style: Formatação do texto, recebe um [TextButton.styleFrom()](./WidgetsTree.md#textbuttonstylefrom) ou [ButtonStyle](./WidgetsTree.md#ButtonStyle)
 -   ElevatedButton()
 -   Compoe:
     -   onPressed: Recebe uma função de ação ao clicar (){}
-    -   child: Recebe widget de texto,
+    -   child: Recebe widget de texto ou icone para exibir dentro do botao,
     -   style: Formatação do texto, recebe um [ElevatedButton.styleFrom()](./WidgetsTree.md#elevatedbuttonstylefrom)) ou [ButtonStyle](./WidgetsTree.md#ButtonStyle)
 -   ElevatedButton.icon()
 -   Compoe:
     -   onPressed: Recebe uma função de ação ao clicar (){}
     -   Recebe um widget de [icone](WidgetsTree.md#Icons)
     -   label: Recebe widget de texto,
+-   FloatingActionButton()
+-   Compoe:
+    - onPressed: Recebe uma função de ação ao clicar (){}
+    - tooltip: Recebe texto a ser exebido ou parar mouse ou longpress
+    - child: Recebe widget de texto ou icone para exibir dentro do botao
 -   IconButton()
 -   Compoe:
     -   onPressed: Recebe uma função de ação ao clicar (){}
@@ -85,6 +90,7 @@
     -   child: Recebe widget de texto,
     -   onTap: Recebe uma função de ação ao clicar (){}
     -   ao fazer algo: Recebe uma funcao que execulta uma ação ao fazer algo (onHorizontalDragStart, onVerticalDragStart, etc...)
+-   floatingActionButton : Este botão encontra-se dentro da [Scaffold](../Principais/Scaffold.md)
 
 ## Text()
 - Usado para definir strings na aplicação
@@ -119,7 +125,7 @@
         - behavior: Recebe SnackBarBehavior.floating
         - width: Largura da SnackBar
         - shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#roundedrectangleborder)
-- Invoca-se o *ScaffoldMessenger.of(context).showSnackBar(snackbar);*
+- Invoca-se o *```ScaffoldMessenger.of(context).showSnackBar(snackbar);```*
     - Passa como parametro do .of o [context](../Fundamentos.md#buildcontext)
     - Passa como paramentro do .showSnackBar a variavel que a contem.
 ## Stack()
@@ -165,3 +171,9 @@
 - Compoe:
     - visible: condição a ser atendida
     - child: widget que sera exbido se a condição for true
+## CheckBox
+- Caixa de seleção, execulta alguma ação ao ser selecionada
+- Exemplo: [Check - SnackBar](../../Img/checkBox.jpg)
+- Compoe:
+    - onChanged: Função a ser execultada quando selecionado
+    - value: valor selecionado (true ou false),

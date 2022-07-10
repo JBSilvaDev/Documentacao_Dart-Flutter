@@ -12,3 +12,4 @@
         - body : Recebe um outro widget que podem conter outros widges [Demais Widgets de composição](../Widgets/WidgetGeral.md)
     - > Barra inferior com icones(botoes)
         - bottomNavigationBar: Recebe [BottomNavigationBar](../Widgets/WidgetGeral.md#bottomnavigationbar)
+        - floatingActionButton: Recebe Widget que comportam [botoes](../Widgets/WidgetGeral.md#buttons) na parte inferior da tela.
