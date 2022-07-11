@@ -32,4 +32,6 @@
     - [Tuple](./Tuple.md)
 - Freezed - [Freezed](./Freezed.md)
 ***
+## Autenticação user
+- Firebase - [Firebase](./Rest-RestFull/FireBase/Autenticacao/FireBase.md)
 

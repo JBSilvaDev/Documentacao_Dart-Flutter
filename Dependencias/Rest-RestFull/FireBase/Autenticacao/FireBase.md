@@ -1,0 +1,1 @@
+atualizar com [isso](../../../../Apps/todo_list_provider/archive/confg_firebase_auth.md)
