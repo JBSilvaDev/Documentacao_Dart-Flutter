@@ -1,5 +1,3 @@
-atualizar com [isso](../../../../Apps/todo_list_provider/archive/confg_firebase_auth.md)
-
 # FirebaseAuth
 >Usado para autenticação de usuarios pois meio de login/senha.<br>
 Docs: [Clique aqui](https://pub.dev/packages/firebase_auth)<br>
