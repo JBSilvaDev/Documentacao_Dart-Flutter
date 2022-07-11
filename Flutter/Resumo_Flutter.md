@@ -21,9 +21,11 @@
 -   [Scroll - List](./Widgets/Scroll_List.md) - (Rolagem de tela)
 -   [Media Query](./Principais/MediaQuery.md) - (Configurações e dimenções de tela)
 -   [Layout Builder](./Principais/Layout_Builder.md) - (Configurações e dimenções de tela)
+-   [BuilderContext](./Principais/BuildeContext.md) - (Transferência de informações entre arquivos atravez do contexto)
 ## Conexao com BD (Interação com usuario)
 -   [Conexões BD Dart](../Dependencias/Dependencias.md#conexão-com-bd)
 -   [Transformando Json em ListView](./Principais/JsonToList.md)
     -  Para leitura de Json Local usar a mesma estrutura apresentada substituindo os comando HTTP (get, put, post) por rootBundle.loadString('Caminho json')
     -  Necessario efetuar configuração no .yaml para acesso a pasta assets
 -   [Flutter SQLite](../Dependencias/Rest-RestFull/SQLite/SQLite.md)
+-   [FirebaseAuth](../Dependencias/Rest-RestFull/FireBase/Autenticacao/FireBase.md)

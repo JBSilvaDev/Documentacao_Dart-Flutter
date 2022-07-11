@@ -40,11 +40,11 @@
               ),
             );
       }
-```
+    ```
 - layoutbuilder
   - widget usado para obter dados da tela, pede um builder que recebe (context, constraints) e retorna outro widget
   - o widget de retorno pode ser qualquer, porem um dos filhos precisa ser uma ConstrainedBox que segue a mesma ideia de um Container, porem tem a opcao de receber constraints, como constraints passa-se o BoxConstraints nele é possivel determinar o maximo e o minimo em altura e largura da pagina, usando como referencia a constraints passadas no LayoutBuilder.
-  ```dart
+```dart
     LayoutBuilder(
       builder: ((context, constraints) {
         return SingleChildScrollView(
