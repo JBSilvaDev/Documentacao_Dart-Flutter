@@ -76,7 +76,7 @@
                 }),
                 ```
     4. Atualizar somente os widgets que foram alterados
-        - Necessário package [tuple](https://pub.dev/packages/tuple)
+        - Necessário package [tuple](../../Dependencias/Tuple.md)
         - Usado para buildar mais de um item da controller
         - Basta chamar o Selector passando seu tipo < Controlador Tupla2< TipoWidgetAtualizado1, TipoWidgetAtualizado1 > > que é composto por:
             - selector: Recebe funcao com 2 paramentros (_, controller) e retorna a Tupla passando os itens a serem atualizados

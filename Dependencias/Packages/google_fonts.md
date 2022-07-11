@@ -13,8 +13,8 @@ dependencies:
 import 'package:google_fonts/google_fonts.dart';
 ```
 ## Utilizazção
-// Passar em tags style o GoogleFonts.FONT()
-// Para mais estilo usar dentro do GoogleFonts a tag texStyle que recebe TextStyle()
+- Passar em tags style o GoogleFonts.FONT()
+- Para mais estilo usar dentro do GoogleFonts a tag ```texStyle``` que recebe ```TextStyle()```
 ```dart
 style: GoogleFonts.acme()
 style: GoogleFonts.aBeeZee(textStyle: TextStyle(fontSize: 10))
