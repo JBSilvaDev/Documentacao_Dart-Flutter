@@ -14,3 +14,4 @@
 - [DateTimer Picker](../../../Dependencias/Datetime.md)
 - [Intil](../../../Dependencias/Packages/intl.md)
 - [Flutter Localization](../../../Dependencias/Packages/FlutterLocale.md)
+- [Freezed](../../../Dependencias/Packages/Freezed.md)
