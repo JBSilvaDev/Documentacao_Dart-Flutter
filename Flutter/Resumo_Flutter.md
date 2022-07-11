@@ -22,6 +22,8 @@
 -   [Media Query](./Principais/MediaQuery.md) - (Configurações e dimenções de tela)
 -   [Layout Builder](./Principais/Layout_Builder.md) - (Configurações e dimenções de tela)
 -   [BuilderContext](./Principais/BuildeContext.md) - (Transferência de informações entre arquivos atravez do contexto)
+## Class Widgets Modelos
+-   [Tema Personalizado](./Widgets/Theme.md) 
 ## Conexao com BD (Interação com usuario)
 -   [Conexões BD Dart](../Dependencias/Dependencias.md#conexão-com-bd)
 -   [Transformando Json em ListView](./Principais/JsonToList.md)

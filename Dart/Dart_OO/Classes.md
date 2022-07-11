@@ -118,7 +118,7 @@ class NomeDaClasse {
   NomeDaClasse(int idadeConstrutor) : _idade = idadeConstrutor;
 }
 ```
->Herança - extends - super - abstract
+>Herança - extends - super - abstract - implements
 - Uma classe pode extender outra usando o extends
     - Essa nova classe vai herdar os atribubos, caracteriscas, etc... do que esta sendo extendido
     - Ao extender uma classe em outra, se faz necessario passar as informações do "filho" para o "pai" utilizando a super junto com um construtor
@@ -157,16 +157,19 @@ class Gato extends Animal {
 ```
 - Chamando ```Cachorro(idade: 1).calcularIdadeHumana());``` terei o retorno de **7**
 - Chamando ```Gato(idade: 1).calcularIdadeHumana());``` terei o retorno de **15**
-- Todas classes que extenderem uma abstract é obrigada a ter um medodo que seu pai pede, porem o que esse metodo ira fazer cada classe ira determinar suas proprias ações, acima a classe animal exige um calculo com base na idade humana, porem o calculo é diferente em cada um de seus filhos.
+- Todas classes que extenderem uma abstract é obrigada a ter o metodo que seu pai pede, porem o que esse metodo ira fazer cada classe ira determinar suas proprias ações, acima a classe animal exige um calculo com base na idade humana, porem o calculo é diferente em cada um de seus filhos.
+- 
+
 > Extensions
 - É um tipo de classe que usa pra adicionar funcao a outra funcao
+- É possivel chamar metodos das classes que as extendem (exemplo 3)
 - exemplo 1:
   ```dart
   extension ThemeExtension on BuildContext {
     Color get primaryColor => Theme.of(this).primaryColor;
     }
     ```
-- Acima estou adicionando uma variavel que recebe a cor primaria de theme e extendendo esta variavel para o buildercontext, assim posso acessar a cor primaria do app chamando o ```context.primaryColor```
+- Acima estou adicionando uma variavel que recebe a cor primaria de theme e extendendo esta variavel para o buildercontext, assim posso acessar a cor primaria do app chamando o ```context.primaryColor``` apos efetuar a importação da classe ```ThemeExtension``` para o arquivo
 - exemplo 2
   ```dart
   extension Texto on BuildContext {
@@ -189,15 +192,15 @@ extension PessoaExtension on Pessoa {
 }
 ```
 - Acima estou extendendo uma classe propria, passando o solicitado no parametro e obtendo o retorno da extenção
-- Chamando ```Pessoa(nome: 'JB').saudacao()``` obtenho *Ola **JB** bem vindo a academia*
+- Chamando ```print(Pessoa(nome: 'JB').saudacao());``` obtenho *Ola **JB** bem vindo a academia*
 - exemplo 4
 ```dart
 extension saudacoesString on String {
   String saudacao() {
-    return 'Ola $this bem vindo a academia do flutter';
+    return 'Ola $this bem vindo ao flutter';
   }
 }
 ```
 - Acima estou extendendo uma classe nativa, passando seu tipo e instanciando a funcao que a extende
-- Chamando ```'JB'.saudacao()``` obtenho *Ola **JB** bem vindo a academia do flutter*
+- Chamando ```print('JB'.saudacao())``` obtenho *Ola **JB** bem vindo ao flutter*
 
