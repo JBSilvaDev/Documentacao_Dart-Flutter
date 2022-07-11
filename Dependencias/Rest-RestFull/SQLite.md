@@ -14,8 +14,8 @@ import 'package:sqflite/sqflite.dart';
 ```
 ## Principais comandos
 - Criando BD/Tabela e Conectando
-    - Seguir os passos acima
-    - [Modelo](../Rest-RestFull/SQLite/Modelos/Criando_ConexaoBD.md)
+    - [Modelo 1](../Rest-RestFull/SQLite/Modelos/Criando_ConexaoBD.md)
+    - [Modelo MVVM](../Rest-RestFull/SQLite/Modelos/MVVM/README.md)
 - Manipulando conteudo
     - Seguir os passos acima    
     - [Modelo](../Rest-RestFull/SQLite/SQLite.md)

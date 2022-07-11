@@ -4,8 +4,7 @@ import 'package:todo_list_provider/app/core/database/migrations/migration_v2.dar
 
 class SqliteMigrationFactory {
   List<Migration> getCreateMigration() => [
-    MigrationV1(),
-    MigrationV2(),
+    MigrationImpl(),
   ];
 
   List<Migration> getUpgradeMigration(int version) {

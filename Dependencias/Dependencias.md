@@ -32,24 +32,4 @@
     - [Tuple](./Tuple.md)
 - Freezed - [Freezed](./Freezed.md)
 ***
-## Verificação de plataforma em uso
-- Importar pacote
-```dart
-import 'dart:io';
-```
-- If para verificação
-```dart
-if (Platform.isIOS) {
-    print('é IOS');
-}else if(Platform.isWindows){
-    print('é windows');
-}
-```
-- Demais:
-    - isAndroid
-    - isLinux
-    - isMacOS
-    - isWindows
-    - isIOS
-***
 
