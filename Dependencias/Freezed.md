@@ -32,9 +32,11 @@ class Person with _Person {
 }
 ```
 >Apos modelo criado rodar no console
+- Para rodar manualmente 1 a 1
 ```dart
-// Para rodar manualmente 1 a 1
 dart run build_runner build
-// Para rodar sempre que houver uma atualização
+```
+- Para rodar sempre que houver uma atualização
+```dart
 dart run build_runner watch
 ```
