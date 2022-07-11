@@ -130,6 +130,7 @@ class SobreNome extends NomeDaClasse{
 }
 ```
 - Quando uma classe é abstract, ela esta "ordenando" que outras classes que a extendem (modelo acima) tenha caracteristicas
+- O mesmo ocorre para classes que sao ```implements``` de outras classes, seus metodos passam a ser obrigatorios a implementação
 - exemplo classe pai:
 ```dart
 abstract class Animal {
@@ -158,7 +159,6 @@ class Gato extends Animal {
 - Chamando ```Cachorro(idade: 1).calcularIdadeHumana());``` terei o retorno de **7**
 - Chamando ```Gato(idade: 1).calcularIdadeHumana());``` terei o retorno de **15**
 - Todas classes que extenderem uma abstract é obrigada a ter o metodo que seu pai pede, porem o que esse metodo ira fazer cada classe ira determinar suas proprias ações, acima a classe animal exige um calculo com base na idade humana, porem o calculo é diferente em cada um de seus filhos.
-- 
 
 > Extensions
 - É um tipo de classe que usa pra adicionar funcao a outra funcao
