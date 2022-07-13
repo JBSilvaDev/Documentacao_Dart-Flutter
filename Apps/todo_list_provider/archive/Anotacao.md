@@ -1,6 +1,7 @@
 - layoutbuilder
   - widget usado para obter dados da tela, pede um builder que recebe (context, constraints) e retorna outro widget
   - o widget de retorno pode ser qualquer, porem um dos filhos precisa ser uma ConstrainedBox que segue a mesma ideia de um Container, porem tem a opcao de receber constraints, como constraints passa-se o BoxConstraints nele é possivel determinar o maximo e o minimo em altura e largura da pagina, usando como referencia a constraints passadas no LayoutBuilder.
+
 ```dart
     LayoutBuilder(
       builder: ((context, constraints) {
@@ -11,21 +12,24 @@
                 minWidth: constraints.maxWidth, ),
             child: Widget()
   ```
+
 - IntrinsicHeight
   - widget que passa para seu filho o tamanho de ocupação necessaria na tela, um collumn por exemplo nao teria tamanho infinito, ocuparia o tamanho exeto necessario para caber seus filhos
+
     ```dart
     IntrinsicHeight(
       child: Column(
         mainAxisSize: MainAxisSize.min, // O tamanho minimo possivel da coluna
         children: []
     ```
+
   - o mesmo ocorre com IntrinsicWidth porem seu ajuste seria na largura
 - TodoListLogo
   - classe  stateleswidget, e apos o builder no widget principal retorna uma coluna alinhada ao centro que ira receber nos filhos uma imagem e um texto ja estilizados
 - Expanded
   - widget de expansão, ira expandir seu filho para ocupar todo o restante disponível em tela
 - TextFormField (Personalizado)
-  - Classe statelesswidget, e apos o builder no widget principal retorna um ValueListenableBuilder to tipo bool, 
+  - Classe statelesswidget, e apos o builder no widget principal retorna um ValueListenableBuilder to tipo bool,
   - Criada variavel ValueNotifier que na atribuição do construtor,antes do super foi atribuido o mesmo valor do obscureText, assim o value notifier pode "ouvir" quando houver mudança de valor da variavel, e com isso executar alguma ação,  ValueListenableBuilder foi composto por:
     - valueListenable: Recebe o valor antigo que sera atualizado pelo value do builder
     - builder: Recebe funcao com 3 parametros um que recebe context, um recebe value (novo valor a ser passado), um recebe widget e retorna o TextFormField.
@@ -40,7 +44,7 @@
     - isDense: Recebe true ou false para deixar o campo mais compacto
     - suffixIcon: Recebe widget, icone dentro do campo, feita uma logica para determinar se o icone iria aparecer ou nao
     - obscureText: Recebe true ou false para ocultar ou nao os caracteres digitados
-  - Variavel privada _emailFocus recebe FocusNode(), que é chamado num onPressed como _emailFocus..requestFocus(), fazendo que o campo onde o focusNode for passado, sera selecionado
+  - Variavel privada _emailFocus recebe FocusNode(), que é chamado num onPressed como_emailFocus..requestFocus(), fazendo que o campo onde o focusNode for passado, sera selecionado
   - O usa esta classe chamando o NomeDoArquivo(Passando seus atributos)
 
 ```dart
@@ -83,6 +87,7 @@
             );
           });
 ```
+
 - Tela de cadastro
   - Classe statefullwidget, adicionada nova rota no AuthModule e nos bindings passado mais um changeNotifierProvider que retorna a RegisterControler, o retorno do RegisterPage é uma tela Scaffold onde
   - AppBar composta:
@@ -96,6 +101,7 @@
   - Criada uma variavel que ira receber a msg de exceções
   - Criado construtor para passar a msg
   - Usa-se a classe chamando o throw NomeClasse(message: "Messagem de erro")
+
 ```dart
   class AuthExceptions implements Exception {
   final String message;
@@ -104,24 +110,27 @@
   });
 }
 ```
+
 - Get & Set
 - Usados para passar ou pegar valores de atributos privados dentro da classe
 - Get obtem o valor de algo e atribui esse valor no metodo da classe
-    - get:
-        - Dentro da classe ```Tipo get atributoClasse => _atributoClassePrivado;```
-    - Get esta pegando o atributo da classe e retornando ele para o set
+  - get:
+    - Dentro da classe ```Tipo get atributoClasse => _atributoClassePrivado;```
+  - Get esta pegando o atributo da classe e retornando ele para o set
 - Set passa um valor de um metodo da classe para outro atributo na mesma classe
-    - set:
-        - Dentro da classe ```set atributoClasse(Tipo atributoClasse) => atributoClasse = _atributoClassePrivado;```
-    - Set esta passando o valor de seu atributo para o atributo privado da classe
-    - É possivel criar uma regra de negocio nos setes, atribuindo alguma condição para aceitar ou nao o valor passado para o atributo
+  - set:
+    - Dentro da classe ```set atributoClasse(Tipo atributoClasse) => atributoClasse = _atributoClassePrivado;```
+  - Set esta passando o valor de seu atributo para o atributo privado da classe
+  - É possivel criar uma regra de negocio nos setes, atribuindo alguma condição para aceitar ou nao o valor passado para o atributo
+        -
         - ```dart
              set atributoClasse(String? atributoClasse) {
                 if(atributoClasse != null && atributoClasse.length > 3){
                   _atributoClassePrivado = atributoClasse;
                 }}
-           ```
-        - Acima, so ira aceitar o valor passado se o tamanho dele for maior que 3
+
+```
+    - Acima, so ira aceitar o valor passado se o tamanho dele for maior que 3
 - Navegacao com animação
   - Dentro de uma ação de navegação
   - Usando ```Navigator.of(context).push()``` dentro do push chama o ```PageRouteBuilder``` que é comporto por:
@@ -133,6 +142,7 @@
         - alignment: recebe o alinhamento da transacao
         - child: recebe o paramento passado no child(filho) de transitionsBuilder
     pageBuilder: recebe funcao anonima com 3 paramentros *context, animation, secondaryAnimation* e retorna a pagina destino.
+
     ```dart
     ElevatedButton(
       onPressed: () {
@@ -156,7 +166,9 @@
       child: Text('Pagina 1'),
     )
     ```
+
     - Ou para navegacao simples:
+
     ```dart
     ElevatedButton(
       onPressed: () {
@@ -179,6 +191,7 @@
       - backgroundColor: Recebe a cor que representa progresso faltante
       - valueColor: Recebe ```AlwaysStoppedAnimation<Color>( Colors.black),``` que é a cor do progresso concluido
       - value: recebe o valorfinal recebido no paramentro
+
     ```dart
       TweenAnimationBuilder<double>(
         tween: Tween(
@@ -194,12 +207,14 @@
           );
         },
       )
-    ``` 
+    ```
+
     - Modo simplificado (sem animação de progresso)
     - ```LinearProgressIndicator``` que é composto por:
       - backgroundColor: Recebe a cor que representa progresso faltante
       - valueColor: Recebe ```AlwaysStoppedAnimation<Color>( Colors.black),``` que é a cor do progresso concluido
-      - value: recebe o valorfinal, a % que ja foi concluida 
+      - value: recebe o valorfinal, a % que ja foi concluida
+
     ```dart
     LinearProgressIndicator(
       backgroundColor:  Colors.grey.shade300,
@@ -208,6 +223,7 @@
 
       )
     ```
+
 - Dismissible (Arrasta para alguma ação)
 - Usado para executar alguma ação ao arrastar um item de uma lista, é composto por:
   - background: Recebe um widget que é exibido ao arastar um item da lista
@@ -235,4 +251,3 @@ Dismissible(
       ),``
 
 ```
-
