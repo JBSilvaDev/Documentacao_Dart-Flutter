@@ -22,7 +22,7 @@ class RegisterController extends DefaultChangeNotifier {
         setError('Erro ao registrar usuario');
       }
     } on AuthExceptions catch (e) {
-      setError(e.message);
+      setErrror(e.message);
     } finally {
       hideLoading();
       notifyListeners();

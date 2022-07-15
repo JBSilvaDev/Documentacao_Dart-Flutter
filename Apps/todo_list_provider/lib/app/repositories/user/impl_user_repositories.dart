@@ -36,7 +36,7 @@ class ImplUserRepositories implements UserRepositories {
                   'Você se cadastrou pelo Google, use o botão indicado para acessar o app');
         }
       } else {
-        throw AuthExceptions(message: e.message ?? 'Eddo ao registrar usuário');
+        throw AuthExceptions(message: e.message ?? 'Erro ao registrar usuário');
       }
     }
   }
