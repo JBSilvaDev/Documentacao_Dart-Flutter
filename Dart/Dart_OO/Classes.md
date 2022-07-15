@@ -45,24 +45,13 @@ class NomeDaClasse{
 
 >Atributos com _ a frente de seu nome, sao privados
 
-- Usa-se get/set para acessados
-- Se a classe estiver no mesmo arquivo que o main pode ser acessado diretamente
-- Se a classe estiver em arquivo separado so pode acessar com get/set
-  - Neste get/set pode-se colocar alguma condicao para aceitar o valor passado ou nao
-  - Exemplo abaixo se o valor da idade for igual a 0 retorna um erro e nao aceita
+- Usa-se [get/set](./Get_Set.md) para acessar esses atributos privados
+- Se a classe estiver no mesmo arquivo (não recomendado) que o *"invocador"* pode ser acessado diretamente
 
 ```dart
 class NomeDaClasse {
-// Caracteristica
-String? nome;
-int? _idade;
-// Get/Set
-int? get idade => _idade;
-set idade(int? idade) {
-    if (idade == 0) {
-        throw Exception('Informe uma idade valida');
-    }
-}
+String? nome; // Não privado, pode ser acessado diretamente como instancia da classe
+int? _idade; // Privado, Nao pode ser acessado fora do arquivo onde a classe foi criada
 }
 ```
 
