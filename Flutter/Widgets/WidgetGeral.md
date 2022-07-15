@@ -36,14 +36,13 @@
 
 - Passa para seus filhos o tamanho necessario para conter seus dados, um para altura, outro para largura
 - Compoe:
-    - child: Recebe widget que ira ter somente o tamanho necessario para seus dados
+  - child: Recebe widget que ira ter somente o tamanho necessario para seus dados
 
 ## Expanded()
 
 - Passa para seus filhos o tamanho restante disponivel da tela para assim ocupar este espaço
 - Compoe:
-    - child: Recebe widget que ira ocupar todo espaço restante na tela.
-
+  - child: Recebe widget que ira ocupar todo espaço restante na tela.
 
 ## Rows() & Columns()
 
@@ -235,3 +234,15 @@
 - Compoe:
   - onChanged: Função a ser execultada quando selecionado
   - value: valor selecionado (true ou false),
+
+## LinearProgressIndicator
+
+- Barra de progresso interativa
+- Valor tota da barra padrão é 1.0 (se o valor da tag value for 0.5 metade da barra sera preenchida)
+- Compoe:
+  - backgroundColor: Recebe a cor que representa progresso faltante
+  - valueColor: Recebe ```AlwaysStoppedAnimation<Color>(Colors.black)```, que é a cor do progresso concluido
+  - value: recebe o valorfinal recebido no paramentro
+- Exemplo 1: [Sem Animação](../../Img/barraProgresso1.png)
+- Para ter animação no preenchimento da barra usa-se o [TweenAnimationBuilder](./WidgetsTree.md#tweenanimationbuilder)
+- Exemplo 2: [Com Animação](../../Img/barraProgresso2.png)

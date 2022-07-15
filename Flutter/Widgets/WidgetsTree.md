@@ -268,3 +268,11 @@
 - Compoe:
   - icon: Recebe icone comum que sera exibido como botao na barra
   - label: Recebe uma String que sera exibida na barra
+
+## TweenAnimationBuilder
+
+- Usado para passar valores para animações
+- Compoe:
+  - tween: Recebe ```Tween``` passando o valor inicial e final da barra (begin/end)
+  - duration: Recebe o tempo que a barra ira demorar para atualizar
+  - builder: Recebe funcao anonima com 3 paramentros *(contexto, valorfinal, child)* e retorna o widget que sera animado.

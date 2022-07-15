@@ -14,6 +14,7 @@
 - [Widgets Composicao](./Widgets/WidgetsTree.md)
 - [Caixas de dialogo (popup)](./Widgets/Dialogs.md)
 - [Navegação](./Principais/Navegacao.md)
+- [Navegação com animação](./Principais/Nav_Animation.md)
 - [Parametros de Navegação](./Principais/Parametros_Navegacao.md) - (Obter dados de uma pagina em outra)
 - [Gerenciamento de estado - setState](./Principais/Gerenciamento_estado_setState.md)
 - [Gerenciamento de estado - ValueNotifier](./Principais/Gerenciamento_estado_ValueNotifier.md)
