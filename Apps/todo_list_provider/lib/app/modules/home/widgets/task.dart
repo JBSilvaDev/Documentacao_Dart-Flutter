@@ -23,6 +23,19 @@ class Task extends StatelessWidget {
           ]),
       margin: EdgeInsets.symmetric(vertical: 5),
       child: Dismissible(
+        background: Container(
+          color: Colors.red,
+          child: Row(
+            children: [
+              Text('Você vai deletar isto! ',style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white),
+              ),
+              SizedBox(
+                width: 20,
+              )
+            ],
+            mainAxisAlignment: MainAxisAlignment.end,
+          ),
+        ),
         direction: DismissDirection.endToStart,
         confirmDismiss: (DismissDirection direction) {
           return showDialog(

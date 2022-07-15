@@ -246,3 +246,14 @@
 - Exemplo 1: [Sem Animação](../../Img/barraProgresso1.png)
 - Para ter animação no preenchimento da barra usa-se o [TweenAnimationBuilder](./WidgetsTree.md#tweenanimationbuilder)
 - Exemplo 2: [Com Animação](../../Img/barraProgresso2.png)
+
+## Dismissible
+
+- Ação de deslizar um item de listas para uma direção pre-definida e executar uma funcao apos deslise.
+- Compoe:
+  - background: Recebe um widget que é exibido ao arastar um item da lista
+  - direction: Recebe ```DismissDirection.DIREÇÃO``` que determina a direção do deslizar 
+  - confirmDismiss: Recebe funcao com paramentro *(DismissDirection direction)* onde seu retorno deve ser uma confirmação de true ou false, como um [pop-up](./Dialogs.md#alertdialog) com botoes, a ação a ser tomada deve esta nesta confirmação de true ou false
+  - key: Recebe uma ```final _formKey = GlobalKey<FormState>();```
+  - child: Recebe lista dos items que a o dismissible ira agir
+- Exemplo : [Dismissible](../../Img/dismissible_simples.png)
