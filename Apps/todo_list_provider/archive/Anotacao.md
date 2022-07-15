@@ -1,26 +1,3 @@
-- Tela de cadastro
-  - Classe statefullwidget, adicionada nova rota no AuthModule e nos bindings passado mais um changeNotifierProvider que retorna a RegisterControler, o retorno do RegisterPage é uma tela Scaffold onde
-  - AppBar composta:
-    - title: Titulo da pagina
-    - automaticallyImplyLeading: Desativa botao voltar padrao
-    - backgroundColor: Cor de fundo
-    - leading: Recebe widget (novo botao voltar)
-  - body recebe todo o conteudo restante da pagina como formularios e botoes
-- Exceções personalizadas
-  - Classe que implementa Exception
-  - Criada uma variavel que ira receber a msg de exceções
-  - Criado construtor para passar a msg
-  - Usa-se a classe chamando o throw NomeClasse(message: "Messagem de erro")
-
-```dart
-  class AuthExceptions implements Exception {
-  final String message;
-  AuthExceptions({
-    required this.message,
-  });
-}
-```
-
 - Get & Set
 - Usados para passar ou pegar valores de atributos privados dentro da classe
 - Get obtem o valor de algo e atribui esse valor no metodo da classe
@@ -32,15 +9,13 @@
     - Dentro da classe ```set atributoClasse(Tipo atributoClasse) => atributoClasse = _atributoClassePrivado;```
   - Set esta passando o valor de seu atributo para o atributo privado da classe
   - É possivel criar uma regra de negocio nos setes, atribuindo alguma condição para aceitar ou nao o valor passado para o atributo
-        -
-        - ```dart
-             set atributoClasse(String? atributoClasse) {
-                if(atributoClasse != null && atributoClasse.length > 3){
-                  _atributoClassePrivado = atributoClasse;
-                }}
-
-```
-    - Acima, so ira aceitar o valor passado se o tamanho dele for maior que 3
+    - ```dart
+      set atributoClasse(String? atributoClasse) {
+        if(atributoClasse != null && atributoClasse.length > 3){
+          _atributoClassePrivado = atributoClasse;
+        }}
+        ```
+- Acima, so ira aceitar o valor passado se o tamanho dele for maior que 3
 - Navegacao com animação
   - Dentro de uma ação de navegação
   - Usando ```Navigator.of(context).push()``` dentro do push chama o ```PageRouteBuilder``` que é comporto por:
