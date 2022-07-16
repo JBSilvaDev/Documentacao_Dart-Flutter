@@ -1,4 +1,7 @@
 # Classes
+***
+- Para heranças de classes -> [Classes Heranças e Variados](./Classes_H_e_V.md)
+***
 
 >Classes sao representações do mundo real dentro do dart, o famoso OBJETO <br>
 

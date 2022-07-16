@@ -1,0 +1,1 @@
+# Heranças de [classes](Classes.md)
