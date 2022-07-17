@@ -1,10 +1,25 @@
 # Heranças de [classes](Classes.md)
 
->Herança - extends - super - abstract - implements
+>extends
 
 - Uma classe pode extender outra usando o extends
-  - Essa nova classe vai herdar os atribubos, caracteriscas, etc... do que esta sendo extendido
-  - Ao extender uma classe em outra, se faz necessario passar as informações do "filho" para o "pai" utilizando a super junto com um construtor
+    - Essa nova classe vai herdar os atribubos, caracteriscas, etc... do que esta sendo extendido
+    - Quando extendemos uma classe os metodos e atributos da classe *Pai* passam para o filho, abaixo exemplo a classe ```Sobrenome``` herdou a variavel nome de seu pai
+    - ```dart
+        class Nome {
+            String? nome;
+        }
+        ```
+    - ```dart
+        class Sobrenome extends Nome{
+        
+        }
+        ```
+    - Assim é possivel chamar a variavel nome na classe ```Sobrenome```
+    - ```dart
+        var n = Sobrenome();
+        n.nome = 'JB';
+        ```
 
 ```dart
 class SobreNome extends NomeDaClasse{
