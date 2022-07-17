@@ -79,7 +79,7 @@
             _NomeDaClasse createState() => _NomeDaClasseState();
             ```
   - É um componente que pode sofrer alterações de estado
-  - Uma nova classe criada como privada, esta classe ira extender State passando a class que extente o StatefulWidget como tipo
+  - Uma nova classe criada como privada, esta classe ira estender State passando a class que extente o StatefulWidget como tipo
         -
         - ```dart
             class _ClassCriadaPrivada extends State<Nome> {}

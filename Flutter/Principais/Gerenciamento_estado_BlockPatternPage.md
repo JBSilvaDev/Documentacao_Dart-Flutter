@@ -39,7 +39,7 @@ _imcStreamController.add(IMCStateLoading());
 imcIn.add(IMCStateLoading())
 ```
 - Ainda na classe controller é criado a funcao que fara o calculo do imc
-    - Esta funcao adiciona um novo valor a stream, este valor é a classe que extende o nosso objeto que passa para a classe pai em seu *super* o valor de 0. *Poderia usar sem a classe que extende passando o valor diretamente para o objeto => ImcState(imc: 0)* porem o load nao funcionaria
+    - Esta funcao adiciona um novo valor a stream, este valor é a classe que estende o nosso objeto que passa para a classe pai em seu *super* o valor de 0. *Poderia usar sem a classe que estende passando o valor diretamente para o objeto => ImcState(imc: 0)* porem o load nao funcionaria
     - A funcao ainda inicia uma variaval que recebe os valores passados nos paramentros
     - É chamada novamente o controlador adicionando ao objeto o novo valor que ele ira ter
 ```dart

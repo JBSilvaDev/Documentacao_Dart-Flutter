@@ -58,7 +58,7 @@ class _TaskCreatePageState extends State<TaskCreatePage> {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton.extended(
+      floatingActionButton: FloatingActionButton.estended(
           backgroundColor: context.primaryColor,
           onPressed: () {
             final formValid = _formKey.currentState?.validate() ?? false;

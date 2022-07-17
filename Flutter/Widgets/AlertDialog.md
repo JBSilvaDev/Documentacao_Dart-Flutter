@@ -1,6 +1,6 @@
 # Classe Personalizada de pop-up interativa
 
-- Classe que extende [AlertDialog](../Widgets/Dialogs.md#alertdialog) e pode ser usada como [showDialog-custon](../Widgets/Dialogs.md#custon-dialog)
+- Classe que estende [AlertDialog](../Widgets/Dialogs.md#alertdialog) e pode ser usada como [showDialog-custon](../Widgets/Dialogs.md#custon-dialog)
 - Em seu construtor pede 3 paramentros que seus tipos podem ser outros dependendo da necessidade.
 - Em seu *super* foi passado os valores que serão padrão das tags do *AlertDialog*
 

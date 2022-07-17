@@ -29,7 +29,7 @@ class UserModel extends InheritedWidget {
 }
 ```
 ## Explicando o Model
-- Classe ira extender o InheritedWidget, passando seus atributos normalmente como visto em [OO](../../Dart/Dart_OO/OO_Em_Pratica/)
+- Classe ira estender o InheritedWidget, passando seus atributos normalmente como visto em [OO](../../Dart/Dart_OO/OO_Em_Pratica/)
 - Em seu contrutor se faz necessario adiconar +1 paramentro do tipo widget, pois este parametro ira receber o widget que compoe o aplicativo
     - Ainda no construtor, é necessario implementar o super, assim passando o conteudo de child para o seu pai *(InheritedWidget)*
 - Necessario tambem criar um novo metodo booleano de nome updateShouldNotify, este metodo ira retornar se o valor passado é diferente do anterior, vefiricando assim se o widget foi alterado.
