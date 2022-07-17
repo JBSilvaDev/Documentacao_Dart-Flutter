@@ -1,6 +1,6 @@
 # Heranças de [classes](Classes.md)
 
->extends
+## extends
 
 - Uma classe pode extender outra usando o extends
     - Essa nova classe vai herdar os atribubos, caracteriscas, etc... do que esta sendo extendido
@@ -20,16 +20,72 @@
         var n = Sobrenome();
         n.nome = 'JB';
         ```
-
+- Quando temos um metódo nao implementado na classe pai obrigatoriamente ela se torna uma classe abstract, e seus hedeiros sao obrigados a implementar este metodo
+    - ```dart
+        abstract class Nome {
+        String nome ();
+        }
+        ```
+    - ```dart
+        class Sobrenome extends Nome{     
+        @override
+        String qualNome (){
+            return 'Seu nome é $nome';
+            }
+        }
+        ```
+    - Assim para obter o retorno da implementação feita na classe filha basta chamar o metodo da mesma
+    - ```dart
+        void main() {
+        var n = Sobrenome();
+        n.nome = 'JB';
+        print(n.qualNome());
+        }
+        ```
+    - O retorno é -> *Seu nome é JB*
+- Quando um pai possui um atributo obrigatorio o filho precisa passar o valor desse atributo, usa-se o *super* para isso, abaixo exemplo passando valor de um atributo do filho para o pai.
 ```dart
-class SobreNome extends NomeDaClasse{
+void main() {
+  var n = Sobrenome(a: 'JB');
+  print(n.na());
+}
+// Classe pai exige valor para variavel nome
+ class Nome {
+  String nome;
+  Nome({required this.nome});
+}
+// Classe filha recebe o valor na variavel a e passa o valor dela para a variavel nome do pai
+class Sobrenome extends Nome {
+  String a;
+  Sobrenome({required this.a}) : super(nome : a);
+}
+```
+- Exemplo com metódo e classe pai *abstract*
+```dart
+void main() {
+  var animal = Cachorro(idade: 10);
+  print(animal.idade);
+  print(animal.calcularIdadeHumana());
   
-  SobreNome(int idade) : super(idade);
+}
 
+abstract class Animal {
+  Animal({this.idade = 0});
+  int idade;
+  int calcularIdadeHumana();
+}
+
+class Cachorro extends Animal {
+  Cachorro({required int idade}) : super(idade: idade);
+  @override
+  int calcularIdadeHumana() {
+    return idade * 7;
+  }
 }
 ```
 
-- Quando uma classe é abstract, ela esta "ordenando" que outras classes que a extendem (modelo acima) tenha caracteristicas
+## implements
+- Como visto acima em [extends](./Classes_H_e_V.md#extends) quando uma classe é abstract, ela esta "ordenando" que outras classes que a extendem tenham caracteristicas suas caracteristicas
 - O mesmo ocorre para classes que sao ```implements``` de outras classes, seus metodos passam a ser obrigatorios a implementação
 - exemplo classe pai:
 
