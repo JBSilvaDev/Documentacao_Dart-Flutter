@@ -77,6 +77,12 @@
       - CrossAxisAlignment.start = Direita da linha da coluna
       - CrossAxisAlignment.end = Esquerda da linha da coluna
     - mainAxisSize: MainAxisSize.min,
+## Wrap
+- Possui as mesmas caracteristas de uma Row, porem ao chegar no limite da tela ira fazer uma quebra de linha para caber os widgets filhos.
+- Compoe:
+  - direction: Axis.vertical,
+  - children: []
+- Exemplo: [Wrap](../../Img/wrap.png)
 
 ## Buttons
 

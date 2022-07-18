@@ -9,3 +9,5 @@
 - Informa que o valor retornado pode ser nulo, deve-se garantir que o valor de retorno nao é nulo passando uma !, ideal fazer um if de verificação antes do retorno, pois se der essa garantia "!" e o valor do retorno chegar nulo ira quebrar a aplicação.
 >MissingPluginException (MissingPluginException(No Implementation found for method getApplicationSupportDirectory on channel '...'))
 - Informa que esta usando algo que ainda nao esta implementado, acontece quando adicionamos novas configurações ao app, deve-se parar totalmente o emulador e iniciar novamente.
+> Expected an identifier. 
+- Parenteses, coxetes e/ou chaves ```(), [], {}``` a mais do que o esperado

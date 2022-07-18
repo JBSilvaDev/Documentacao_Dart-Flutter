@@ -20,6 +20,7 @@
 - [Gerenciamento de estado - ValueNotifier](./Principais/Gerenciamento_estado_ValueNotifier.md)
 - [Gerenciamento de estado - ChanceNotifier](./Principais/Gerenciamento_estado_ChanceNotifier.md)
 - [Gerenciamento de estado - Block Pattern](./Principais/Gerenciamento_estado_BlockPatternPage.md)
+- [Gerenciamento de estado - Bloc/Cubit](./Principais/Bloc.md)
 - [Provider](./Principais/Provider_Modelo.md)
 - [Inherited widget - Add curstom class in tree componets](./Principais/Inherited_widget.md)
 - [Scroll - List](./Widgets/Scroll_List.md) - (Rolagem de tela)

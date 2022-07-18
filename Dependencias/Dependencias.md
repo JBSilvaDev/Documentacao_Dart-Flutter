@@ -31,6 +31,8 @@
 - Provider - [Provider](./Provider.md)
     - [Tuple](./Tuple.md)
 - Freezed - [Freezed](./Freezed.md)
+- Bloc - [Bloc/Cubit](./Bloc.md)
+    - [Equatable](./Equatable.md)
 ***
 ## Autenticação user
 - Firebase - [Firebase](./Rest-RestFull/FireBase/Autenticacao/FireBase.md)
