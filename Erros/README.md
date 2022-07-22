@@ -11,3 +11,6 @@
 - Informa que esta usando algo que ainda nao esta implementado, acontece quando adicionamos novas configurações ao app, deve-se parar totalmente o emulador e iniciar novamente.
 > Expected an identifier. 
 - Parenteses, coxetes e/ou chaves ```(), [], {}``` a mais do que o esperado
+> Failed assertion: line 6207 pos 12: 'child == _child': is not true.
+> Could not find the correct Provider<ContactsRepository> above this MyApp Widget
+- Aconteceu pois faltou context nas rotas disso ```routes: {'/' :(_) => HomePage(),}``` para isso ```routes: {'/' :(context) => HomePage(),}``` Uso do proveider/bloc
