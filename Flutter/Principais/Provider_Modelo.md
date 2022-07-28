@@ -1,6 +1,6 @@
 # Provider Models
 - Guia inicial [aqui](../../Dependencias/Provider.md)
-- Pacote responsavel por:
+- Pacote responsável por:
     - alocação/disposição simplificada de recursos
     - lazy-loading
     - redução considerável de código desnecessário toda vez que se cria uma class
