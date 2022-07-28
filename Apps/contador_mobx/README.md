@@ -1,4 +1,4 @@
-# calcular_imc_mobx
+# contador_mobx
 
 A new Flutter project.
 

@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.calcular_imc_mobx">
+    package="com.example.contador_mobx">
    <application
-        android:label="calcular_imc_mobx"
+        android:label="contador_mobx"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

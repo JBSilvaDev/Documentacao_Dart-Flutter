@@ -1,6 +1,6 @@
 {
-    "name": "calcular_imc_mobx",
-    "short_name": "calcular_imc_mobx",
+    "name": "contador_mobx",
+    "short_name": "contador_mobx",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
