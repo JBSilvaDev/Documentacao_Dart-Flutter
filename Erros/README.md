@@ -16,3 +16,8 @@
 - Aconteceu pois faltou context nas rotas disso ```routes: {'/' :(_) => HomePage(),}``` para isso ```routes: {'/' :(context) => HomePage(),}``` Uso do proveider/bloc
 > The argument type '...' can't be assigned to the parameter type 'String'.
 - Tipo recebido é diferente do esperado, para este caso espera-se receber uma sstring
+>The argument type 'Null Function()' can't be assigned to the parameter type 'dynamic Function(TipoFuncao)'
+- Acontece quando a funcao precisa de um paramentro e nao foi pasado nenhum, corrigir ```(){}``` para ```(_){}``` 
+- *_ pode ser substituido por qualquer outro paramentro*
+>The argument type 'void Function(dynamic)' can't be assigned to the parameter type 'void Function()'.
+- Acontece quando se passa algum paramentro em uma funcao que nao o aceita, corrigir ```(paramentro){}``` para ```(){}```

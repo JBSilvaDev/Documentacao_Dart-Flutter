@@ -13,7 +13,8 @@ Documentação oficial Português
 >MobX é baseado em 3 pilares
 - [Observador](./MobX_Modelo.md#observable)
 - [Ação](./MobX_Modelo.md#action)
-- [Reação](./MobX_Modelo.md#observer)
+  - [Ação em tela](./MobX_Modelo.md#observer)
+- [Reação](./MobX_Modelo.md#reactions)
 
 ### Observable
 - É a classe do mobx responsável por observar se o valor/conteudo foi alterado
@@ -40,10 +41,10 @@ ContadorController() {
 - Função passada para *Action* executar
 ```dart
 void addMaisUmFuncao() {
-    _counter.value++;
+    contadorMaisUm.value++;
     }
 ```
-### Observer
+#### Observer
 - É a classe do mobx reponsavel por reagir as ações tomadas
 - Esta classe recebe a tag builder que recebe uma nova funcao onde seu retorno é o widget a ser atualizado conforme ações tomada.
 - Exemplo abaixo mostra um ```Text()``` que seu conteudo é a variavel *contador* e sempre que uma ação é realizada nesta variavel o conteudo do *Text* muda pois o mesmo esta reagindo a ação realizada.
@@ -53,5 +54,59 @@ Observer(builder: (_) {
               return Text('${controller.contadorMaisUm}');
             }),
 ```
+### Reactions
+- Reações são usadas em [StatefullWidgets](../Fundamentos.md#tipos-basicos-widgets)
+- É necessario uma variavel que sera uma lista do tipo ```ReactionDisposer```, esta variavel sera responsavel por fazer os [dispose](../Fundamentos.md#iniciando-descarregamento-de-dados-na-tela) das reacoes da aplicação.
+```dart
+final reactionsDisposer = <ReactionDisposer>[];
+```
+- As reações sao em [initState](../Fundamentos.md#iniciando-carregamento-de-dados-na-tela) como variaveis
+>1 - autorun
+- Reação que recebe uma funcao onde em seu corpo tera o conteudo a ser executado
+- Esta reação é chamada sempre ao iniciar a tela e quando um dos observadores em seu corpo sofrer alguma atualização
+```dart
+final autoDispose = autorun((_) {
+  print(controller.contadormaisum);
+});
+```
+- Necessario fazer adicionar variavel de reacao a lista de disposer do tipo ```ReactionDisposer``` ainda dentro do initState
+```dart
+reactionsDisposer.add(whenDispose);
+```
+>2 - reaction
+- Reação que recebe duas funcoes onde uma retorna o observador que deseja e outra recebe um paramentro que ira assumir o valor do observador e em seu corpo executar alguma reacão
+- Esta reacao é executada somente quando o observador retornado pela primera funcao sofrer alterações
+```dart
+final reactionDispose = reaction((_) => controller.contadormaisum, (contadormaisum) {
+  print(contadormaisum);
+});
+```
+- Necessario fazer adicionar variavel de reacao a lista de disposer do tipo ```ReactionDisposer``` ainda dentro do initState
+```dart
+reactionsDisposer.add(reactionDispose);
+```
+>3 - when
+- Reação que recebe duas funcoes onde uma retorna o observador assim como a reaction, porem uma condição deve ser passada para o resutado seja true ou false, e outra recebe um paramentro que ira assumir o valor do observador e em seu corpo executar alguma reacão
+- Esta reacao é executada uma unica vez quando a condição no retorno da primeira funcao é atendida, exemplo abaixo so sera executado quando o contador for maior que 2.
+```dart
+final whenDispose = when((_) => controller.contadormaisum > 2, () {
+  print(controller.contadormaisum);
+});
+```
+- Necessario fazer adicionar variavel de reacao a lista de disposer do tipo ```ReactionDisposer``` ainda dentro do initState
+```dart
+reactionsDisposer.add(whenDispose);
+```
+
+***
+Observações: quanto ao dispose deve-se efetuar um forEach na lista para "matar" os itens iniciados no initState
+```dart
+void dispose() {
+  super.dispose();
+  reactionsDisposer.forEach((reacaoes) => reacaoes()); // dispose da lista de reactions
+}
+  ```
 
 **Modelo completo** *[aqui](../../Apps/contador_mobx/)*
+
+**Modelo completo + Codegen** *[aqui](../../Apps/contador_mobx_codegen/)*
