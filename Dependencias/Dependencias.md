@@ -32,6 +32,7 @@
     - [Tuple](./Tuple.md)
 - Freezed - [Freezed](./Freezed.md)
 - MobX - [MobX/Flutter_MobX](./MobX.md)
+    - MobxCodeGen - [MobX/Flutter_MobX](./MobX_CodeGen.md) (Recomendado)
 ***
 ## Autenticação user
 - Firebase - [Firebase](./Rest-RestFull/FireBase/Autenticacao/FireBase.md)

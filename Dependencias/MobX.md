@@ -1,6 +1,5 @@
 # Configuração
 ## No .yaml
-- Usado em conjunto com ***Flutter Bloc***
 >Documentação: <br>
 MobX - [pub.dev](https://pub.dev/packages/mobx)<br>
 Flutter MobX - [pub.dev](https://pub.dev/packages/flutter_mobx)<br>

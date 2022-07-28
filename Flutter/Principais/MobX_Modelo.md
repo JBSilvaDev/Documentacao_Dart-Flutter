@@ -9,13 +9,14 @@ Documentação oficial Português
 <br>[![pub package](https://img.shields.io/pub/v/mobx.svg?label=mobx&color=blue)](https://github.com/mobxjs/mobx.dart/blob/master/translation/pt-BR/README.md)
 
 ## Utilização
-***
 >MobX é baseado em 3 pilares
 - [Observador](./MobX_Modelo.md#observable)
 - [Ação](./MobX_Modelo.md#action)
   - [Ação em tela](./MobX_Modelo.md#observer)
 - [Reação](./MobX_Modelo.md#reactions)
-
+***
+OS DADOS ABAIXO SAO USADOS DENTRO DE UMA CLASSE COMUM
+***
 ### Observable
 - É a classe do mobx responsável por observar se o valor/conteudo foi alterado
 - Pode ou nao ser tipada, assim como pode ou nao receber uma tag *name* que pode facilitar em caso de erros encontrar o observador que esta com problemas
@@ -107,6 +108,4 @@ void dispose() {
 }
   ```
 
-**Modelo completo** *[aqui](../../Apps/contador_mobx/)*
-
-**Modelo completo + Codegen** *[aqui](../../Apps/contador_mobx_codegen/)*
+**Modelo completo** *[aqui](../Principais/mobx/contador_mobx/)*
