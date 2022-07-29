@@ -14,3 +14,5 @@
     - Utilização do provider para gerenciamento de estado
     - Utilização de SQLite para banco de dados
     - Arquitetura de módulos
+6. [Calculadora IMC (MobX)](./imc_mobx/README.md)
+    - Calculadora IMC usando MobX 

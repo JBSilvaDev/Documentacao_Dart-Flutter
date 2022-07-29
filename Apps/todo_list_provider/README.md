@@ -1,6 +1,5 @@
 # todo_list_provider
 
-- [Dependências usadas](./archive/Gerais/Dados_gerais.md)
 <br>
 <br>
 <br>

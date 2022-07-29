@@ -21,3 +21,5 @@
 - *_ pode ser substituido por qualquer outro paramentro*
 >The argument type 'void Function(dynamic)' can't be assigned to the parameter type 'void Function()'.
 - Acontece quando se passa algum paramentro em uma funcao que nao o aceita, corrigir ```(paramentro){}``` para ```(){}```
+>The return type 'Tipo' isn't a 'FutureOr<ObservableFuture<Tipo>>', as required by the closure's context.
+- Acontece quando temos um await em um futuro, removendo o erro encerra
