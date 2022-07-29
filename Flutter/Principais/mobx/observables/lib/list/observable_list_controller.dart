@@ -35,4 +35,10 @@ abstract class _ObservableListControllerBase with Store {
       products.removeAt(products.length - 1);
     }
   }
+
+  @action
+  void removeLongPress(String nome) {
+      products.removeWhere((element) => element.name == nome,);
+ 
+  }
 }

@@ -29,7 +29,7 @@ abstract class _ModeloObservableControllerBase with Store {
   }
 
   @action
-  void removeProduct() {
+  void removechecks() {
     // products.removeAt(products.length - 1);
     products.removeWhere((check) => check.selected);
   }
@@ -39,4 +39,20 @@ abstract class _ModeloObservableControllerBase with Store {
     var productSelected = products[index].selected;
     products[index].selected = !productSelected;
   }
+
+  // Pesquisa item na lista
+  @observable
+  String filter = '';
+  @action
+  setFilter(String value) => filter = value;
+  @computed
+  List<ProductStore> get listFilter{
+    if(filter.isEmpty){
+      return products;
+    }else{
+      return products.where((item) => item.product.name.toUpperCase().contains(filter.toUpperCase())).toList();
+    }
+  }
+
+
 }

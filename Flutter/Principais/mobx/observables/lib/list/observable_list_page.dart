@@ -26,10 +26,9 @@ class _ObservableListPageState extends State<ObservableListPage> {
                   itemCount: controller.products.length,
                   itemBuilder: (context, index) {
                     final nomeProduto = controller.products[index].name;
-                    return CheckboxListTile(
-                      value: false,
-                      onChanged: (_) {},
+                    return ListTile(
                       title: Text(nomeProduto),
+                      trailing: IconButton(icon:Icon(Icons.delete, color: Colors.red),onPressed: () => controller.removeLongPress(nomeProduto),),
                     );
                   },
                 );

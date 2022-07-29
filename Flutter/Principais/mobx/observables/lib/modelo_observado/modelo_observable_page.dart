@@ -21,12 +21,20 @@ class _ModeloObservablePageState extends State<ModeloObservablePage> {
         ),
         body: Column(
           children: [
+            SizedBox(
+                width: MediaQuery.of(context).size.width * 0.5,
+                child: TextField(
+                  onChanged: controller.setFilter,
+                    // textCapitalization: TextCapitalization.characters,
+                )
+                ),
             Expanded(
               child: Observer(builder: (_) {
                 return ListView.builder(
-                  itemCount: controller.products.length,
+                  
+                  itemCount: controller.listFilter.length,
                   itemBuilder: (context, index) {
-                    final productStore = controller.products[index];
+                    final productStore = controller.listFilter[index];
                     return Observer(builder: (_) {
                       return CheckboxListTile(
                         value: productStore.selected,
@@ -51,7 +59,7 @@ class _ModeloObservablePageState extends State<ModeloObservablePage> {
                     child: Text('Adicionar')),
                 ElevatedButton(
                     onPressed: () {
-                      controller.removeProduct();
+                      controller.removechecks();
                     },
                     child: Text('Remover')),
                 ElevatedButton(

@@ -1,5 +1,6 @@
 # MobX Models
-- Guia inicial [aqui](../../Dependencias/MobX_CodeGen.md)
+- Guia inicial MobX [aqui](../../Dependencias/MobX.md)
+- Guia inicial Codegen [aqui](../../Dependencias/MobX_CodeGen.md)
 - Pacote responsável por:
   - Receber valores atualizaveis
   - Notificar atualização de conteudo a tela

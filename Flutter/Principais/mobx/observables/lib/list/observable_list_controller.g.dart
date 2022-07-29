@@ -62,6 +62,17 @@ mixin _$ObservableListController on _ObservableListControllerBase, Store {
   }
 
   @override
+  void removeLongPress(String nome) {
+    final _$actionInfo = _$_ObservableListControllerBaseActionController
+        .startAction(name: '_ObservableListControllerBase.removeLongPress');
+    try {
+      return super.removeLongPress(nome);
+    } finally {
+      _$_ObservableListControllerBaseActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 products: ${products}

@@ -7,7 +7,7 @@ class ControllerCodeGen = ControllerCodegenBase with _$ControllerCodeGen;
 
 abstract class ControllerCodegenBase with Store {
 
-    @observable
+  @observable
   int counter = 0;
 
   @observable
@@ -17,8 +17,6 @@ abstract class ControllerCodegenBase with Store {
   String get saudacao => 'Olá ${fullName1.nome} voce ja clicou $counter vezes';
 
   String get nomeCompleto1 => fullName1.nome + fullName1.sobrenome;
-  
-  
 
   @action
   void incremento() {
