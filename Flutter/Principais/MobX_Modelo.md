@@ -10,21 +10,32 @@ Documentação oficial Português
 
 ## Utilização
 >MobX é baseado em 3 pilares
-- [Observador](./MobX_Modelo.md#observable)
+- [Observador](./MobX_Modelo.md#observables)
 - [Ação](./MobX_Modelo.md#action)
   - [Ação em tela](./MobX_Modelo.md#observer)
 - [Reação](./MobX_Modelo.md#reactions)
 ***
 OS DADOS ABAIXO SAO USADOS DENTRO DE UMA CLASSE COMUM
 ***
-### Observable
+### Observables
+>Observable
 - É a classe do mobx responsável por observar se o valor/conteudo foi alterado
 - Pode ou nao ser tipada, assim como pode ou nao receber uma tag *name* que pode facilitar em caso de erros encontrar o observador que esta com problemas
 ```dart
 var _contador = Observable<int>(0, name: 'Nome deste item para identificar em caso de erros (opcional)');
 ```
-- Exemplo de erro que identifica pelo nome do observador
-  - ![](../../Img/mobxErro1.png)
+> Exemplo de erro que identifica pelo nome do observador
+![](../../Img/mobxErro1.png)
+<br>
+
+>ObservableList
+- É a classe do mobx responsável por observar alterações em conteudos de listas
+- [Modelo](./mobx/observables/)
+```dart
+ObservableList products = ObservableList();
+// Usado para observar alterações no conteúdo de uma lista, outro método de usar é (var products = <Tipo>[].asObservable())
+```
+
 ### Action
 - É a classe do mobx responsável por ações que realizam atualizações em um valor/conteudo
 - Normalmente iniciada como *late* pois a ação pode ser iniciada posteriormente, nao juntamente com a classe pai.

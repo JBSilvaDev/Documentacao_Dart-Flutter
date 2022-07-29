@@ -27,12 +27,19 @@ abstract class ControllerCodegenBase with Store {}
 ***
 OS DADOS ABAIXO SAO USADOS DENTRO DE UMA CLASSE ABSTRACT CRIADA ACIMA
 ***
-### Observable
+### Observables
+>Observable
 - É a classe do mobx responsável por observar se o valor/conteudo foi alterado
 - Com uso do Codegen usa-se o metadata ou notações para identificar o que cada atributo da classe é
 ```dart
 @observable
 int counter = 0;
+```
+>ObservableList
+- É a classe do mobx responsável por observar alterações em conteudos de listas
+```dart
+ObservableList products = ObservableList();
+// Usado para observar alterações no conteúdo de uma lista, outro método de usar é (var products = <Tipo>[].asObservable())
 ``` 
 ### Action
 - É a classe do mobx responsável por ações que realizam atualizações em um valor/conteudo.
@@ -43,7 +50,8 @@ int counter = 0;
     counter++;
   }
 ```
-#### Observer
+#### Observers
+>Observer
 - É a classe do mobx reponsavel por reagir as ações tomadas
 - Esta classe recebe a tag builder que recebe uma nova funcao onde seu retorno é o widget a ser atualizado conforme ações tomada.
 - Exemplo abaixo mostra um ```Text()``` que seu conteudo é a variavel *contador* e sempre que uma ação é realizada nesta variavel o conteudo do *Text* muda pois o mesmo esta reagindo a ação realizada.
@@ -53,6 +61,7 @@ Observer(builder: (_) {
               return Text('${controller.contadorMaisUm}');
             }),
 ```
+
 ### Reactions
 - Segue igual apontado em [MobX](./MobX_Modelo.md#reactions)
 

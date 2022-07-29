@@ -10,8 +10,7 @@ class ObservableListController = _ObservableListControllerBase
 
 abstract class _ObservableListControllerBase with Store {
   @observable
- ObservableList products =
-      ObservableList(); // Usado para observar alterações no conteudo de uma lista, outro metodo de usar é (var products = <Tipo>[].asObservable())
+ ObservableList products = ObservableList(); // Usado para observar alterações no conteudo de uma lista, outro metodo de usar é (var products = <Tipo>[].asObservable())
 
 
   @action
@@ -32,6 +31,8 @@ abstract class _ObservableListControllerBase with Store {
 
   @action
   void removeProduct() {
-    products.removeAt(products.length - 1);
+    if(products.length >=1){
+      products.removeAt(products.length - 1);
+    }
   }
 }

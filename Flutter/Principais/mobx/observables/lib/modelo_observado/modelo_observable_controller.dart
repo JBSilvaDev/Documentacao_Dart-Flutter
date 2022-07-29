@@ -9,7 +9,7 @@ class ModeloObservableController = _ModeloObservableControllerBase
 
 abstract class _ModeloObservableControllerBase with Store {
   @observable
-  var products = <ProductStore>[].asObservable().asObservable();
+  var products = <ProductStore>[].asObservable();
 
   @action
   void loadProducts() {
