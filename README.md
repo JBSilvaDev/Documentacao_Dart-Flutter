@@ -19,7 +19,7 @@
 ***
 >[Mini Projetos](./Apps/README.md)
 ***
->[Erros](./Erros/README.md)
+>[Erros Comuns](./Erros/README.md)
 ***
 
 <br><br>
