@@ -1,6 +1,6 @@
 # Mapeamento de Listas e mapas
 - Uma função muito utilizada para tratamento de mapas e listas é a funcao <i>.map()</i>, esta funcao percorre toda a lista/mapa salvando seus items/valores e retornando o conteudo salvo/mapeado.
-- O retorno por padão é um interable, ou seja é um arquivo bruto que precisa ser convertido usando o <i>.toList()</i> ao final da funcão.
+- O retorno por padrão é um interable, ou seja é um arquivo bruto que precisa ser convertido usando o <i>.toList()</i> ao final da funcão.
 - Ainda neste arquivo é mostrado como é feito o tratamento usando OO
 ## Tratamento de listas e mapas
 >Lista simples
@@ -43,9 +43,9 @@
     var lista = frutas.map((fruta) => 'Suco de ${fruta['nome']}').toList(); 
     print(lista);
     ```  
-<i>[Resultado](../../Img/tratamentoLista.png)</i> 
+<i>![Resultado](../../Img/tratamentoLista.png)</i> 
 
--  For in em muitos dos casos pode ser substituido por <i>.forEach()</i>, com exceções de conexoes com banco de dados que muitas das vezes precisam de uma conexao ascincrone, e o <i>.forEach()</i> não oferece esta opção.
+-  For in em muitos dos casos pode ser substituído por <i>.forEach()</i>, com exceções de conexões com banco de dados que muitas das vezes precisam de uma conexao ascincrona, e o <i>.forEach()</i> não oferece esta opção.
 - Em ambos os exemplos a função percorre toda a lista pegando item a item e salvando em uma nova lista.
 - Quando utilizaz o <i>.map()</i> o retorno é uma instancia, para converte-lo em lista usar o <i>.toList()</i>.
 
@@ -116,7 +116,7 @@
     ```dart
     var lista = frutas.map((fruta) => Fruta('${fruta['nome']}')).toList(); 
     print(lista);
-<i>[Resultado OO simples](../../Img/tratamentoOO.png)</i>
+<i>![Resultado OO simples](../../Img/tratamentoOO.png)</i>
 
 - Agora usaremos as duas classes, onde a classe <i>Suco</i> ira receber os valores da classe <i>Fruta</i> como objeto.
 - Neste exemplo vamos "fazer um suco" das frutas que contem na lista usando OO
@@ -171,4 +171,4 @@
     var sucos = frutasMap.map((fruta) => Suco(fruta['nome'] ?? 'Sem Sabor')).toList();
     print(sucos);
     ```
-<i>[Resultado OO ](../../Img/sucoOO.png)</i>  
+<i>![Resultado OO ](../../Img/sucoOO.png)</i>  
