@@ -1,7 +1,6 @@
 # Aplicativos criados durante aprendizagem
 
-1. [Calculadoras de IMC](https://github.com/JBSilvaDev/IMC-Calculate/blob/main/README.md)
-1. [Calculadoras de IMC](https://github.com/JBSilvaDev/IMC-Calculate/blob/main/README.md)
-1. [Calculadoras de IMC](https://github.com/JBSilvaDev/IMC-Calculate/blob/main/README.md)
-1. [Calculadoras de IMC](https://github.com/JBSilvaDev/IMC-Calculate/blob/main/README.md)
-1. [Calculadoras de IMC](https://github.com/JBSilvaDev/IMC-Calculate/blob/main/README.md)
+1. [Contador](https://github.com/JBSilvaDev/Person-Count)
+2. [Calculadoras de IMC](https://github.com/JBSilvaDev/IMC-Calculate/blob/main/README.md)
+3. [Conversor de moedas](https://github.com/JBSilvaDev/Currency-Converter)
+4. [Todo List - Provider](https://github.com/JBSilvaDev/To-Do-List-Provider)
