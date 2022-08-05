@@ -88,7 +88,6 @@ print(lista);
     print(lista);
     ```
     ```Resultado -> [1, 2]```
-    ```dart
     - ternario
     ```dart
     lista.removeWhere((item) => (item == 3)?true:false);
