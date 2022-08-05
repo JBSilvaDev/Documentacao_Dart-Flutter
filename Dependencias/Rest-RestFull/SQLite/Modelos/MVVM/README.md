@@ -3,11 +3,11 @@
 ***
 ## Arquivo de criação do BD
 - Arquivo 1 com classe ```abstract``` contendo metodos que recebem parametros tipo *Batch*. 
-    - [Exemplo](../../../../../Apps/todo_list_provider/lib/app/core/database/migrations/migration.dart)
+    - [Exemplo](https://github.com/JBSilvaDev/To-Do-List-Provider/blob/main/lib/app/core/database/migrations/migration.dart)
 - Arquivo 2 com classe que ```implementa``` a classe do *Arquivo 1*, esta classe ira conter as funcoes que irão interagir com o BD criando tabelas atravez de comandos SQL.
-    - [Exemplo](../../../../../Apps/todo_list_provider/lib/app/core/database/migrations/migration_impl.dart)
+    - [Exemplo](https://github.com/JBSilvaDev/To-Do-List-Provider/blob/main/lib/app/core/database/migrations/migration_impl.dart)
 - Arquivo 3 com classe que irá conter uma lista tipada como a classe do *Arquivo 1* com um metodo que retorna uma lista de objetos a serem executados, como o objeto criado no *Arquivo 2*.
-    - [Exemplo](../../../../../Apps/todo_list_provider/lib/app/core/database/sqlite_migration_factory.dart)
+    - [Exemplo](https://github.com/JBSilvaDev/To-Do-List-Provider/blob/main/lib/app/core/database/sqlite_migration_factory.dart)
 - Arquivo 4 com classe que abre conexão com BD e invoca os metodos no *Arquivo 3*
     - É a classe do SQLite que gera uma "fabrica" de conexões, para esta classe foi criado um construtor privado para evitar acessos diretos a classe.
     - Criadas constantes staticas e privadas onde é passado nome e versao do BD
@@ -27,17 +27,17 @@
             - a versao do BD obtida na variavel no inicio da classe
             - onConfigure, onCreate, onUpgrade, onDowngrade que sao passadas funcoes especificadas mais afrente neste arquivo.
     - Criado método para fechar a conexão que ira chamar o .close no _db? e depois ira passar o valor de null para o mesmo, assim possibilitando nova abertura de conexao quando necessário.
-    - Criado método privado de configuracao do BD **_onConfigure** que recebe um db
+    - Criado método privado de configuração do BD **_onConfigure** que recebe um db
         - Em seu conteudo é chamado o ```db.execute()``` do SQLIte passando comando SQL para "ligar" as chaves de conexão com BD.
     - Criado método privado de configuracao do BD **_onCreate** que recebe o db e sua versao
         - Iniciada variavel que recebe o ```db.batch()``` do SQLite
         - Iniciada variavel que recebe a classe do *Arquivo 3* chamando metodo para criar o BD
             - Como este metodo é uma lista de BDs a serem criados, foi feito um *for in* para ser executado o ```itemForIn.create(batch)``` em cada um dos BDs na lista
         - Ao final é chamado o ```batch.commit()``` para salvar os dados criados
-    - [Exemplo](../../../../../Apps/todo_list_provider/lib/app/core/database/sqlite_connection_factory.dart)
+    - [Exemplo](https://github.com/JBSilvaDev/To-Do-List-Provider/blob/main/lib/app/core/database/sqlite_connection_factory.dart)
 - Arquivo 5 classe mixin com ```WidgetsBindingObserver``` que é um observador do flutter em geral, permitindo executar ações dependendo do que usuario faça com o aplicativo.
     - Criado metodo ```didChanceAppLifecycleState``` que recebe em parametro do estado da aplicação tipo ```AppLifecycleState```.
         - Neste metodo inicia-se uma variavel que recebe a conexão com BD, em seguida é feito um ```switch-case``` comparando o estado do aplicativo, mantendo a conexão ativa somente quando esta em uso *resume* para as demais opções a conexão é fechada
         - Apos verificação o estado é passado para o super
-    - [Exemplo](../../../../../Apps/todo_list_provider/lib/app/core/database/sqlite_adm_conection.dart)
+    - [Exemplo](https://github.com/JBSilvaDev/To-Do-List-Provider/blob/main/lib/app/core/database/sqlite_adm_conection.dart)
 
