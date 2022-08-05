@@ -7,7 +7,8 @@
 
 <br><br>
 ***
->[Instalação](./Instalacao/Instalação.md)
+>[Instalação Windows](./Instalacao/Instalação_Windows.md)<br>
+>[Instalação Mac](./Instalacao/Instalação_Mac.md)
 ***
 >[Dart](./Dart/Resumo_Dart.md)
 ***
