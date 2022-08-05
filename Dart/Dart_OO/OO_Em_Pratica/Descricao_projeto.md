@@ -59,25 +59,25 @@
 - Cada classe possue seus metodos
     - toMap() - É um metodo pega o objeto e transforma em um *Map* de <String, dynamic>
         - Normalmente usado para enviar dados para [API](./backend/db.json), neste metodo passamos os valores (mesmos da classe mãe) e ele nos retorna um mapa com de chave e valor de acordo com o que foi tipado
-            - <b>*Objeto.id -> {"id": id}*</b>
+            - <b>```Objeto.id -> {"id": id}```</b>
         -   ```dart
                 Map<String, dynamic>toMap()=>{"id": id};
             ```
     - fromMap() É um contrutor, onde transforma um *Map* e transforma em um objeto
         - Processo reverso do toMap() - Normalmente usado quando recebemos dados da [API](./backend/db.json) neste contrutor recebemos um *Map* e retorna seus itens (key, value) para o contrutor da classe mãe, transformando assim em um objeto
-            - <b>*{"id": id} -> Objeto.id*</b>
+            - <b>```{"id": id} -> Objeto.id```</b>
         -   ```dart
                 factory Objeto.fromMap(Map<String, dynamic> map)=>Objeto(id:map['id']);
             ```
     - toJson() É um metodo que retorna uma string json do objeto (converte o objeto em string)
         - Normalmente usado para enviar dados a API (*Post, Patch/Put*) pois devemos enviar dados no formato de *MAP* porem como uma *String*, este método Encoda o o que é retornado no toMap() ou seja transforma um mapa em uma string 
-            - <b>*{'key':value} -> "{'key':value}"*</b>
+            - <b>```{'key':value} -> "{'key':value}"```</b>
         -   ```dart
                 String toJson() => jsonEncode(toMap());
             ```
     - fromJson() É um contrutor que baseado no json, retorna um objeto
         - Processo reverso to toJson() - Normalmente os valores retornados da API chegam como String as este construtor Decodifica a string recebida e a transforma em um mapa usando o fromMap() que por sua vez transforma o mapa em objeto
-            - <b>*"{'key':value}" -> {'key':value}*</b>
+            - <b>```"{'key':value}" -> {'key':value}```</b>
         -   ```dart
                 factory Objeto.fromJson(String json) => Objeto.fromMap(jsonDecode(json));
             ```
@@ -113,15 +113,15 @@
 >Recebimento de informações
 - <b>A classe nesta instancia espera receber uma List< String ></b>
     - fromMap()
-        - Foi usado o *map['nomeCursos'].cast< String >()* para garantir que o tipo da lista que recebemos da [API](./backend/db.json) sera do tipo string pois é o que a classe espera receber
-        - Outra alternativa para garantir o tipo correto seria *List< String >.from(map['nomeCursos']*
+        - Foi usado o ```map['nomeCursos'].cast< String >()``` para garantir que o tipo da lista que recebemos da [API](./backend/db.json) sera do tipo string pois é o que a classe espera receber
+        - Outra alternativa para garantir o tipo correto seria ```List< String >.from(map['nomeCursos']```
 <br><br>
 
 #### Item endereco
 >Envio de informações
 - <b>API espera receber nesta chave um Map<String, Object></b>
     - toMap()
-        - É passado na chave endereco a instacia.toMap() pois se faz necessario realizar conversao de objeto para mapa porque é o que a [API](./backend/db.json) espera receber nesta chave.
+        - É passado na chave endereco a ```instância.toMap()``` pois se faz necessario realizar conversao de objeto para mapa porque é o que a [API](./backend/db.json) espera receber nesta chave.
 >Recebimento de informações
 - <b>A classe nesta instancia espera receber um objeto [Endereco](./models/endereco.md)</b>
     - fromMap()
@@ -132,12 +132,12 @@
 >Envio de informações
 - <b>API espera receber nesta chave uma List< Object ></b>
     - toMap()
-        - É usado o [.map()](../TratamentoListMap.md) para percorrer o conteudo da chave cursos na [API](./backend/db.json) *instancia.map((e) => retorno)*
-        - Dentro dos itens mapeados é usado o .toMap() para converter os objetos em mapas e ao final usa-se o .toList() assim os mapas convertidos sao colocados dentro de uma lista se tornando o que a [API](./backend/db.json) espera receber. *instancia.map((e) => e.toMap()).toList()*
+        - É usado o [.map()](../TratamentoListMap.md) para percorrer o conteudo da chave cursos na [API](./backend/db.json) ```instancia.map((e) => retorno)```
+        - Dentro dos itens mapeados é usado o .toMap() para converter os objetos em mapas e ao final usa-se o .toList() assim os mapas convertidos sao colocados dentro de uma lista se tornando o que a [API](./backend/db.json) espera receber. ```instancia.map((e) => e.toMap()).toList()```
 >Recebimento de informações
 - <b>A classe nesta instancia espera receber uma List<[Curso](./models/curso.md)></b>
     - fromMap()
-        - A [API](./backend/db.json) nesta chave retorna uma lista de mapas, entao foi necessario percorrer esta lista pegando mapa a mapa tipando-os para <[Curso](./models/curso.md)> pois é o esperado na classe e retornando cada um desses mapas como objeto ao final usa-se o .toList() para adicionar estes objetos em uma lista, se tornando assim o que a classe mãe espera receber. *map['chave'].map((e)=>Objeto.fromMap(instancia)).toList()*
+        - A [API](./backend/db.json) nesta chave retorna uma lista de mapas, entao foi necessario percorrer esta lista pegando mapa a mapa tipando-os para <[Curso](./models/curso.md)> pois é o esperado na classe e retornando cada um desses mapas como objeto ao final usa-se o .toList() para adicionar estes objetos em uma lista, se tornando assim o que a classe mãe espera receber. ```map['chave'].map((e)=>Objeto.fromMap(instancia)).toList()```
 ***
 <center>Acessando Backend</center>
 
