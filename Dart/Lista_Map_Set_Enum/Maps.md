@@ -1,7 +1,7 @@
 # Maps
 > Definição de Map
 - Maps sao definidos por chaves assim com Sets
-- É necessario passar os tipos <String, String> do seu conteudo caso o inicie vazio
+- É necessário passar os tipos <String, String> do seu conteúdo caso o inicie vazio
 - Tem o mesmo formato de um json
 - São compostos por chave e valor {"chave": "valor"}
 >Declaração/Criação
@@ -69,8 +69,9 @@ var resultado = alunos.map(pegarApenasONome).toList(); // Converte o objeto em u
 
 // Metodo 2
 var listaComNomes = alunos.map((nome) => nome['nome']).toList(); // Acessa todos os itens na lista, e obtem todos os valores na chave nome
-// Retorno - [Alfredo, Wilson, Mariana, Guilherme, Ana, Ricardo]
 ```
+```Retorno - [Alfredo, Wilson, Mariana, Guilherme, Ana, Ricardo]```
+
 - Pegar todos as notas nos maps e soma com *reduce* ( mais detalhes em [Listas](./Listas.md) ) e faz uma media.
 ```dart
   var alunos = [
@@ -91,8 +92,9 @@ var media = total / notasFinais.length;
 
 print('Soma: $total');
 print('Media: $media');
-// retorno - Soma: 51.0 Media: 8.5
 ```
+```Retorno - Soma: 51.0 Media: 8.5```
+
 
 
 
