@@ -1,5 +1,5 @@
 <div align=center><h1>Documentação Flutter</h1>
-<h3>Aqui documento meus aprendizados em Dart & Flutter</h3><br>
+<h3>Documentação Flutter/Dart - Basics</h3><br>
 
 <p align="center">
   <img src=https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/08/06034931/feat-3-1024x512.png width="100%">
