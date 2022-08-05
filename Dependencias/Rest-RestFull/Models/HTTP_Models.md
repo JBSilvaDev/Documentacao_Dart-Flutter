@@ -4,7 +4,9 @@
 >Usa-se classes para representar o que o json ira retornar, nos exemplos uso [Cidade](./ClassesModels/cidade.dart).
 
 - Os atributos da classe [Cidade](./ClassesModels/cidade.dart):
-    - sao alguns dos items que estao retornando do json [API via CEP](https://viacep.com.br/ws/45936000/json) - [Img Retorno API](../../../Img/ViaCepAPI.png)..
+    - sao alguns dos items que estao retornando do json [API via CEP](https://viacep.com.br/ws/45936000/json) 
+    - Retorno API :
+        - ![Img Retorno API](../../../Img/ViaCepAPI.png)..
 - O construtor:
     - usa o required para dizer que os itens sao obrigatorios
 ## Metodos:
@@ -86,11 +88,14 @@ Future<void> buscaCep() async {
 >Usa-se classes para representar o que o json ira retornar, nos exemplos uso [User Types](./ClassesModels/user_type.dart).
 
 - Os atributos da classe [User](./ClassesModels/user.dart):
-    - sao alguns dos items que estao retornando do json [Mocki API](https://5f7cba02834b5c0016b058aa.mockapi.io/api/users/1) - [Img Retorno API](../../../Img/MockAPI.png).
+    - sao alguns dos items que estao retornando do json [Mocki API](https://5f7cba02834b5c0016b058aa.mockapi.io/api/users/1) 
+    - Retorno API:
+        - ![Img Retorno API](../../../Img/MockAPI.png).
     - uma das chaves desta API retorna como valor uma lista que possui um map como um dos itens
     - foi necessario criar duas classes, uma para tratamento da API outra para tratamento do retorno como Lista
     - a classe [User Types](./ClassesModels/user_type.dart) fara todo tratamento da lista que contem um map, o models usado é o padrao, o mesmo usado na [API via CEP](https://viacep.com.br/ws/45936000/json), como o conteudo da lista é uma string modelo json/map o tratamento foi o mesmo.
-    - a classe [User](./ClassesModels/user.dart) fara o tratamento da API de modo geral porem um de seus atributos é do tipo List assim como é no [Retorno API](../../../Dart/Img/MockAPI.png), e esta lista ira ser do tipo [User Types](./ClassesModels/user_type.dart), ou seja, ira receber o que foi tratado na classe irmã como conteudo para assim montar um objeto unico dando o retorno desejado ao usuario final
+    - a classe [User](./ClassesModels/user.dart) fara o tratamento da API de modo geral porem um de seus atributos é do tipo List assim como é no retorno api:
+        - ![Retorno API](../../../Img/MockAPI.png), e esta lista ira ser do tipo [User Types](./ClassesModels/user_type.dart), ou seja, ira receber o que foi tratado na classe irmã como conteudo para assim montar um objeto unico dando o retorno desejado ao usuario final
         - ```dart
             class User {
                 final String id;
@@ -183,10 +188,13 @@ Future<void> buscarUser() async {
 - Instalar extensão : <b>[Dart Data Class Generator](https://marketplace.visualstudio.com/items?itemName=dotup.dart-data-class-generator)</b>
 - Com a classe ja criada com seus atributos
     - clique sobre o nome da classe, use <i><b>CTRL+ .</i></b> ou clique na lampada amarela
-    - clique em [Generate contructor](../../../Img/genereteconstructor.png)
-        - Irar criar o contrutor para a sua classe automaticamente
-    - clique em [Generate JSON serialization](../../../Img/generetejsonserialization.png)
-        - Ira criar basicamente todo o conteudo visto até aqui (sobre models), pode ser necessario efetuar alguns ajustes
-    - clique em [Generate toString](../../../Img/generatetostring.png)
+    - clique em Generate constructor:
+        - ![Generate constructor](../../../Img/genereteconstructor.png)
+        - Irar criar o construtor para a sua classe automaticamente
+    - clique em Generate JSON serialization:
+        - ![Generate JSON serialization](../../../Img/generetejsonserialization.png)
+        - Ira criar basicamente todo o conteudo visto até aqui (sobre models), pode ser necessário efetuar alguns ajustes
+    - clique em Generate toString:
+        - ![Generate toString](../../../Img/generatetostring.png)
         - Ira criar um @override para exibição do retorno da classe
 
