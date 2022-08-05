@@ -46,47 +46,49 @@ Future<void> main() async {
 ## Implementação ao codigo
 >Efetuando uma requisicao HTTP - (API de exemplo Via CEP)<br>
 
-Para efetuar uma requisão HTTP é necessario converter a URL da API em URI<br>
-Como é uma requisao de API é necessario usar o [Async/Await](../../Dart/Dart_OO/Async.md) para aguardar a resposta da API, pois o retorno é um "futuro"
+- Para efetuar uma requisão HTTP é necessario converter a URL da API em URI<br>
+- Como é uma requisao de API é necessario usar o [Async/Await](../../Dart/Dart_OO/Async.md) para aguardar a resposta da API, pois o retorno é um "futuro"
 ```dart
 Future<void> requisicaoHTTP() async {
 var urlAPI = 'https://viacep.com.br/ws/45936000/json'; // Link da API
 var convertURI = Uri.parse(urlAPI); // Converte a URL em URI
-var response = await http.get(convertURI); // Efetuando a requisicao a API
+var response = await http.get(convertURI); // Efetuando a requisição a API
 ```
 ```dart
 print(response.statusCode); // Exibe o Status HTTP (Tópico acima)
 ```
+- ```Response.body``` é o conteúdo retornado da API
+- O retorno é uma ```String```, entao se faz necessario converte-lo, ou efetuar o *Decode* (descodificar)
+- IMPORTAR O ```import 'dart:convert' as convert```;
 ```dart
-// response.body é o conteudo retornado da API
-// O retorno é uma String, entao se faz necessario converte-lo, ou efetuar o Decode (descodificar)
-// IMPORTAR O import 'dart:convert' as convert;
 var responseData = jsonDecode(response.body);
 ```
+- Apos decodificação o retorno pode se tornar um Map ou List
+- Para obter o conteúdo do retorno do tipo mapa basta exibi-lo diretamente
 ```dart
-// Apos decodificação o retorno pode se tornar um Map ou List
-// Para obter o conteudo do retorno do tipo mapa basta exibi-lo diretamente
 print(responseData['bairro']);
-
-// Para obter o conteudo do retorno do tipo lista necessario um forEach ou For in
+```
+- Para obter o conteudo do retorno do tipo lista necessario um forEach ou For in
+```dart
 responseData.forEach(((element) => print(element['id']))); // Ira exibir todos os IDs existentes da API
-
-// Para um melhor tratamento é recomendado adicionar os elementos desejados em uma nova lista
+```
+- Para um melhor tratamento é recomendado adicionar os elementos desejados em uma nova lista
+```dart
 var listaDeIds = [];
 responseData.forEach(((element) => listaDeIds.add(element['id'])));
 print(listaDeIds); // Retorna a lista contendo os IDs
 print(listaDeIds['index']); // Retorna um index de um ID desejado
 ```
+- É uma boa pratica criar uma condição para que se o retorno for positivo (Status HTTP), code 2xx, seguir com codigo, se nao informar ao usuario o ocorrido
 ```dart
-// É uma boa pratica criar uma condição para que se o retorno for positivo (Status HTTP), code 2xx, seguir com codigo, se nao informar ao usuario o ocorrido
 if (response.statusCode >= 200 && response.statusCode < 300) {
-    // Codigos response aqui
+    // Códigos response aqui
 }else{
     print('Erro de requisição: ${response.statusCode}');
 }
 ```
+- Como temos dois tipos de retorno possivel, List e Map, é uma boa pratica criar uma condição para tratar cada tipo de retorno
 ```dart
-// Como temos dois tipos de retorno possivel, List e Map, é uma boa pratica criar uma condição para tratar cada tipo de retorno
 if (responseData is List) {
     // Tratamento do response em caso de retorno em lista
 }else if(responseData is Map){
@@ -94,7 +96,7 @@ if (responseData is List) {
 }
 }
 ```
-<b>OBS: Todo codigo acima estaria dentro da mesma funcao <i>requisicaoHTTP</i>, foi separado em blocos para uma melhor legibilidade.</b>
+<b>OBS: Todo código acima estaria dentro da mesma funcao <i>requisicaoHTTP</i>, foi separado em blocos para uma melhor legibilidade.</b>
 > Enviando dados para API
 
 ```dart
