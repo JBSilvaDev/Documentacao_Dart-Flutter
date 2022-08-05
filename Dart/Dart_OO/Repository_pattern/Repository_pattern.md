@@ -47,5 +47,5 @@ Este modelo consiste em organizar os arquivos de codigos em pastas que os repres
             }
         }
       ```
-- O codigo foi importado o repositorio e criada uma função future, explicada [aqui](../Async.md).
-- Esta funcao cria uma nova instacia de CidadeRepository() e faz uma solicitação a mesma, caso tenha sucesso na busca, retorna a cidade, caso nao, exibe uma mensagem de erro.
+- O codigo foi importado o repositório e criada uma função future, explicada [aqui](../Async.md).
+- Esta função cria uma nova instância de ```CidadeRepository()``` e faz uma solicitação a mesma, caso tenha sucesso na busca, retorna a cidade, caso nao, exibe uma mensagem de erro.
