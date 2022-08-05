@@ -26,8 +26,8 @@
   - onUpgrade: recebe funcao com 3 paramentros *(Database db, int oldVersion, int version)*, seu conteudo é para quando há atualização da versao do BD.
   - onDowngrade: recebe funcao com 3 paramentros *(Database db, int oldVersion, int version)*, seu conteudo é para quando um down na versao do BD.
 
->Tags a seguir sao defindas no return da funcao de conexao, dentro do [openDatabase()](Criando_ConexaoBD.md#conteudo-return-da-funcao)<br>
->Modelo base [SQLite](database_sqlite.md)
+>Tags a seguir sao defindas no return da funcao de conexao, dentro do ```openDatabase()```<br>
+>Modelo base [SQLite](../SQLite.md)
 ### Variavel com link definida na [funcao](Criando_ConexaoBD.md#classe-e-funcao-de-criação-e-conexão-com-bd-usada-em-conjunto-com-pathpathmd)
 ```dart
 databaseFinalPath
