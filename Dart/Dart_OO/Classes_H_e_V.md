@@ -1,4 +1,4 @@
-# Heranças de [classes](Classes.md)
+# Heranças de classes
 
 ## Extends
 
