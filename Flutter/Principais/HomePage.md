@@ -1,7 +1,7 @@
 # HomePage
 
 - É uma classe normalmente do tipo [StatelessWidget](../Fundamentos.md#tipos-basicos-widgets), mas dependendo da aplicação pode ser [StatefulWidget](../Fundamentos.md#tipos-basicos-widgets)
-- Pode receber variaveis em seu < State > em caso de [StatefulWidget](../Fundamentos.md#tipos-basicos-widgets)
+- Pode receber variaveis em seu ```<State>``` em caso de [StatefulWidget](../Fundamentos.md#tipos-basicos-widgets)
 - Seu return por padrão é um [Scaffold](./Scaffold.md) pois o mesmo ja tras o layout basico padrao do flutter
 
 - Exemplo de HomePage [StatelessWidget](../Fundamentos.md#tipos-basicos-widgets)

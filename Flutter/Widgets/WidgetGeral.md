@@ -82,7 +82,7 @@
 - Compoe:
   - direction: Axis.vertical,
   - children: []
-- Exemplo: [Wrap](../../Img/wrap.png)
+- Exemplo: ![Wrap](../../Img/wrap.png)
 
 ## Buttons
 
@@ -143,14 +143,14 @@
 - Declarada uma variavel que recebe SnackBar() <= O snackbar pode ser passado diretamente no paramentro do .showSnackBar
 - Por padrão as SnackBar sao fixas, para alterar adicione a propriedade behavior *Complet compose*
   - Quando a snackbar esta fixa o width nao funciona.
-- [Simple compoe](../../img/simpleSnack.png):
-  - context: Conteudo da snackbar
-- [Action compoe](../../img/actionSnack.png):
+  - Simple compoe: ![Simple compoe](../../img/simpleSnack.png)
+  - context: Conteúdo da snackbar
+- Action compoe:![Action compoe](../../img/actionSnack.png)
   - context: Conteudo da snackbar
   - action: Recebe SnackBarAction que compoe:
     - label: Texto exibido (string solta sem uso do Text())
     - onPressed: Funcao anonima de ação ao ser clicada
-- [Complet compose](../../img/completSnack.png):
+-Complet compose: ![Complet compose](../../img/completSnack.png):
   - context: Conteudo da snackbar, aceita widgets
   - action: Recebe SnackBarAction que compoe:
     - label: Texto exibido (string solta sem uso do Text())
@@ -197,16 +197,22 @@
     - Cada item possui um index na lista.
   - Necessario uma variavel int para ser o index dos itens na lista -> ```int _indiceAtual = 0;```
   - Necessario funcao que ira receber o index atual e passar o valor para varaivel
-  - Exemplo -> [Clique aqui](../../Img/listaItems.jpg)
+  - Exemplo -> 
+    
+  ![Clique aqui](../../Img/listaItems.jpg)
   - Compoe:
     - items: Recebe uma lista de [BottomNavigationBarItem](./WidgetsTree.md#bottomnavigationbaritem), ***Necessario ter 2 ou mais itens na lista***
     - onTap: Recebe index do botao clicado passando-o para outra funcao que ira executar uma acao de acordo com o valor de index
     - currentIndex: Recebe a variavel
-    - Exemplo -> [Clique aqui](../../Img/listaItems2.jpg)
+    - Exemplo -> 
+    
+  ![Clique aqui](../../Img/listaItems2.jpg)
 - Para açõe na tela
   - Necessario uma funcao para receber o index do onTap
   - Necessario um comparador como o switch case para execultar algo de acordo com o index recebido
-  - Exemplo -> [Clique aqui](../../Img/listaItems3.jpg)
+  - Exemplo -> 
+  
+  ![Clique aqui](../../Img/listaItems3.jpg)
   - Compoe:
     - items: Recebe uma lista de [BottomNavigationBarItem](./WidgetsTree.md#bottomnavigationbaritem),
     - onTap: Recebe index do botao clicado passando-o para outra funcao que ira executar uma acao de acordo com o valor de index
@@ -236,7 +242,7 @@
 ## CheckBox
 
 - Caixa de seleção, execulta alguma ação ao ser selecionada
-- Exemplo: [Check - SnackBar](../../Img/checkBox.jpg)
+- Exemplo: ![Check - SnackBar](../../Img/checkBox.jpg)
 - Compoe:
   - onChanged: Função a ser execultada quando selecionado
   - value: valor selecionado (true ou false),
@@ -249,9 +255,9 @@
   - backgroundColor: Recebe a cor que representa progresso faltante
   - valueColor: Recebe ```AlwaysStoppedAnimation<Color>(Colors.black)```, que é a cor do progresso concluido
   - value: recebe o valorfinal recebido no paramentro
-- Exemplo 1: [Sem Animação](../../Img/barraProgresso1.png)
+- Exemplo 1: ![Sem Animação](../../Img/barraProgresso1.png)
 - Para ter animação no preenchimento da barra usa-se o [TweenAnimationBuilder](./WidgetsTree.md#tweenanimationbuilder)
-- Exemplo 2: [Com Animação](../../Img/barraProgresso2.png)
+- Exemplo 2: ![Com Animação](../../Img/barraProgresso2.png)
 
 ## Dismissible
 
@@ -262,4 +268,4 @@
   - confirmDismiss: Recebe funcao com paramentro *(DismissDirection direction)* onde seu retorno deve ser uma confirmação de true ou false, como um [pop-up](./Dialogs.md#alertdialog) com botoes, a ação a ser tomada deve esta nesta confirmação de true ou false
   - key: Recebe uma ```final _formKey = GlobalKey<FormState>();```
   - child: Recebe lista dos items que a o dismissible ira agir
-- Exemplo : [Dismissible](../../Img/dismissible_simples.png)
+- Exemplo : ![Dismissible](../../Img/dismissible_simples.png)
