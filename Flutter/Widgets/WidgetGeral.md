@@ -82,7 +82,9 @@
 - Compoe:
   - direction: Axis.vertical,
   - children: []
-- Exemplo: ![Wrap](../../Img/wrap.png)
+- Exemplo: 
+
+  ![Wrap](../../Img/wrap.png)
 
 ## Buttons
 
