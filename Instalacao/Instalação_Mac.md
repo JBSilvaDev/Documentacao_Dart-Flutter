@@ -56,4 +56,8 @@
 - con celular no usb e com depuraçao ativada o mesmo deve aparecer na lista de dispositivos, selecione e rode o projeto
 
 - reincie o mac
+- instalando git
+- brew install git
+git config --global user.name "Seu Nome"
+git config --global user.email email@example.com
 
