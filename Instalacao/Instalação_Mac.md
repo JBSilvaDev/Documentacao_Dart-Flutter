@@ -65,28 +65,35 @@ sudo xcodebuild -runFirstLaunch
     ```
 - Fazer login no XCode e configurar o ***TEAM*** adicionando a conta iCloud
 - Selecionar um emulador de iPhone na lista e clicar *Runner* para executa-lo.
-    - Pare a execução do projeto e vá para o VsCode porem nao feche o emulador
-- Com emulador aberto abra o VsCode e veja se o mesmo aparece na lista de dispositivos, selecione o emulador do iPhone e clique em *Debug* para executa-lo.
-## device fisico 
-- Conectar cabo usb ao mac, no iphone clicar em confiar
-- selecionar o iphone fisico no xcode 
-- executar o projeto e permitir sempre a execucao
-- No iphone cancele a msg que aparecer na tela
-- Ir em configuracaoes - geral - gerenciamento de VPN e dispositivos
-    - Autorizar o apple development
-- Voltar ao xcode, e executar o bunner novamente
-- com iphone conectado abra o vsCode e veja se o mesmo aparece na lista de dispositivos, rode o projeto teste.
-- faça o build em ambos 1 por vez para verificar o funcionamento
-## Android virtual
-- o dispositivo configurado no android studio deve ja esta aparecendo na lista
-- selecionar o emulador e executar o debug
-## fisico
-- plugar o ubs no celular e ativar depuraçao usb
-- con celular no usb e com depuraçao ativada o mesmo deve aparecer na lista de dispositivos, selecione e rode o projeto
-
-- reincie o mac
-- instalando git
-- brew install git
-git config --global user.name "Seu Nome"
-git config --global user.email email@example.com
+    - Aguarde a conclusão, teste e pare a execução do projeto e vá para o VsCode porem nao feche o emulador
+- Com emulador aberto abra o VsCode e veja se o mesmo aparece na lista de dispositivos, selecione o emulador do iPhone e clique em *Debug* para executar o projeto aberto.
+- XCode Emulador físico
+- Conectar cabo usb ao mac, um popup ira aparecer no iPhone, clique em confiar.
+- Abra o XCode, selecione um projeto ou crie um novo como mostrado [acima](./Instalação_Mac.md#emuladores)
+- Procure o iPhone físico na lista de emuladores do XCode
+- Selecionar o iPhone na lista e clicar *Runner* para executa-lo.
+- No iPhone cancele o popup que aparecer na tela e configure as permissões development
+    - configurações - geral - gerenciamento de VPN e dispositivos
+        - Autorizar o apple development
+- Voltar ao XCode, com iPhone físico selecionado executar o *Runner* novamente
+    - Aguarde a conclusão, teste e pare a execução do projeto e vá para o VsCode
+- Com iPhone conectado abra o VsCode e veja se o mesmo aparece na lista de dispositivos, selecione-o e clique em *Debug* para executa o projeto aberto.
+- Android Emulador virtual
+- O emulador configurado no android studio deve ja esta disponivel na lista
+- Selecione o emulador e executar o *Debug*
+- Android Emulador fisico
+- Plugar o usb no celular e ativar depuração usb
+- Com celular no usb e com depuração ativada o mesmo deve aparecer na lista de dispositivos, selecione-o e clique em *Debug* para executa o projeto aberto.
+- Reinicie o mac
+# Instalando git
+> Comandos do terminal<br>
+```
+brew install git
+```
+```
+git config --global user.name "UserNameGit"
+```
+```
+git config --global user.email "email@example.com"
+```
 
