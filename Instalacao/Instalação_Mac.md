@@ -9,8 +9,6 @@
 - Download xCode no App Sore
 
 
-
-
 # Abrir Terminal
 - Configurar curl
     - ```/usr/bin/curl```
@@ -32,11 +30,15 @@
 # VSCode
 - Baixar pugins
 - Caso seja necessario localizar o SDK usar o caminho salvo na instalacao do brew
-# xcode
+# Emuladores
+## xcode virtual
+- ```sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer```
+- ```sudo xcodebuild -runFirstLaunch```
 - Abrir a pasta ios de um projeto no xcode
 - Fazer login no xcode e configurar o TEAM adicionando a conta 
 - Abrir emulador pela primeira vez e testar o projeto aberto
-## device fisico
+- com emulador aberto abra o vsCode e veja se o mesmo aparece na lista de dispositivos, rode o projeto teste.
+## device fisico 
 - Conectar cabo usb ao mac, no iphone clicar em confiar
 - selecionar o iphone fisico no xcode 
 - executar o projeto e permitir sempre a execucao
@@ -44,5 +46,14 @@
 - Ir em configuracaoes - geral - gerenciamento de VPN e dispositivos
     - Autorizar o apple development
 - Voltar ao xcode, e executar o bunner novamente
-- reiniciar mac
+- com iphone conectado abra o vsCode e veja se o mesmo aparece na lista de dispositivos, rode o projeto teste.
+- faça o build em ambos 1 por vez para verificar o funcionamento
+## Android virtual
+- o dispositivo configurado no android studio deve ja esta aparecendo na lista
+- selecionar o emulador e executar o debug
+## fisico
+- plugar o ubs no celular e ativar depuraçao usb
+- con celular no usb e com depuraçao ativada o mesmo deve aparecer na lista de dispositivos, selecione e rode o projeto
+
+- reincie o mac
 
