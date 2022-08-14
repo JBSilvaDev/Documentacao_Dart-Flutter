@@ -37,10 +37,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install git
 ```
 ```
-git config --global user.name "UserNameGit"
+git config --global user.name <"UserNameGit">
 ```
 ```
-git config --global user.email "email@example.com"
+git config --global user.email <"email@example.com">
 ```
 # Instalando JDKs
 - Baixar no site oficial
@@ -89,15 +89,97 @@ vi ~/.zshrc
 ```
 - Precione "i" para editar a variavel informe o export passando o caminho copiado acima incluindo ao final /jdk
 ```
-export JAVA_HOME= caminho copiado acima + /jdk
+export JAVA_HOME= <caminho copiado acima>/jdk
 ```
 - Para sair e salvar precione *esc* depois comando ```:wq```
 - Feito isto ja é possivel alterar entre as versoes do JDK, para isso usar comando
+    - Para selecionar a versao 8
+        ```
+        unlink jdk
+        ```
+        ```
+        ln -s $(/usr/libexec/java_home -v 1.8.0) ./jdk
+        ```
+    - Para selecionar a versao 11
+        ```
+        unlink jdk
+        ```
+        ```
+        ln -s $(/usr/libexec/java_home -v 11.0) ./jdk
+        ```
+- Recomendo deixar a pasta bin oculta, para isso com termina na pasta home
 ```
-unlink jdk
-ln -s $(/usr/libexec/java_home -v 1.8.0) ./jdk
+chflags hidden <Caminho da pasta>
+```
+# Variaveis Android Studio SDK
+- **Copiar** caminho exibido no SDK do android studio
+```
+vi ~/.zshrc
+```
+- Precione "i" para editar a variavel informe o export passando o caminho do sdk copiado
+```
+export ANDROID_HOME=<CAMINHO OBTIDO NO ANDROID STUDIO SDK>
+export ANDROID_ROOT_SDK=<CAMINHO OBTIDO (MESMO ACIMA)>
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+```
+- Para sair e salvar precione *esc* depois comando ```:wq```
+- Reiniciar terminal e rodar comando para verificar versao do sdk
+```
+adb --version
+```
+# Instalar FVM
+- No terminal
+```
+brew tap leoafarias/fvm
+```
+```
+brew install fvm
+```
+# Instalar Flutter
+- Para verificar versões disponiveis
+```
+fvm releases
+```
+- Para instalar
+```
+fvm global <versao desejada>
+```
+- Ou instalar a ultima disponivel
+```
+fvm global stable
+```
+- **OBS**: *PARA ALTERNAR ENTRE VERSOES BASTA RODAR COMANDO FVM GLOBAL (versao desejada) CASO JA TENHA BAIXADA IRA EFETUAR A TROCA CASO NAO TENHA IRA BAIXAR*
 
-
-
-
-
+# Variaveis do Flutter
+- **Copiar** caminho da instalação exibido quando concluída.<br>
+```
+vi ~/.zshrc
+```
+- Precione "i" para editar a variavel informe o export passando o caminho copiado
+```
+export PATH=$PATH:<Caminho copiado>
+```
+- Para sair e salvar precione *esc* depois comando ```:wq```
+- Reiniciar terminal executar comando
+```
+flutter doctor
+```
+# Resolvendo pendendias doctor
+- Abra o xCode para baixar e instalar os componentes necessarios.
+    - Quando concluir o mesmo ira para na tela para criar ou abrir um projeto, pode fechar o programa nesta tela
+- Execute comando
+```
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+```
+```
+sudo gem install cocoapods
+```
+```
+sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc
+```
+- Aceite as lincenças do android
+```
+flutter doctor --android-licenses
+```
+- Digite "y" para aceitar licenças
