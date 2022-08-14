@@ -1,13 +1,13 @@
-baixar xcode
+<!-- baixar xcode
 instalar home brew com zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/jbsilva/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 instalar git
-brew install git
+brew install git -->
 ***
-instalar jdk 11
+<!-- instalar jdk 11
 dmg installer
 
 fechar e abrir terminal para verificar se instacao foi ok
@@ -17,9 +17,9 @@ baixar jdk 8
 dmg installer
 
 fechar e abrir terminal para verificar se instacao foi ok
-java -version
+java -version -->
 
-navegar para home
+<!-- navegar para home
 cd ~
 navegar para documentos
 cd Documents
@@ -39,7 +39,7 @@ dentro da pasta bin usar
 pwd e copiar caminho exibido
 vi ~/.zshrc
 export JAVA_HOME= link copiado acima + /jdk
-salvar com esc depois :wq
+salvar com esc depois :wq -->
 
 para troca entre versoes do java
 entrar na pasta bin em workstation

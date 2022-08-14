@@ -8,7 +8,8 @@
 <br><br>
 ***
 >[Instalação Windows](./Instalacao/Instalação_Windows.md)<br>
->[Instalação Mac](./Instalacao/Instalação_Mac.md)
+>Homebrew [Instalação Mac](./Instalacao/Instalação_Mac_Brew.md) only one version<br>
+>FVM [Instalação Mac](./Instalacao/Instalação_Mac_Fvm.md) multi versions
 ***
 >[Dart](./Dart/Resumo_Dart.md)
 ***
