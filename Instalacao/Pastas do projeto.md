@@ -1,14 +1,14 @@
-.dart_tool
+- .dart_tool
     - Pasta padrao, não mexer
-.idea
+- .idea
     - Pasta padrao, não mexer
-android
+- android
     - Pasta de arquivos para gerar app android
-ios
+- ios
     - Pasta de arquivos para gerar app ios
-web
+- web
     - Pasta de arquivos para gerar app/site web
-lib
+- lib
     - Pasta de codigos em .dart (Area de desenvolvimento)
-test
+- test
     - Pasta de arquivos para testes de funcionamento do app
