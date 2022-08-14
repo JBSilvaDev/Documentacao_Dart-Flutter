@@ -100,6 +100,11 @@ sudo xcodebuild -runFirstLaunch
 sudo gem install cocoapods
 sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc (esse eu nao fiz para ver se e necessario)
 
+instalar vs code e seus plugins
+
+caso deseja ocultar a pasta usar
+chflags hidden (arraste a pasta que deseja ocultar aqui)
+
 
 
 
