@@ -23,6 +23,9 @@
 ***
 >[Erros Comuns](./Erros/README.md)
 ***
+***
+>[Depuração WiFi](./Instalacao/Wifi_Debug.md)
+***
 
 <br><br>
 <br><br>
