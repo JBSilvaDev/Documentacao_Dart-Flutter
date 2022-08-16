@@ -22,6 +22,8 @@ p2() {
 ```
 >Exemplo 2 - funcao que retorna algo:
 - Aguarda a funcao finalizar obtendo o retorno da mesma dentro do main
+- Quando usamos o then apos uma função assincrona, este metodo recebe em seu paramentro o retorno da funcao a qual ele esta instanciado, no exemplo ele recebe a msg *Fim do p2*
+- ```.then((retornoFuncao)=>print(retornoFuncao)```
 ```dart
 void main() {
   print("Iniciou o main");
@@ -29,32 +31,54 @@ void main() {
   print("fim do main, aguardando p2");
 }
 
-Future<String>p2() {
+Future<String>p2() async{
   print("Iniciou p2");
- return Future.delayed(Duration(seconds: 2), () => "Fim do p2");
+  await Future.delayed(Duration(seconds: 5));
+ return "Fim do p2";
 }
 ```
 >Exemplo 3 - tratar, capturar um erro
-- Retorna a msg na funcao, caso haja erro o exiba
-- É possivel obter o mesmo resultado usando o onError (dentro do then)
-  - p2().then((msgs) => print('msg'), onError: (error){print('Erro aqui')}
+- No Exemplo abaixo usa-se o *catchError* para obter e exibir o erro apresentado, e como um erro é apresentado, o menssagem de retorno nao sera exibida.
+- É possivel obter o mesmo resultado usando o *onError (dentro do then)*
+  - ```p2().then((msgs) => print('msg'), onError: (error){print('Erro aqui')}```
 ```dart
 void main() {
   print("Iniciou o main");
-  p2().then((msgs) => print('msg'))
-    .catchError((erro) => print('Achei um erro!')); // starta funcao p2
+  p2()
+    .then((msgs) => print('msg'))
+    .catchError((erro) => print('Achei um erro!, $erro')); // starta funcao p2
   print("fim do main, aguardando p2");
 }
 Future<String>p2() {
   print("Iniciou p2");
  return Future.delayed(Duration(seconds: 2), () {
-    throw Exception();
+    throw Exception('Erro Encontrado');
   });
 }
 ```
->Exemplo 4 - Await - processo volta a ser sincrono
-- Faz sistema aguardar o retorno ou conclusao da funcao para continuar o main
-- Necessario inserir async no main e tranformar o void em um Future<void>
+>Exemplo 4 - Quando completado
+- Executa uma ação quando o processo for completado com ou sem erros ele sempre sera executado.
+- Abaixo exemplo que mesmo com erro o whenComplete é executado
+```dart
+void main() {
+  print("Iniciou o main");
+  p2()
+    .then((msgs) => print('msg'))
+    .catchError((erro) => print('Achei um erro!, $erro'))
+    .whenComplete(()=>print('p2 chegou ao fim'));
+  print("fim do main, aguardando p2");
+}
+Future<String>p2() {
+  print("Iniciou p2");
+ return Future.delayed(Duration(seconds: 2), () {
+    throw Exception('Erro Encontrado');
+  });
+}
+```
+
+>Exemplo 5 - Await - processo volta a ser síncrono
+- Faz sistema aguardar o retorno ou conclusão da funcao para continuar o main
+- Necessário inserir async no main e transformar o void em um Future<void>
 ```dart
 void main() async {
   print("Iniciou o main");

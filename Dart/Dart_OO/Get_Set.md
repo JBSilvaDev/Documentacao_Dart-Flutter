@@ -7,7 +7,7 @@
   - Get esta pegando o atributo da classe e retornando ele para o set
 - Set:
   - Set esta passando o valor de seu atributo para o atributo privado da classe
-  - Dentro da classe set ```nomeGet(Tipo nomeVariavel) => _atributoClassePrivado = nomeVariavel;;```
+  - Dentro da classe ```set nomeGet(Tipo nomeVariavel) => _atributoClassePrivado = nomeVariavel;;```
 
 ## Passando valor recebido para atributo privado da classe
 

@@ -134,3 +134,21 @@ class NomeDaClasse {
   NomeDaClasse(int idadeConstrutor) : _idade = idadeConstrutor;
 }
 ```
+- Construtores com *assets*
+  - Asserts sao usados para fazer verificações dos parametros passados para um construtor
+  - Abaixo exemplo de um assert onde se o nome passado for '' retorna um erro.
+```dart
+void main() {
+  var cli = Asserts()..nome = '';
+
+  print(cli.nome);
+}
+
+class Asserts {
+  String? nome;
+
+  Asserts({
+    this.nome,
+  }) : assert(nome == '', 'Nome não pode ser nulo ou vazio');
+}
+

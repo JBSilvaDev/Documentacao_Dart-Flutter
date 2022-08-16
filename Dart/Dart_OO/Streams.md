@@ -4,7 +4,7 @@
 - Ao abrir uma stream ela se manterar aberta ate o usuario ou uma determinação do sistema a fechar
     - Enquanto esta conexao se manter aberta pode-se enviar e receber informações por ela e para ela.
 >Observação:
-- Quando há uma lista a ser percorrida de modo ascincrono, nao usar o <i>forEach</i> pois o mesmo nao aceita o await, deve-se usar o <i>for in</i>.
+- Quando há uma lista a ser percorrida de modo assíncrono, nao usar o <i>forEach</i> pois o mesmo nao aceita o await, deve-se usar o <i>for in</i>.
 ## Stream periodic
 - Stream periodic recebe um intervalo que quando concluido execulta o segundo parametro que é uma funcao
 - Exemplo usado é que a cada 2 segundo, a stream chama a funcao callback

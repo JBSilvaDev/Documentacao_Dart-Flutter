@@ -3,8 +3,8 @@
 ## Extends
 
 - Uma classe pode estender outra usando o extends
-    - Essa nova classe vai herdar os atribubos, caracteriscas, etc... do que esta sendo extendido
-    - Quando estendemos uma classe os metodos e atributos da classe *Pai* passam para o filho, abaixo exemplo a classe ```Sobrenome``` herdou a variavel nome de seu pai
+    - Essa nova classe vai herdar os atributos, características, etc... do que esta sendo estendido
+    - Quando estendemos uma classe os métodos e atributos da classe *Pai* passam para o filho, abaixo exemplo a classe ```Sobrenome``` herdou a variavel nome de seu pai
     - ```dart
         class Nome {
             String? nome;
