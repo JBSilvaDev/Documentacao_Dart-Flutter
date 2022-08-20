@@ -15,7 +15,7 @@
 ***
 ## Interação / Formatação / Visual
 - Device preview - [Preview](../Dependencias/Device_preview.md)
-- Graficos tipo conometro/acelerador - [Gauges](../Dependencias/Packages/Gauges_Visual_Acelerometros.md)
+- Gráficos tipo conometro/acelerador - [Gauges](../Dependencias/Packages/Gauges_Visual_Acelerometros.md)
 - Botões para logins com redes sociais - [FSButton](../Dependencias/Packages/flutter_signin_button.md)
 - Icones personalizados - [FlutterIcon](../Dependencias/Packages/flutter_icon.md)
 - Botão personalizado login - [Flutter Signin Button](../Dependencias/Packages/flutter_signin_button.md)
@@ -26,6 +26,7 @@
 - Loading - [OverlayLoader](../Dependencias/OverlayLoader.md)
 - PopUp data e hora - [DateTimer Picker](../Dependencias/Datetime.md)
 - Localização e idioma - [Flutter Localization](../Dependencias/Packages/FlutterLocale.md)
+- Alterar Splash Page - [Flutter Native Splash](../Dependencias/Packages/Flutter_Native_Splash_.md)
 ***
 ## Gerenciamento de estado
 - Provider - [Provider](./Provider.md)
