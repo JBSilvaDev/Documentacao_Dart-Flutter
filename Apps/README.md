@@ -6,3 +6,4 @@
 4. [Todo List - Provider](https://github.com/JBSilvaDev/To-Do-List-Provider)
 5. [ViaCep - Pesquisa](https://github.com/JBSilvaDev/viacep)
 6. [Frases Motivacionais](https://github.com/JBSilvaDev/frases-do-dia)
+7. [Joken-Pô](https://github.com/JBSilvaDev/jokenpo)
