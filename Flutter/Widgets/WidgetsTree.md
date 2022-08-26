@@ -26,7 +26,7 @@
 - Se baseando pela imagem original, basta criar pastas de nomes 2.0x para imagem 2x maior, 3.0x para 3x maior e assim sucessivamente, o flutter ira reconhecer o tamanho da tela e pegar a melhor imagem para ela. A imagem menor fica na pasta raiz, e as maiores ficam nas pastas correspondentes 2.0x, 3.0x, 4.0x, etc...
 - Compoe:
   - image: Recebe Widget de imagem
-    - NetworkImage ou AssetsImage que irão receber o link da imagem
+    - NetworkImage ou AssetImage que irão receber o link da imagem
 - Pode ser passado da seguinte forma:
   - Image.asset() recebe link local da imagem
   - Image.network() recebe link online da imagem
@@ -35,7 +35,7 @@
 
 - Usado para definir imagens em formato circular (comuns em imagens de perfil)
 - Compoe:
-  - backgroundImage: Recebe Widget de [imagem](./WidgetsTree.md#image)
+  - backgroundImage: NetworkImage ou AssetImage que irão receber o link da imagem
   - child: Recebe widget para exibição no circleavatar
 
 ***
