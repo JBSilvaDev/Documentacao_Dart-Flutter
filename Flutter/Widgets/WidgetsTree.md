@@ -37,6 +37,8 @@
 - Compoe:
   - backgroundImage: NetworkImage (link online da imagem) ou AssetImage (link local da imagem) 
   - child: Recebe widget para exibição dentro do circleavatar (na frente da imagem)
+  - maxRadius: Tamanho maximo,
+  - minRadius: tamanho minimo,
 
 ***
 
