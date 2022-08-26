@@ -74,6 +74,9 @@ onPressed: () {
   - onChange: Recebe uma funcao que em seu paramentro recebe o valor digitado pelo usuario
   - style: Recebe um [TextStyle](./WidgetsTree.md#textstyle) para formatação do conteudo do campo
   - decoration: Recebe um [InputDecoration](WidgetsTree.md#inputdecoration) para formatação do campo
+  - keyboardType: Recebe TextInputType.TIPO TECLADO
+  - maxLength: Recebe um inteiro com a quantidade maxima permitida no campo
+  - maxLenghtEnForce: Recebe true ou false para bloqueiar o valro maximo definico no maxLenght
 
 ## TextFormField()
 
