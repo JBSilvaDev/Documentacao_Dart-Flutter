@@ -35,8 +35,8 @@
 
 - Usado para definir imagens em formato circular (comuns em imagens de perfil)
 - Compoe:
-  - backgroundImage: NetworkImage ou AssetImage que irão receber o link da imagem
-  - child: Recebe widget para exibição no circleavatar
+  - backgroundImage: NetworkImage (link online da imagem) ou AssetImage (link local da imagem) 
+  - child: Recebe widget para exibição dentro do circleavatar (na frente da imagem)
 
 ***
 
