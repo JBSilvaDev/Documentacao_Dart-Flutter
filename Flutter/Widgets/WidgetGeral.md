@@ -305,4 +305,6 @@
 value: valor inicial do slider
 max: valor maximo do slider
 min: valor minimo do slider
+label: Recebe String para exbição ao deslizar, usar em conjunto com divisions
+divisions: Recebe inteiro com numero de divisoes no slider
 onChanged: Função com paramentro referente ao value , ativado sempre que slider seta novo valor (deslisa)
