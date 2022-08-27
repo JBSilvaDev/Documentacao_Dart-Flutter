@@ -250,7 +250,27 @@
 - Exemplo 2: <br>
   - ![Check - SnackBar](../../Img/checkBox.jpg)<br>
 - Compoe:
-  - onChanged: Função a ser execultada quando selecionado
+  - onChanged: Função com paramentro referente ao value , ativado sempre que selecionado o box
+  - value: valor selecionado (true ou false),
+
+## Radio
+
+- Usado para selecionar um valor na pagina
+- Idependente de quantos radios tiver na pagina apenas 1 é selecionado desde que os valores de value sejam diferentes
+- Exemplo: <br>
+  - ![](../../Img/radio.png)
+- Compoe:
+  - value: Recebe qualquer tipo, porem este tipo deve ser o mesmo do paramentro em onChanged
+  - groupValue: Recebe a variavel que ira armazenar o valor
+  - onChanged: Função com paramentro referente ao value , ativado sempre que selecionado o radio
+
+## Swith (togle)
+- Togle de seleção, execulta alguma ação ao ser selecionada (mesmas caracteristicas de checkbox)
+  - Para conseguir marcar e desmarcar o switch, necessario usar variavel no value, e alterar o valor dela no onChanged (com algum gerenciador de estado tipo setState) para atualizar a exibição na tela
+- Exemplo: <br>
+  - ![](../../Img/switch.png)<br>
+- Compoe:
+  - onChanged: Função com paramentro referente ao value , ativado sempre que selecionado o togle/switch
   - value: valor selecionado (true ou false),
 
 ## LinearProgressIndicator
@@ -275,3 +295,14 @@
   - key: Recebe uma ```final _formKey = GlobalKey<FormState>();```
   - child: Recebe lista dos items que a o dismissible ira agir
 - Exemplo : ![Dismissible](../../Img/dismissible_simples.png)
+
+## Slider
+- Linha deslisante usada para capturar valor passado pelo usuario
+- Recebe valores double, e necessita de uma variavel para receber seus valores, assim como um gerenciador de estado como setState para altera-lo
+- Exemplo: <br>
+  -![](../../Img/slider.png)
+- Compoe:
+value: valor inicial do slider
+max: valor maximo do slider
+min: valor minimo do slider
+onChanged: Função com paramentro referente ao value , ativado sempre que slider seta novo valor (deslisa)
