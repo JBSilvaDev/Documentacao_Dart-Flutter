@@ -71,12 +71,16 @@ onPressed: () {
 
 - Usado para digitação de caracteres
 - Compoe:
-  - onChange: Recebe uma funcao que em seu paramentro recebe o valor digitado pelo usuario
+  - onChange: Recebe uma funcao que em seu paramentro recebe o que esta sendo digitado pelo usuario
+    - (String valor){print(valor)}
+  - onSubmitted: Recebe uma funcao que em seu paramentro recebe o que foi digitado pelo usuario apos confirmar (enter, ok)
   - style: Recebe um [TextStyle](./WidgetsTree.md#textstyle) para formatação do conteudo do campo
   - decoration: Recebe um [InputDecoration](WidgetsTree.md#inputdecoration) para formatação do campo
   - keyboardType: Recebe TextInputType.TIPO TECLADO
   - maxLength: Recebe um inteiro com a quantidade maxima permitida no campo
   - maxLenghtEnForce: Recebe true ou false para bloqueiar o valro maximo definico no maxLenght
+  - obscureText: recebe true ou false para ocultar o conteudo digitado
+  - controller: Recebe o controlador definido no State< NomePagina >
 
 ## TextFormField()
 
@@ -90,7 +94,6 @@ onPressed: () {
   - validator: Recebe uma funcao anonima que em seu parametro é passado um valor, efetuando a verificação com if, pode constatar se o valor é igual a null ou valor.isEmpty, caso seja retorna uma mensagem ou uma ação.
   - obscureText: recebe true ou false para ocultar o conteudo digitado
   - focusNode: Recebe true ou false, o pontero ou seleção ira para o campo que for definido true
-  - border: Configuração padrão da borda
   - errorBorder: Configuracao da borda em caso de erro no form
   - isDense: Recebe true ou false para deixar o campo mais compacto
   - suffixIcon: Recebe widget, icone dentro do campo

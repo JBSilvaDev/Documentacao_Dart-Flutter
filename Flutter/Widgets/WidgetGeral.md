@@ -244,6 +244,7 @@
 ## CheckBox
 
 - Caixa de seleção, execulta alguma ação ao ser selecionada
+  - Para conseguir marcar e desmarcar o box, necessario usar variavel no value, e alterar o valor dela no onChanged (com algum gerenciador de estado tipo setState) para atualizar o check na tela
 - Exemplo: ![Check - SnackBar](../../Img/checkBox.jpg)
 - Compoe:
   - onChanged: Função a ser execultada quando selecionado
