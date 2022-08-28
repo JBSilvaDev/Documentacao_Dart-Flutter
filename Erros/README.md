@@ -23,3 +23,5 @@
 - Acontece quando se passa algum paramentro em uma funcao que nao o aceita, corrigir ```(paramentro){}``` para ```(){}```
 >The return type 'Tipo' isn't a 'FutureOr<ObservableFuture<Tipo>>', as required by the closure's context.
 - Acontece quando temos um await em um futuro, removendo o erro encerra
+>The operator '[]' isn't defined for the type 'Object'. Try defining the operator '[]'
+- Acontece quando o widget nao esta tipado, logo ele espera um objeto
