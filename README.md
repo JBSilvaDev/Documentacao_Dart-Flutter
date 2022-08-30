@@ -19,7 +19,7 @@
 ***
 >[Desafios](./Desafios/Desafios.md)
 ***
->[Mini Projetos](./Apps/README.md)
+>[Projetos](./Apps/README.md)
 ***
 >[Erros Comuns](./Erros/README.md)
 ***
