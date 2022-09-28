@@ -76,7 +76,9 @@
       - CrossAxisAlignment.center = No meio da linha coluna
       - CrossAxisAlignment.start = Direita da linha da coluna
       - CrossAxisAlignment.end = Esquerda da linha da coluna
-    - mainAxisSize: MainAxisSize.min,
+    - mainAxisSize: Recebe tamanho maximo e minimo que a coluna ocupará
+      - MainAxisSize.min = Tamanho minimo,
+      - MainAxisSize.max = Tamanho maximo,
 ## Wrap
 - Possui as mesmas caracteristas de uma Row, porem ao chegar no limite da tela ira fazer uma quebra de linha para caber os widgets filhos.
 - Compoe:

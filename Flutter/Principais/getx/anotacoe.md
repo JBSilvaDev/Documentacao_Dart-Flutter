@@ -10,6 +10,6 @@ Get.to(Pagina());
 ```
 > Retornar uma pagina (pop)
 ```dart
-Get.back);
+Get.back();
 ```
 
