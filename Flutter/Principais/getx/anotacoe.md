@@ -12,4 +12,7 @@ Get.to(Pagina());
 ```dart
 Get.back();
 ```
-
+> Remove a pagina atual e substitui pela passada para nevegação (ao voltar a pagina nao estara disponivel)
+```dart
+Get.off(Pagina());
+```
