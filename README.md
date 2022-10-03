@@ -9,7 +9,8 @@
 ***
 >[Instalação Windows](./Instalacao/Instalação_Windows.md)<br>
 >Homebrew [Instalação Mac](./Instalacao/Instalação_Mac_Brew.md) only one version<br>
->FVM [Instalação Mac](./Instalacao/Instalação_Mac_Fvm.md) multi versions
+>FVM [Instalação Mac](./Instalacao/Instalação_Mac_Fvm.md) multi versions<br>
+>Plugins [AutoCompliteZSH](https://www.alura.com.br/artigos/oh-my-zsh-melhorando-produtividade-terminal?gclid=Cj0KCQjwidSWBhDdARIsAIoTVb29RIFz5PSU4EbgYkt0_X_h939MVd6ww0u4n50xVUw8F4UKJwB7w_8aAlZFEALw_wcB%5D(https://www.alura.com.br/artigos/oh-my-zsh-melhorando-produtividade-terminal?gclid=Cj0KCQjwidSWBhDdARIsAIoTVb29RIFz5PSU4EbgYkt0_X_h939MVd6ww0u4n50xVUw8F4UKJwB7w_8aAlZFEALw_wcB))
 ***
 >[Dart](./Dart/Resumo_Dart.md)
 ***
