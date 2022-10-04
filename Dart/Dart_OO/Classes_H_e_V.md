@@ -1,4 +1,4 @@
-# Heranças e Polimofismo de classes
+# Heranças
 
 ## Extends
 
@@ -251,9 +251,10 @@ extension saudacoesString on String {
 - Acima estou estendendo uma classe nativa, passando seu tipo e instanciando a função que a estende
 - Chamando ```print('JB'.saudacao())``` obtenho *Ola **JB** bem vindo ao flutter*
 - Chamando ```print('Silva'.saudacao());``` obtenho *Ola **Silva** bem vindo ao flutter*
-
-## Polimorfismo
-- É a possibilidade de alterar uma instancia de classe para outra desde que seu tipo seja igual ao seu "Pai", e ambas seja "irmãs
+***
+***
+# Polimorfismo
+- É a possibilidade de alterar uma instancia de classe para outra desde que seu tipo seja igual ao seu "Pai", e ambas seja "irmãs"
 > Classe pai
 ```dart
 abstract class Pagamento{
