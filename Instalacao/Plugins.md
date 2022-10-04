@@ -34,7 +34,7 @@
     - Procurar plugins = (...)
     - Colocar dentro do parenteses `zsh-syntax-highlighting`
     - Terminal ficara com comandos coloridos 
-    - [](../Img/zsh-syntax-highlighting.png)
+    - ![](../Img/zsh-syntax-highlighting.png)
 ## zsh-autosuggestions
 - Instalação
     ```
@@ -45,6 +45,6 @@
     - Procurar plugins = (...)
     - Colocar dentro do parenteses `zsh-autosuggestions`
     - Terminal tera auto sugestoes de comandos
-    - [](../Img/zsh-autosuggestions.png)
+    - ![](../Img/zsh-autosuggestions.png)
 
 

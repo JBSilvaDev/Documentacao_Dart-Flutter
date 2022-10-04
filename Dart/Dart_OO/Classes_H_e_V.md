@@ -1,4 +1,4 @@
-# Heranças de classes
+# Heranças e Polimofismo de classes
 
 ## Extends
 
@@ -251,3 +251,43 @@ extension saudacoesString on String {
 - Acima estou estendendo uma classe nativa, passando seu tipo e instanciando a função que a estende
 - Chamando ```print('JB'.saudacao())``` obtenho *Ola **JB** bem vindo ao flutter*
 - Chamando ```print('Silva'.saudacao());``` obtenho *Ola **Silva** bem vindo ao flutter*
+
+## Polimorfismo
+- É a possibilidade de alterar uma instancia de classe para outra desde que seu tipo seja igual ao seu "Pai", e ambas seja "irmãs
+> Classe pai
+```dart
+abstract class Pagamento{
+  void pagar();
+}
+```
+> Classes filhas
+```dart
+class Boleto implements Pagamento{
+  @override
+  void pagar(){
+    print('Paguei com boleto');
+  }
+}
+```
+```dart
+class Pix implements Pagamento{
+  @override
+  void pagar(){
+    print('Paguei com pix');
+  }
+}
+```
+> Chamada
+```dart
+Pagamento pagamento = Boleto();
+pagamento.pagar();
+
+pagamento = Pix();
+pagamento.pagar();
+```
+- Acima temos a classe "Pai" Pagamento onde sao filhas delas as classes Boleto e Pix
+- Na chamada temos a variavel (tipada com a classe pai) pagamento que recebe o tipo de pagamento Boleto e em sequencia mudamos o tipo de pagamento para Pix, a possibilidade de fazer isso chama-se Polimorfismo
+- Retorno no console
+  - ![](../../Img/polimorfismo.png)
+
+
