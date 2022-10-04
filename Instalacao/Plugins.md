@@ -5,7 +5,7 @@
 ***
 ## Instalações
 - [zsh](./Plugins.md#zsh)
-- [Oh My Zsh](./Plugins.md#OhMyZsh)
+- [Oh My Zsh](./Plugins.md#Oh-My-Zsh)
 - [zsh-syntax-highlighting](./Plugins.md#zsh-syntax-highlighting)
 - [zsh-autosuggestions](./Plugins.md#zsh-autosuggestions)
 ***
