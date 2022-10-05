@@ -21,6 +21,7 @@ p2() {
 }
 ```
 >Exemplo 2 - funcao que retorna algo:
+- Para obter o retorno de uma função que retorna um Future, usa-se o then, passando uma funcão que recebera o valor retornado.
 - Aguarda a funcao finalizar obtendo o retorno da mesma dentro do main
 - Quando usamos o then apos uma função assincrona, este metodo recebe em seu paramentro o retorno da funcao a qual ele esta instanciado, no exemplo ele recebe a msg *Fim do p2*
 - ```.then((retornoFuncao)=>print(retornoFuncao)```
@@ -36,6 +37,41 @@ Future<String>p2() async{
   await Future.delayed(Duration(seconds: 5));
  return "Fim do p2";
 }
+```
+```dart
+void main() async {
+  var nomeRetornado1 = nomeFuture1();
+  var nomeRetornado2 = nomeFuture2();
+  var nomeRetornado3 = nomeFuture3();
+
+  // Obtendo retorno em then passando uma função normal
+  nomeRetornado1.then((retornoFuture1) {
+    print(retornoFuture1);
+  });
+
+  // Obtendo retorno em then passando uma arrow Function
+  nomeRetornado2.then((retornoFuture2) => print(retornoFuture2));
+
+  // E possivel obter o retorno, porem precisa ser asincrono, colocando async na funcao pai e await no metodo then
+  var retornoFuncaoThen = await nomeRetornado3.then((retornoFuture3) {
+    return retornoFuture3;
+  });
+
+  print(retornoFuncaoThen);
+}
+
+Future<String> nomeFuture1() {
+  return Future.value('Retorno do Future 1');
+}
+
+Future<String> nomeFuture2() {
+  return Future.value('Retorno do Future 2');
+}
+
+Future<String> nomeFuture3() {
+  return Future.value('Retorno do Future 3');
+}
+
 ```
 >Exemplo 3 - tratar, capturar um erro
 - No Exemplo abaixo usa-se o *catchError* para obter e exibir o erro apresentado, e como um erro é apresentado, o menssagem de retorno nao sera exibida.
