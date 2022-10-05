@@ -21,6 +21,7 @@
 - Streams: [Clique Aqui](./Dart_OO/Streams.md)
 - Funcoes: [Clique Aqui](./Dart_OO/Funcao.md)
 - Classes: [Clique Aqui](./Dart_OO/Classes.md)
+- Extensions: [Clique Aqui](./Dart_OO/Extensions.md)
 - Get E Set: [Clique Aqui](./Dart_OO/Get_Set.md)
 - Repository-Pattern: [Clique Aqui](./Dart_OO/Repository_pattern/Repository_pattern.md)
 - Trabalhando com arquivos: [Clique Aqui](./Dart_OO/Arquivos/Files.md)
