@@ -13,13 +13,23 @@ Map<String, String> mapa = {'nome': 'JB','curso': 'Flutter',};
 ```dart
 mapa.putIfAbsent('Chave', () => 'Valor');
 ```
+```dart
+mapa['Chave'] = 'Valor';
+```
 >Alterando um valor dentro do mapa
 ```dart
 mapa.update('Chave', (value) => 'NovoValor');
 ```
+```dart
+mapa['Chave'] = 'NovoValor';
+```
 >Tenta atualizar um valor, caso nao encontre sua chave cria uma nova tambem
 ```dart
-mapa.update('Chave',(value) => 'Valor',ifAbsent: () => 'Valor');
+mapa.update('Chave',(value) => 'Valor', ifAbsent: () => 'Valor');
+```
+>Remove um item do mapa baseado na chave
+```dart
+mapa.remove('Chave');
 ```
 >Acesso a um conteudo especifico num mapa
 ```dart
