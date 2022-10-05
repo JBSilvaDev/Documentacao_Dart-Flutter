@@ -45,4 +45,18 @@ extension saudacoesString on String {
 - Acima estou estendendo uma classe nativa, passando seu tipo e instanciando a função que a estende
 - Chamando ```print('JB'.saudacao())``` obtenho *Ola **JB** bem vindo ao flutter*
 - Chamando ```print('Silva'.saudacao());``` obtenho *Ola **Silva** bem vindo ao flutter*
+- exemplo 5:
+```dart
+void main() {
+String nome = 'juliano';
+  print(nome.priMaiuscula());
+}
+extension ExtensionString on String{
+  String priMaiuscula(){
+    return this[0].toUpperCase() + this.substring(1);
+  }
+}
+```
+- Acima estou estendendo a classe nativa String, adiconando novo metodo a ela onde pela a primeira letra (index [0]) transforma em maiuscula e concatena com o restante a partir da segunda letra (index[1]) usando o substring, retornando assim ```Juliano```
 ***
+>OBS: Para as extensions funcionarem deve-se importa-las nas paginas que deseja usar

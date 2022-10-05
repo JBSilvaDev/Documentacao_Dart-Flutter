@@ -44,3 +44,39 @@ enum Cores {
   preto,
 }
 ```
+> Exemplo pratico de uso de enum com [classe](../Dart_OO/Classes.md) que faz uma verificação do item selecionado.
+- O valor selecionado é passado para o contrutor
+- O Construtor que reccebeu o valor selecionado retorna uma String (ou qualquer outro tipo passado entre parenteses).
+- Fazendo este processo é possivel fazer verificações de conteudo como no exemplo mostrado
+
+```dart
+void main() {
+  var pagamento = Pagamento();
+  pagamento.pagar(TipoPagamento.PIX);
+}
+
+enum TipoPagamento {
+  PIX('Pix'),
+  BOLETO('Boleto'),
+  CARTAO('Cartao');
+
+  final String value;
+  const TipoPagamento(this.value);
+}
+
+class Pagamento {
+  void pagar(TipoPagamento tipoPagamento) {
+    if (tipoPagamento.value == 'Pix') {
+      print("Pagando com pix...");
+    } else if (tipoPagamento.value == 'Boleto') {
+      print("Pagando com Boleto...");
+    } else if (tipoPagamento.value == "Cartao") {
+      print("Pagando com Cartão... ");
+    }
+  }
+}
+
+```
+![](../../Img/enum1.png)
+
+
