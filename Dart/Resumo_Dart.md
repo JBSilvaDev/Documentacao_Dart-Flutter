@@ -23,6 +23,7 @@
 - Classes: [Clique Aqui](./Dart_OO/Classes.md)
 - Extensions: [Clique Aqui](./Dart_OO/Extensions.md)
 - Get E Set: [Clique Aqui](./Dart_OO/Get_Set.md)
+- Tipos Genericos [Clique aqui](./Dart_OO/Tipos_genericos.md)
 - Repository-Pattern: [Clique Aqui](./Dart_OO/Repository_pattern/Repository_pattern.md)
 - Trabalhando com arquivos: [Clique Aqui](./Dart_OO/Arquivos/Files.md)
 - Tratamento/Acesso conteudo List/Map (<i> .map() </i>): [Clique Aqui](../Dart/Dart_OO/TratamentoListMap.md)

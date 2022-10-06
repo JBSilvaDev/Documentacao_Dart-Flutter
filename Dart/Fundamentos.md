@@ -93,7 +93,7 @@ switch(idade){
 ```
 ## Null Safety
 >Declarar variaveis sem atribuir valores
-- Usar "?" apos a declaração de tipo
+- Usar "?" apos a declaração de tipo para indicar que a variavel pode ser nula
 ```dart
 String? variavel;
 ```
@@ -112,11 +112,38 @@ if(variavel != null){
     print("Não é nulo");
   }
 // Ou
-print(variavel = null? 'É nulo' : 'Não é nulo')
-// OU
+print(variavel == null? 'É nulo' : 'Não é nulo')
 print(variavel != null? 'Não é nulo' : 'É nulo')
 // Ou
 print(variavel ?? "É nulo") // Neste caso, exiba o valor da variavel, se for nulo exibra "é nulo"
+```
+>Atribuição de nulos
+- Verifica se o valor é nulo, caso seja adicona um valor a ele, caso nao mantem o valor atual
+```dart
+  var imNull;
+  var imNotNull = 5;
+
+  imNull ??= 10; // Ira adiconar o valor 10 a variavel pois a mesma foi iniciada como nula
+  imNotNull ??= 15; // Ira manter o valor original da variavel pois nao é nulo
+```
+> Null where operator
+- Quando uma variavel pode ser nula sua propriedades nao sao exibidas a nao ser que use o operador "?" ou "!" apos a mesma
+- No exemplo o metodo contains(), so ficou disponivel apos o uso do operador "?", para variaveis nao nulas nao se faz necessario.
+- O operador "?" é usado quando nao pode-se afirmar que aquela variavel possui conteudo valido
+- Recomendado fazer condicional para caso o retorno seja nulo outro valor assumir o contexto
+```dart
+  String? nullString;
+  String notNullString = 'Nao nula string';
+
+  print(notNullString.contains('Nao'));
+  print(nullString?.contains('Nao') ?? 'Valor nulo passado');
+```
+- No exemplo o metodo contains(), so ficou disponivel apos o uso do operador "!", pois para este caso consigo ter certeza que ha um valor valido na variavel
+- 
+```dart
+  String? nullString;
+  nullString = 'Nao estou mais nulo';
+  print(nullString!.contains('Nao'));
 ```
 ## Console
 >print - Escreve textos, numero, variaveis, tipos, etc.. no console

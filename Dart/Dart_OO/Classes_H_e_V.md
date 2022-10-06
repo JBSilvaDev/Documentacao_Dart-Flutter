@@ -68,70 +68,70 @@
         ```
     - ```O retorno é -> *Seu nome é JB* ```
 - É possivel uma classe chamar um metodo da classe que ela estende, abaixo vemos que o estagiario apos executar sua atividade chama o anestesista atrasvez do *super*
-```dart
-  void main() {
-    EstagiarioAnastesista().operar();
-  }
-
-  abstract class Medico {
-    void operar();
-  }
-
-  class Anestesista extends Medico {
-    @override
-    void operar() {
-      print('Anestesiar pacientes');
+  ```dart
+    void main() {
+      EstagiarioAnastesista().operar();
     }
+
+    abstract class Medico {
+      void operar();
+    }
+
+    class Anestesista extends Medico {
+      @override
+      void operar() {
+        print('Anestesiar pacientes');
+      }
+    }
+
+    class EstagiarioAnastesista extends Anestesista {
+      @override
+      void operar() {
+        print('Preparar e esterelizar os equipamentos');
+        super.operar();
+      }
+    }
+  ```
+- Quando um pai possui um atributo obrigatorio o filho precisa passar o valor desse atributo, usa-se o *super* para isso, abaixo exemplo passando valor de um atributo do filho para o pai.
+  ```dart
+  void main() {
+    var n = Sobrenome(a: 'JB');
+    print(n.a);
+  }
+  // Classe pai exige valor para variavel nome
+  class Nome {
+    String nome;
+    Nome({required this.nome});
+  }
+  // Classe filha recebe o valor na variavel a e passa o valor dela para a variavel nome do pai
+  class Sobrenome extends Nome {
+    String a;
+    Sobrenome({required this.a}) : super(nome : a);
+  }
+  ```
+- Exemplo com metódo e classe pai *abstract*
+  ```dart
+  void main() {
+    var animal = Cachorro(idade: 10);
+    print(animal.idade);
+    print(animal.calcularIdadeHumana());
+    
   }
 
-  class EstagiarioAnastesista extends Anestesista {
+  abstract class Animal {
+    Animal({this.idade = 0});
+    int idade;
+    int calcularIdadeHumana();
+  }
+
+  class Cachorro extends Animal {
+    Cachorro({required int idade}) : super(idade: idade);
     @override
-    void operar() {
-      print('Preparar e esterelizar os equipamentos');
-      super.operar();
+    int calcularIdadeHumana() {
+      return idade * 7;
     }
   }
   ```
-- Quando um pai possui um atributo obrigatorio o filho precisa passar o valor desse atributo, usa-se o *super* para isso, abaixo exemplo passando valor de um atributo do filho para o pai.
-```dart
-void main() {
-  var n = Sobrenome(a: 'JB');
-  print(n.a);
-}
-// Classe pai exige valor para variavel nome
- class Nome {
-  String nome;
-  Nome({required this.nome});
-}
-// Classe filha recebe o valor na variavel a e passa o valor dela para a variavel nome do pai
-class Sobrenome extends Nome {
-  String a;
-  Sobrenome({required this.a}) : super(nome : a);
-}
-```
-- Exemplo com metódo e classe pai *abstract*
-```dart
-void main() {
-  var animal = Cachorro(idade: 10);
-  print(animal.idade);
-  print(animal.calcularIdadeHumana());
-  
-}
-
-abstract class Animal {
-  Animal({this.idade = 0});
-  int idade;
-  int calcularIdadeHumana();
-}
-
-class Cachorro extends Animal {
-  Cachorro({required int idade}) : super(idade: idade);
-  @override
-  int calcularIdadeHumana() {
-    return idade * 7;
-  }
-}
-```
 ## Covariant
 - Para que uma classe seja aceita como tipo do seu pai, seu pai precisa ser ```covariante```.
 - Abaixo temos o exemplo de um mamifero que come fruta, e em sequencia uma banana que é filha de fruta, para que essa banana seja aceita pelo mamifero(Macaco) se fez necessario o pai receber um tipo ```covariante```

@@ -3,11 +3,22 @@
 >Usados para passar ou pegar valores de atributos privados dentro da classe <br>
 
 - Get:
-  - Dentro da classe ```Tipo get nomeGet => _atributoClassePrivado;```
-  - Get esta pegando o atributo da classe e retornando ele para o set
+  - Dentro da classe ```TipoDoItem get nomeGet => _atributoClassePrivado;```
+  - Get obtem o valor de um dos atributos da classe e exibindo ao usuario.
+  - Não é possivel fazer atribuição de valor a um atributo usando o get
+  - Exemplo completo get: [Get](./Get_Set.md#get)
 - Set:
+  - Dentro da classe 
+    ```dart 
+      set nomeSet(String nomeSetParam) { 
+        // Regra de negocio e atribuicao do valor para o paramentro privado 
+        _nome = nomeSetParam;
+      }
+    ```
+  - Set recebe o valor passado e o repassa para o atibuto da classe, podendo ou nao fazer uma regra para aceitar, recusar ou modificar o valor passado.
   - Set esta passando o valor de seu atributo para o atributo privado da classe
-  - Dentro da classe ```set nomeGet(Tipo nomeVariavel) => _atributoClassePrivado = nomeVariavel;;```
+  - Exemplo completo set: [Set](./Get_Set.md#set)
+
 
 ## Passando valor recebido para atributo privado da classe
 
@@ -69,3 +80,51 @@ class Pessoa {
 ```
 
 ![](../../Img/get_set_veri.png)
+
+## Get
+```dart
+void main() {
+  var camisetaADF = Camiseta(marca: 'Academia do flutter');
+  print('A marca é ${camisetaADF.marcaGet}');
+}
+
+class Camiseta {
+  String _marca;
+
+  // Construtores
+  Camiseta({required String marca}) : _marca = marca;
+
+  // Get
+  String get marcaGet => _marca; // Get so libera acesso ao conteudo
+
+}
+```
+![](../../Img/getReturn.png)
+
+## Set
+```dart
+void main() {
+  var camisetaADF = Camiseta(marca: 'Academia do flutter');
+  camisetaADF.marcaSet = 'Adidas';
+  print('A Marca é ${camisetaADF.marcaGet}');
+}
+
+class Camiseta {
+  // Caracteristicas - Atributos
+  String _marca;
+
+  // Construtores
+  Camiseta({required String marca}) : _marca = marca;
+  String get marcaGet => _marca;
+  // Set
+  set marcaSet(String marcaSetParam) {
+    // Set faz alteração de um conteudo, podendo haver regras de negocio para aceitar/recusar/modificar o valor passado
+    if (marcaSetParam == 'ADF') {
+      _marca = 'Academia do flutter';
+    } else {
+      _marca = marcaSetParam;
+    }
+  }
+}
+```
+![](../../Img/setModif.png)

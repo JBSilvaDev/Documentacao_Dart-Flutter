@@ -17,12 +17,12 @@ class NomeDaClasse {}
 class NomeDaClasse{
     // Atributos / Caracteristicas
     String? nome;
-    int? idade;;
+    int? idade;
 }
 ```
 
 >Invocando/Instaciando uma classe
-
+- Metodo de atribuir valores padrao
 ```dart
 // Criando o Objeto
 var variavel = NomeDaClasse();
@@ -30,7 +30,14 @@ var variavel = NomeDaClasse();
 variavel.nome = 'Nome';
 variavel.idade = 10;
 ```
-
+- Metodo de atribuir valores em cascade notation
+- O ';' vem apenas no final da notação nao em cada linha como normalmente é
+```dart
+var variavel = NomeDaClasse()
+// Passsando valores para os atributos do objeto
+  ..nome = 'Nome'
+  ..idade = 10;
+```
 >É possivel criar funcoes dentro das classes (metodos)
 
 ```dart
@@ -151,4 +158,5 @@ class Asserts {
     this.nome,
   }) : assert(nome == '', 'Nome não pode ser nulo ou vazio');
 }
+```
 
