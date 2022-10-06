@@ -23,6 +23,13 @@ class StatefulBuilderPage extends StatelessWidget {
               },
               child: const Text('Botao'),
             ),
+            Container(
+              height: 250,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.red,
+              ),
+            )
           ],
         );
       }),

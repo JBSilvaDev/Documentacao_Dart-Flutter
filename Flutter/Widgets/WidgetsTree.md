@@ -83,6 +83,7 @@
   - boxShadow: Recebe uma lista de configurações para sombreamento como [BoxShadow()](./WidgetsTree.md#BorderRadius)
   - image: Recebe um [DecorationImage()](./WidgetsTree.md#DecorationImage)
   - border: Recebe um [Border()](./WidgetsTree.md#border)
+  - shape: Recebe um BoxShape....
 
 ## Border
 
