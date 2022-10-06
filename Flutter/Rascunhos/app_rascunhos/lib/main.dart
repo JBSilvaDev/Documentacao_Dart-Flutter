@@ -1,4 +1,7 @@
 import 'package:app_rascunhos/StatefulBuilderPage.dart';
+import 'package:app_rascunhos/home_page.dart';
+import 'package:app_rascunhos/pageview_page.dart';
+import 'package:app_rascunhos/pageview_page_drawer.dart';
 import 'package:flutter/material.dart';
 
 const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
@@ -17,7 +20,13 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: darkBlue,
       ),
       debugShowCheckedModeBanner: false,
-      home: StatefulBuilderPage(),
+      initialRoute: '/',
+      routes: {
+        '/':(context) => HomePage(),
+        '/stetefulbuilder':(context) => StatefulBuilderPage(),
+        '/pageview':(context) => PageviewPage(),
+        '/pageviewdrawer':(context) => PageviewPageDrawer(),
+      },
     );
   }
 }
