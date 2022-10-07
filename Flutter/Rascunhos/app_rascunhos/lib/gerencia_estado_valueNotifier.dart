@@ -4,16 +4,8 @@ import 'package:flutter/material.dart';
 
 import 'botao_personalizado.dart';
 
-class GerenciaEstadoValueNotifier extends StatefulWidget {
-  const GerenciaEstadoValueNotifier({Key? key}) : super(key: key);
-
-  @override
-  State<GerenciaEstadoValueNotifier> createState() =>
-      _GerenciaEstadoValueNotifierState();
-}
-
-class _GerenciaEstadoValueNotifierState
-    extends State<GerenciaEstadoValueNotifier> {
+class GerenciaEstadoValueNotifier extends StatelessWidget {
+  GerenciaEstadoValueNotifier({Key? key}) : super(key: key);
   ValueNotifier<int> valorAleatorio = ValueNotifier(0);
 
   ramdom() async {

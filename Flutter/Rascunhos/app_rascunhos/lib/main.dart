@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         '/navegacao': (context) => Navegacao(),
         '/botao': (context) => const BotaoPage(),
         '/setstate': (context) => const GerenciaEstadoSetState(),
-        '/valuenotifier': (context) => const GerenciaEstadoValueNotifier(),
+        '/valuenotifier': (context) => GerenciaEstadoValueNotifier(),
       },
     );
   }
