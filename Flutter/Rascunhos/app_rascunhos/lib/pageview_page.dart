@@ -2,7 +2,7 @@ import 'package:app_rascunhos/StatefulBuilderPage.dart';
 import 'package:flutter/material.dart';
 
 class PageviewPage extends StatefulWidget {
-  PageviewPage({Key? key}) : super(key: key);
+  const PageviewPage({Key? key}) : super(key: key);
 
   @override
   State<PageviewPage> createState() => _PageviewPageState();
@@ -51,6 +51,13 @@ class _PageviewPageState extends State<PageviewPage> {
                     child: const Center(child: Text('Container 2')),
                   ),
                 ],
+              ),
+              
+              FloatingActionButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Icon(Icons.arrow_back),
               )
             ],
           ),

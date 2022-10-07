@@ -15,7 +15,7 @@
     );
 ```
 - No exemplo como estou passando um map no arguments, é necessario efetuar a tipagemdo valor passado nos arguments onde os dados serão recebidos
-- Metodo 1 - Para StatelessWidget:
+- Metodo 1:
     - Dentro do Build da pagina que ira receber o parametro
     - Definir uma variavel que ira receber o ModelRoute.of
     - Este ModalRouter.of ira receber um context que pode ser nulo?
@@ -28,7 +28,8 @@
     -   ```dart
         Text('${param?['id'] ?? 0}')
         ```
--   Metodo 2 - Para StatefullWidget:
+***
+-   Metodo 2:
 -   OBS: considerando que o valor passado nos arguments é um numero inteiro e nao mais um Map *arguments: 10*
     -   Dentro do initial state *(classe privada principal da pagina _NomeDaPagina)*
     -   Definida uma variavel do tipo int? pois pode ser nula
@@ -57,19 +58,55 @@
     -   ```dart
         Text('$id')
         ```
+***
+-   Metodo 3:
+- Passando paramentros de uma pagina para outra com contrutor
+- Page exemplo:
+    - Recebe em seu contrutor um nome que deve ser informado ao chamar a pagina
+    - Este nome neste exemplo é exibido no titulo da pagina
+```dart
+import 'package:flutter/material.dart';
+
+class Navegacao extends StatelessWidget {
+  String name;
+  Navegacao({Key? key, required this.name}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(name),
+      ),
+      body: Container(),
+    );
+  }
+}
+```
+
+- Passa o *Nome da pagina* durante a navegação
+
+```dart
+ElevatedButton(
+    onPressed: () => Navigator.push(context, MaterialPageRoute(
+        builder: ((context) => Navegacao(name: 'Rota Construtor)))),
+    child: const Text('Navegação'),
+    ),
+```
 >pushNamed
+- Metodo 1:
 - Passando o valor 10 como id na tag arguments, Mais detalhes de navegação [aqui](./Navegacao.md).
 ```dart
 Navigator.of(context).pushNamed('/detalhe', arguments: {'id': 15});
 ```
 - No exemplo como estou passando um map no arguments, é necessario efetuar a tipagem do valor passado nos arguments onde os dados serão recebidos.
 - A Recuperação do valor é realizada das mesmas formas mostradas acima
-## Obtendo parametro, execultando ação entre paginas
+## Retornando argumentos entre paginas (go/back)
+- Metodo 1:
 - Estrategia usada pra execultar alguma ação quando o usuario voltar da pagina navegada
 - No mesmo pressed de um botao ou similar, usa-se o [Async/Await](../../Dart/Dart_OO/Async.md)
 - Ao clicar no botao a função ira navegar para pagina indicada, porem a mesma ficara aguardando um retorno para execultar alguma outra ação
 ```dart
-// Pagina
+// Pagina origem
 onPressed: () async {
     print('Essa mensagem quando navega para pagina indicada');
     final retorno = await Navigator.of(context).pushNamed('/pagina');
@@ -79,9 +116,28 @@ onPressed: () async {
     },
 ```
 ```dart
-// Outra pagina
+// Pagina destino
 onPressed: () {
     Navigator.of(context).pop('Voltei');},
+```
+- Metodo 2:
+- Usando o .then() para obter o valor de retorno de uma navegação
+- Quando o usuario clicar para voltar (pop) o argumento passado nele entra no ```valor_Do_Pop_Na_Page_Destino``` o que por sua vez executa um print do mesmo
+
+```dart
+// Pagina origem
+ ElevatedButton(
+    onPressed: () => Navigator.pushNamed(context, '/navegacao', arguments: 'Rota Nomeada')
+    .then((valor_Do_Pop_Na_Page_Destino) => print(valor_Do_Pop_Na_Page_Destino)),
+    child: const Text('Navegação Nomeda'),
+    ),
+```
+```dart
+// Pagina destino
+ElevatedButton(
+    onPressed: () => Navigator.pop(context, 'Voltei'),
+    child: Text('Voltar'),
+),
 ```
 -   Printa uma msg
     -   Navega para pagina indicada
@@ -89,3 +145,36 @@ onPressed: () {
 -   Printa outra msg
 -   Printa o retorno da pagina feito no pop do pressed *(Voltei)*
     -   Navega para outra pagina
+***
+- Metodo 2:
+- Passando paramentros de uma pagina a outra por argumentos
+- Page exemplo:
+    - Apos o context criada uma variavel que recebe um ModalRoute onde ira obter o argumento passado
+    - O argumento recebido é do tipo ```Object?``` ou seja pode ser qualquer coisa e opcional
+    - No ModalRoute caso seja certo que o argumento vira usar ["!"](../../Dart/Fundamentos.md#null-safety) apos o context e o cast *as String* por exemplo informado o tipo de argumento recebido.
+    - Caso o argumento seja opcional usar ["?"](../../Dart/Fundamentos.md#null-safety) apos o context e um [Null where operator](../../Dart/Fundamentos.md#null-safety) indicando o valor da variavel caso seja nula.
+    - Ao usar o argumento passado, caso seja em valor opcionar usar o cast *as String* por exemplo, caso seja um valor certamente nao vazio/nulo basta informar a variavel pois o cast *as Tipo* ja foi informado na variavel.
+
+```dart
+class Navegacao extends StatelessWidget {
+  Navegacao({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    var args = ModalRoute.of(context)?.settings.arguments ?? 'Nao informado';
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(args as String),
+      ),
+      body: Container(),
+    );
+  }
+}
+```
+- Passando argumento e rota nomeada
+```dart
+ ElevatedButton(
+    onPressed: () => Navigator.pushNamed(context, '/navegacao', arguments: 'Rota Nomeada'),
+    child: const Text('Navegação Nomeda'),
+    ),
+```

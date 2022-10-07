@@ -56,6 +56,7 @@ class _PageviewPageDrawerState extends State<PageviewPageDrawer> {
               title: const Text('Page 3'),
               trailing: const Icon(Icons.pages),
             ),
+            
           ],
         ),
       ),
@@ -94,7 +95,13 @@ class _PageviewPageDrawerState extends State<PageviewPageDrawer> {
                     child: const Center(child: Text('Container 2')),
                   ),
                 ],
-              )
+              ),
+               FloatingActionButton(
+                onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back),
+              ),
             ],
           ),
           Container(

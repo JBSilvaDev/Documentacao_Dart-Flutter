@@ -1,5 +1,6 @@
 import 'package:app_rascunhos/StatefulBuilderPage.dart';
 import 'package:app_rascunhos/home_page.dart';
+import 'package:app_rascunhos/navegacao.dart';
 import 'package:app_rascunhos/pageview_page.dart';
 import 'package:app_rascunhos/pageview_page_drawer.dart';
 import 'package:flutter/material.dart';
@@ -22,10 +23,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/':(context) => HomePage(),
-        '/stetefulbuilder':(context) => StatefulBuilderPage(),
-        '/pageview':(context) => PageviewPage(),
-        '/pageviewdrawer':(context) => PageviewPageDrawer(),
+        '/': (context) => const HomePage(),
+        '/stetefulbuilder': (context) => const StatefulBuilderPage(),
+        '/pageview': (context) => PageviewPage(),
+        '/pageviewdrawer': (context) => const PageviewPageDrawer(),
+        '/navegacao': (context) =>  Navegacao(),
       },
     );
   }
