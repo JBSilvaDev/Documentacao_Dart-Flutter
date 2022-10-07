@@ -36,6 +36,10 @@ class HomePage extends StatelessWidget {
             .then((value) => print(value)),
             child: const Text('Navegação Nomeda', style: TextStyle(color: Colors.black, fontSize: 20),),
           ),
+          ElevatedButton(
+            onPressed: () => Navigator.pushNamed(context, '/botao'),
+            child: const Text('Botao Page', style: TextStyle(color: Colors.black, fontSize: 20),),
+          ),
         ],
         
       ),

@@ -177,20 +177,32 @@
 
 - Usado para estilização
   - Compoe:
-    - shadowColor: Recebe a cor da sombra do botao -> MaterialStateProperty,
-    - minimumSize: Recebe o tamanho minimo do botao - MaterialStateProperty,
-    - backgroundColor: Recebe a cor de fundo do botao em MaterialStateProperty
-    - shape: Recebe formatação do MaterialStateProperty
+    - shadowColor: Recebe a cor da sombra do botao -> [MaterialStateProperty](./WidgetsTree.md#materialstateproperty),
+    - minimumSize: Recebe o tamanho minimo do botao - [MaterialStateProperty](./WidgetsTree.md#materialstateproperty),
+    - backgroundColor: Recebe a cor de fundo do botao em [MaterialStateProperty](./WidgetsTree.md#materialstateproperty)
+    - shape: Recebe formatação do [MaterialStateProperty](./WidgetsTree.md#materialstateproperty)
 
 ## MaterialStateProperty
 
-- Usado para passar propriedades para [ButtonStyle](./WidgetsTree.md#ButtonStyle)
+- Usado para passar propriedades de estado (exemplo: [ButtonStyle](./WidgetsTree.md#ButtonStyle))
+  - .all : Quando usado o valor passado sera atribuido ao widget em todos os estados dele
+  - .resolveWith((state) {}): Usado para passar valores como cor, tamanho, sombra em cada estado
+    - Exemplo: 
+      - Se o estado conter desabilitado fica vermelho
+      - Se for pressionado fica azul
+      - ```dart
+          if (states.contains(MaterialState.disabled)) return Colors.red;
+          if (states.contains(MaterialState.pressed)) return Colors.blue;
+          ```
 - Compoe:
-  - MaterialStateProperty.all(Recebe propriedades a ser passada para o botao, aceita outros widgets),
-    - MaterialStateProperty.all(Colors.cor),
-    - MaterialStateProperty.all(Size(largura, altura)),
-    - MaterialStateProperty.all([RoundedRectangleBorder()](./WidgetsTree.md#RoundedRectangleBorder)),
-  - MaterialStateProperty.resolveWith([Pode receber uma funcao com condições para aplicar uma propriedade](../../img/MaterialStateProperty.png))
+>Recebe propriedades a ser passada para o widget, aceita outros widgets como
+  - MaterialStateProperty.all()
+    - Colors.cor
+    - Size(largura, altura)
+    - [RoundedRectangleBorder()](./WidgetsTree.md#RoundedRectangleBorder)
+>Pode receber uma funcao com condições para aplicar uma propriedade
+- Recomandado fazer a tipagem, cor ```<Color>```, Tamanho ```<Size>```, etc...
+  - MaterialStateProperty.resolveWith```<Tipo>```((state) {```Condicionais```})
 
 ## RoundedRectangleBorder
 

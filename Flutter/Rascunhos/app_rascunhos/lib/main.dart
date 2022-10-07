@@ -1,4 +1,5 @@
 import 'package:app_rascunhos/StatefulBuilderPage.dart';
+import 'package:app_rascunhos/botao_page.dart';
 import 'package:app_rascunhos/home_page.dart';
 import 'package:app_rascunhos/navegacao.dart';
 import 'package:app_rascunhos/pageview_page.dart';
@@ -25,9 +26,10 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/stetefulbuilder': (context) => const StatefulBuilderPage(),
-        '/pageview': (context) => PageviewPage(),
+        '/pageview': (context) => const PageviewPage(),
         '/pageviewdrawer': (context) => const PageviewPageDrawer(),
-        '/navegacao': (context) =>  Navegacao(),
+        '/navegacao': (context) => Navegacao(),
+        '/botao': (context) => const BotaoPage(),
       },
     );
   }
