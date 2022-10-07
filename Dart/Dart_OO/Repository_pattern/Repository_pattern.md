@@ -3,10 +3,10 @@
 Com a criação deste modelo, o codigo main fica ainda mais limpo, ou seja a manutenção do codigo fica melhor e mais rapida, visto que identificar erros em menos codigo é mais facil.
 Este modelo consiste em organizar os arquivos de codigos em pastas que os representem, e no arquivo principal fazemos as chamadas dos conteudos destes arquivos "externos".<br>
 - Exemplos:
-    - Pasta 📁 *controller* => é a pasta onde há classes para entrada de dados, ira receber as informações do usuario, passar pelos services, depois pelos repositories, depois pelos models, para assim retornar ao usuario a informação
-    - Pasta 📁 *services* => é a pasta que contem as regras de negocios da aplicação, aqui sao criadas, condições e verificações para validar uma operaçao.
-    - Pasta 📁 *repositories* => é a pasta que ira conter o repositorio, ou seja, todas as classes de acesso a nossos dados (BD) e converter estes dados para modelos
-    - Pasta 📁 *models* => é a pasta onde ira conter as classe que irão tratar o json/map/list vindo do BD e metodos de conversao de um para outro
+    - Pasta 📁 *repositories* => é a pasta que ira conter os arquivos que fazem conexão com BD/API passando os dados brutos para o controller
+    - Pasta 📁 *controller* => é a pasta que ira conter a classe para onde ira controlar os dados vindos do repositories fazendo os filtros necessarios e eviando para o model
+    - Pasta 📁 *models* => é a pasta onde ira conter as classe que ira modelar os dados vindos do controller e enviar para a view
+    - Pasta 📁 *view* => é a pasta de interação com o usuario que capitura e recebe os dados os exibindo na tela
 
 >Dependencias
 - A implementação inicial para este caso de uso, é similar ao [HTTP](../../../Dependencias/Rest-RestFull/HTTP.md).

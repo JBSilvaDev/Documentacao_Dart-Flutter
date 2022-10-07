@@ -32,7 +32,7 @@ class BotaoPersonalizado extends StatelessWidget {
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
         textStyle: MaterialStateProperty.resolveWith((context) {
           if (context.contains(MaterialState.pressed)) {
-            return const TextStyle(fontSize: 20);
+            return  TextStyle(fontSize: tamanho != null ? tamanho! * 2 : 20);
           } else {
             return TextStyle(fontSize: tamanho);
           }

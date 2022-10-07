@@ -1,5 +1,7 @@
 import 'package:app_rascunhos/StatefulBuilderPage.dart';
 import 'package:app_rascunhos/botao_page.dart';
+import 'package:app_rascunhos/gerencia_estado_setState.dart';
+import 'package:app_rascunhos/gerencia_estado_valueNotifier.dart';
 import 'package:app_rascunhos/home_page.dart';
 import 'package:app_rascunhos/navegacao.dart';
 import 'package:app_rascunhos/pageview_page.dart';
@@ -30,6 +32,8 @@ class MyApp extends StatelessWidget {
         '/pageviewdrawer': (context) => const PageviewPageDrawer(),
         '/navegacao': (context) => Navegacao(),
         '/botao': (context) => const BotaoPage(),
+        '/setstate': (context) => const GerenciaEstadoSetState(),
+        '/valuenotifier': (context) => const GerenciaEstadoValueNotifier(),
       },
     );
   }
