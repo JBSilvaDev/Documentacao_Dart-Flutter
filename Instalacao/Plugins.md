@@ -18,6 +18,9 @@
     ```
     chsh -s /usr/local/bin/zsh
     ```
+>Com terminal aberto no Mac, escolha Terminal > Preferências e clique em Geral.
+>Em “Shells abrem com”, selecione “Comando (caminho completo)” e digite caminho para o shell que deseja usar.
+>
 ## Oh My Zsh
 - Instalação
     ```
