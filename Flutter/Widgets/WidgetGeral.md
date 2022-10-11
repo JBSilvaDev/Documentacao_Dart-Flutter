@@ -109,6 +109,9 @@
 - Compoe:
   - onPressed: Recebe uma função de ação ao clicar (){}
   - tooltip: Recebe texto a ser exebido ou parar mouse ou longpress
+  - backgroundColor: Receber Colors para definir cor do botao,
+  - foregroundColor: Tecebe Colors para definir cor do icone no botao,
+  - shape: Recebe OutlinedBorder ou filhos para formatação diversas
   - child: Recebe widget de texto ou icone para exibir dentro do botao
 - IconButton()
 - Compoe:

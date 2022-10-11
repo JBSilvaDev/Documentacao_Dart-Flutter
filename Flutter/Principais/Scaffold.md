@@ -14,3 +14,4 @@
         - bottomNavigationBar: Recebe [BottomNavigationBar](../Widgets/WidgetGeral.md#bottomnavigationbar)
         - floatingActionButton: Recebe Widget que comportam [botoes](../Widgets/WidgetGeral.md#buttons) na parte inferior da tela.
         - floatingActionButtonLocation: Recebe ```FloatingActionButtonLocation.ALGUMACOISA```,
+        - bottomSheet: Recebe widget que ficara na parte inferior da tela
