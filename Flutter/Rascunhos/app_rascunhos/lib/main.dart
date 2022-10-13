@@ -6,6 +6,9 @@ import 'package:app_rascunhos/home_page.dart';
 import 'package:app_rascunhos/navegacao.dart';
 import 'package:app_rascunhos/pageview_page.dart';
 import 'package:app_rascunhos/pageview_page_drawer.dart';
+import 'package:app_rascunhos/login/pages/home_page_login.dart';
+import 'package:app_rascunhos/login/pages/login_page.dart';
+import 'package:app_rascunhos/login/splash_page.dart';
 import 'package:flutter/material.dart';
 
 const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
@@ -34,6 +37,9 @@ class MyApp extends StatelessWidget {
         '/botao': (context) => const BotaoPage(),
         '/setstate': (context) => const GerenciaEstadoSetState(),
         '/valuenotifier': (context) => GerenciaEstadoValueNotifier(),
+        '/splash': (context) =>  const SplashPage(),
+        '/login': (context) =>   LoginPage(),
+        '/homelogin': (context) =>   HomePageLogin(),
       },
     );
   }

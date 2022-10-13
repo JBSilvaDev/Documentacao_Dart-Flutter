@@ -51,6 +51,11 @@ class HomePage extends StatelessWidget {
             onPressed: () => Navigator.pushNamed(context, '/valuenotifier'),
             child: const Text('Value Notifier', style: TextStyle(color: Colors.black, fontSize: 20),textAlign: TextAlign.center,),
           ),
+   
+          ElevatedButton(
+            onPressed: () => Navigator.pushNamed(context, '/splash'),
+            child: const Text('Login Page  Splash', style: TextStyle(color: Colors.black, fontSize: 20),textAlign: TextAlign.center,),
+          ),
         ],
         
       ),
