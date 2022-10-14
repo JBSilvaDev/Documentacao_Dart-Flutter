@@ -1,10 +1,10 @@
-import 'package:app_rascunhos/login/components/login_component.dart';
-import 'package:app_rascunhos/login/controller/login_controller.dart';
-import 'package:app_rascunhos/login/widget/custon_textfiled.dart';
+import 'package:app_rascunhos/api_dio/login_api/components/login_component.dart';
+import 'package:app_rascunhos/api_dio/login_api/controller/login_controller.dart';
+import 'package:app_rascunhos/api_dio/login_api/widget/custon_textfiled.dart';
 import 'package:flutter/material.dart';
 
-class LoginPage extends StatelessWidget {
-  LoginPage({Key? key}) : super(key: key);
+class LoginPageApi extends StatelessWidget {
+  LoginPageApi({Key? key}) : super(key: key);
 
   LoginController controller = LoginController();
   final loginEC = TextEditingController();
@@ -12,6 +12,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    loginEC.text = 'admin';
+    passEC.text = '123';
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login Page'),

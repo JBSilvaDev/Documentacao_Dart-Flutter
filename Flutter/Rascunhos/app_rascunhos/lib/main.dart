@@ -1,4 +1,8 @@
 import 'package:app_rascunhos/StatefulBuilderPage.dart';
+import 'package:app_rascunhos/api_dio/login_api/pages/home_detalhes.dart';
+import 'package:app_rascunhos/api_dio/login_api/pages/home_page_login_api.dart';
+import 'package:app_rascunhos/api_dio/login_api/pages/login_page_api.dart';
+import 'package:app_rascunhos/api_dio/login_api/splash_page.dart';
 import 'package:app_rascunhos/botao_page.dart';
 import 'package:app_rascunhos/gerencia_estado_setState.dart';
 import 'package:app_rascunhos/gerencia_estado_valueNotifier.dart';
@@ -37,9 +41,13 @@ class MyApp extends StatelessWidget {
         '/botao': (context) => const BotaoPage(),
         '/setstate': (context) => const GerenciaEstadoSetState(),
         '/valuenotifier': (context) => GerenciaEstadoValueNotifier(),
-        '/splash': (context) =>  const SplashPage(),
-        '/login': (context) =>   LoginPage(),
-        '/homelogin': (context) =>   HomePageLogin(),
+        '/splash': (context) => const SplashPage(),
+        '/login': (context) => LoginPage(),
+        '/homelogin': (context) => const HomePageLogin(),
+        '/homeloginapi': (context) => const HomePageLoginApi(),
+        '/loginapi': (context) => LoginPageApi(),
+        '/splashapi': (context) => const SplashPageApi(),
+        '/homedetalhes': (context) =>  HomeDetalhes(),
       },
     );
   }
