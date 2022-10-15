@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 
-import 'package:app_rascunhos/api_dio/login_api/models/post_model.dart';
+import 'package:app_rascunhos/api_dio/models/post_model.dart';
 import 'package:flutter/material.dart';
 
 class HomeDetalhes extends StatelessWidget {

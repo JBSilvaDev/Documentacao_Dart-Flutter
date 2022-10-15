@@ -1,8 +1,8 @@
 import 'package:app_rascunhos/StatefulBuilderPage.dart';
-import 'package:app_rascunhos/api_dio/login_api/pages/home_detalhes.dart';
-import 'package:app_rascunhos/api_dio/login_api/pages/home_page_login_api.dart';
-import 'package:app_rascunhos/api_dio/login_api/pages/login_page_api.dart';
-import 'package:app_rascunhos/api_dio/login_api/splash_page.dart';
+import 'package:app_rascunhos/api_dio/pages/home_detalhes.dart';
+import 'package:app_rascunhos/api_dio/pages/home_page_login_api.dart';
+import 'package:app_rascunhos/api_dio/pages/login_page_api.dart';
+import 'package:app_rascunhos/api_dio/splash_page.dart';
 import 'package:app_rascunhos/botao_page.dart';
 import 'package:app_rascunhos/gerencia_estado_setState.dart';
 import 'package:app_rascunhos/gerencia_estado_valueNotifier.dart';

@@ -2,7 +2,7 @@ import 'package:app_rascunhos/api_dio/repositories/home_repository_abs.dart';
 
 import 'package:dio/dio.dart';
 
-import '../login_api/models/post_model.dart';
+import '../models/post_model.dart';
 
 class HomeRepositoryImp implements HomeRepositoryAbs {
   @override

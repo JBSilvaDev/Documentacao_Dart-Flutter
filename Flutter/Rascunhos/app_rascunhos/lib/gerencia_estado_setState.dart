@@ -15,9 +15,8 @@ class _GerenciaEstadoSetStateState extends State<GerenciaEstadoSetState> {
   ramdom() async {
     for (int i = 0; i < 5; i++) {
       await Future.delayed(const Duration(seconds: 1));
-      setState(() {
         valorAleatorio = Random().nextInt(10);
-      });
+      setState(() {});
     }
   }
 

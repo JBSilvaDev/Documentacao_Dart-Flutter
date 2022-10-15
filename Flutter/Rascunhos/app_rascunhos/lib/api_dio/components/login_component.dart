@@ -1,5 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:app_rascunhos/api_dio/login_api/controller/login_controller.dart';
+import 'package:app_rascunhos/api_dio/controller/login_controller.dart';
 import 'package:flutter/material.dart';
 
 

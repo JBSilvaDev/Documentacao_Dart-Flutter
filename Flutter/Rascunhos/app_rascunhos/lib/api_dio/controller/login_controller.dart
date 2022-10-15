@@ -1,3 +1,4 @@
+import 'package:app_rascunhos/api_dio/services/prefs_services.dart';
 import 'package:flutter/material.dart';
 
 class LoginController {
@@ -12,6 +13,7 @@ class LoginController {
     await Future.delayed(const Duration(seconds: 2));
     inLoader.value = false;
     if (_login == 'admin' && _pass == '123') {
+      PrefsServices.save(_login!);
       return true;
     } else {
       return false;

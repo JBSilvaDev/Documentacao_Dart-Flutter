@@ -1,6 +1,6 @@
-import 'package:app_rascunhos/api_dio/login_api/components/login_component.dart';
-import 'package:app_rascunhos/api_dio/login_api/controller/login_controller.dart';
-import 'package:app_rascunhos/api_dio/login_api/widget/custon_textfiled.dart';
+import 'package:app_rascunhos/api_dio/components/login_component.dart';
+import 'package:app_rascunhos/api_dio/controller/login_controller.dart';
+import 'package:app_rascunhos/api_dio/widget/custon_textfiled.dart';
 import 'package:flutter/material.dart';
 
 class LoginPageApi extends StatelessWidget {
