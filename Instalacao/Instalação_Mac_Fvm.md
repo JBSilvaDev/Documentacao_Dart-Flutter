@@ -93,7 +93,7 @@ vi ~/.zshrc
 export JAVA_HOME= <caminho copiado acima>/jdk
 ```
 - Para sair e salvar precione *esc* depois comando ```:wq```
-- Feito isto ja é possivel alterar entre as versoes do JDK, para isso usar comando
+- Feito isto ja é possivel alterar entre as versoes do JDK, para isso usar comando (usar o comando de versao dentro da pasta bin em workstation para lincar ela com java)
     - Para selecionar a versao 8
         ```
         unlink jdk
