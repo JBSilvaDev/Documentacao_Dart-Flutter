@@ -50,9 +50,9 @@ git config --global user.email <"email@example.com">
 - Baixar arquivos DMG para instalação no mac
 - Usar comando abaixo para localizar pasta de instalação do java
 
-    ```
-    /usr/libexec/java_home
-    ```
+```
+/usr/libexec/java_home
+```
 - Usar comando abaixo para verificar se as duas versões foram instaladas
 ls + local exibido no comando anterior (removendo do link a pasta de versao)
     - Exemplo: /Library/Java/JavaVirtualMachines/JDK11/...
