@@ -43,3 +43,7 @@
   - Necessario efetuar configuração no .yaml para acesso a pasta assets
 - [Flutter SQLite](../Dependencias/Rest-RestFull/SQLite/SQLite.md)
 - [FirebaseAuth](../Dependencias/Rest-RestFull/FireBase/Autenticacao/FireBase.md)
+
+## SOLID
+
+- [Solid](./Solid/Solid.md)
