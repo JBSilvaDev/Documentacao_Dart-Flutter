@@ -8,7 +8,14 @@
     - Configurar Emulador
 - Download **XCode** no App Sore
     - Demora, aguarde a instalação para seguir com proximos passos
-
+# Plugins
+- Preparando terminal
+    - [Zsh](./Plugins.md#zsh)
+    - [OhMyZsh](./Plugins.md#oh-my-zsh)
+- Personalizando terminal
+    - [Colors](./Plugins.md#zsh-syntax-highlighting)
+    - [Auto Complete](./Plugins.md#zsh-autosuggestions)
+    
 # Configurando variável curl
 > Comandos do terminal<br>
 ```
@@ -19,28 +26,6 @@
 
 ```
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-```
-## Instalar HomeBrew
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-- Apos instalação executar comandos
-```
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/UserFolder/.zprofile
-```
-```
-eval "$(/opt/homebrew/bin/brew shellenv)"
-```
-# Instalando git
-> Comandos do terminal<br>
-```
-brew install git
-```
-```
-git config --global user.name <"UserNameGit">
-```
-```
-git config --global user.email <"email@example.com">
 ```
 # Instalando JDKs
 - Baixar no site oficial
@@ -62,7 +47,6 @@ ls + local exibido no comando anterior (removendo do link a pasta de versao)
         ```
     - Ira mostras as duas versoes do JDK instaladas
     
-
 - Voltar para home
 ```
 cd ~
@@ -112,22 +96,27 @@ export JAVA_HOME= <caminho copiado acima>/jdk
 ```
 chflags hidden <Caminho da pasta>
 ```
-# Variaveis Android Studio SDK
-- **Copiar** caminho exibido no SDK do android studio
+## Instalar HomeBrew
 ```
-vi ~/.zshrc
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-- Precione "i" para editar a variavel informe o export passando o caminho do sdk copiado
+- Apos instalação executar comandos
 ```
-export ANDROID_HOME=<CAMINHO OBTIDO NO ANDROID STUDIO SDK>
-export ANDROID_ROOT_SDK=<CAMINHO OBTIDO (MESMO ACIMA)>
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/UserFolder/.zprofile
 ```
-- Para sair e salvar precione *esc* depois comando ```:wq```
-- Reiniciar terminal e rodar comando para verificar versao do sdk
 ```
-adb --version
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+# Instalando git
+> Comandos do terminal<br>
+```
+brew install git
+```
+```
+git config --global user.name <"UserNameGit">
+```
+```
+git config --global user.email <"email@example.com">
 ```
 # Instalar FVM
 - No terminal
@@ -150,10 +139,52 @@ fvm global <versao desejada>
 ```
 fvm global stable
 ```
-- **OBS**: *PARA ALTERNAR ENTRE VERSOES BASTA RODAR COMANDO FVM GLOBAL (versao desejada) CASO JA TENHA BAIXADA IRA EFETUAR A TROCA CASO NAO TENHA IRA BAIXAR*
+- Salvar caminho exibido no terminal apos instalação do flutter/fvm para uso mais a frente neste passo-a-passo.
+- **OBS**: *PARA ALTERNAR ENTRE VERSOES BASTA RODAR COMANDO ```FVM GLOBAL <versao desejada>``` CASO JA TENHA BAIXADA IRA EFETUAR A TROCA CASO NAO TENHA IRA BAIXAR*
 
+
+# Configurando Android Studio
+>SDK
+- No Andrdoid Studio va em preferencias selecione *Android SDK*
+    - Na aba *SDK Platforms* Selecione a uma versao do Android
+    - Na aba *SDK Tools*
+        - Selecione *Android SDK Command-line Tools*
+        - Selecione *Android SDK Build-Tools*
+        - Selecione *Android SDK Platform-Tools*
+    - Clique Ok e aguarde instalação
+- Va em preferencias selecione *Plugins*
+    - Instale o *Plugin Flutter*
+    - Instale o *Plugin Dart*
+>Emulador
+- Selecione *Virtual Device Manager*
+    - Crie um novo device ou configure um ja existente
+
+# Configuração Visual Studio Code
+>Plugins
+- Baixar *Plugin flutter*
+- Baixar *Plugin dart*
+>Rodar *flutter doctor*
+
+# Variaveis Android Studio SDK
+- No Andrdoid Studio va em preferencias selecione *Android SDK*
+    - **Copiar** caminho exibido em *Android SDK Location*
+```
+vi ~/.zshrc
+```
+- Precione "i" para editar a variavel informe o export passando o caminho do sdk copiado
+```
+export ANDROID_HOME=<CAMINHO OBTIDO NO ANDROID STUDIO SDK>
+export ANDROID_ROOT_SDK=<CAMINHO OBTIDO (MESMO ACIMA)>
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+```
+- Para sair e salvar precione *esc* depois comando ```:wq```
+- Reiniciar terminal e rodar comando para verificar versao do sdk
+```
+adb --version
+```
 # Variaveis do Flutter
-- **Copiar** caminho da instalação exibido quando concluída.<br>
+- Usar caminho salvo anteriormente da instalação exibido ao fim da instalação do flutter/fvm.<br>
 ```
 vi ~/.zshrc
 ```
@@ -166,21 +197,21 @@ export PATH=$PATH:<Caminho copiado>
 ```
 flutter doctor
 ```
-# Resolvendo pendendias doctor
+# Resolvendo pendencias doctor
 - Abra o xCode para baixar e instalar os componentes necessarios.
     - Quando concluir o mesmo ira para na tela para criar ou abrir um projeto, pode fechar o programa nesta tela
-- Execute comando
-```
-sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-```
-```
-sudo gem install cocoapods
-```
-```
-sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc
-```
+- Execute comandos no terminal
+   -  ```
+        sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+      ```
+    - ```
+        sudo gem install cocoapods
+      ```
+    - ```
+        sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc
+      ```
 - Aceite as lincenças do android
-```
-flutter doctor --android-licenses
-```
-- Digite "y" para aceitar licenças
+    - ```
+        flutter doctor --android-licenses
+      ```
+    - Digite "y" para aceitar licenças
