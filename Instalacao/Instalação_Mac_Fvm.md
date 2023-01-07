@@ -215,3 +215,17 @@ flutter doctor
         flutter doctor --android-licenses
       ```
     - Digite "y" para aceitar licenças
+
+# Iniciando novo projeto
+> Via CMD
+- Flutter
+    - ```dart
+      $ flutter create --project-name=nome_do_projeto --org br.com.jbtec --platforms android,ios -a kotlin -i swift ./local/name=nome_do_projeto
+        ```
+- Dart
+    - ```cmd
+      $ dart create nome_do_projeto
+        ```
+> Via VSCode
+- Ctrl+Shift+P (View - Command Palette)
+    - Flutter: New Project.
