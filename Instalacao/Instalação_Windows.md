@@ -1,13 +1,13 @@
 # Instalar Android Studio
-    - https://developer.android.com/studio
+- https://developer.android.com/studio
 # Instalar VSCode
-    - https://code.visualstudio.com/download
+- https://code.visualstudio.com/download
 # Instalar Visual Studio Community
-    - https://visualstudio.microsoft.com/pt-br/vs/community/
-    - Avançar e marcar a opção desenvolvimento para desktop c++
+- https://visualstudio.microsoft.com/pt-br/vs/community/
+- Avançar e marcar a opção desenvolvimento para desktop c++
 # Baixar o zip no site
-    - https://docs.flutter.dev/get-started/install/windows
-    - Extrair o zip no local desejado
+- https://docs.flutter.dev/get-started/install/windows
+- Extrair o zip no local desejado
 > Via CMD
 - Instalar o chocolatey
 	- https://chocolatey.org/install
