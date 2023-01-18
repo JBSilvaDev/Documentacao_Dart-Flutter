@@ -34,6 +34,6 @@
 <br><br>
 <br><br>
 <br><br>
-LinkedIn: - [Clique aqui](https://www.linkedin.com/in/juliano-silva-a07a9293/)
+LinkedIn: - [Clique aqui](https://www.linkedin.com/in/jbsilvadev/)
 
 </div>
