@@ -1,8 +1,9 @@
 # Dependências
-## Conexão com BD 
-- Dartion - [Local Server](https://pub.dev/packages/dartion)
+## Conexão com BD
+- Json Rest Server - [Local Server](https://pub.dev/packages/json_rest_server)
     - Usado para criar servidor local com as informações do Json
-      Para uso necessario configurar o Path do caminho (C:\Users\Usuario\AppData\Local\Pub\Cache\bin)
+    - Para uso necessario configurar o Path do caminho (C:\Users\Usuario\AppData\Local\Pub\Cache\bin)
+    - Exemplo de uso [JRS](./Rest-RestFull/JRS.md)
 - Http - [HTTP](./Rest-RestFull/HTTP.md)
 - MYSQL - [MySQL](./Rest-RestFull/MYSQL.md)
 - SQLite - [SQLite](./Rest-RestFull/SQLite.md)
