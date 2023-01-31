@@ -13,6 +13,10 @@ Docs: [Clique aqui](https://pub.dev/packages/json_rest_server)
     ```
     json_rest_server create ./backend
     ```
-- Uma pasta "backend" sera criada com dois arquivos um `.yalm` e um `.json`
-    - No arquivo `.yalm`pode ser configurado o nome do banco, a parta a qual ele ira responder, e o endereço local (0.0.0.0 ou localhost), tambem indica o arquivo json que sera usado como bd, no caso por padrao é o `database.json`.
-    - No arquivo `.json` se trata de um json comum que é nosso backend, ele pode ser editado manualmente e/ou feito CRUD para manipulação de seu conteudo atravez do link local da api *Normalmente `localhost:8080`*.
+- Uma pasta "backend" sera criada com dois arquivos um `.yalm` e um `.json`.
+    - No arquivo `.yalm` criado dentro da pasta ./backend pode ser configurado o nome do banco, a parta a qual ele ira responder, e o endereço local (0.0.0.0 ou localhost), tambem indica o arquivo json que sera usado como bd, no caso por padrao é o `database.json`.
+    - O arquivo `.json` criado dentro da pasta ./backend é um json comum que é nosso backend, ele pode ser editado manualmente e/ou feito CRUD para manipulação de seu conteudo atravez do link local da api *Normalmente `localhost:8080`*.
+    - Para inicializar o servidor local, navegar no cmd para dentro da pasta ./backend e rodar comando
+    ```
+    json_rest_server run
+    ```
