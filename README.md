@@ -17,6 +17,8 @@
 ***
 >[Flutter](./Flutter/Resumo_Flutter.md)
 ***
+>[GetX](./GetX/Resumo_Get.md)
+***
 >[Dependências](./Dependencias/Dependencias.md)
 ***
 >[Desafios](./Desafios/Desafios.md)
