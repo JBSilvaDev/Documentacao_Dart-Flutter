@@ -4,6 +4,7 @@
 ```dart
     Navigator.of(context).pop();
 ```
+***
 - Utilização get
 ```dart
     Get.back();

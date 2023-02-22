@@ -6,6 +6,7 @@
         builder:(context) => const PageName()
     ));
 ```
+***
 - Utilização get
 ```dart
     Get.off(const PageName());

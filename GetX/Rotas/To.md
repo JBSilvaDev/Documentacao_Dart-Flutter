@@ -8,6 +8,7 @@
         }
     ));
 ```
+***
 - Utilização get
 ```dart
     Get.to(const PageName());
