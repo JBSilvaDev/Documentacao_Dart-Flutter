@@ -20,6 +20,7 @@
 - Get [off](./Rotas/Off.md)
 - Get [offAll](./Rotas/OffAll.md)
 - Get com [parametros](./Rotas/Enviando_Paramentros.md)
+- Get com [rotas nomeadas](./Rotas/Rotas_Nomeadas.md)
 
 ### Gerencia de dependencias
 
