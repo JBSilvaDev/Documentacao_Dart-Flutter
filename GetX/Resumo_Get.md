@@ -19,6 +19,7 @@
 - Get [back](./Rotas/Back.md)
 - Get [off](./Rotas/Off.md)
 - Get [offAll](./Rotas/OffAll.md)
+- Get com [parametros](./Rotas/Enviando_Paramentros.md)
 
 ### Gerencia de dependencias
 
