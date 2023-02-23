@@ -24,5 +24,7 @@
 - Get com [navigation 2.0](./Rotas/Navigation20.md) (BottomNavigationBar)
 
 ### Gerencia de dependencias
+- Get [put and find](./GerenciamentoDeDependencias/basico_put_find.md) (basico)
+- Get [lazyPut, factory e fenix](./GerenciamentoDeDependencias/put_factory_fenix.md)
 
 ### Gerencia de estado
