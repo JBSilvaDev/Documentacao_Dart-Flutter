@@ -21,6 +21,7 @@
 - Get [offAll](./Rotas/OffAll.md)
 - Get com [parametros](./Rotas/Enviando_Paramentros.md)
 - Get com [rotas nomeadas](./Rotas/Rotas_Nomeadas.md)
+- Get com [navigation 2.0](./Rotas/Navigation20.md) (BottomNavigationBar)
 
 ### Gerencia de dependencias
 
