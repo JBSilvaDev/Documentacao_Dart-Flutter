@@ -25,6 +25,6 @@
 
 ### Gerencia de dependencias
 - Get [put and find](./GerenciamentoDeDependencias/basico_put_find.md) (basico)
-- Get [lazyPut, factory e fenix](./GerenciamentoDeDependencias/put_factory_fenix.md)
+- Get [lazyPut, fenix](./GerenciamentoDeDependencias/lazyput_fenix.md)
 
 ### Gerencia de estado
