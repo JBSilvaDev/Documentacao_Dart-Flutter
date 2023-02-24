@@ -50,3 +50,8 @@ class BindingsExample extends Bindings {
     ),
   ],
 ```
+- A navegação é comum, pode ser com ```Navigator.of(context).pushNamed('/rota')```, ou com ```Get.toNamed('/rota')```
+- A pagina a qual esta navegando deve conter o ```Get.find()``` da instancia a qual esta passando para ter acesso a seu conteudo
+```dart
+Text(Get.find<BindingsController>().nome),
+```
