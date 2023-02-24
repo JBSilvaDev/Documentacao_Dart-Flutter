@@ -4,3 +4,5 @@
 > Bindings com rotas:
 - [Rotas Nomeadas](./rotas_nomeadas.md)
 - [Rotas Não Nomeadas](./rotas_nao_nomeadas.md)
+> Bindings, disponibilizando instancia de uma classe para toda apliação
+- [initialBindings](./initial_bindings.md)

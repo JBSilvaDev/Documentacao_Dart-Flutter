@@ -8,7 +8,6 @@ class BindingsController {
   });
 }
 ```
-- 
 - Para usar mais de um tipo de instancia no bind é correto criar uma nova classe que extenda o Bindings do Getx
 ```dart
 class BindingsExample extends Bindings {
