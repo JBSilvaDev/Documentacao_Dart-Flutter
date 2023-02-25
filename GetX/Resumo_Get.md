@@ -4,13 +4,15 @@
 
 ## Principais interações
 - Instalação:
-    ```dart
-        flutter pub add get
-    ```
-    ```yaml
-        dependencies:
-            get: ^4.6.5
-    ```
+> No CMD
+```dart
+    flutter pub add get
+```
+> Diretamente no pubspec.yalm
+```yaml
+    dependencies:
+        get: ^4.6.5
+```
 - Disponibilizar Get para aplicação
     - Substituir o `MaterialApp()` por `GetMaterialApp()`
 
@@ -30,4 +32,4 @@
 
 ### Gerencia de estado
 - Get [state manager](./GerenciamentoDeEstado/basico_state_manager.md) (basico)
-- Get [tipos primitivos](./GerenciamentoDeEstado/tipos_primitivos.md)
+- Get [tipos primitivos e variaveis](./GerenciamentoDeEstado/tipos_primitivos_variaveis.md)
