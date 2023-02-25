@@ -30,3 +30,4 @@
 
 ### Gerencia de estado
 - Get [state manager](./GerenciamentoDeEstado/basico_state_manager.md) (basico)
+- Get [tipos primitivos](./GerenciamentoDeEstado/tipos_primitivos.md)
