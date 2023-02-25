@@ -56,3 +56,47 @@ Text('Nome: ${nome.value ?? 'JB'}'),
 ```dart
 Text('Nome: ${nome.value!}'),
 ```
+> Atualização de objetos
+- Para atualizar o valor de um objeto na tela
+- Objeto usado:
+```dart
+class UsuarioModel {
+  String nome;
+  UsuarioModel({
+    required this.nome,
+  });
+}
+```
+- Variavel observada:
+```dart
+ final usuarioModel = UsuarioModel(nome: 'JB').obs;
+```
+- Exebição do valor na tela:
+```dart
+Obx(() {
+  return Text('Nome: ${usuarioModel.value.nome}');
+}),
+```
+- Metodos de atualição de valores\
+  - **Com Refresh()**
+    ```dart
+    ElevatedButton(
+      onPressed: () {
+        usuarioModel.value.nome = 'Silva';
+        usuarioModel.refresh();
+      },
+      child: const Text('Atualizando com refresh'),
+      ),
+    ```
+  - **Com Update()**
+    ```dart
+    ElevatedButton(
+      onPressed: () {
+        usuarioModel.update((usuario) {
+          usuario?.nome = 'Silva JB';
+        });
+      },
+      child: const Text('Atualizando com update'),
+    ),
+    ```
+
