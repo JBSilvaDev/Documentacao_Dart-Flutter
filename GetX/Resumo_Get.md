@@ -35,3 +35,4 @@
 - Get [tipos primitivos e variaveis](./GerenciamentoDeEstado/tipos_primitivos_variaveis.md)
 - Get [GetX Controller](./GerenciamentoDeEstado/getx_controller.md)
 - Get [GetX Widget](./GerenciamentoDeEstado/getx_widget.md)
+- Get [Local State Widgets](./GerenciamentoDeEstado/local_state.md)
