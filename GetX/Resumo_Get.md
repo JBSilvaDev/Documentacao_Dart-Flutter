@@ -29,3 +29,4 @@
 - Get [bindings](./GerenciamentoDeDependencias/Bindings/Descricao.md)
 
 ### Gerencia de estado
+- Get [state manager](./GerenciamentoDeEstado/basico_state_manager.md) (basico)
