@@ -37,3 +37,4 @@
 - Get [GetX Widget](./GerenciamentoDeEstado/getx_widget.md)
 - Get [Local State Widgets](./GerenciamentoDeEstado/local_state.md)
 - Get [Workers](./GerenciamentoDeEstado/workers.md)
+- Get [GetBuilder](./GerenciamentoDeEstado/getbuilder.md)
