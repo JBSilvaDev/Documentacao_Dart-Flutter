@@ -12,7 +12,9 @@
 - Path - [Path](./Rest-RestFull/Path.md)
     - Usado para encontrar, definir caminho dos arquivos salvos pela aplicação
     - Modelo de utilização em [SQLite](../Dependencias/Rest-RestFull/SQLite/Modelos/database_sqlite.md)
-
+***
+## Injeção de dependencias
+- Get_It - [GetIt](../Dependencias/Packages/get_it.md)
 ***
 ## Interação / Formatação / Visual
 - Device preview - [Preview](../Dependencias/Device_preview.md)
@@ -35,6 +37,7 @@
 - Freezed - [Freezed](./Freezed.md)
 - MobX - [MobX/Flutter_MobX](./MobX.md)
     - MobxCodeGen - [MobX/Flutter_MobX](./MobX_CodeGen.md) (Recomendado)
+- GetX - [GetX/GetUtils](../GetX/Resumo_Get.md) (Recomendado)
 ***
 ## Autenticação user
 - Firebase - [Firebase](./Rest-RestFull/FireBase/Autenticacao/FireBase.md)
