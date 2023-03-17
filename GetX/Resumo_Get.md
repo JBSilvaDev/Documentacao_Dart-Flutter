@@ -33,8 +33,16 @@
 ### Gerencia de estado
 - Get [state manager](./GerenciamentoDeEstado/basico_state_manager.md) (basico)
 - Get [tipos primitivos e variaveis](./GerenciamentoDeEstado/tipos_primitivos_variaveis.md)
-- Get [GetX Controller](./GerenciamentoDeEstado/getx_controller.md)
-- Get [GetX Widget](./GerenciamentoDeEstado/getx_widget.md)
-- Get [Local State Widgets](./GerenciamentoDeEstado/local_state.md)
-- Get [Workers](./GerenciamentoDeEstado/workers.md)
-- Get [GetBuilder](./GerenciamentoDeEstado/getbuilder.md)
+- Get[X controller](./GerenciamentoDeEstado/getx_controller.md)
+- Get[X widget](./GerenciamentoDeEstado/getx_widget.md)
+- Get [local state sidgets](./GerenciamentoDeEstado/local_state.md)
+- Get [workers](./GerenciamentoDeEstado/workers.md)
+- Get[Builder](./GerenciamentoDeEstado/getbuilder.md)
+- Get [state mixin](./GerenciamentoDeEstado/state_mixin.md)
+
+
+### Get Utilities
+- Get [context extension](./GetUtils/context_extension.md)
+- Get [margin/padding extension](./GetUtils/margin_padding_extension.md)
+- Get[View](./GetUtils/get_view.md)
+- Get [resposive view](./GetUtils/responsive_view.md)

@@ -1,5 +1,5 @@
 # GetX Workers
-> EVEr
+> Ever
 - É um worker que recebe um observavel e uma função, e conforme o valor do observavel é atualizado alguma ação é axecutada na função, t ambem é possivel passar opção de nao executar em caso de erros, um condicional e uma função a ser executada em caso de erros.
 ```dart
 ever<String>(
