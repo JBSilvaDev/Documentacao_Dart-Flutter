@@ -75,27 +75,6 @@ print(lista);
 ```
 ```Resultado -> [2,3]```
 
--   removeWhere(){} - Remove item que atendem a condição imposta
-    - if + return
-    ```dart
-    lista.removeWhere((item) {
-        if(item == 3){
-        return true;
-        }else{
-        return false;
-        }
-    });
-    print(lista);
-    ```
-    ```Resultado -> [1, 2]```
-    
-    - ternario
-    ```dart
-    lista.removeWhere((item) => (item == 3)?true:false);
-    print(lista);
-    ```
-    ```Resultado -> [1, 2]```
-
 >Gerar uma lista automatica
 - Gera uma lista com 10 itens adicionando +1 para cada valor
 ```dart
@@ -159,6 +138,43 @@ var retorno = lista.where((element) => element.contains('J'));
 print(retorno);
 ```
 ```Resultado -> (JB, José)```
+
+-   firstWhere(){} - Retorna o primeiro item que atende a condição
+```dart
+  var lista = [1, 2, 3, 4, 5, 3];
+  var subL1 = lista.firstWhere((item) => item > 3);
+  print(subL1);
+```
+```Retorno -> 4```
+
+-   lastWhere(){} - Retorna o ultimo item que atende a condição
+```dart
+  var lista = [1, 2, 3, 4, 5, 3];
+  var subL1 = lista.firstWhere((item) => item > 3);
+  print(subL1);
+```
+```Retorno -> 5```
+
+-   removeWhere(){} - Remove item que atendem a condição imposta
+    - if + return
+    ```dart
+    lista.removeWhere((item) {
+        if(item == 3){
+        return true;
+        }else{
+        return false;
+        }
+    });
+    print(lista);
+    ```
+    ```Resultado -> [1, 2]```
+    
+    - ternario
+    ```dart
+    lista.removeWhere((item) => (item == 3)?true:false);
+    print(lista);
+    ```
+    ```Resultado -> [1, 2]```
 
 >Soma os valores na lista
 -   fold(){}
