@@ -277,4 +277,21 @@ print(nome);
 ```dart
 pessoas.toSet()
 ```
+>Retorna parte da lista
+- Usando list.sublist(index_start, index_end)
+    - Se obtem uma nova lista baseada em outra essa nova lista iniciara e terminarar de acordo com o index passado
+```dart
+  var lista = ['1', '2', '3', '4', '5', '3'];
+  var subL1 = lista.sublist(2, 5);
+  print(subL1);
+```
+```Resultado -> [3, 4, 5]```
+- Passando somente um index o resultado sera a partir do index passado ate o final da lista
+```dart
+  var lista = ['1', '2', '3', '4', '5', '3'];
+  var subL1 = lista.sublist(2);
+  print(subL1);
+```
+```Resultado -> [3, 4, 5, 3]```
+
 
