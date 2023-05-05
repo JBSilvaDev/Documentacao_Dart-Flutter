@@ -27,7 +27,6 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # Instalando JDKs
 - Baixar no site oficial
     - [JDK 11](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)
-<br>
 - Baixar arquivos DMG para instalação no mac
 - Usar comando abaixo para localizar pasta de instalação do java
 ```
