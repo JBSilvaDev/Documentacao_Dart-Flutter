@@ -128,6 +128,7 @@ fvm global stable
         ```
         export PATH=$PATH:<Caminho copiado>
         ```
+    - Em caso de troca de versão ser necessario trocar o link path da variavel de ambiente do fvm/flutter no arquivo `.zshrc` trocando o caminho do path para o exibido no console apos atualização
 
 # Configurando Android Studio
 >SDK

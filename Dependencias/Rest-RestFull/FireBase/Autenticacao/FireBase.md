@@ -9,6 +9,7 @@
   - Ou no terminal do app rodar ```flutter pub add firebase_auth```
   - Rodar no terminal do app ```flutter pub add firebase_core```
   - Rodar no terminal do app ```flutter run```
+    - Apos toda configuração do flutter run usar crtl + c para parar programa
 ## Configuração para efetuar cadastro (E-mail e Senha)
 - Colocar no main, antes do runApp pois o firebase precisa ser iniciado antes do app
     - ![exemplo](../../../../Img/mainFireBase.jpg)

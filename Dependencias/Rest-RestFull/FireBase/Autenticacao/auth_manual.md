@@ -7,23 +7,23 @@ Docs: [Clique aqui](https://pub.dev/packages/firebase_auth)<br>
 - Criar um novo projeto e acessa-lo
     - Ir em configuracao -> configuracao do projeto informar a plataforma a sera usado e demais dados solicitados.
     - Para *SHA-1* usar um dos comandos abaixo ou acessar [dev.google](https://developers.google.com/android/guides/client-auth) para orientações.
-        ```
-        keytool -list -v -keystore "C:\Users\JBSilva\.android\debug.keystore"
-        ```	
-        ```									    
-        keytool -list -v -keystore "C:\Users\JBSilva\.android\debug.keystore" -alias androiddebugkey -storepass android -keypass android 
-        ```
-        ```       
-        keytool -list -v -alias androiddebugkey -keystore "%USERPROFILE%\.android\debug.keystore"
-        ```
-    - Para *NOME DO PACOTE* é o *```com.exemplo.appnome```* pode ser encontrato em ```AndroidManifest.xml```
-    - Adicionar um "apelido" ao projeto, em seguida baixar o arquivo ```.json``` e adiciona-lo em *```android\app\```*
+        - Mac:
+          - `
+              keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore
+            `	
+
+        - Windows:
+          - `       
+            keytool -list -v -alias androiddebugkey -keystore "%USERPROFILE%\.android\debug.keystore"
+          `
+    - Para *NOME DO PACOTE* é o `com.exemplo.appnome` pode ser encontrato em `AndroidManifest.xml`
+    - Adicionar um "apelido" ao projeto, em seguida baixar o arquivo `.json` e adiciona-lo em `android\app\`
     - Em auteticação selecionar os tipos de autenticações que pretende usar no projeto.
 
 ## Configuração de projeto app
 > Acessar documentação do [package](https://pub.dev/packages/firebase_auth)
-- Ir no arquivo *```android/build.gradle```* e atualizar o ```buildscript``` acrescentando o *classoath* do google.
-    ``` 
+- Ir no arquivo `android/build.gradle` e atualizar o `buildscript` acrescentando o *classoath* do google.
+    ```
     buildscript {
         dependencies {
             // ... other dependencies
@@ -32,12 +32,12 @@ Docs: [Clique aqui](https://pub.dev/packages/firebase_auth)<br>
     }
     ```
 **ATENCAO A ABERTURA E FECHAMENTO DE TAGS NOS ARQUIVOS XML**
-- Ir no arquivo *```android/app/build.gradle```* e adicionar ao final do arquivo
-    ``` 
+- Ir no arquivo `android/app/build.gradle` e adicionar ao final do arquivo
+    ` 
     apply plugin: 'com.google.gms.google-services'
-    ```
-    - Alterar ```minSdkVersion``` para 21 ou mais e adicionar ao mesmo mapa o ```multiDexEnabled true```
-- ir ao arquivo *```android/app/src/debug/AndroidManifest.xml```*
+    `
+    - Alterar `minSdkVersion` para 21 ou mais e adicionar ao mesmo mapa o `multiDexEnabled true`
+- ir ao arquivo `android/app/src/debug/AndroidManifest.xml`
     - Adicionar nova tag ao *<manifest xmlns:android*
     ```html
     <application android:usesCleartextTraffic="true">
