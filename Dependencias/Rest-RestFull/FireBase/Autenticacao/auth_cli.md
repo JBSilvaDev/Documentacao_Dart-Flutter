@@ -15,7 +15,7 @@ Docs: [Clique aqui](https://pub.dev/packages/firebase_auth)<br>
         - Windows:
           - ```       
             keytool -list -v -alias androiddebugkey -keystore "%USERPROFILE%\.android\debug.keystore"
-          ```
+            ```
     - Para *NOME DO PACOTE* é o *```com.exemplo.appnome```* pode ser encontrato em ```AndroidManifest.xml```
     - Adicionar um "apelido" ao projeto, não é necessario fazer download do arquivo `.json`
     - Em auteticação selecionar os tipos de autenticações que pretende usar no projeto.
