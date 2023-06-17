@@ -90,6 +90,7 @@
   - `fvm config`
 - Defina a versão principal do flutter e outras que possa querer/precisar
   - `fvm install <versao>`
+  - `fvm global <versao>`
 - Rodar `flutter doctor` ou `fvm flutter doctor`
 - Ja dentro de um projeto flutter usei `fvm use <versao>`para alterar entre as verções do flutter
   - Uma pasta deve ser criada criando um link simbolico da versao solicitada do flutter no fvm
