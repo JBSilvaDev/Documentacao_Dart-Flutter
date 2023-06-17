@@ -1,15 +1,28 @@
-install choco - https://chocolatey.org/install
-install dart sdk - choco install dart-sdk
-CRIAR FVM_HOME colocar mesmo local
-fvm realease 
-fvm install <versions>
-fvm list
-em shell dev ou adm
-fvm global <versao>
-criara variavel no path %FVM_HOME%\default\bin
+Abrir terminal
+dart pub global activate fvm
+  adicionar path na variavel de ambiente (olhar warning no terminal o caminho "C:\Users\jbsil\AppData\Local\Pub\Cache\bin")
+fechar terminal
+abrir terminal 
+fvm --version
+  verificar versao
+fvm config
+fvm config --cache-path E:\Development\StudyStation\flutter-fvm
+fvm config
+  verificar se apareceu o cachePath com o local informado
+Comandos basicos - https://fvm.app/docs/guides/basic_commands
+fvm releases
+fvm install <versao desejada>
+fechar terminal
+abrir terminal COMO ADM
+fvm global <versao baixada>
+fechar terminal
+abri terminal
+criar variavel FVM_HOME
+  passar o caminho que deseja onde sera instalado as versoes do flutter
+    E:\Development\StudyStation\flutter-fvm\<versao flutter>
+  mesmo caminho da variavel FVM_HOME porem sem a versao do flutter no final
+
 rodar flutter doctor
-[!]warnigs de path podem ser ignorados
-criar pasta .vscode com arquivo settigs.json dentro do projeto
 {
   "dart.flutterSdkPath": ".fvm/flutter_sdk",
   // Remove .fvm files from search
