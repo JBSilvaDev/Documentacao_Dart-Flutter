@@ -59,6 +59,8 @@ jdk11 - https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.
 instalar flutter via git
 git clone https://github.com/flutter/flutter.git -b stable
 
+auto complit - https://www.youtube.com/watch?v=jERL0wbhtsc&list=PLPU9zDUtTNCI7Je40XEllURLdQd3ngUDH
+
 
 
 
