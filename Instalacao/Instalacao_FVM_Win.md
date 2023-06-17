@@ -79,6 +79,8 @@
  
 ## FVM
 > Comandos basicos - https://fvm.app/docs/guides/basic_commands
+- Baixar sdk do dart
+	- ```choco install dart-sdk```
 - No powershell rodar comando `dart pub global activate fvm`
   - Um caminho sera exibido após instalação salve em uma variavel de ambiente no *Path*
 - Reinicie o terminal e verifique a versão do fvm com comando `fvm --version`
