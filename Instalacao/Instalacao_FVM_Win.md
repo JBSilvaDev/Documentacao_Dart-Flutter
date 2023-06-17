@@ -8,6 +8,7 @@
 - https://visualstudio.microsoft.com/pt-br/vs/community/
 ## Git
 - https://git-scm.com/downloads
+  - `winget install --id Git.Git -e --source winget --force`
 ## Chocolatey
 - https://chocolatey.org/install
 	- Abrir powershell como adm
@@ -66,6 +67,7 @@
     - jdk8
     - jdk11
 - Criar link simbolico
+> Considere criar funcoes para o powershell [aqui](./shel_configs.md)
   - Para pasta jdk8
     - ```
       New-Item -ItemType SymbolicLink -Path C:\Dev\java\current -Target C:\Dev\java\jdk8 -Force
@@ -92,7 +94,18 @@
   - `fvm install <versao>`
   - `fvm global <versao>`
 - Rodar `flutter doctor` ou `fvm flutter doctor`
+- Warnings deste tipo podem ser ignorados, é apenas um aviso que nao esta usando variaveis para o flutter
+```
+[!] Flutter (Channel stable, 3.10.5, on Microsoft Windows [versÆo 10.0.22621.1848], locale pt-BR)
+    ! Warning: `flutter` on your path resolves to C:\Dev\flutter-fvm\stable\bin\flutter, which is not inside your
+      current Flutter SDK checkout at C:\Users\jbsil\fvm\default. Consider adding C:\Users\jbsil\fvm\default\bin to the
+      front of your path.
+    ! Warning: `dart` on your path resolves to C:\Dev\flutter-fvm\stable\bin\dart, which is not inside your current
+      Flutter SDK checkout at C:\Users\jbsil\fvm\default. Consider adding C:\Users\jbsil\fvm\default\bin to the front of
+      your path.
+```
 - Ja dentro de um projeto flutter usei `fvm use <versao>`para alterar entre as verções do flutter
+  - Para consutar as versoes baixadas disponiveis use `fvm list`
   - Uma pasta deve ser criada criando um link simbolico da versao solicitada do flutter no fvm
   - Necessario configurar vsCode para direcionar o path com o json
     - Criar pasta no projeto -> .vscode\settigns.json
