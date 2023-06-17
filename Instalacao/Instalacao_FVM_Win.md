@@ -1,77 +1,94 @@
-Abrir terminal
-dart pub global activate fvm
-dart pub global deactivate fvm
-  adicionar path na variavel de ambiente (olhar warning no terminal o caminho "C:\Users\jbsil\AppData\Local\Pub\Cache\bin")
-fechar terminal
-abrir terminal 
-fvm --version
-  verificar versao
-fvm config
-fvm config --cache-path E:\Development\StudyStation\flutter-fvm
-fvm config
-  verificar se apareceu o cachePath com o local informado
-Comandos basicos - https://fvm.app/docs/guides/basic_commands
-fvm releases
-fvm install <versao desejada>
-abri terminal
------ opcional caso nao faça o cashpath --------
-criar variavel FVM_HOME
-  passar o caminho que deseja onde sera instalado as versoes do flutter
-    E:\Development\StudyStation\flutter-fvm\<versao flutter>
-  mesmo caminho da variavel FVM_HOME porem sem a versao do flutter no final
----------
-rodar flutter doctor
-{
-  "dart.flutterSdkPath": ".fvm/flutter_sdk",
-  // Remove .fvm files from search
-  "search.exclude": {
-    "**/.fvm": true
-  },
-  // Remove from file watching
-  "files.watcherExclude": {
-    "**/.fvm": true
-  }
-}
+# Downloads
+> Fazer as instalações quando possível em uma pasta sem necessidade de permissão ADM
+## Android Studio
+- https://developer.android.com/studio
+## VSCode
+- https://code.visualstudio.com/download
+## Visual Studio Community
+- https://visualstudio.microsoft.com/pt-br/vs/community/
+## Git
+- https://git-scm.com/downloads
+## Chocolatey
+- https://chocolatey.org/install
+	- Abrir powershell como adm
+	- Colar codigo:
+		-  ```
+			 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+		  	``` 
+## JDK's
+- jdk8 
+  - https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
+- jdk11 
+  - https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
+***
+*** 
 
-fazer as instalações necessarias mostrada no arquivo de instalação do windows
-setar as variaves que la mostra
-usar flutter user<version> dentro do projeto para alterar a versao a ser usada nele, apos rodar flutter doctor
+# Configurações
 
-Instalar em uma pasta nova que nao precise de adm
-jdk8 - https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
-jdk11 - https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
-   remover possiveis variaveis de ambiente criadas automaticamente
-   No powershell navegar ate a pasta java e rodar comando DIR para verificar se as duas versoes estao la
-    Criar links simbolicos
-      New-Item -ItemType SymbolicLink -Path "C:\DevPrograms\Java\current" -Target "C:\DevPrograms\Java\jdk11" -Force
-        para mudar entre as versoes do java alterar a pasta final apos o -Target (jdk11 -> jdk8)
-      Adicionar o link da pasta current criada nas variaveis de ambiente +\bin
-        funcoes notepad
-          Comando para criar o link simbolico: 
-          New-Item -ItemType SymbolicLink -Path "PATH_DA_PASTA_CORRENT" -Target "PATH_DA_VERSAO_DO_JAVA" -Force
-          Comando para criar o profile do power shell:
-          notepad $PROFILE
-          Comando para liberar as politicas de execução do windows:
-          ```
-          Get-ExecutionPolicy
-          Set-ExecutionPolicy RemoteSigned
-          Exemplo do Profile criado na aula:
-          ```
-          ```
-          function jdk8() {
-          New-Item -ItemType SymbolicLink -Path C:\DevPrograms\java\current -Target C:\DevPrograms\java\jdk1.8.0_202 -Force
-          }
+## Git
+- https://github.com/JBSilvaDev/Intro_For_Git
 
-          function jdk11() {
-          New-Item -ItemType SymbolicLink -Path C:\DevPrograms\java\current -Target C:\DevPrograms\java\jdk-11 -Force
-          }
-          ```
+## Visual Studio
+- Avançar e marcar a opção desenvolvimento para desktop c++
+  
+## Visual Studio Code
+>Plugins
+- Baixar *Plugin flutter*
+- Baixar *Plugin dart*
 
-instalar flutter via git
-git clone https://github.com/flutter/flutter.git -b stable
+## Android Studio
+>Variaveis de ambiente
+- Crie uma nova variavel de ambiente com nome *ANDROID_HOME*
+    - Va em configurações selecione *SDK Manager*
+    - Copie o caminho da instacação do SDK *C:\Users\usuarioNome\AppData\Local\Android\Sdk*
+    - Cole o caminho do SDK copiado no valor da variavel
+- Dentro da variavel de ambiente *Path* adicione um novo caminho *%ANDROID_HOME%\tools\bin*
+- Ainda na variavel de ambiente *Path* adicione outro caminho *%ANDROID_HOME%\platform-tools*
+- No CMD rodar comando *adb --version* se mostrar a versao do adb a configuração foi concluida.
+>SDK
+- Va em configurações selecione *SDK Manager*
+    - Selecione a *ultima versao do Android*
+- SDK Tools
+    - Selecione *Android SDK Command-line Tools*
+    - Selecione *Android SDK Build-Tools*
+>Plugins
+- Va para plugins
+    - Instale o *Plugin Flutter*
+    - Instale o *Plugin Dart*
+>Emulador
+- Selecione *Virtual Device Manager*
+    - Crie um novo device ou configure um ja existente
 
-auto complit - https://www.youtube.com/watch?v=jERL0wbhtsc&list=PLPU9zDUtTNCI7Je40XEllURLdQd3ngUDH
-
+## JDK's
+- Remover possíveis variaveis de ambiente criadas durante a instalação
+- Navegar no powershell ate a pasta onde instalou os JDK's
+  - C:\Dev\Java
+    - jdk8
+    - jdk11
+- Criar link simbolico
+  - Para pasta jdk8
+    - ```
+      New-Item -ItemType SymbolicLink -Path C:\Dev\java\current -Target C:\Dev\java\jdk8 -Force
+      ```
+  - Para pasta jdk11
+    - ```
+      New-Item -ItemType SymbolicLink -Path C:\Dev\java\current -Target C:\Dev\java\jdk11 -Force
+      ```
+  - Após executar um dos comandos uma pasta nova sera crada no diretório, para este exemplo é a pasta `current`, copiar o path desta pasta e adicionar a variável de ambiente JAVA_HOME
+    - Dentro da variavel de ambiente *Path* adicione um novo caminho *%JAVA_HOME%\bin*
+  
+## FVM
+> Comandos basicos - https://fvm.app/docs/guides/basic_commands
+- No powershell rodar comando `dart pub global activate fvm`
+  - Um caminho sera exibido após instalação salve em uma variavel de ambiente no *Path*
+- Reinicie o terminal e verifique a versão do fvm com comando `fvm --version`
+- Rode comando para configurar local de instalação das versões do flutter
+  - `fvm config --cache-path C:\Dev\flutter-fvm`
+- Rode comando para verificar se a configuração do cachePath foi definida
+  - `fvm config`
+- Defina a versão principal do flutter e outras que possa querer/precisar
+  - `fvm install <versao>`
+- Rodar `flutter doctor` ou `fvm flutter doctor`
 
 
 
