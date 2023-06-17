@@ -76,7 +76,7 @@
       ```
   - Após executar um dos comandos uma pasta nova sera crada no diretório, para este exemplo é a pasta `current`, copiar o path desta pasta e adicionar a variável de ambiente JAVA_HOME
     - Dentro da variavel de ambiente *Path* adicione um novo caminho *%JAVA_HOME%\bin*
-  
+ 
 ## FVM
 > Comandos basicos - https://fvm.app/docs/guides/basic_commands
 - No powershell rodar comando `dart pub global activate fvm`
@@ -89,6 +89,24 @@
 - Defina a versão principal do flutter e outras que possa querer/precisar
   - `fvm install <versao>`
 - Rodar `flutter doctor` ou `fvm flutter doctor`
+- Ja dentro de um projeto flutter usei `fvm use <versao>`para alterar entre as verções do flutter
+  - Uma pasta deve ser criada criando um link simbolico da versao solicitada do flutter no fvm
+  - Necessario configurar vsCode para direcionar o path com o json
+    - Criar pasta no projeto -> .vscode\settigns.json
+      - ```
+        {
+          "dart.flutterSdkPath": ".fvm/flutter_sdk",
+          // Remove .fvm files from search
+          "search.exclude": {
+            "**/.fvm": true
+          },
+          // Remove from file watching
+          "files.watcherExclude": {
+            "**/.fvm": true
+          }
+        }
+        ```
+      - Ou passando "dart.flutterSdkPath": ".fvm/flutter_sdk" diretamente no json de configuração global do vsCode
 
 
 
