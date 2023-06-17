@@ -27,7 +27,9 @@
 # Configurações
 
 ## Git
-- https://github.com/JBSilvaDev/Intro_For_Git
+- `git config --global --add safe.directory '*'`
+- `git config --global user.name "Seu Nome"`
+- `git config --global user.email email@example.com`
 
 ## Visual Studio
 - Avançar e marcar a opção desenvolvimento para desktop c++
