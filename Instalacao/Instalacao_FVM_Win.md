@@ -125,6 +125,7 @@
         }
         ```
       - Ou passando "dart.flutterSdkPath": ".fvm/flutter_sdk" diretamente no json de configuração global do vsCode
+      - Sempre que fizer alteração de versao de um projeto se faz necessario reiniciar a IDE
 
 
 
