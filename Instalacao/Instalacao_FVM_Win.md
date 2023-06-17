@@ -1,5 +1,6 @@
 Abrir terminal
 dart pub global activate fvm
+dart pub global deactivate fvm
   adicionar path na variavel de ambiente (olhar warning no terminal o caminho "C:\Users\jbsil\AppData\Local\Pub\Cache\bin")
 fechar terminal
 abrir terminal 
@@ -12,16 +13,13 @@ fvm config
 Comandos basicos - https://fvm.app/docs/guides/basic_commands
 fvm releases
 fvm install <versao desejada>
-fechar terminal
-abrir terminal COMO ADM
-fvm global <versao baixada>
-fechar terminal
 abri terminal
+----- opcional caso nao faça o cashpath --------
 criar variavel FVM_HOME
   passar o caminho que deseja onde sera instalado as versoes do flutter
     E:\Development\StudyStation\flutter-fvm\<versao flutter>
   mesmo caminho da variavel FVM_HOME porem sem a versao do flutter no final
-
+---------
 rodar flutter doctor
 {
   "dart.flutterSdkPath": ".fvm/flutter_sdk",
