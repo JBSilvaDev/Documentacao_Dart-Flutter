@@ -49,7 +49,7 @@ flutter doctor --android-licenses
 - Rodar flutter doctor e resolver pendencias caso haja alguma
 # Configuração IDE
 ## VSCode
-- Caso seja necessário localizar o SDK usar o caminho salvo na [instalação do brew](./Instalação_Mac.md#Instalando-flutter)
+- Caso seja necessário localizar o SDK usar o caminho salvo na [instalação do brew](./Instalação_Mac_Brew.md#Instalando-flutter)
 ### Emuladores
 - XCode Emulador virtual
 > Comandos do terminal<br>
@@ -69,7 +69,7 @@ sudo xcodebuild -runFirstLaunch
 - Com emulador aberto abra o VsCode e veja se o mesmo aparece na lista de dispositivos, selecione o emulador do iPhone e clique em *Debug* para executar o projeto aberto.
 - XCode Emulador físico
 - Conectar cabo usb ao mac, um popup ira aparecer no iPhone, clique em confiar.
-- Abra o XCode, selecione um projeto ou crie um novo como mostrado [acima](./Instalação_Mac.md#emuladores)
+- Abra o XCode, selecione um projeto ou crie um novo como mostrado [acima](./Instalação_Mac_Brew.md#emuladores)
 - Procure o iPhone físico na lista de emuladores do XCode
 - Selecionar o iPhone na lista e clicar *Runner* para executa-lo.
 - No iPhone cancele o popup que aparecer na tela e configure as permissões development

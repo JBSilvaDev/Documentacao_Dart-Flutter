@@ -1,29 +1,33 @@
+# Funcoes com atalhos para shell
+## Windows
+- Exemplo de função powershell
+  - Para este exemplo uso o comando de verificar ips na maquina
+- Comando padrão
+```ps
+Get-NetIPAddress -AddressFamily IPv4 | Select-Object InterfaceAlias, IPAddress, PrefixLength
+```
+- Para criar uma função pra este comando usar
+```ps
+code $PROFILE
+```
+   - Um arquivo .ps1 ira abrir no vsCode
+   - Neste arquivo criar a função como abaixo
+   ```ps1
+   function meuip(){  
+   Get-NetIPAddress -AddressFamily IPv4 | Select-Object InterfaceAlias, IPAddress, PrefixLength
+   }
+   ```
+- Agora basta usar no powershell o comando `meuip` que ira obter o mesmo retorno do comando completo
 
-auto complit - https://www.youtube.com/watch?v=jERL0wbhtsc&list=PLPU9zDUtTNCI7Je40XEllURLdQd3ngUDH
- 
-       funcoes notepad
-          Comando para criar o link simbolico: 
-          New-Item -ItemType SymbolicLink -Path "PATH_DA_PASTA_CORRENT" -Target "PATH_DA_VERSAO_DO_JAVA" -Force
-          Comando para criar o profile do power shell:
-          notepad $PROFILE
-          Comando para liberar as politicas de execução do windows:
-          ```
-          Get-ExecutionPolicy
-          Set-ExecutionPolicy RemoteSigned
-          Exemplo do Profile criado na aula:
-          ```
-          ```
-          function jdk8() {
-          New-Item -ItemType SymbolicLink -Path C:\DevPrograms\java\current -Target C:\DevPrograms\java\jdk1.8.0_202 -Force
-          }
-
-          function jdk11() {
-          New-Item -ItemType SymbolicLink -Path C:\DevPrograms\java\current -Target C:\DevPrograms\java\jdk-11 -Force
-          }
-          ```
-
-#mac:
-
-     abrir arquivo .zshrc incluir alias, assim digitando somente o nome do jdk ira realizar a troca das versoes
-        alias jdk11="sdk default java 11.0.19-amzn"
-        alias jdk8="sdk default java 8.0.372-amzn"
+## Mac
+- Exemplo de alias no zsh
+  - Para este exemplo uso o comando de verificar ips na maquina
+- Comando padrão
+```bash
+ifconfig | grep "inet " | awk '{print $1, $2, $4}'
+```
+- Para criar o alias no mac basta setar uma variavel do tipo alias no arquivo de configuração de variaveis de ambiente
+```
+alias meuip="ifconfig | grep 'inet ' | awk '{print $1, $2, $4}'"
+```
+- Agora basta usar no powershell o comando `meuip` que ira obter o mesmo retorno do comando completo

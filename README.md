@@ -1,43 +1,80 @@
-<div align=center><h1>Documentação Flutter</h1>
-<h3>Documentação Flutter/Dart - Basics</h3><br>
+# Documentação Flutter
 
-<p align="center">
-  <img src=https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/08/06034931/feat-3-1024x512.png width="100%">
-  </p>
+## Documentação Flutter/Dart - Basics
 
-<br><br>
-***
->[Instalação Windows](./Instalacao/Instalação_Windows.md)<br>
->Homebrew [Instalação Mac](./Instalacao/Instalação_Mac_Brew.md) only one version<br>
->FVM [Instalação Mac](./Instalacao/Instalação_Mac_Fvm.md) multi versions<br>
->FVM [Instalação Windows](./Instalacao/Instalacao_FVM_Win.md) multi versions<br>
->Plugins [AutoCompliteZSH](./Instalacao/Plugins_mac.md)<br>
->Plugins [PowerShell](./Instalacao/Plugins_win.md)
-
-***
->[Dart](./Dart/Resumo_Dart.md)
-***
->[Flutter](./Flutter/Resumo_Flutter.md)
-***
->[GetX](./GetX/Resumo_Get.md)
-***
->[Dependências](./Dependencias/Dependencias.md)
-***
->[Desafios](./Desafios/Desafios.md)
-***
->[Projetos](./Apps/README.md)
-***
->[Erros Comuns](./Erros/README.md)
-***
->[Depuração WiFi](./Instalacao/Wifi_Debug.md)
-***
->[Rascunhos](./Flutter/Rascunhos/Rascunhos.md)
-***
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-LinkedIn: - [Clique aqui](https://www.linkedin.com/in/jbsilvadev/)
-
+<div align="center">
+  <img src="https://s3.ap-southeast-1.amazonaws.com/arrowhitech.com/wp-content/uploads/2020/08/06034931/feat-3-1024x512.png" alt="Flutter" width="70%">
 </div>
+
+---
+
+## Instalações
+### Windows
+- [Pura](./Instalacao/Instalação_Windows.md)
+- [FVM - versionamento local](./Instalacao/Win_FVM_Local.md)
+## Mac
+- [Pura](./Instalacao/Instalação_Mac_Brew.md)
+- [FVM - versionamento global](./Instalacao/Mac_FVM_Global.md)
+- [FVM - versionamento local](./Instalacao/Mac_FVM_Local.md)
+## Shell
+- [Windows - Plugins PowerShell](./Instalacao/Plugins_win.md)
+- [Mac - Plugins AutoCompliteZSH](./Instalacao/Plugins_mac.md)
+- [Funções Shell](./Instalacao/shel_configs.md)
+
+---
+
+## Dart
+
+- [Resumo Dart](./Dart/Resumo_Dart.md)
+
+---
+
+## Flutter
+
+- [Resumo Flutter](./Flutter/Resumo_Flutter.md)
+
+---
+
+## GetX
+
+- [Resumo GetX](./GetX/Resumo_Get.md)
+
+---
+
+## Dependências
+
+- [Dependências](./Dependencias/Dependencias.md)
+
+---
+
+## Desafios
+
+- [Desafios](./Desafios/Desafios.md)
+
+---
+
+## Projetos
+
+- [Projetos](./Apps/README.md)
+
+---
+
+## Erros Comuns
+
+- [Erros Comuns](./Erros/README.md)
+
+---
+
+## Depuração WiFi
+
+- [Depuração WiFi](./Instalacao/Wifi_Debug.md)
+
+---
+
+## Rascunhos
+
+- [Rascunhos](./Flutter/Rascunhos/Rascunhos.md)
+
+<br><br><br>
+
+LinkedIn: [Clique aqui](https://www.linkedin.com/in/jbsilvadev/)
