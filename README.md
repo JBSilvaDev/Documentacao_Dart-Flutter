@@ -69,12 +69,6 @@
 
 - [Depuração WiFi](./Instalacao/Wifi_Debug.md)
 
----
-
-## Rascunhos
-
-- [Rascunhos](./Flutter/Rascunhos/Rascunhos.md)
-
 <br><br><br>
 
 LinkedIn: [Clique aqui](https://www.linkedin.com/in/jbsilvadev/)
