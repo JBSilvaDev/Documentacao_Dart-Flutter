@@ -82,6 +82,7 @@
     git config --global user.email email@example.com
     ```
 
+
 ## Android Studio (Configuração)
 >SDK
 - Va em configurações selecione *SDK Manager*

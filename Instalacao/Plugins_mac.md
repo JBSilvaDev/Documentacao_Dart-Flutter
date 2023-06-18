@@ -1,6 +1,6 @@
 # Instalação plugins para mac ZSH
 - Executar apos configuração de ambiente
-
+- Salve suas variaveis de ambiente pois seráo apagadas apos instalação do [oh-mt-zsh](./Plugins_mac.md#oh-my-zsh)
 
 ***
 ## Instalações
@@ -20,7 +20,6 @@
     ```
 >Com terminal aberto no Mac, escolha Terminal > Preferências e clique em Geral.
 >Em “Shells abrem com”, selecione “Comando (caminho completo)” e digite caminho para o shell que deseja usar.
->
 ## Oh My Zsh
 - Instalação
     ```
