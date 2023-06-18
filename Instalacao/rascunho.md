@@ -30,3 +30,14 @@ instalar android studio
         export PATH=$PATH:$ANDROID_HOME/platform-tools
 instlar dart sdk
     brew install dart
+
+Instalar fvm
+    dart pub global activate fvm
+    fvm --version
+    fvm config --cache-path /Users/jbsilva/Dev/flutter-fvm
+    fvm install <versao>
+    fvm global <versao>
+        setar variavel de ambiente como caminho apontado apos instalacao
+        export PATH=$PATH:"/Users/jbsilva/fvm/default/bin"
+    rodar flutter doctor
+    
