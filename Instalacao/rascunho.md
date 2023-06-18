@@ -19,6 +19,8 @@ criando atalho para alterar versoes do jdk
 instalar xcode
 instalar homebrew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+instalar zsh
+    brew install zsh
 instalar git
     brew install git
 instalar vsCode
@@ -40,4 +42,4 @@ Instalar fvm
         setar variavel de ambiente como caminho apontado apos instalacao
         export PATH=$PATH:"/Users/jbsilva/fvm/default/bin"
     rodar flutter doctor
-    
+
