@@ -12,10 +12,12 @@
 -   https://apps.apple.com/us/app/xcode/id497799835?mt=12
     - Abrir e baixar complementos necessários
 
-# Instalações JDK's
+# Instalações
 ## SdkMan
 -   Instalação sdkman
-    - `curl -s "https://get.sdkman.io" | bash`
+    - ```
+        curl -s "https://get.sdkman.io" | bash
+        ```
     - `source "/Users/jbsilva/.sdkman/bin/sdkman-init.sh"`
 -   Instalação java
     -   `sdk list java`
@@ -31,8 +33,9 @@
     -   `sudo compaudit | xargs chown -R "$(whoami)"` OU `compaudit | xargs sudo chown -R "$(whoami)`" : para resolver
 - Criando atalhos para alterar versoes do jdk
     - veja shell-Configs
+## HomeBrew
+-   Instalação sdkman
 
-instalar xcode
 instalar homebrew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 instalar zsh
