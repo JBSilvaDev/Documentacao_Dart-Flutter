@@ -10,7 +10,9 @@
 >[Instalação Windows](./Instalacao/Instalação_Windows.md)<br>
 >Homebrew [Instalação Mac](./Instalacao/Instalação_Mac_Brew.md) only one version<br>
 >FVM [Instalação Mac](./Instalacao/Instalação_Mac_Fvm.md) multi versions<br>
->Plugins [AutoCompliteZSH](./Instalacao/Plugins.md)
+>FVM [Instalação Windows](./Instalacao/Instalacao_FVM_Win.md) multi versions<br>
+>Plugins [AutoCompliteZSH](./Instalacao/Plugins_mac.md)<br>
+>Plugins [PowerShell](./Instalacao/Plugins_win.md)
 
 ***
 >[Dart](./Dart/Resumo_Dart.md)
