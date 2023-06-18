@@ -13,8 +13,8 @@ instalar sdkman
             sudo compaudit | xargs chown -R "$(whoami)" OU compaudit | xargs sudo chown -R "$(whoami)" - para resolver
 criando atalho para alterar versoes do jdk
      abrir arquivo .zshrc incluir alias, assim digitando somente o nome do jdk ira realizar a troca das versoes
-        alias jdk11="sdk use java 11.0.19-amzn"
-        alias jdk8="sdk use java 8.0.372-amzn"
+        alias jdk11="sdk default java 11.0.19-amzn"
+        alias jdk8="sdk default java 8.0.372-amzn"
 
 instalar xcode
 instalar homebrew
