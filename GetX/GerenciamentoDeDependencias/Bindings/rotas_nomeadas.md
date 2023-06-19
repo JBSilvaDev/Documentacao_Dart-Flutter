@@ -1,5 +1,6 @@
 # Bindings
-- Classe a ser instanciada
+
+- Classe a ser instanciada:
 ```dart
 class BindingsController {
   String nome;
@@ -8,30 +9,34 @@ class BindingsController {
   });
 }
 ```
-- Instanciando diretamente na rota na tag ***getPages*** dentro do ```GetMaterialApp()``` com ```BindingsBuilder()```, normalmente usado quando se tem apenas 1 instancia a ser disponibilizada para a pagina
+
+- Instanciando diretamente na rota na tag `getPages` dentro do `GetMaterialApp()` com `BindingsBuilder()`, normalmente usado quando se tem apenas uma instância a ser disponibilizada para a página:
 ```dart
-  getPages: [
-    GetPage(
-      name: '/rota',
-      binding: BindingsBuilder(() {
-        Get.put(BindingsController(nome: 'Inicializado diretamente na rota'));
-        }),
-      page: () =>  PageName(),
-    ),
-  ],
+getPages: [
+  GetPage(
+    name: '/rota',
+    binding: BindingsBuilder(() {
+      Get.put(BindingsController(nome: 'Inicializado diretamente na rota'));
+    }),
+    page: () => PageName(),
+  ),
+],
 ```
-- Tambem é possivel chamar a instancia na rota ja executando o put no builder com BindingsBuilder.put()
+
+- Também é possível chamar a instância na rota já executando o `put` no builder com `BindingsBuilder.put()`:
 ```dart
-  getPages: [
-    GetPage(
-      name: '/rota',
-      binding: BindingsBuilder.put(() => BindingsController(nome: 'Inicializado diretamente na rota')),
-        ),
-      page: () =>  PageName(),
+getPages: [
+  GetPage(
+    name: '/rota',
+    binding: BindingsBuilder.put(
+      () => BindingsController(nome: 'Inicializado diretamente na rota'),
     ),
-  ],
+    page: () => PageName(),
+  ),
+],
 ```
-- Para usar mais de um tipo de instancia no bind é correto criar uma nova classe que extenda o Bindings do Getx
+
+- Para usar mais de um tipo de instância no binding, é correto criar uma nova classe que estenda o `Bindings` do GetX:
 ```dart
 class BindingsExample extends Bindings {
   @override
@@ -40,18 +45,22 @@ class BindingsExample extends Bindings {
   }
 }
 ```
-- Neste modelo a invocação na rota é a seguinte:
+
+- Neste modelo, a invocação na rota é a seguinte:
 ```dart
-  getPages: [
-    GetPage(
-      name: '/rota',
-      binding: BindingsExample(),
-      page: () =>  PageName(),
-    ),
-  ],
+getPages: [
+  GetPage(
+    name: '/rota',
+    binding: BindingsExample(),
+    page: () => PageName(),
+  ),
+],
 ```
-- A navegação é comum, pode ser com ```Navigator.of(context).pushNamed('/rota')```, ou com ```Get.toNamed('/rota')```
-- A pagina a qual esta navegando deve conter o ```Get.find()``` da instancia a qual esta passando para ter acesso a seu conteudo
+
+- A navegação é comum, pode ser feita com `Navigator.of(context).pushNamed('/rota')` ou com `Get.toNamed('/rota')`.
+
+- A página para a qual está navegando deve conter o `Get.find()` da instância que está sendo passada para ter acesso ao seu conteúdo:
 ```dart
 Text(Get.find<BindingsController>().nome),
 ```
+

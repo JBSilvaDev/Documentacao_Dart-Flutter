@@ -1,73 +1,73 @@
-# Get Paramentros
-- Navegação comum com paramentros
+# Get Parâmetros
+
+- Navegação comum com parâmetros.
 - Utilização nativa:
 > Envio
 ```dart
-    Navigator.of(context).push(MaterialPageRouter(
-        builder: (context) {
-            return const PageName();
-        },
-        settings: const RouterSettings(
-            arguments: 'Paramentro a ser enviado aqui (Object)'
-        )
-    ));
+Navigator.of(context).push(MaterialPageRoute(
+  builder: (context) {
+    return const PageName();
+  },
+  settings: RouteSettings(
+    arguments: 'Parâmetro a ser enviado aqui (Object)',
+  ),
+));
 ```
-> Recebimento, variavel dentro do BuildContext
+> Recebimento - variável dentro do BuildContext
 ```dart
-    final paramsNative = ModelRouter.of(context)?.settings.arguments ?? 'Valor se nulo';
+final paramsNative =
+    ModalRoute.of(context)?.settings.arguments ?? 'Valor se nulo';
 ```
 ```dart
-    Text('Nativo: ${paramsNative}');
+Text('Nativo: $paramsNative');
 ```
 ***
-- Utilização get
+- Utilização com GetX
 > Envio
 ```dart
-    Get.to(const PageName(), arguments: 'Paramentro a ser enviado aqui (Object)');
+Get.to(const PageName(), arguments: 'Parâmetro a ser enviado aqui (Object)');
 ```
-> Recebimento, variavel dentro do BuildContext
+> Recebimento - variável dentro do BuildContext
 ```dart
-    final paramsGetx = Get.arguments ?? 'Valor se nulo';
+final paramsGetx = Get.arguments ?? 'Valor se nulo';
 ```
 ```dart
-    // Pode-se passar o Get.arguments direto no Text(Get.arguments)
-    Text('Getx: ${paramsGetx}');
+// Também é possível usar diretamente Get.arguments no Text(Get.arguments)
+Text('GetX: $paramsGetx');
 ```
-- Em ambas as opções o valor passado por paramentro (arguments), sera enviado a pagina informada.
+- Em ambas as opções, o valor passado como parâmetro (arguments) será enviado para a página informada.
 
-## Aguardando paramentros
-- Faz a navegação para uma pagina a aguarda o retorno da mesma recebendo um paramentro enviado por ela
+## Aguardando Parâmetros
+
+- Navega para uma página e aguarda o retorno da mesma, recebendo um parâmetro enviado por ela.
 - Utilização nativa:
-> Aguardando paramentro da proxima pagina
+> Aguardando parâmetro da próxima página
 ```dart
 () async {
-    final result = await Navigator.of(context).push(MaterialPageRouter(
-        builder: (context) {
-            return const PageName();
-        },
-    ));
+  final result = await Navigator.of(context).push(MaterialPageRoute(
+    builder: (context) {
+      return const PageName();
+    },
+  ));
+  print(result); // Retorno da página
 }
-print(result) // Retorno da pagina
-    
 ```
-> Enviando paramentro para pagina anterior
+> Enviando parâmetro para a página anterior
 ```dart
-    Navigator.of(context).pop('Paramentro a ser enviado a pagina anterior');
+Navigator.of(context).pop('Parâmetro a ser enviado para a página anterior');
 ```
 ***
-- Utilização get
-> Aguardando paramentro da proxima pagina
+- Utilização com GetX:
+> Aguardando parâmetro da próxima página
 ```dart
 () async {
-    final result = await Get.to(const AwaitParamsPage1());
-    debugPrint(result);
-},
+  final result = await Get.to(const AwaitParamsPage1());
+  debugPrint(result);
+}
 ```
-> Enviando paramentro para pagina anterior
+> Enviando parâmetro para a página anterior
 ```dart
 () async {
-    Get.back(result: 'Retornando paramentro a pagina anterior com getx');
-},
+  Get.back(result: 'Retornando parâmetro para a página anterior com GetX');
+}
 ```
-
-

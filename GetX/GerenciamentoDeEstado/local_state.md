@@ -1,8 +1,11 @@
-# GetX Local State
-- Usados para controle de estado local, sem necessidade de uma controller
-- Na tag *initialValue* ira receber o valor inicial, e na tag *builder* uma função cujo paramentro é o valor inicial e o atualizador do valor inicial
-> ValueBuilder
-- *variavel* inicia como 'JB', e o *updater* o atualiza para 'JB Silva'
+# GetX Estado Local
+
+O GetX oferece recursos para o controle de estado local, sem a necessidade de uma controller. Duas opções comumente utilizadas são `ValueBuilder` e `ObxValue`.
+
+## ValueBuilder
+
+O `ValueBuilder` é usado para construir um widget que possui um estado local. A propriedade `initialValue` recebe o valor inicial, e a propriedade `builder` recebe uma função que recebe o valor inicial e um atualizador para esse valor.
+
 ```dart
 ValueBuilder<String?>(
   initialValue: 'JB',
@@ -16,16 +19,23 @@ ValueBuilder<String?>(
   },
 ),
 ```
-> ObxValue
-- O valor inicial é passado como segundo paramentro no caso 'JB'.obs, pois é um valor observavel, que ao ser clicado é alterado para 'JB Silva'
+
+Nesse exemplo, a variável `variavel` é iniciada com o valor 'JB', e o `updater` é usado para atualizá-la para 'JB Silva' quando o botão é pressionado.
+
+## ObxValue
+
+O `ObxValue` é usado quando o valor inicial é um observável. A função de atualização é passada como um parâmetro para o `ObxValue`, e ao ser chamada, atualiza o valor do observável.
+
 ```dart
 ObxValue<RxString>(
   (variavel) => TextButton(
-        onPressed: () {
-          variavel('JB Silva');
-        },
-        child: Text(variavel.value),
-      ),
-  'JB'.obs
+    onPressed: () {
+      variavel('JB Silva');
+    },
+    child: Text(variavel.value),
+  ),
+  'JB'.obs,
 )
 ```
+
+Nesse exemplo, o valor inicial é passado como o segundo parâmetro, `'JB'.obs`, para criar um observável. Quando o botão é pressionado, a função `variavel` é chamada para atualizar o valor para 'JB Silva'.

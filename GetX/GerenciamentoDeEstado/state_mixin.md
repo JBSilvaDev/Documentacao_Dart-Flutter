@@ -1,35 +1,51 @@
 # GetX StateMixin
-- Usado para controlar o estado de um objeto
-> Metodo de declarar
-- Usa-se o mixin passando o ```StateMixin<ClasseOBJ>```
+
+O `GetX StateMixin` é utilizado para controlar o estado de um objeto.
+
+## Método de declaração
+
+Para utilizar o mixin, passamos `StateMixin<ClasseOBJ>` como complemento da classe controladora:
+
 ```dart
 class HomeControllerStateMixin extends GetxController with StateMixin<CepModel> {}
 ```
-- Quando o SteteMixin é passado como "complemento" da classe controladora é possivel usar a metodo change() que recebe o estado da classe/Objeto e o estado em que a mesma se encontra, e com base neste estado executar alguma ação.
-- Para vazio
-  - ```dart
-    change(state, status: RxStatus.empyt());
-    ```
-- Para carregando
-  - ```dart
-    change(state, status: RxStatus.loading());
-    ```
-- Para sucesso
-  - ```dart
-    change(state, status: RxStatus.success());
-    ```
-- Para erro
-  - ```dart
-    change(state, status: RxStatus.error());
-    ```
-- Exibição com base na condição do estado passado
-  - ```dart
-      controller.obx(
-        // state é o classe/Objeto passado no mixin (CepModel)
-        (state) => const Text('Sou exibido se for success'),
-        onLoading: const Text('Sou exibido se for loading'),
-        onError: (error) =>
-            const Text('Sou exibido se for error'),
-        onEmpty: const Text('Sou exibido se for empyt'))
-    ```
-- O widget correspondente ao estado sera exibido na tela.
+
+## Métodos para alterar o estado
+
+Ao utilizar o `StateMixin`, temos acesso ao método `change()`, que recebe o estado da classe/objeto e o estado em que ela se encontra. Com base nesse estado, podemos executar alguma ação. Existem quatro métodos para alterar o estado:
+
+- Vazio (`empty`):
+  ```dart
+  change(state, status: RxStatus.empty());
+  ```
+
+- Carregando (`loading`):
+  ```dart
+  change(state, status: RxStatus.loading());
+  ```
+
+- Sucesso (`success`):
+  ```dart
+  change(state, status: RxStatus.success());
+  ```
+
+- Erro (`error`):
+  ```dart
+  change(state, status: RxStatus.error());
+  ```
+
+## Exibição com base no estado
+
+Podemos exibir widgets com base no estado fornecido utilizando o método `obx` do controlador:
+
+```dart
+controller.obx(
+  // state é a classe/objeto passado no mixin (CepModel)
+  (state) => const Text('Sou exibido se for sucesso'),
+  onLoading: const Text('Sou exibido se estiver carregando'),
+  onError: (error) => const Text('Sou exibido se ocorrer um erro'),
+  onEmpty: const Text('Sou exibido se estiver vazio'),
+)
+```
+
+O widget correspondente ao estado será exibido na tela, de acordo com a condição verificada.

@@ -1,7 +1,11 @@
 # GetX Widget
-- É um widget do pacote que serve como alternativa ao ```Obs()```
-- Para seu uso não se faz necessario passar os bindings na rota, passando a classe controladora em sua tag *init*, e na sua tag builder passa-se uma função com paramentro que assumi o "poder" da controller, sendo assim possivel usar o conteudo da classe controladora instanciando a variavel do paramentro.
-> Classe usada
+
+O GetX oferece um widget chamado `GetX` que serve como uma alternativa ao uso de `Obx`. Ao usar o `GetX` widget, não é necessário passar os bindings na rota. Em vez disso, você passa a classe controladora usando a propriedade `init` e, em seguida, na propriedade `builder`, você define uma função com um parâmetro que recebe a instância da controller. Isso permite que você acesse o conteúdo da classe controladora usando a variável do parâmetro.
+
+## Classe utilizada
+
+Aqui está um exemplo de classe controladora que será utilizada:
+
 ```dart
 class GetxWidgetController extends GetxController {
   final _nome = 'Jb Silva'.obs;
@@ -13,8 +17,11 @@ class GetxWidgetController extends GetxController {
   }
 }
 ```
-> Utilização para consulta e alteração
-- Tando o widget exibidor quanto a botao que faz alteração estao dentro do GetX Widget pois precisam da instancia da controller
+
+## Utilização para consulta e alteração
+
+Tanto o widget exibidor quanto o botão que faz a alteração estão envoltos no `GetX` Widget, pois eles precisam da instância da controller.
+
 ```dart
 GetX(
   init: GetxWidgetController(),
@@ -23,11 +30,14 @@ GetX(
     children: [
       Text(controller.nome),
       ElevatedButton(
-          onPressed: () {
-            controller.alterarNome('Nome alterado');
-          },
-          child: const Text('Alterar nome'))
+        onPressed: () {
+          controller.alterarNome('Nome alterado');
+        },
+        child: const Text('Alterar nome'),
+      ),
     ],
   ),
 ),
 ```
+
+Nesse exemplo, o `GetX` widget é iniciado com a classe `GetxWidgetController`. No `builder`, você tem acesso à instância da controller através do parâmetro `controller`. Você pode usar essa instância para exibir o nome e para chamar o método `alterarNome` quando o botão for pressionado.

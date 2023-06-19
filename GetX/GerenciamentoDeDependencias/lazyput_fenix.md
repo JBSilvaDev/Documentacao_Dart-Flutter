@@ -1,26 +1,28 @@
-# Get LazyPut, Fenix
-## lazyPut
-- Inicialização tardia de uma instancia, a mesma é declarada no construtos da pagina a qual deseja instanciar, porem ao contrario do put que cria a instancia assim que a pagina é montada, no layPut so é criada quando invocada.
-- Esta instancia não é mantida, ao sair da pagina a mesma é finalizada
-> Classe usada
+# Get LazyPut e Fenix
+
+## LazyPut
+- O `LazyPut` permite a inicialização tardia de uma instância. Ela é declarada no construtor da página em que se deseja instanciá-la. Ao contrário do `put`, que cria a instância assim que a página é montada, o `lazyPut` só cria a instância quando é invocada.
+- Essa instância não é mantida, ou seja, ao sair da página, ela é finalizada.
+> Classe usada:
 ```dart
 class LazyPutController {
   String nome = 'JB Silva';
-  LazyPutController(){
-     print('LazyPutController foi inicializado');
+  LazyPutController() {
+    print('LazyPutController foi inicializado');
   }
 }
 ```
-> Declaração no contrutor da pagina
+> Declaração no construtor da página:
 ```dart
 class LazyPutPage extends StatefulWidget {
   LazyPutPage({Key? key}) : super(key: key) {
     Get.lazyPut(() => LazyPutController());
   }
-  }
+}
 ```
-- Deste modo o Get guarda a instancia para cria-la quando necessario, chama-se usando o ```Get.find()```
-> Criando a instancia chamando-a com ```Get.find()```
+Dessa forma, o GetX guarda a instância para criá-la quando necessário, e ela é chamada usando o `Get.find()`.
+
+> Criando a instância e chamando-a com `Get.find()`:
 ```dart
 class _LazyPutPageState extends State<LazyPutPage> {
   String nome = '';
@@ -49,37 +51,37 @@ class _LazyPutPageState extends State<LazyPutPage> {
   }
 }
 ```
-## fenix
-- Inicialização tardia de uma instancia, a mesma é declarada no construtos da pagina a qual deseja instanciar, porem ao contrario do put que cria a instancia assim que a pagina é montada, no layPut so é criada quando invocada.
-- Esta instancia é mantida, ao sair da pagina a mesma não é finalizada em paginas seguintes a que foi iniciada
-> Classe usada
-```dart
-class LazyPutController {
-  String nome = 'JB Silva';
-  LazyPutController(){
-     print('LazyPutController foi inicializado');
-  }
-}
-```
-> Declaração no contrutor da pagina
+
+## Fenix
+- O `Fenix` também permite a inicialização tardia de uma instância. A diferença é que essa instância é mantida, ou seja, ao sair da página, ela não é finalizada e pode ser usada em páginas subsequentes àquela em que foi iniciada.
+> Classe usada:
 ```dart
 class LazyPutFenixController {
   String nomeFenix = 'JB Silva';
-  LazyPutFenixController(){
-     print('LazyPutFenixController foi inicializado');
+  LazyPutFenixController() {
+    print('LazyPutFenixController foi inicializado');
   }
 }
 ```
-- Deste modo o Get guarda a instancia para cria-la quando necessario, chama-se usando o ```Get.find()```
-> Criando a instancia chamando-a com ```Get.find()```
+> Declaração no construtor da página:
 ```dart
-class _LazyPutPageState extends State<LazyPutPage> {
+class LazyPutFenixPage extends StatefulWidget {
+  LazyPutFenixPage({Key? key}) : super(key: key) {
+    Get.putAsync(() => LazyPutFenixController());
+  }
+}
+```
+Dessa forma, o GetX guarda a instância para criá-la quando necessário, e ela é chamada usando o `Get.find()`.
+
+> Criando a instância e chamando-a com `Get.find()`:
+```dart
+class _LazyPutFenixPageState extends State<LazyPutFenixPage> {
   String nomeFenix = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Lazy Put page'),
+        title: const Text('Lazy Put Fenix page'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

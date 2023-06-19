@@ -1,18 +1,27 @@
-# Get gerenciamento de dependencias basico
-- No padrão flutter uma controller é disponibilizada apenas na pagina a qual foi declarada
+# Get Gerenciamento de Dependências Básico
+
+No Flutter padrão, um controller é disponibilizado apenas na página em que foi declarado da seguinte forma:
+
 ```dart
-final controller = PagController();
+final controller = PageController();
 ```
-- No Get é possivel disponibilizar esta controller para todas as paginas que são posteriores a que ele foi declarado ***Home (nao consegue usar controller da pag1) -> Pag1 (controller aqui) -> Pag2 (consegue usar a controller da pag1)***, esta controller é encerrada quando a pagina a qual foi declarada é fechada.
-  - Para fazer a declaração da controller usa-se o ```Get.put()```, deste modo sempre que a instancia for chamada uma nova sera criada
-  ```dart
-    final controller = Get.put(PagController());
-  ```
-  - Para manter a instancia da controller ativa (nao encerrar apos fechar), usar a tag permant do ```Get.put()```, neste modo sempre que a instancia for chamada ira buscar a que ja esta criada na memoria
-  ```dart
-    final controller = Get.put(PagControllerPermanent(), permanent: true);
-  ```
-  - Para usar a controller passada ao **Get** usa-se o ```Get.find()```
-  ```dart
-    Get.find<PagController>()
-  ```
+
+No GetX, é possível disponibilizar esse controller para todas as páginas que são subsequentes à página em que ele foi declarado. Por exemplo: ***Home (não consegue usar o controller da página 1) -> Pagina1 (controller declarado aqui) -> Pagina2 (consegue usar o controller da página 1)***. Essa instância do controller é encerrada quando a página em que foi declarado é fechada.
+
+- Para declarar o controller, utiliza-se o método `Get.put()`, assim toda vez que a instância for chamada, uma nova será criada:
+
+```dart
+final controller = Get.put(PageController());
+```
+
+- Para manter a instância do controller ativa (não ser encerrada ao fechar a página), utiliza-se o parâmetro `permanent: true` no método `Get.put()`. Dessa forma, sempre que a instância for chamada, o GetX buscará a instância existente na memória:
+
+```dart
+final controller = Get.put(PageControllerPermanent(), permanent: true);
+```
+
+- Para utilizar o controller fornecido pelo GetX, utiliza-se o método `Get.find()`:
+
+```dart
+Get.find<PageController>()
+```

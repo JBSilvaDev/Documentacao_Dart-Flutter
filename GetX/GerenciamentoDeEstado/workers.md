@@ -1,11 +1,11 @@
-# GetX Workers
+# Workers no GetX
 > Ever
-- É um worker que recebe um observavel e uma função, e conforme o valor do observavel é atualizado alguma ação é axecutada na função, t ambem é possivel passar opção de nao executar em caso de erros, um condicional e uma função a ser executada em caso de erros.
+- O `ever` é um worker que recebe um observável e uma função, e, à medida que o valor do observável é atualizado, uma ação é executada na função. Também é possível passar opções para não executar a função em caso de erros, uma condição para determinar se o worker deve ser executado ou não, e uma função a ser executada em caso de erros.
 ```dart
 ever<String>(
   _nome,
   (n) {
-    print('Executando o worker ever \n${n}');
+    print('Executando o worker ever \n$n');
   },
   // Executa o worker apenas quando não há erros
   cancelOnError: true,
@@ -13,7 +13,7 @@ ever<String>(
   condition: () => _nome.value == 'jb',
 );
 ```
-- É uma boa pratica definir uma variavel list do tipo Worker que ira armazener workers, assim é possivel executar o dispose do mesmo quando necessario ou nao for mais utilizado
+- É uma boa prática definir uma lista de workers para armazenar os workers, permitindo executar o `dispose` quando necessário ou quando não forem mais utilizados.
 ```dart
 // Lista de workers
 final _workers = <Worker>[];
@@ -21,8 +21,8 @@ final _workers = <Worker>[];
 ```dart
 // Worker executado ao iniciar
 void onInit() {
-    // Executa ação sempre que a variavel obs é iniciada
-    // Worker a ser adicionado a lista de workers
+    // Executa ação sempre que a variável obs é iniciada
+    // Worker a ser adicionado à lista de workers
     final everWorkers = ever<String>(
       _nome,
       (n) {
@@ -33,7 +33,7 @@ void onInit() {
       // Condição para ser executado
       condition: () => _nome.value == 'jb',
     );
-    // Adicionando worker a lista
+    // Adicionando worker à lista
     _workers.add(everWorkers);
     super.onInit();
   }
@@ -47,7 +47,7 @@ void onInit() {
   }
   ```
   > Once
-  - Possui as mesmas caracteristicas do Ever, porem a função é executada somente uma vez
+  - O `once` possui as mesmas características do `ever`, porém a função é executada apenas uma vez.
   ```dart
 ever<String>(
     _nome,
@@ -58,14 +58,14 @@ ever<String>(
     cancelOnError: true,
   );
 ```
-- Importante nao esquecer da boa pratica para sempre fazer o dispose quando nao for mais utilizar o worker
+- Importante não esquecer da boa prática de sempre fazer o `dispose` quando não for mais necessário utilizar o worker.
 ```dart
 final _workers = <Worker>[];
 ```
 ```dart
 @override
   void onInit() {
-    // Executa ação apenas 1 vez apos variavel obs ser iniciada
+    // Executa ação apenas uma vez após a variável obs ser iniciada
     final onceWorkers = ever<String>(
       _nome,
       (n) {
@@ -87,7 +87,7 @@ final _workers = <Worker>[];
   }
 ```
 > Interval
-- Executa ações com base na variavel observavel a cada certo tempo
+- O `interval` executa ações com base no valor do observável em intervalos de tempo específicos.
 ```dart
 interval<String>(_nome, (n) {
       print('#' * 50);
@@ -95,11 +95,11 @@ interval<String>(_nome, (n) {
     },
     // Executa o worker apenas quando não há erros
     cancelOnError: true,
-    // Intervalos de execução
+    // Intervalo de execução
     time: const Duration(seconds: 3)
 );
 ```
-- Ação para dispose do worker
+- Ação para o `dispose` do worker.
 ```dart
 final _workers = <Worker>[];
 ```
@@ -113,7 +113,7 @@ final _workers = <Worker>[];
     },
         // Executa o worker apenas quando não há erros
         cancelOnError: true,
-        // Intervalos de execução
+        // Intervalo de execução
         time: const Duration(seconds: 3));
     _workers.add(intervalWorkers);
     super.onInit();
@@ -128,7 +128,7 @@ final _workers = <Worker>[];
   }
 ```
 > Debounce
-- Executa a ação apos finalizar digitação (ou pausa de 800 milisegundos, pode ser alterado no timer assim como no Interval)
+- O `debounce` executa a ação após a conclusão da digitação (ou após uma pausa de 800 milissegundos, que pode ser alterada no timer, assim como no `interval`).
 ```dart
 debounce<String>(_nome, (n) {
     print('#' * 50);
@@ -138,11 +138,11 @@ debounce<String>(_nome, (n) {
       cancelOnError: true,
     );
 ```
-- Preparando para dispose
+- Preparação para o `dispose`.
 ```dart
 @override
   void onInit() {
-    // Executa ação apos parar de digitar
+    // Executa ação após parar de digitar
     final debounceWorkers = debounce<String>(_nome, (n) {
       print('#' * 50);
       print('Executando o worker debounce \n$n');

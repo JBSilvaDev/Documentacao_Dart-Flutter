@@ -1,16 +1,17 @@
-# Get to
-- Navegação comum equivalente ao Push do flutter
+# Get.to
+
+- Navegação comum equivalente ao Push do Flutter.
 - Utilização nativa:
 ```dart
-    Navigator.of(context).push(MaterialPageRouter(
-        builder: (context) {
-            return const PageName();
-        }
-    ));
+Navigator.of(context).push(MaterialPageRoute(
+  builder: (context) {
+    return const PageName();
+  }
+));
 ```
 ***
-- Utilização get
+- Utilização do Get:
 ```dart
-    Get.to(const PageName());
+Get.to(const PageName());
 ```
-- Em ambas as opções o usuario ira ser direcionado para a pagina informada.
+- Em ambas as opções, o usuário será direcionado para a página informada.

@@ -1,54 +1,70 @@
 # GetX GetBuilder
-- Usado para fazer o rebuilde de uma parte da tela por completo, similar ao Builder() ou StatefulBuilder()
-> Controller usado
+
+O `GetBuilder` é usado para reconstruir completamente uma parte da tela, de forma similar ao `Builder()` ou ao `StatefulBuilder()`.
+
+## Controller utilizado
+
+Aqui está um exemplo de um controller utilizado com o `GetBuilder`:
+
 ```dart
 class GetBuilderController extends GetxController {
   var nome = 'JB';
 
-  int conter = 0;
+  int contador = 0;
 
-  alterarNome() {
+  void alterarNome() {
     nome = 'JB Silva';
     update();
   }
 
-  increment() {
-    conter++;
+  void incrementar() {
+    contador++;
     update(['contador']);
   }
 }
 ```
-- No exemplo todos os itens dentro de Column() serão rebuildados ao precionar o botão
+
+## Rebuild de todos os itens dentro de um widget
+
+No exemplo a seguir, todos os itens dentro do `Column()` serão rebuildados quando o botão for pressionado:
+
 ```dart
 GetBuilder<GetBuilderController>(builder: (controller) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(controller.nome),
-        ElevatedButton(
-            onPressed: () {
-              controller.alterarNome();
-            },
-            child: const Text('Alterar nome')),
-      ],
-    );
-  }),
-```
-- Neste exemplo apenas os itens que correspondem ao id passado serao rebuildados.
-```dart
-Column(
+  return Column(
     mainAxisAlignment: MainAxisAlignment.center,
-    children: [ 
-      GetBuilder<GetBuilderController>(
-          id: 'contador',
-          builder: (control) {
-            return Text(controller.conter.toString());
-          }),
+    children: [
+      Text(controller.nome),
       ElevatedButton(
-          onPressed: () {
-            controller.increment();
-          },
-          child: const Text('Increment')),
+        onPressed: () {
+          controller.alterarNome();
+        },
+        child: const Text('Alterar nome'),
+      ),
     ],
   );
+}),
+```
+
+## Rebuild seletivo com identificadores
+
+No exemplo a seguir, apenas o item que corresponde ao ID especificado será rebuildado:
+
+```dart
+Column(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    GetBuilder<GetBuilderController>(
+      id: 'contador',
+      builder: (controller) {
+        return Text(controller.contador.toString());
+      },
+    ),
+    ElevatedButton(
+      onPressed: () {
+        controller.incrementar();
+      },
+      child: const Text('Incrementar'),
+    ),
+  ],
+);
 ```

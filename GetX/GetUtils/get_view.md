@@ -1,7 +1,7 @@
-# Getx GetView
-- Usado em conjunto com [GetController](../GerenciamentoDeEstado/getx_controller.md), o ```GetView``` assume papel de controlador da pagina substituindo o widget que a pagina é extendida (stateless ou statefull).
-> Metodo de uso:
-- Classe controladora
+# GetX GetView
+- Usado em conjunto com [GetController](../GerenciamentoDeEstado/getx_controller.md), o ```GetView``` assume o papel de controlador da página, substituindo o widget do qual a página é estendida (Stateless ou Stateful).
+> Método de uso:
+- Classe controladora:
 ```dart
 class GetViewController extends GetxController {
   var _nome = 'JB'.obs;
@@ -9,17 +9,17 @@ class GetViewController extends GetxController {
   String get nome => _nome.value;
 
   void alterarNome(String novoNome) {
-    _nome.value = 'JB Silva';
+    _nome.value = novoNome;
   }
 
   @override
   void onReady() {
-    print('on Read Chamado');
+    print('onReady chamado');
   }
 }
 ```
-- Uso na pagina que sera controloda
-  - Principal diferença do GetView e da variavel controller com Get.find é que caso o binding seja lazy a controller so sera chamada com o uso e nao na abertura da pagina
+- Uso na página que será controlada:
+  - A principal diferença entre o uso de ```GetView``` e a obtenção do controlador com ```Get.find``` é que, caso o binding seja preguiçoso (lazy), o controlador só será chamado quando utilizado, e não na abertura da página.
 ```dart
 class GetViewPage extends GetView<GetViewController> {
   @override
@@ -33,9 +33,8 @@ class GetViewPage extends GetView<GetViewController> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Obx(() { 
-                    return Text(controller.nome);
-                }
-              ),
+              return Text(controller.nome);
+            }),
             const SizedBox(
               height: 15,
             ),

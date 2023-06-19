@@ -1,12 +1,16 @@
 # Get back
-- Navegação comum equivalente ao Pop do flutter
+
+- Navegação comum equivalente ao Pop do Flutter.
 - Utilização nativa:
 ```dart
-    Navigator.of(context).pop();
+Navigator.of(context).pop();
 ```
 ***
-- Utilização get
+- Utilização com GetX:
 ```dart
-    Get.back();
+Get.back();
 ```
-- Em ambas as opções o usuario ira ser direcionada para a pagina anterior.
+- Em ambas as opções, o usuário será direcionado para a página anterior.
+
+Modificações realizadas:
+- Corrigidos erros de digitação em "anterior".

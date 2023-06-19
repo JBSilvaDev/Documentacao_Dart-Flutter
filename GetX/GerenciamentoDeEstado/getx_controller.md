@@ -1,35 +1,34 @@
 # GetX Controller
-- GetX controller é uma classe do GetX que é extendida por uma classe controladora onde possui 3 atributos
-> onInit(){}
-- Executado sempre que a pagina é iniciada
-> onReady(){}
-- Executado sempre que a pagina é carregada
-> onClose(){}
-- Executado sempre que a pagina é fechada
-***
-- Classe controlladora usada
+
+O `GetX Controller` é uma classe fornecida pelo GetX que pode ser estendida para criar uma classe controladora. Ela possui três métodos que podem ser sobrescritos para executar ações em momentos específicos:
+
+1. `onInit()`: Executado sempre que a página é iniciada.
+2. `onReady()`: Executado sempre que a página é completamente carregada.
+3. `onClose()`: Executado sempre que a página é fechada.
+
+Aqui está um exemplo de uma classe controladora que estende `GetXController`:
+
 ```dart
 class Controller extends GetxController {
-
-  final _nome = 'JB silva'.obs;
+  final _nome = 'JB Silva'.obs;
 
   String get nome => _nome.value;
 
   @override
   void onInit() {
-    print('TODO: implement onInit');
+    print('TODO: implementar onInit');
     super.onInit();
   }
 
   @override
   void onReady() {
-    print('TODO: implement onReady');
+    print('TODO: implementar onReady');
     super.onReady();
   }
 
   @override
   void onClose() {
-    print('TODO: implement onClose');
+    print('TODO: implementar onClose');
     super.onClose();
   }
 
@@ -38,26 +37,32 @@ class Controller extends GetxController {
   }
 }
 ```
-- Na rota deve-se passar o binding indicando a classe controlladora, usando o ```BindingsBuilder.put()``` e a pagina a qual ira usar os dados desta cotroller.
+
+Para utilizar essa classe controladora em uma rota, você precisa passá-la como um binding usando `BindingsBuilder.put()` juntamente com a página que usará os dados dessa controller:
+
 ```dart
 GetPage(
-    name: '/getxController',
-    binding: BindingsBuilder.put(() => Controller()),
-    page: () => const GetxControllerPage()
-  ),
+  name: '/getxController',
+  binding: BindingsBuilder.put(() => Controller()),
+  page: () => const GetxControllerPage(),
+),
 ```
-- O uso dos valores na classe controladores é o uso padrao ja mostrado
-> Exibição
+
+Os valores da classe controladora podem ser acessados usando `Get.find<Controller>()`. Por exemplo, para exibir o nome em um widget:
+
 ```dart
-Text(Get.find<Controller>().nome);
+Text(Get.find<Controller>().nome),
 ```
-> Alteração
+
+E para alterar os dados:
+
 ```dart
 ElevatedButton(
   onPressed: () {
     Get.find<Controller>().alterarDados('Novo nome');
   },
   child: Text('Alterar nome'),
-  )
+),
 ```
-> Os dados estao disponiveis para consulta e alteração pois a controller foi passada no binding junto com a rota de navegação.
+
+Dessa forma, os dados da classe controladora estão disponíveis para consulta e alteração, pois a controller foi passada como binding juntamente com a rota de navegação.
