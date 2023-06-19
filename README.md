@@ -19,7 +19,7 @@
 ## Shell
 - [Windows - Plugins PowerShell](./Instalacao/Plugins_win.md)
 - [Mac - Plugins AutoCompliteZSH](./Instalacao/Plugins_mac.md)
-- [Funções Shell](./Instalacao/shel_configs.md)
+- [Funções Shell](./Instalacao/shell_configs.md)
 
 ---
 

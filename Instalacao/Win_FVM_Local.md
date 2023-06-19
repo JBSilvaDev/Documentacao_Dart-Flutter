@@ -69,7 +69,7 @@
     - jdk8
     - jdk11
 - Criar link simbolico
-> Considere criar funcoes para o powershell [aqui](./shel_configs.md)
+> Considere criar funcoes para o powershell [aqui](./shell_configs.md)
   - > -Path
     - Pasta vazia para linkar o java
   - > -Target

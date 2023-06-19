@@ -1,5 +1,6 @@
 # Versionamento Global
-- Este tipo de instalação é usada para troca entre versões do flutter em toda a maquina
+- Este tipo de instalação é usada para trocar entre versões do Flutter em toda a máquina.
+
 # Programas necessários
 - [Download VSCode](https://code.visualstudio.com/)
     - Baixar e instalar
@@ -14,7 +15,7 @@
 ```
 /usr/bin/curl
 ```
-- Retorno deve ser -> *curl: try 'curl --help' or 'curl --manual' for more information* <br>
+- O retorno deve ser -> *curl: try 'curl --help' or 'curl --manual' for more information* <br>
 
 ```
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
@@ -22,20 +23,20 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # Instalando JDKs
 - Baixar no site oficial
     - [JDK 11](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)
-- Baixar arquivos DMG para instalação no mac
-- Usar comando abaixo para localizar pasta de instalação do java
+- Baixar arquivos DMG para instalação no Mac
+- Usar o comando abaixo para localizar a pasta de instalação do Java
 ```
 /usr/libexec/java_home
 ```
-- Usar comando abaixo para verificar a versão instalada
+- Usar o comando abaixo para verificar a versão instalada
 ```
 ls /Library/Java/JavaVirtualMachines/
 ```
-- Voltar para home
+- Voltar para a pasta home
 ```
 cd ~
 ```
-- Criar uma nova pasta, usei o nome workstation para esta pasta criada, e dentro desta pasta criar uma pasta chamada bin e navegar ate ela
+- Criar uma nova pasta, usando o nome "workstation" para esta pasta criada, e dentro desta pasta criar uma pasta chamada "bin" e navegar até ela
 ```
 mkdir workstation
 ```
@@ -48,34 +49,36 @@ mkdir bin
 ```
 cd bin
 ```
-- Dentro da pasta bin usar comando 
+- Dentro da pasta bin, usar o comando 
 ```
 pwd
 ```
-- Copiar caminho exibido e adicionar a variavel JAVA_HOME (Usado terminal zsh)
-    - Tambem é possivel abrir arquivo oculto `.zshrc` , normalmente localizado na pasta do usuario (Para exibi-lo usar *CMD + SHIFT + .*), e incluir o caminho diretamente
+- Copiar o caminho exibido e adicionar à variável JAVA_HOME (usando o terminal Zsh)
+    - Também é possível abrir o arquivo oculto `.zshrc`, normalmente localizado na pasta do usuário (para exibi-lo, use *CMD + SHIFT + .*), e incluir o caminho diretamente
 ```
 vi ~/.zshrc
 ```
-- Precione "i" para editar a variavel informe o export passando o caminho copiado acima incluindo ao final /jdk
+- Pressionar "i" para editar a variável, informe o export passando o caminho copiado acima, incluindo "/jdk" no final
 ```
 export JAVA_HOME=<caminho copiado acima>/jdk
 ```
-- Para sair e salvar precione *esc* depois comando ```:wq```
-- Feito isto rodar comando para finalizar configuração do JDK
+- Para sair e salvar, pressionar *esc* e depois o comando ```:wq```
+- Feito isso, rodar o comando para finalizar a configuração do JDK
 ```
 unlink jdk 
 ```
 ```
 ln -s $(/usr/libexec/java_home -v 11.0) ./jdk
 ```
-- Recomendo deixar a pasta bin oculta, para isso com termina na pasta home
+- Recomendo deixar a pasta bin oculta. Para isso, com o terminal na pasta home
 ```
 chflags hidden <Caminho da pasta>
 ```
-## Instalar/Reativar HomeBrew
-- Para instalar, rodar comando 1, 2 e 3
-- Para reativar rodar apenas comando 3
+##
+
+ Instalar/Reativar HomeBrew
+- Para instalar, rodar os comandos 1, 2 e 3
+- Para reativar, rodar apenas o comando 3
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -85,7 +88,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/UserFolder/.zprofile
 ```
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
-# Instalar git se ainda não o tenha feito anteriormente
+# Instalar o Git se ainda não o tiver feito anteriormente
 > Comandos do terminal<br>
 ```
 brew install git
@@ -96,7 +99,7 @@ git config --global user.name <"UserNameGit">
 ```
 git config --global user.email <"email@example.com">
 ```
-# Instalar FVM
+# Instalar o FVM
 - No terminal
 ```
 brew tap leoafarias/fvm
@@ -104,92 +107,48 @@ brew tap leoafarias/fvm
 ```
 brew install fvm
 ```
-# Instalar Flutter
-- Para verificar versões disponiveis
+# Instalar o Flutter
+- Para verificar as versões disponíveis
 ```
 fvm releases
 ```
 - Para instalar
 ```
-fvm global <versao desejada>
+fvm global <versão desejada>
 ```
-- Ou instalar a ultima disponivel
+- Ou instalar a última disponível
 ```
 fvm global stable
 ```
-- **OBS**: *PARA ALTERNAR ENTRE VERSOES BASTA RODAR COMANDO ```FVM GLOBAL <versao desejada>``` CASO JA TENHA BAIXADA IRA EFETUAR A TROCA CASO NAO TENHA IRA BAIXAR*
-- Salvar caminho exibido no terminal apos instalação do *flutter/fvm* para uso mais a frente neste passo-a-passo.
-    - Gravar variavel de ambiente, seguir mesmo passos feito na variavel do JDK ou abrir arquivo oculto `.zshrc` , normalmente localizado na pasta do usuario (Para exibi-lo usar *CMD + SHIFT + .*)
+- **OBS**: *PARA ALTERNAR ENTRE VERSÕES, BASTA RODAR O COMANDO ```FVM GLOBAL <versão desejada>``` CASO JÁ TENHA BAIXADO, IRÁ EFETUAR A TROCA. CASO NÃO TENHA, IRÁ BAIXAR.*
+- Salvar o caminho exibido no terminal após a instalação do *flutter/fvm* para uso posterior neste passo a passo.
+    - Gravar a variável de ambiente. Seguir os mesmos passos feitos na variável do JDK ou abrir o arquivo oculto `.zshrc`, normalmente localizado na pasta do usuário (para exibi-lo, use *CMD + SHIFT + .*)
         ```
         export PATH=$PATH:<Caminho copiado>
         ```
-    - Em caso de troca de versão ser necessario trocar o link path da variavel de ambiente do fvm/flutter no arquivo `.zshrc` trocando o caminho do path para o exibido no console apos atualização
+    - Em caso de troca de versão ser necessária, trocar o link path da variável de ambiente do fvm/flutter no arquivo `.zshrc`, substituindo o caminho do path pelo exibido no console após a atualização.
 
-# Configurando Android Studio
+# Configurando o Android Studio
 >SDK
-- No Andrdoid Studio va em preferencias selecione *Android SDK*
-    - Na aba *SDK Platforms* Selecione a uma versao do Android
+- No Android Studio, vá em preferências e selecione *Android SDK*
+    - Na aba *SDK Platforms*, selecione uma versão do Android
     - Na aba *SDK Tools*
         - Selecione *Android SDK Command-line Tools*
         - Selecione *Android SDK Build-Tools*
         - Selecione *Android SDK Platform-Tools*
-    - Clique Ok e aguarde instalação
-- Va em preferencias selecione *Plugins*
+    - Clique em OK e aguarde a instalação
+- Vá em preferências e selecione *Plugins*
     - Instale o *Plugin Flutter*
     - Instale o *Plugin Dart*
 >Emulador
 - Selecione *Virtual Device Manager*
-    - Crie um novo device ou configure um ja existente
+    - Crie um novo dispositivo ou configure um já existente
 >Plugins
     - Baixar plugins *Flutter & Dart*
     - Baixar SDKs
-    - Baixar Tools (Android DSK Command-line Tools)
+    - Baixar Tools (Android SDK Command-line Tools)
     - Configurar Emulador
->Variaveis Android Studio SDK
-- No Andrdoid Studio va em preferencias selecione *Android SDK*
-    - **Copiar** caminho exibido em *Android SDK Location*
-    - Gravar variavel de ambiente, seguir mesmo passos feito na variavel do JDK ou abrir arquivo oculto `.zshrc` , normalmente localizado na pasta do usuario (Para exibi-lo usar *CMD + SHIFT + .*)
-```
-export ANDROID_HOME=<CAMINHO OBTIDO NO ANDROID STUDIO SDK>
-```
-```
-export ANDROID_ROOT_SDK=<CAMINHO OBTIDO (MESMO ACIMA)>
-```
-```
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-```
-```
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-```
-- Execultar comando CMD para verificar instalação
-```
-adb --version
-```
-# Configuração Visual Studio Code
->Plugins
-- Baixar *Plugin flutter*
-- Baixar *Plugin dart*
->Rodar *flutter doctor*
-# Resolvendo pendencias doctor
-- Reiniciar terminal executar comando
-```
-flutter doctor
-```
->Erros Xcode
-- Execute comandos no terminal
-   -  ```
-        sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
-      ```
-    - ```
-        sudo gem install cocoapods
-      ```
-    - ```
-        sudo gem uninstall ffi && sudo gem install ffi -- --enable-libffi-alloc
-      ```
->Erros Android Studio
-- Aceite as lincenças do android
-    - ```
-        flutter doctor --android-licenses
-      ```
-    - Digite "y" para aceitar licenças
-- Repetir `flutter doctor`, todas linhas estando ok, a instalação foi concluida!
+>Variáveis Android Studio SDK
+- No Android Studio, vá em preferências e selecione *Android SDK*
+    - **Copie** o caminho exibido em *Android SDK Location*
+    - Gravar a variável de ambiente. Seguir os mesmos pass
