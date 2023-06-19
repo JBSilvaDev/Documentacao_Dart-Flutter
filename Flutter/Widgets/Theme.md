@@ -1,28 +1,34 @@
-# Classe de tema personalizado
+# Classe de Tema Personalizado
 
-- Classe com construtor privado criada para para configuração de tema
-- Compoe:
-  - Um metodo get static do tipo ThemeData que retorna um ThemeData
-  - ThemeData contem diversos atributos de colorização e estilo, para os principais foi passado as cores e estilos que o projeto deve ter.
-- Para aplicar o tema ir em [MaterialApp](../Principais/MateralApp.md) no atributo ```theme``` e passar o widget personalizado ```ThemaPersonalisado.theme```
-- Para usar apenas um dos atributos, usar o desejado invocando o context de *Theme* ```Theme.of(context).ESTILO_DESEJADO```
-- Para o textTheme foi usado o [GoogleFonts](../../Dependencias/Packages/google_fonts.md)
-- Modelo
+```dart
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-    ```dart
-    class ThemaPersonalisado {
-    ThemaPersonalisado._();
+class TemaPersonalizado {
+  TemaPersonalizado._();
 
-    static ThemeData get theme => ThemeData(
-            textTheme: GoogleFonts.mandaliTextTheme(),
-            primaryColor: Color(0xff5C77CE),
-            primaryColorLight: Color(0xffABC8F7),
-            backgroundColor: Color(0xFFFAFBFE),
-            elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-                primary: Color(0xff5C77CE),
-            ),
-            ),
-        );
-    }
-    ```
+  static ThemeData get theme {
+    return ThemeData(
+      textTheme: GoogleFonts.mandaliTextTheme(),
+      primaryColor: const Color(0xff5C77CE),
+      primaryColorLight: const Color(0xffABC8F7),
+      backgroundColor: const Color(0xFFFAFBFE),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          primary: const Color(0xff5C77CE),
+        ),
+      ),
+    );
+  }
+}
+```
+
+Esta é uma classe de tema personalizado. Ela possui um construtor privado para configurar o tema. A classe contém os seguintes elementos:
+
+- Um método estático chamado `theme` que retorna um objeto `ThemeData`. O `ThemeData` contém diversos atributos de colorização e estilo. Para os principais atributos, foram definidas as cores e estilos que o projeto deve ter.
+
+Para aplicar o tema, você deve ir para o [MaterialApp](../Principais/MateralApp.md) e definir o atributo `theme` como o widget personalizado `TemaPersonalizado.theme`.
+
+Para usar apenas um dos atributos, você pode acessá-los usando o `context` do `Theme`. Por exemplo, para acessar o estilo desejado, utilize `Theme.of(context).ESTILO_DESEJADO`.
+
+No exemplo fornecido, o `textTheme` utiliza o pacote [GoogleFonts](../../Dependencias/Packages/google_fonts.md) para fornecer a fonte de texto chamada "Mandali".

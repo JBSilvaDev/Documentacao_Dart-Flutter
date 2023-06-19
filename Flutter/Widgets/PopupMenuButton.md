@@ -1,32 +1,34 @@
 # PopupMenuButton()
-- Usado com conjunto com [Enum](../../Dart/Lista_Map_Set_Enum/Enums.md) assim evitando erros de digitação usando seus itens para intanciar um valor (Enum Usado ***PopupMenuPages***)
-- Usado em actions dentro da [AppBar()](../Principais/AppBar.md)
+- Utilizado em conjunto com [Enum](../../Dart/Lista_Map_Set_Enum/Enums.md) para evitar erros de digitação ao usar seus itens para instanciar um valor (Enum utilizado: ***PopupMenuPages***).
+- Usado nas ações dentro do widget [AppBar()](../Principais/AppBar.md).
+
 ## Utilização
--   PopupMenuButton é tipado pelo tipo do enum declarado
--   Compoe:
-    -   icon: [Opcional] Icone a ser usado
-    -   onSelected: Recebe uma funcao que em seu parametro recebe os valores de PopupMenuPages
-        -   No Switch Case é passado o valor recebido do PopupMenuPages
-        -   Caso este valor seja *PopupMenuPages.container* use [Navege](../Principais/Navegacao.md) para pagina correspondente, o mesmo valor para *PopupMenuPages.rows_columns*.
-    -   itemBuilder: Recebe uma função que em seu paramentro recebe o contexto passado no builder.
-        -   Essa funcao retorna uma lista de items para o menu
-        -   A lista é composta por varios outros *PopupMenuItem< PopupMenuPages >* e cada um deles passa um valor diretente para o contexto do builder:
-            -   value: Valor do Enum PopupMenuPages
-            -   child: Texto exibido no menu
-    -   OBS: A lista no retorno é tipada como *<PopupMenuItem< PopupMenuPages >>* - Opcional
-        -   A lista é um tipo de manu que em seu conteudo tera itens do Enum *PopupMenuPages*
-    -   OBS: Os itens da lista sao tipados como *PopupMenuItem< PopupMenuPages >*
-        - Os itens fazem parte do menu, e seu conteudo compoe o valor do menu
-    -   OBS: caso nao deseje usar Enum, subitituir a tipagem *PopupMenuPages* pelo valor desejado, (String, int, etc...), para este caso o valor passado no value deve ser do mesmo tipo (String, int, etc...)
-    -   OBS: o exemplo abaixo é para navegação, necessario configurar os routers no [MaterialApp](../Principais/MateralApp.md)
->Enum
+- O `PopupMenuButton` é tipado com o tipo do enum declarado.
+- Composição:
+    - `icon`: [Opcional] Ícone a ser utilizado.
+    - `onSelected`: Recebe uma função que, em seu parâmetro, recebe os valores de `PopupMenuPages`.
+        - Utilize um `switch case` para tratar o valor recebido de `PopupMenuPages`.
+        - Se o valor for *PopupMenuPages.container*, navegue para a página correspondente utilizando [Navegação](../Principais/Navegacao.md). Faça o mesmo para o valor *PopupMenuPages.rows_columns*.
+    - `itemBuilder`: Recebe uma função que, em seu parâmetro, recebe o contexto fornecido no `builder`.
+        - Essa função retorna uma lista de itens para o menu.
+        - A lista é composta por vários `PopupMenuItem<PopupMenuPages>`, em que cada um deles fornece um valor diretamente para o contexto do `builder`:
+            - `value`: Valor do Enum `PopupMenuPages`.
+            - `child`: Texto exibido no menu.
+    - OBS: A lista de retorno é tipada como `<PopupMenuItem<PopupMenuPages>>` [Opcional].
+        - A lista é um tipo de menu que contém itens do Enum `PopupMenuPages`.
+    - OBS: Os itens da lista são tipados como `PopupMenuItem<PopupMenuPages>`.
+        - Os itens fazem parte do menu, e seu conteúdo representa o valor do menu.
+    - OBS: Caso não deseje utilizar um Enum, substitua a tipagem `PopupMenuPages` pelo tipo desejado (String, int, etc.). Nesse caso, o valor fornecido em `value` deve ser do mesmo tipo (String, int, etc.).
+    - OBS: O exemplo abaixo é para navegação, portanto é necessário configurar as rotas no [MaterialApp](../Principais/MateralApp.md).
+
+> Enum
 ```dart
 enum PopupMenuPages {
   container,
   rows_columns
 }
 ```
->PopupMenuButton
+> PopupMenuButton
 ```dart
 PopupMenuButton<PopupMenuPages>(
     icon: Icon(Icons.menu),

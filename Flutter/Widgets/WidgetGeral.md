@@ -145,171 +145,210 @@
 
 ## SnackBar()
 
-- Usado para mensagens rapidas na tela, pode ou nao conter interações com usuario.
-- Dentro do onPressed ou similar invocamos a snackbar e enviamos seu conteudo para o ScaffoldMessenger
-- Declarada uma variavel que recebe SnackBar() <= O snackbar pode ser passado diretamente no paramentro do .showSnackBar
-- Por padrão as SnackBar sao fixas, para alterar adicione a propriedade behavior *Complet compose*
-  - Quando a snackbar esta fixa o width nao funciona.
-  - Simple compoe: ![Simple compoe](../../img/simpleSnack.png)
-  - context: Conteúdo da snackbar
-- Action compoe:![Action compoe](../../img/actionSnack.png)
-  - context: Conteudo da snackbar
-  - action: Recebe SnackBarAction que compoe:
-    - label: Texto exibido (string solta sem uso do Text())
-    - onPressed: Funcao anonima de ação ao ser clicada
--Complet compose: ![Complet compose](../../img/completSnack.png):
-  - context: Conteudo da snackbar, aceita widgets
-  - action: Recebe SnackBarAction que compoe:
-    - label: Texto exibido (string solta sem uso do Text())
-    - onPressed: Funcao anonima de ação ao ser clicada
-    - duration: Recebe um [Duration](./WidgetsTree.md#duration)
-    - padding: Recebe [EdgeInserts](./WidgetsTree.md#edgeinsets)
-    - behavior: Recebe SnackBarBehavior.floating
-    - width: Largura da SnackBar
-    - shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#roundedrectangleborder)
-- Invoca-se o *```ScaffoldMessenger.of(context).showSnackBar(snackbar);```*
-  - Passa como parametro do .of o [context](../Fundamentos.md#buildcontext)
-  - Passa como paramentro do .showSnackBar a variavel que a contem.
+- Usado para mensagens rápidas na tela, pode ou não conter interações com o usuário.
+- Dentro do `onPressed` ou similar, invocamos a Snackbar e enviamos seu conteúdo para o `ScaffoldMessenger`.
+- Declara-se uma variável que recebe `SnackBar()` <= A Snackbar pode ser passada diretamente como parâmetro do `.showSnackBar`.
+- Por padrão, as Snackbars são fixas. Para alterar isso, adicione a propriedade `behavior`.
+  - Quando a Snackbar está fixa, a propriedade `width` não funciona.
+  - Comportamento simples: ![Comportamento simples](../../img/simpleSnack.png)
+  - context: Conteúdo da Snackbar.
+- Comportamento de ação: ![Comportamento de ação](../../img/actionSnack.png)
+  - context: Conteúdo da Snackbar.
+  - action: Recebe `SnackBarAction` que compõe:
+    - label: Texto exibido (string solta sem uso de `Text()`).
+    - onPressed: Função anônima de ação ao ser clicada.
+- Comportamento completo: ![Comportamento completo](../../img/completSnack.png)
+  - context: Conteúdo da Snackbar, aceita widgets.
+  - action: Recebe `SnackBarAction` que compõe:
+    - label: Texto exibido (string solta sem uso de `Text()`).
+    - onPressed: Função anônima de ação ao ser clicada.
+    - duration: Recebe um [Duration](./WidgetsTree.md#duration).
+    - padding: Recebe [EdgeInsets](./WidgetsTree.md#edgeinsets).
+    - behavior: Recebe `SnackBarBehavior.floating`.
+    - width: Largura da Snackbar.
+    - shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#roundedrectangleborder).
+- Invoca-se o *`ScaffoldMessenger.of(context).showSnackBar(snackbar);`*
+  - Passa como parâmetro do `.of` o [context](../Fundamentos.md#buildcontext).
+  - Passa como parâmetro do `.showSnackBar` a variável que a contém.
 
 ## Stack()
 
-- Usado para posicionar widgets em locais desejados
-- Stack nao alinha os widget um ao lado do outro ou debaixo do outro, ele sobrepoe um ao outro, cabe ao usuario definir uma posição para cada widget dentro do stack.
-- Compoe:
-  - children: Recebe um ou mais widgets
-    - Os widgets sao empilhados um sobre o outro
-    - Para definir a posição de cada widget usa-se o [Align](./WidgetsTree.md#align) ou [Positioned](./WidgetsTree.md#positioned) como pai
-      - Stakc => Align => Widget
+- Usado para posicionar widgets nos locais desejados.
+- O Stack não alinha os widgets um ao lado do outro ou um abaixo do outro; ele sobrepõe um ao outro. Cabe ao usuário definir uma posição para cada widget dentro do Stack.
+- Composição:
+  - children: Recebe um ou mais widgets.
+    - Os widgets são empilhados um sobre o outro.
+    - Para definir a posição de cada widget, usa-se o [Align](./WidgetsTree.md#align) ou [Positioned](./WidgetsTree.md#positioned) como pai.
+      - Stack => Align => Widget
 
 ## IndexedStack()
 
-- Usado para posicionar widgets um sobre o outro, exibindo um por vez de acordo com o index passado
-- Compoe:
-  - index: Recebe o index de um dos itens da lista para ser exibido (padrao é 0)
-  - children: Recebe um ou mais widgets que serao exibidos de acordo com seu index
+- Usado para posicionar widgets um sobre o outro, exibindo um por vez de acordo com o índice passado.
+- Composição:
+  - index: Recebe o índice de um dos itens da lista a ser exibido (padrão é 0).
+  - children: Recebe um ou mais widgets que serão exibidos de acordo com seu índice.
 
 ## Card()
 
-- Sua exibição ao usuario é similar a [container](./WidgetGeral.md#container)
-- Compoe:
-  - elevation: Recebe valor da sombra do card
-  - shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#roundedrectangleborder)
-  - child: Recebe widget
+- Sua exibição ao usuário é similar ao [Container](./WidgetGeral.md#container).
+- Composição:
+  - elevation: Recebe o valor da sombra do card.
+  -
+
+ shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#roundedrectangleborder).
+  - child: Recebe um widget.
 
 ## BottomNavigationBar()
 
-- Usado para passar botes na barra inferior da pagina
-- Para navegacao ou troca de widget na tela
-  - Necessario lista de items a serem exibidos ou executados para cada botao na barra
-    - Cada item possui um index na lista.
-  - Necessario uma variavel int para ser o index dos itens na lista -> ```int _indiceAtual = 0;```
-  - Necessario funcao que ira receber o index atual e passar o valor para varaivel
-  - Exemplo -> 
+- Usado para exibir botões na barra inferior da página.
+- Para navegação ou troca de widget na tela:
+  - É necessária uma lista de itens a serem exibidos ou executados para cada botão na barra.
+    - Cada item possui um índice na lista.
+  - É necessária uma variável int para ser o índice dos itens na lista -> ```int _indiceAtual = 0;```
+  - É necessária uma função que irá receber o índice atual e passar o valor para a variável.
+  - Exemplo: 
     
   ![Clique aqui](../../Img/listaItems.jpg)
-  - Compoe:
-    - items: Recebe uma lista de [BottomNavigationBarItem](./WidgetsTree.md#bottomnavigationbaritem), ***Necessario ter 2 ou mais itens na lista***
-    - onTap: Recebe index do botao clicado passando-o para outra funcao que ira executar uma acao de acordo com o valor de index
-    - currentIndex: Recebe a variavel
-    - Exemplo -> 
+  - Composição:
+    - items: Recebe uma lista de [BottomNavigationBarItem](./WidgetsTree.md#bottomnavigationbaritem). ***É necessário ter 2 ou mais itens na lista.***
+    - onTap: Recebe o índice do botão clicado, passando-o para outra função que irá executar uma ação de acordo com o valor do índice.
+    - currentIndex: Recebe a variável.
+    - Exemplo: 
     
   ![Clique aqui](../../Img/listaItems2.jpg)
-- Para açõe na tela
-  - Necessario uma funcao para receber o index do onTap
-  - Necessario um comparador como o switch case para execultar algo de acordo com o index recebido
-  - Exemplo -> 
+- Para ações na tela:
+  - É necessária uma função para receber o índice do onTap.
+  - É necessário um comparador, como o `switch case`, para executar algo de acordo com o índice recebido.
+  - Exemplo: 
   
   ![Clique aqui](../../Img/listaItems3.jpg)
-  - Compoe:
-    - items: Recebe uma lista de [BottomNavigationBarItem](./WidgetsTree.md#bottomnavigationbaritem),
-    - onTap: Recebe index do botao clicado passando-o para outra funcao que ira executar uma acao de acordo com o valor de index
-    - Exemplo -> [Clique aqui](../../Img/listaItems4.jpg)
+  - Composição:
+    - items: Recebe uma lista de [BottomNavigationBarItem](./WidgetsTree.md#bottomnavigationbaritem).
+    - onTap: Recebe o índice do botão clicado, passando-o para outra função que irá executar uma ação de acordo com o valor do índice.
+    - Exemplo: [Clique aqui](../../Img/listaItems4.jpg)
 
 ## MaterialBanner
 
-- Possue a mesma estrutura da [snackBar](./WidgetGeral.md#snackbar)
-- Invoca-se o *ScaffoldMessenger.of(context).showMaterialBanner(materialBanner);*
-- Ocultar o *ScaffoldMessenger.of(context).hideCurrentMaterialBanner();*
-  - Passa como parametro do .of o [context](../Fundamentos.md#buildcontext)
-  - Passa como paramentro do .showMaterialBanner a variavel que a contem o MaterialBanner()
-- Compoe:
-  - actions: Recebe uma lista de ações (exemplo botoes) - *Obrigatorio*
-  - content: Recebe o conteudo a ser exibido no banner
-  - backgroundColor: Recebe Colors.cor
-  - forceActionsBelow: Recebe true ou false, para determinar se botoes de ação ficam na parte debaixo do banner ou nao, padrao é false
-- Banners nao somem automaticamente da tela apos serem exibidos, esta ação deve ser feita por um botao de ação dentro das actions
+- Possui a mesma estrutura da [SnackBar](./WidgetGeral.md#snackbar).
+- Invoca-se o *`ScaffoldMessenger.of(context).showMaterialBanner(materialBanner);`*
+- Ocultar o *`ScaffoldMessenger.of(context).hideCurrentMaterialBanner();`*
+  - Passa como parâmetro do `.of` o [context](../Fundamentos.md#buildcontext).
+  - Passa como parâmetro do `.showMaterialBanner` a variável que contém o MaterialBanner().
+- Composição:
+  - actions: Recebe uma lista de ações (por exemplo, botões) - *Obrigatório*.
+  - content: Recebe o conteúdo a ser exibido no banner.
+  - backgroundColor: Recebe uma cor.
+  - forceActionsBelow: Recebe true ou false para determinar se os botões de ação ficam na parte debaixo do banner ou não (padrão é false).
+
+Os banners não desaparecem automaticamente da tela após serem exibidos. Essa ação deve ser feita por um botão de ação dentro das actions.
 
 ## Visibility
 
-- Usado para exibir widget se uma condição for atendida (similar ao if)
-- Compoe:
-  - visible: condição a ser atendida
-  - child: widget que sera exbido se a condição for true
+- Usado para exibir um widget se uma condição for atendida (similar ao `if`).
+- Composição:
+  - visible: Condição a ser atendida.
+  - child: Widget que será exibido se a condição for verdadeira.
 
 ## CheckBox
 
-- Caixa de seleção, execulta alguma ação ao ser selecionada
-  - Para conseguir marcar e desmarcar o box, necessario usar variavel no value, e alterar o valor dela no onChanged (com algum gerenciador de estado tipo setState) para atualizar o check na tela
+- Caixa de seleção que executa alg
+
+uma ação ao ser selecionada.
+  - Para conseguir marcar e desmarcar o box, é necessário usar uma variável no `value` e alterar o valor dela no `onChanged` (com algum gerenciador de estado, como `setState`), para atualizar o estado do check na tela.
 - Exemplo: <br>
-  - ![Check - Simple](../../Img/checkBox2.png)<br><br>
+  - ![Check - Simples](../../Img/checkBox2.png)<br><br>
 - Exemplo 2: <br>
   - ![Check - SnackBar](../../Img/checkBox.jpg)<br>
-- Compoe:
-  - onChanged: Função com paramentro referente ao value , ativado sempre que selecionado o box
-  - value: valor selecionado (true ou false),
+- Composição:
+  - onChanged: Função com um parâmetro referente ao `value`, ativado sempre que o box é selecionado.
+  - value: Valor selecionado (true ou false).
 
 ## Radio
 
-- Usado para selecionar um valor na pagina
-- Idependente de quantos radios tiver na pagina apenas 1 é selecionado desde que os valores de value sejam diferentes
+- Usado para selecionar um valor na página.
+- Independentemente de quantos radios existam na página, apenas 1 é selecionado, desde que os valores de `value` sejam diferentes.
 - Exemplo: <br>
   - ![](../../Img/radio.png)
-- Compoe:
-  - value: Recebe qualquer tipo, porem este tipo deve ser o mesmo do paramentro em onChanged
-  - groupValue: Recebe a variavel que ira armazenar o valor
-  - onChanged: Função com paramentro referente ao value , ativado sempre que selecionado o radio
+- Composição:
+  - value: Recebe qualquer tipo, mas esse tipo deve ser o mesmo do parâmetro em `onChanged`.
+  - groupValue: Recebe a variável que irá armazenar o valor selecionado.
+  - onChanged: Função com um parâmetro referente ao `value`, ativada sempre que um radio é selecionado.
 
-## Swith (togle)
-- Togle de seleção, execulta alguma ação ao ser selecionada (mesmas caracteristicas de checkbox)
-  - Para conseguir marcar e desmarcar o switch, necessario usar variavel no value, e alterar o valor dela no onChanged (com algum gerenciador de estado tipo setState) para atualizar a exibição na tela
+## Switch (Toggle)
+
+- Toggle de seleção que executa alguma ação ao ser selecionado (mesmas características do CheckBox).
+  - Para conseguir ativar e desativar o switch, é necessário usar uma variável no `value` e alterar o valor dela no `onChanged` (com algum gerenciador de estado, como `setState`), para atualizar o estado na tela.
 - Exemplo: <br>
   - ![](../../Img/switch.png)<br>
-- Compoe:
-  - onChanged: Função com paramentro referente ao value , ativado sempre que selecionado o togle/switch
-  - value: valor selecionado (true ou false),
+- Composição:
+  - onChanged: Função com um parâmetro referente ao `value`, ativada sempre que o switch é selecionado.
+  - value: Valor selecionado (true ou false).
 
 ## LinearProgressIndicator
 
-- Barra de progresso interativa
-- Valor tota da barra padrão é 1.0 (se o valor da tag value for 0.5 metade da barra sera preenchida)
-- Compoe:
-  - backgroundColor: Recebe a cor que representa progresso faltante
-  - valueColor: Recebe ```AlwaysStoppedAnimation<Color>(Colors.black)```, que é a cor do progresso concluido
-  - value: recebe o valorfinal recebido no paramentro
+- Barra de progresso interativa.
+- O valor total da barra padrão é 1.0 (se o valor da tag `value` for 0.5, metade da barra será preenchida).
+- Composição:
+  - backgroundColor: Cor que representa o progresso faltante.
+  - valueColor: ```AlwaysStoppedAnimation<Color>(Colors.black)```, que é a cor do progresso concluído.
+  - value: Recebe o valor final passado como parâmetro.
 - Exemplo 1: ![Sem Animação](../../Img/barraProgresso1.png)
-- Para ter animação no preenchimento da barra usa-se o [TweenAnimationBuilder](./WidgetsTree.md#tweenanimationbuilder)
+- Para ter animação no preenchimento da barra, usa-se o [TweenAnimationBuilder](./WidgetsTree.md#tweenanimationbuilder).
 - Exemplo 2: ![Com Animação](../../Img/barraProgresso2.png)
 
 ## Dismissible
 
-- Ação de deslizar um item de listas para uma direção pre-definida e executar uma funcao apos deslise.
-- Compoe:
-  - background: Recebe um widget que é exibido ao arastar um item da lista
-  - direction: Recebe ```DismissDirection.DIREÇÃO``` que determina a direção do deslizar 
-  - confirmDismiss: Recebe funcao com paramentro *(DismissDirection direction)* onde seu retorno deve ser uma confirmação de true ou false, como um [pop-up](./Dialogs.md#alertdialog) com botoes, a ação a ser tomada deve esta nesta confirmação de true ou false
-  - key: Recebe uma ```final _formKey = GlobalKey<FormState>();```
-  - child: Recebe lista dos items que a o dismissible ira agir
-- Exemplo : ![Dismissible](../../Img/dismissible_simples.png)
+- Ação de deslizar um item de uma lista para uma direção pré-definida e executar uma função após o deslize.
+- Composição:
+  - background: Recebe um widget que é exibido ao arrastar um item da lista.
+  - direction: Recebe `DismissDirection.DIREÇÃO`, que determina a direção do deslize.
+  - confirmDismiss: Recebe uma função com um parâmetro *(DismissDirection direction)*, onde seu retorno deve ser uma confirmação de true ou false, como um [pop-up](./Dialogs.md#
+
+alert-dialog) para confirmar a ação.
+
+## Drawer
+
+- Usado para exibir um menu lateral (como uma gaveta) em uma página.
+- Composição:
+  - child: Recebe um widget que será exibido dentro do Drawer.
+
+## AlertDialog
+
+- Usado para exibir um diálogo/modal ao usuário com opções ou informações.
+- Composição:
+  - title: Título do diálogo.
+  - content: Conteúdo do diálogo.
+  - actions: Lista de ações/opções do diálogo.
+
+## BottomSheet
+
+- Usado para exibir um painel inferior na tela.
+- É possível personalizar o conteúdo do BottomSheet com qualquer widget.
+- Composição:
+  - builder: Recebe uma função que retorna o conteúdo do BottomSheet, geralmente um widget.
+  - elevation: Recebe o valor da sombra do painel (padrão é 0.0).
+  - shape: Recebe a forma do painel.
+  - backgroundColor: Cor de fundo do painel.
+
+## SingleChildScrollView
+
+- Usado para criar uma área deslizável que contém um único filho.
+- Permite que o conteúdo seja rolado verticalmente quando não há espaço suficiente para exibi-lo completamente.
+- Composição:
+  - child: Recebe um único widget que será exibido dentro do SingleChildScrollView.
+
+Espero que essas informações sejam úteis para você! Se tiver mais alguma dúvida, estou aqui para ajudar.
 
 ## Slider
-- Linha deslisante usada para capturar valor passado pelo usuario
-- Recebe valores double, e necessita de uma variavel para receber seus valores, assim como um gerenciador de estado como setState para altera-lo
+
+- Um controle deslizante usado para capturar um valor fornecido pelo usuário.
+- Recebe valores do tipo double e requer uma variável para armazenar o valor selecionado, além de um gerenciador de estado, como o setState, para atualizá-lo.
 - Exemplo: <br>
   -![](../../Img/slider.png)
-- Compoe:
-value: valor inicial do slider
-max: valor maximo do slider
-min: valor minimo do slider
-label: Recebe String para exbição ao deslizar, usar em conjunto com divisions
-divisions: Recebe inteiro com numero de divisoes no slider
-onChanged: Função com paramentro referente ao value , ativado sempre que slider seta novo valor (deslisa)
+- Composição:
+  - value: Valor inicial do controle deslizante.
+  - max: Valor máximo do controle deslizante.
+  - min: Valor mínimo do controle deslizante.
+  - label: Recebe uma String para exibição durante o deslizamento, utilizado em conjunto com divisions.
+  - divisions: Recebe um valor inteiro que define o número de divisões no controle deslizante.
+  - onChanged: Uma função com um parâmetro que representa o novo valor selecionado quando o controle deslizante é movido.

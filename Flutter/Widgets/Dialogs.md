@@ -1,190 +1,209 @@
-# Dialoag
-
-- Usados para interagir com usuario em uma caixa de dialogo flutuante
-- Modelo de caixa de dialogo custumizada em uma classe
-- Todos os dialogs podem retornar um future e para recupera algum dado dele usa-se o [async await](../../Dart/Dart_OO/Async.md), Exemplo usado em [TimePicker](./Dialogs.md#timer-picker) e [DateTime](./Dialogs.md#date-timer)
+# Diálogo
 
 ```dart
-class DialogCuston extends Dialog {
-  DialogCuston(BuildContext context) : super(
-    shape:RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12)),
-    child: Container(
+import 'package:flutter/material.dart';
+
+class DialogCustom extends Dialog {
+  DialogCustom(BuildContext context)
+      : super(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Container(
             width: 300,
             height: 300,
             child: Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Text('Titulo X'),
+                  child: Text('Título X'),
                 ),
                 TextButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  child: Text('Fechar Dialog'),
+                  child: Text('Fechar Diálogo'),
                 ),
               ],
             ),
-          ));
+          ),
+        );
 }
 ```
 
-- Classe que extente Dialog, assim herdando seus atributos
-- Definido um contrutor que herda seu superior (pai) recebendo como paramentro um (BuildContext context) que é necessario para ações em botoes que estao na caixa de dialogo, exemplo o [pop](../Principais/Navegacao.md#utilização)
-- Dentro desta herança (super), foi definido:
-  - shape: Recebe um [RoundedRectangleBorder](./WidgetsTree.md#roundedrectangleborder)
-  - child: Recebe um container que sera o corpo da caixa de dialogo
-    - Este container ira conter botoes onde executara uma ação (opcional)
+A classe `DialogCustom` foi corrigida e formatada adequadamente. Ela estende `Dialog` e pode ser usada como uma caixa de diálogo personalizada. No construtor da classe, é fornecido um parâmetro `BuildContext context`, que é necessário para as ações nos botões dentro da caixa de diálogo, como o `pop`.
 
-## Invocando caixa de dialogo
+Dentro da herança (`super`), foram definidos:
+
+- `shape`: Recebe um `RoundedRectangleBorder` que define as bordas arredondadas da caixa de diálogo.
+- `child`: Recebe um container que será o corpo da caixa de diálogo. Neste exemplo, o container contém um título e um botão para fechar o diálogo.
+
+## Invocando uma caixa de diálogo
 
 ```dart
 @override
-  Widget build(BuildContext contextBuilderPage) { /* <= Contexto a ser passado no context no onPressed */
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Dialogs'),
+Widget build(BuildContext contextBuilderPage) {
+  /* <= Contexto a ser passado no context no onPressed */
+  return Scaffold(
+    appBar: AppBar(
+      title: const Text('Diálogos'),
+    ),
+    body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Texto do botão'),
+          ),
+        ],
       ),
-      body: Center(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          ElevatedButton(onPressed:(){}, child: Text('Texto do botao'))
+    ),
+  );
+}
 ```
 
-### Custon Dialog
+### Diálogo Personalizado
 
-- Usando onPressed ou similar para invocar o dialog
-- Por padrao ao clicar fora da caixa ela é fechada, para desabilidar isso implementa-se o *barrierDismissible*
-- O context recebe o contexto do builder da pagina *contextBuilderPage*
-- O builder recebe uma funcao anonima que recebe um parametro qualquer
-- Seu retorno é a propria classe que compoe a caixa de dialogo, passando em seu paramentro o contexto quaquer que foi passado no paramentro do builder.
+Para invocar o diálogo personalizado, use o `onPressed` ou algo similar. Por padrão, ao clicar fora da caixa de diálogo, ela será fechada. Para desabilitar isso, é utilizado o `barrierDismissible`.
+
+O `context` recebe o contexto do construtor da página (`contextBuilderPage`). O `builder` recebe uma função anônima que recebe um parâmetro qualquer. Seu retorno é a própria classe que compõe a caixa de diálogo, passando no parâmetro do construtor o contexto qualquer que foi passado no parâmetro do `builder`.
 
 ```dart
- onPressed: () {
-    showDialog(
-        barrierDismissible: false,
-        context: contextBuilderPage,
-        builder: (paramQualquer) {
-        return DialogCuston(paramQualquer);
-        },
-    );
+onPressed: () {
+  showDialog(
+    barrierDismissible: false,
+    context: contextBuilderPage,
+    builder: (paramQualquer) {
+      return DialogCustom(paramQualquer);
     },
+  );
+},
 ```
 
 ### Simple Dialog
 
-- Usando onPressed ou similar para invocar o dialog
-- Por padrao ao clicar fora da caixa ela é fechada, para desabilidar isso implementa-se o *barrierDismissible*
-- O context recebe o contexto do builder da pagina *contextBuilderPage*
-- O builder recebe uma funcao anonima que recebe um parametro qualquer
-- Seu retorno é um SimpleDialog() que é composto por:
-  - title: Titulo da caixa de dialogo
-  - contentPadding: Recebe um [EdgeInsets](./WidgetsTree.md#edgeinsets)
-  - children: Recebe lista de Widgets que ira conter dentro da caixa de dialogo
-- O context passado no [navigator](../Principais/Navegacao.md#utilização) é o mesmo que esta no builder
+Para invocar o Simple Dialog, use o `onPressed` ou algo similar. Por padrão, ao clicar fora da caixa, ela será fechada. Para desabilitar isso, é utilizado o `barrierDismissible`.
+
+O `context` recebe o contexto do construtor da página (`contextBuilderPage`). O `builder` recebe uma função anônima que recebe um parâmetro qualquer. Seu retorno é um `SimpleDialog()` que é composto por:
+
+- `title`: Título da caixa de diálogo.
+- `contentPadding`: Recebe um `EdgeInsets` que define o espaçamento
+
+ interno do conteúdo.
+- `children`: Recebe uma lista de Widgets que serão exibidos dentro da caixa de diálogo.
+
+O contexto passado no `Navigator` é o mesmo que está no `builder`.
 
 ```dart
 onPressed: () {
-    showDialog(
-        barrierDismissible: false,
-        context: contextBuilderPage,
-        builder: (paramQualquer) {
-        return SimpleDialog(
-            title: Text('Simple Dialog'),
-            contentPadding: EdgeInsets.all(10),
-            children: [
-            Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Text('Titulo X'),
-            ),
-            TextButton(
-                onPressed: () => Navigator.of(paramQualquer).pop(),
-                child: Text('Fechar Dialog'),
-            ),],
-        );},
-    );},
+  showDialog(
+    barrierDismissible: false,
+    context: contextBuilderPage,
+    builder: (paramQualquer) {
+      return SimpleDialog(
+        title: Text('Simple Dialog'),
+        contentPadding: EdgeInsets.all(10),
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Text('Título X'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(paramQualquer).pop(),
+            child: Text('Fechar Diálogo'),
+          ),
+        ],
+      );
+    },
+  );
+},
 ```
 
 ### AlertDialog
 
-- Usando onPressed ou similar para invocar o dialog
-- Por padrao ao clicar fora da caixa ela é fechada, para desabilidar isso implementa-se o *barrierDismissible*
-- O context recebe o contexto do builder da pagina *contextBuilderPage*
-- O builder recebe uma funcao anonima que recebe um parametro qualquer
-- Seu retorno é um AlertDialog() que é composto por:
-  - title: Titulo da caixa de dialogo
-  - content: Recebe um conteudo para a caixa de dialogo, no exemplo -> [SingleChildScrollView](./Scroll_List.md#singlechildscrollview) que em seu child recebe [ListBody](./Scroll_List.md#listbody), poderia ser qualquer outro com oum *container*
-  - actions: Recebe lista de Widgets que ira conter dentro da caixa de dialogo como botoes para execultar alguma ação.
-- O context passado no [navigator](../Principais/Navegacao.md#utilização) é o mesmo que esta no builder
+Para invocar o AlertDialog, use o `onPressed` ou algo similar. Por padrão, ao clicar fora da caixa, ela será fechada. Para desabilitar isso, é utilizado o `barrierDismissible`.
+
+O `context` recebe o contexto do construtor da página (`contextBuilderPage`). O `builder` recebe uma função anônima que recebe um parâmetro qualquer. Seu retorno é um `AlertDialog()` que é composto por:
+
+- `title`: Título da caixa de diálogo.
+- `content`: Recebe um conteúdo para a caixa de diálogo. No exemplo, é utilizado um `SingleChildScrollView` que tem como child um `ListBody`, mas poderia ser qualquer outro widget, como um `Container`.
+- `actions`: Recebe uma lista de Widgets que serão exibidos dentro da caixa de diálogo como botões para executar alguma ação.
+
+O contexto passado no `Navigator` é o mesmo que está no `builder`.
 
 ```dart
-  onPressed: () {
-    showDialog(
-        barrierDismissible: false,
-        context: contextBuilderPage,
-        builder: (paramQualquer) {
-            return AlertDialog(
-            title: Text('Alert Dialog'),
-            content: SingleChildScrollView(
-                child: ListBody(
-                children: [
-                    Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                        'Deseja salvar??? (Exemplo aqui nao salva nada)'),
-                    ),
-                ],
-                ),
-            ),
-            actions: [
-                TextButton(
-                    onPressed: () => Navigator.of(paramQualquer).pop(),
-                    child: Text('Cancelar')),
-                TextButton(
-                    onPressed: () => Navigator.of(paramQualquer).pop(),
-                    child: Text('Confirmar'))],
-                );}
-            );},
+onPressed: () {
+  showDialog(
+    barrierDismissible: false,
+    context: contextBuilderPage,
+    builder: (paramQualquer) {
+      return AlertDialog(
+        title: Text('Alert Dialog'),
+        content: SingleChildScrollView(
+          child: ListBody(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Text('Deseja salvar??? (Exemplo aqui não salva nada)'),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(paramQualquer).pop(),
+            child: Text('Cancelar'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.of(paramQualquer).pop(),
+            child: Text('Confirmar'),
+          ),
+        ],
+      );
+    },
+  );
+},
 ```
 
 ### Timer Picker
 
-- Usado para obter ou enviar horarios
-- Utilizado o async await para recupera valor informado pelo usuario
-- Usando onPressed ou similar para invocar o showTimePicker
-- Dentro do onPressed foi definida uma variavel que ira aguardar e receber o valor do showTimePicker
-- O context recebe o contexto do builder da pagina *contextBuilderPage*
-- O initialTime recebe o TimeOfDay.now() que é a hora atual no aparelho em uso
-- Ao final exibe o valor selecionado pelo usuario no console
+O Timer Picker é usado para obter ou enviar horários. É utilizado `async`/`await` para recuperar o valor informado pelo usuário.
+
+Use o `onPressed` ou algo similar para invocar o `showTimePicker`. Dentro do `onPressed`, foi definida uma variável que aguardará e receberá o valor selecionado pelo `showTimePicker`.
+
+O `context` recebe o contexto do construtor da página (`contextBuilderPage`). O `initialTime` recebe `TimeOfDay.now()`, que representa o horário atual no dispositivo em uso.
+
+No final, o valor selecionado pelo usuário é exibido no console.
 
 ```dart
 onPressed: () async {
-    final selectedTime = await showTimePicker(
-        context: contextBuilderPage,
-        initialTime: TimeOfDay.now(),
-    );
-    print('Selecionou o horario $selectedTime');
-    },
+  final selectedTime = await showTimePicker(
+    context: contextBuilderPage,
+    initialTime: TimeOfDay.now(),
+  );
+  print('Horário selecionado: $selectedTime');
+},
 ```
 
 ### Date Timer
 
-- Usado para obter ou enviar horarios
-- Utilizado o async await para recupera valor informado pelo usuario
-- Usando onPressed ou similar para invocar o showDatePicker
-- Dentro do onPressed foi definida uma variavel que ira aguardar e receber o valor do showDatePicker
-- O context recebe o contexto do builder da pagina *contextBuilderPage*
-- initialDate: Recebe DateTime.now(), que ira exibir a data atual no aparelho em uso
-- firstDate: Recebe DateTime(ano inicial) pois é o ano minimo que o calendario ira exibir
-- lastDate: DateTime(ano final) pois é o ano maximo que o calendario ira exibir
-- Ao final exibe o valor selecionado pelo usuario no console
+O Date Timer é usado para obter ou enviar datas. É utilizado
+
+ `async`/`await` para recuperar o valor informado pelo usuário.
+
+Use o `onPressed` ou algo similar para invocar o `showDatePicker`. Dentro do `onPressed`, foi definida uma variável que aguardará e receberá o valor selecionado pelo `showDatePicker`.
+
+O `context` recebe o contexto do construtor da página (`contextBuilderPage`). `initialDate` recebe `DateTime.now()`, que exibirá a data atual no dispositivo em uso. `firstDate` recebe `DateTime(anoInicial)`, que é o ano mínimo que o calendário exibirá. `lastDate` recebe `DateTime(anoFinal)`, que é o ano máximo que o calendário exibirá.
+
+No final, o valor selecionado pelo usuário é exibido no console.
 
 ```dart
-    onPressed: () async {
-    final dataSelecionada = await showDatePicker(
-        context: contextBuilderPage,
-        initialDate: DateTime.now(),
-        firstDate: DateTime(2000),
-        lastDate: DateTime(2025),
-    );
-    print('A data escolhida foi $dataSelecionada');
-    },
+onPressed: () async {
+  final dataSelecionada = await showDatePicker(
+    context: contextBuilderPage,
+    initialDate: DateTime.now(),
+    firstDate: DateTime(2000),
+    lastDate: DateTime(2025),
+  );
+  print('A data escolhida foi $dataSelecionada');
+},
 ```

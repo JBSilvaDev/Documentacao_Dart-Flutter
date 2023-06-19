@@ -1,293 +1,295 @@
-# Widgets de composição para parametros que compoe outros widgets
+# Widgets de Composição para Parâmetros que Compõem Outros Widgets
 
 ***
 
 ## ClipOval
 
-- Usado para deixar seu filho envolvido em uma area circular/oval
-- Compoe:
-  - child: Recebe widget
+- Usado para envolver seu filho em uma área circular/oval
+- Composição:
+  - child: Recebe um widget
 
 ***
 
 ## FittedBox
 
-- Usado para redimensionamento automatico de seus filhos de acordo com a tela do usuario
-- Compoe:
-  - child: Recebe widget que sera redimencionado de acordo com a tela (normalmente uma imagem)
-  - fit: Recebe BoxFit.DIMENSAO
+- Usado para redimensionar automaticamente seus filhos de acordo com a tela do usuário
+- Composição:
+  - child: Recebe um widget que será redimensionado de acordo com a tela (normalmente uma imagem)
+  - fit: Recebe BoxFit.DIMENSION
 
 ***
 
 ## Image
 
-- Usado para adionar imagens ***Importante configurar a tag assets no .yaml***
-- É possivel colocar imagens iguais, porem de tamanhos diferentes para serem usadas de acordo com a resolução do aparelho.
-- Se baseando pela imagem original, basta criar pastas de nomes 2.0x para imagem 2x maior, 3.0x para 3x maior e assim sucessivamente, o flutter ira reconhecer o tamanho da tela e pegar a melhor imagem para ela. A imagem menor fica na pasta raiz, e as maiores ficam nas pastas correspondentes 2.0x, 3.0x, 4.0x, etc...
-- Compoe:
-  - image: Recebe Widget de imagem
-    - NetworkImage ou AssetImage que irão receber o link da imagem
+- Usado para adicionar imagens ***Importante configurar a tag assets no .yaml***
+- É possível colocar imagens iguais, porém de tamanhos diferentes, para serem usadas de acordo com a resolução do aparelho.
+- Com base na imagem original, basta criar pastas com nomes como 2.0x para uma imagem 2x maior, 3.0x para uma imagem 3x maior e assim por diante. O Flutter irá reconhecer o tamanho da tela e escolherá a melhor imagem para exibir. A imagem menor fica na pasta raiz, e as maiores ficam nas pastas correspondentes, como 2.0x, 3.0x, 4.0x, etc.
+- Composição:
+  - image: Recebe um widget de imagem
+    - NetworkImage ou AssetImage, que receberão o link da imagem
 - Pode ser passado da seguinte forma:
-  - Image.asset() recebe link local da imagem
-  - Image.network() recebe link online da imagem
+  - Image.asset() recebe o link local da imagem
+  - Image.network() recebe o link online da imagem
 
 ## CircleAvatar()
 
-- Usado para definir imagens em formato circular (comuns em imagens de perfil)
-- Compoe:
+- Usado para definir imagens em formato circular (comum em imagens de perfil)
+- Composição:
   - backgroundImage: NetworkImage (link online da imagem) ou AssetImage (link local da imagem) 
-  - child: Recebe widget para exibição dentro do circleavatar (na frente da imagem)
-  - maxRadius: Tamanho maximo,
-  - minRadius: tamanho minimo,
+  - child: Recebe um widget para exibição dentro do CircleAvatar (na frente da imagem)
+  - maxRadius: Tamanho máximo
+  - minRadius: Tamanho mínimo
 
 ***
 
 ## Text
 
-- Usado para exibir textos nos aplicativos, texto passado diretamente nos ()
-- Compoe:
-  - style: Rebece um [TextStyle()](./WidgetsTree.md#TextStyle)
+- Usado para exibir textos nos aplicativos, o texto é passado diretamente nos parênteses
+- Composição:
+  - style: Recebe um [TextStyle()](./WidgetsTree.md#TextStyle)
 
 ### TextStyle
 
 - Usado para estilizar textos
-- Compoe:
-  - backgroundColor: Recebe Colors.cor (cor de fundo no texto)
+- Composição:
+  - backgroundColor: Recebe Colors.cor (cor de fundo do texto)
   - fontSize: Tamanho da fonte
-  - fontFamily: Familia a qual a fonte que vai usar pertence
+  - fontFamily: Família à qual a fonte pertence
   - color: Recebe Colors.cor (cor do texto)
-  - fontWeight: Tonalidade do texto (negrito, normal...)
+  - fontWeight: Peso da fonte (negrito, normal, etc.)
   - decoration: Recebe TextDecoration.ALGO
 
 ***
 
 ## EdgeInsets
 
-- Usado para passar valores em margin e padding
-  - EdgeInserts.
-    - EdgeInsets.all(todos os lados receberar o valor passado)
-    - EdgeInsets.fromLTRB(leftValor, topValor, rightValor, bottomValor)
-    - EdgeInsets.only(left: valor, top: valor, right: valor, bottom: valor)
-    - EdgeInsets.symmetric(horizontal: valor, vertical: valor)
-
+- Usado para definir valores de margem e preenchimento (padding)
+  - EdgeInsets.
+    - EdgeInsets.all(valor) define o mesmo valor para todos os lados
+    - EdgeInsets.fromLTRB(valorEsquerda, valorTopo, valorDireita, valorBase) define valores diferentes para cada lado
+    - EdgeInsets.only(left: valor, top: valor, right: valor, bottom: valor) define valores específicos para cada lado
+    - EdgeInsets.symmetric(horizontal: valor, vertical: valor) define valores iguais para os lados horizontais e verticais
 ***
 
 ## BoxDecoration
 
-- É um conjunto de conficurações para o widget pai
-- Compoe:
-  - gradient: Recebe [LinearGradient()](./WidgetsTree.md#LinearGradient)
-  - color: Colors.cor,
-  - image: Recebe [DecorationImage()](./WidgetsTree.md#DecorationImage)
-  - borderRadius: Recebe [BorderRadius()](./WidgetsTree.md#BorderRadius),
-  - boxShadow: Recebe uma lista de configurações para sombreamento como [BoxShadow()](./WidgetsTree.md#BorderRadius)
-  - image: Recebe um [DecorationImage()](./WidgetsTree.md#DecorationImage)
-  - border: Recebe um [Border()](./WidgetsTree.md#border)
+- É um conjunto de configurações para o widget pai.
+- Composto por:
+  - gradient: Recebe um [LinearGradient()](./WidgetsTree.md#LinearGradient).
+  - color: Cor do widget, utiliza-se a classe Colors.
+  - image: Recebe um [DecorationImage()](./WidgetsTree.md#DecorationImage).
+  - borderRadius: Recebe um [BorderRadius()](./WidgetsTree.md#BorderRadius).
+  - boxShadow: Recebe uma lista de configurações de sombreamento, como [BoxShadow()](./WidgetsTree.md#BorderRadius).
+  - border: Recebe um [Border()](./WidgetsTree.md#border).
   - shape: Recebe um BoxShape....
 
 ## Border
 
-- Usado para configurações de bordas especificas
-- Compoe:
-  - top: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda superior
-  - bottom: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda inferior
-  - left: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda esquerda
-  - right: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda direita
+- Usado para configurações de bordas específicas.
+- Composto por:
+  - top: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda superior.
+  - bottom: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda inferior.
+  - left: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda esquerda.
+  - right: Recebe um [BorderSide()](./WidgetsTree.md#borderside) para configurar a borda direita.
 
 ## BorderSide
 
-- Usado para formatação de bordas
-  - Compoe:
-    - color: Recebe um Colors.cor
-    - width: Recebe a largura das bordas
-    - style: Recebe um BorderStyle.nome ou BorderStyle.solid
+- Usado para formatação de bordas.
+- Composto por:
+  - color: Recebe uma cor utilizando a classe Colors.
+  - width: Recebe a largura das bordas.
+  - style: Recebe um BorderStyle.nome ou BorderStyle.solid.
 
 ## LinearGradient
 
-- Usado para passar mais de uma cor a um widget
-- Compoe:
-  - colors: Recebe uma lista de cores -> [Colors.red, Colors.green, Colors.blue]
+- Usado para passar mais de uma cor a um widget.
+- Composto por:
+  - colors: Recebe uma lista de cores, como [Colors.red, Colors.green, Colors.blue].
 
 ## BorderRadius
 
-- Usado para passar valores que definem arrendondamento das bordas de um widget
-  - BorderRadius.
-    - BorderRadius.all(Recebe [Radius()](./WidgetsTree.md#Radius))
-    - BorderRadius.horizontal(left:Recebe [Radius()](./WidgetsTree.md#Radius), right: Recebe [Radius()](./WidgetsTree.md#Radius))
-    - BorderRadius.vertical(top:Recebe [Radius()](WidgetsTree.md#Radius), buttom: Recebe [Radius()](./WidgetsTree.md#Radius))
-    - BorderRadius.only(topLeft:Recebe [Radius()](./WidgetsTree.md#Radius), topRight: Recebe [Radius()](./WidgetsTree.md#Radius), buttomLetf: Recebe [Radius()](./WidgetsTree.md#Radius), buttomRight: Recebe [Radius()](./WidgetsTree.md#Radius))
-    - BorderRadius.circular(Valor ro radios)
+- Usado para definir o arredondamento das bordas de um widget.
+- Composto por:
+  - BorderRadius.all: Recebe um [Radius()](./WidgetsTree.md#Radius).
+  - BorderRadius.horizontal: Recebe left e right, ambos [Radius()](./WidgetsTree.md#Radius).
+  - BorderRadius.vertical: Recebe top e bottom, ambos [Radius()](WidgetsTree.md#Radius).
+  - BorderRadius.only: Recebe topLeft, topRight, bottomLeft e bottomRight, todos [Radius()](./WidgetsTree.md#Radius).
+  - BorderRadius.circular: Recebe um valor para o raio dos cantos.
 
 ## Radius
 
-- Usado para passar valores ao BorderRadius
-  - Radius.
-    - Radius.circular(Valor a ser passado)
-    - Radius.elliptical(valor topo, valor button)
+- Usado para passar valores ao BorderRadius.
+- Composto por:
+  - Radius.circular: Recebe um valor para o raio do canto circular.
+  - Radius.elliptical: Recebe dois valores, um para o topo e outro para a base da elipse.
 
 ## DecorationImage
 
-- Usado para adicionar uma imagem ao widget
-- Compoe:
-  - image: Recebe um AssetImage(Link da imagem) ou um NertWorkImage(Url da imagem)
-  - fit: Recebe um BoxFit... que define o preenchimento da imagem
+- Usado para adicionar uma imagem ao widget.
+- Composto por:
+  - image: Recebe um AssetImage(Link da imagem) ou um NetworkImage(Url da imagem).
+  - fit: Recebe um BoxFit que define o preenchimento da imagem.
 
 ## BoxShadow
 
-- Usado para passar valores de sombreamento
-- Compoe:
-  - color: Recebe uma cor (Colors.black)
-  - blurRadius: Recebe um inteiro para tonalidade da sombra
-  - offset: Recebe Offset(int, int) posicao da sombra, int positivo = button, right, int negativo = top, left
-- É possivel definir mais de um BoxShadow
+- Usado para passar valores de sombreamento.
+- Composto por:
+  - color: Recebe uma cor (Colors.black).
+  - blurRadius: Recebe um inteiro para definir a tonalidade da sombra.
+  - offset: Recebe um Offset(int, int) para definir a posição da sombra. Valor positivo para direita e inferior, valor negativo para esquerda e superior.
+- É possível definir mais de
+
+ um BoxShadow.
 
 ***
 
 ## Buttons
 
-- Widgets recebidos nas composições de botoes
+- Widgets utilizados nas composições de botões.
 
 ## TextButton.styleFrom()
 
-- Recebido em TextButton()
-- Compoe:
-  - primary: Recebe a cor do texto,
-  - padding: Recebe um [EdgeInsets](./WidgetsTree.md#EdgeInsets)
-  - minimumSize: Recebe tamanho minimo -> Size(largura, altura),
-  - shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#RoundedRectangleBorder) para formatação do botao ao ser clicado.
+- Utilizado em TextButton().
+- Composto por:
+  - primary: Recebe a cor do texto.
+  - padding: Recebe um [EdgeInsets](./WidgetsTree.md#EdgeInsets).
+  - minimumSize: Recebe um Size(largura, altura) para definir o tamanho mínimo.
+  - shape: Recebe um [RoundedRectangleBorder](./WidgetsTree.md#RoundedRectangleBorder) para formatar o botão quando clicado.
 
 ## ElevatedButton.styleFrom()
 
-- Recebido em ElevatedButton()
-- Compoe:
-  - primary: Recebe a cor do texto,
-  - padding: Recebe um [EdgeInsets](./WidgetsTree.md#EdgeInsets)
-  - minimumSize: Recebe tamanho minimo -> Size(largura, altura),
-  - shape: Recebe [RoundedRectangleBorder](./WidgetsTree.md#RoundedRectangleBorder) para formatação do botao.
+- Utilizado em ElevatedButton().
+- Composto por:
+  - primary: Recebe a cor do texto.
+  - padding: Recebe um [EdgeInsets](./WidgetsTree.md#EdgeInsets).
+  - minimumSize: Recebe um Size(largura, altura) para definir o tamanho mínimo.
+  - shape: Recebe um [RoundedRectangleBorder](./WidgetsTree.md#RoundedRectangleBorder) para formatar o botão.
 
 ## Icons
 
-- Usado para icones
-- Compoe:
-  - Icon.icone_desejado
-  - size: Recebe o tamanho do icone
-  - color: Recebe Colors.cor
+- Utilizado para ícones.
+- Composto por:
+  - Icon.icone_desejado.
+  - size: Recebe o tamanho do ícone.
+  - color: Recebe uma cor utilizando a classe Colors.
 
 ## ButtonStyle
 
-- Usado para estilização
-  - Compoe:
-    - shadowColor: Recebe a cor da sombra do botao -> [MaterialStateProperty](./WidgetsTree.md#materialstateproperty),
-    - minimumSize: Recebe o tamanho minimo do botao - [MaterialStateProperty](./WidgetsTree.md#materialstateproperty),
-    - backgroundColor: Recebe a cor de fundo do botao em [MaterialStateProperty](./WidgetsTree.md#materialstateproperty)
-    - shape: Recebe formatação do [MaterialStateProperty](./WidgetsTree.md#materialstateproperty)
+- Utilizado para estilização de botões.
+- Composto por:
+  - shadowColor: Recebe a cor da sombra do botão utilizando [MaterialStateProperty](./WidgetsTree.md#materialstateproperty).
+  - minimumSize: Recebe o tamanho mínimo do botão utilizando [MaterialStateProperty](./WidgetsTree.md#materialstateproperty).
+  - backgroundColor: Recebe a cor de fundo do botão utilizando [MaterialStateProperty](./WidgetsTree.md#materialstateproperty).
+  - shape: Recebe a formatação utilizando [MaterialStateProperty](./WidgetsTree.md#materialstateproperty).
 
 ## MaterialStateProperty
 
-- Usado para passar propriedades de estado (exemplo: [ButtonStyle](./WidgetsTree.md#ButtonStyle))
-  - .all : Quando usado o valor passado sera atribuido ao widget em todos os estados dele
-  - .resolveWith((state) {}): Usado para passar valores como cor, tamanho, sombra em cada estado
+- Utilizado para passar propriedades de estado, por exemplo, em [ButtonStyle](./WidgetsTree.md#ButtonStyle).
+  - .all: Quando utilizado, o valor passado será atribuído ao widget em todos os estados.
+  - .resolveWith((state) {}): Utilizado para passar valores como cor, tamanho e sombra para cada estado.
     - Exemplo: 
-      - Se o estado conter desabilitado fica vermelho
-      - Se for pressionado fica azul
+      - Se o estado contiver desabilitado, a cor será vermelha.
+      - Se for pressionado, a cor será azul.
       - ```dart
-          if (states.contains(MaterialState.disabled)) return Colors.red;
-          if (states.contains(MaterialState.pressed)) return Colors.blue;
-          ```
-- Compoe:
->Recebe propriedades a ser passada para o widget, aceita outros widgets como
-  - MaterialStateProperty.all()
-    - Colors.cor
-    - Size(largura, altura)
-    - [RoundedRectangleBorder()](./WidgetsTree.md#RoundedRectangleBorder)
->Pode receber uma funcao com condições para aplicar uma propriedade
-- Recomandado fazer a tipagem, cor ```<Color>```, Tamanho ```<Size>```, etc...
-  - MaterialStateProperty.resolveWith```<Tipo>```((state) {```Condicionais```})
+        if (states.contains(MaterialState.disabled)) return Colors.red;
+        if (states.contains(MaterialState.pressed)) return Colors.blue;
+        ```
+- Composto por:
+> Recebe propriedades a serem passadas para o widget, podendo aceitar outros widgets como:
+  - MaterialStateProperty.all:
+    - Colors.cor.
+    - Size(largura, altura).
+    - [RoundedRectangleBorder()](./WidgetsTree.md#RoundedRectangleBorder).
+> Pode receber uma função com condições para aplicar uma propriedade.
+- É recomendado fazer a tipagem, por exemplo: cor ```<Color>```, tamanho ```<Size>```, etc.
+  - MaterialStateProperty.resolveWith```<Tipo>```((state) {```Condições```})
 
 ## RoundedRectangleBorder
 
-- Usado para passar formatação de bordas para widget
-- Compoe:
-  - borderRadius: Recebe [BorderRadius](./WidgetsTree.md#BorderRadius)
-  - side: Recebe BorderSide(color: Colors.red) para cor das bordas
-  - shadowColor: Recebe a cor da sombra
+- Utilizado para aplicar formatação de bordas a um widget.
+- Composto por:
+  - borderRadius: Recebe [BorderRadius](./WidgetsTree.md#BorderRadius) para definir o raio das bordas.
+  - side: Recebe um BorderSide(color: Colors.red) para definir a cor das bordas.
+  - shadowColor: Recebe a cor da sombra.
 
 ***
 
 ## Divider
 
-- Usado para efetuar separação de itens (comum em listas)
-- Compoe:
-  - color: Recebe a cor do divisor
-  - thickness: Recebe a espessura do divisor
-  - height: Recebe a altura de cada item dividido
-  - indent: Recebe onde a linha divisora ira iniciar,
-  - endIndent: Recebe onde a linha divisora ira terminar
+- Utilizado para criar uma separação visual entre itens, geralmente utilizado em listas.
+- Composto por:
+  - color: Recebe a cor do divisor.
+  - thickness: Recebe a espessura do divisor.
+  - height: Recebe a altura de cada item dividido.
+  - indent: Recebe a posição inicial da linha divisória.
+  - endIndent: Recebe a posição final da linha divisória.
 
 ***
 
 ## Duration
 
-- Usado em conjunto com *Future.delayed(Duration aqui)*
-- Usado para daley de itens ou aguardar algum tempo para continuar algo
-- Compoe:
-  - days: Recebe numero inteiro informando quantos ***dias*** ira aguardar
-  - hours: Recebe numero inteiro informando quantas ***horas*** ira aguardar
-  - microseconds: Recebe numero inteiro informando quantos ***microsegundos*** ira aguardar
-  - milliseconds: Recebe numero inteiro informando quantos ***milissegundos*** ira aguardar
-  - minutes: Recebe numero inteiro informando quantos ***minutos*** ira aguardar
-  - seconds: Recebe numero inteiro informando quantos ***segundos*** ira aguardar
+- Utilizado em conjunto com `Future.delayed(Duration aqui)`.
+- Utilizado para atrasar a execução de uma ação ou aguardar um determinado tempo.
+- Composto por:
+  - days: Recebe um número inteiro para definir o número de dias de espera.
+  - hours: Recebe um número inteiro para definir o número de horas de espera.
+  - microseconds: Recebe um número inteiro para definir o número de microssegundos de espera.
+  - milliseconds: Recebe um número inteiro para definir o número de milissegundos de espera.
+  - minutes: Recebe um número inteiro para definir o número de minutos de espera.
+  - seconds: Recebe um número inteiro para definir o número de segundos de espera.
 
 ***
 
 ## InputDecoration
 
-- Usado para formatação de campos de formularios
-- Compoe:
-  - labelText: Recebe uma String, é o titulo do campo
-  - border: Recebe *OutlineInputBorder()* que é composto por:
-    - borderRadius: Recebe [BorderRadius](./WidgetsTree.md#borderradius)
-    - borderSide: Recebe [BorderSide](./WidgetsTree.md#borderside)
-  - labelStyle: Recebe [TextStyle](./WidgetsTree.md#textstyle) para formatação do titulo do campo
-  - isDense: Recebe true ou false para a densidade do campo
-  - enebledBorder: Formatação da borda quando campo esta ativo, recebe *OutlineInputBorder()* que é composto por:
-    - borderRadius: Recebe [BorderRadius](./WidgetsTree.md#borderradius)
-    - borderSide: Recebe [BorderSide](./WidgetsTree.md#borderside)
-  - focusedBorder: Formatação da borda quando campo esta selecionado, recebe *OutlineInputBorder()* que é composto por:
-    - borderRadius: Recebe [BorderRadius](./WidgetsTree.md#borderradius)
-    - borderSide: Recebe [BorderSide](./WidgetsTree.md#borderside)
-  - errorBorder: Formatação da borda quando ha erro no campo, recebe *OutlineInputBorder()* que é composto por:
-    - borderRadius: Recebe [BorderRadius](./WidgetsTree.md#borderradius)
-    - borderSide: Recebe [BorderSide](./WidgetsTree.md#borderside)
+- Utilizado para formatar campos de formulário.
+- Composto por:
+  - labelText: Recebe uma String que representa o rótulo do campo.
+  - border: Recebe `OutlineInputBorder()`, que define a formatação da borda, composto por:
+    - borderRadius: Recebe [BorderRadius](./WidgetsTree.md#BorderRadius) para definir o raio da borda.
+    - borderSide: Recebe [BorderSide](./WidgetsTree.md#BorderSide) para definir a formatação da linha da borda.
+  - labelStyle: Recebe [TextStyle](./WidgetsTree.md#TextStyle) para definir a formatação do rótulo do campo.
+  - isDense: Recebe um valor booleano (true ou false) para definir a densidade do campo.
+  - enabledBorder: Define a formatação da borda quando o campo está ativo, recebendo `OutlineInputBorder()`, que é composto por:
+    - borderRadius: Recebe [BorderRadius](./WidgetsTree.md#BorderRadius) para definir o raio da borda.
+    - borderSide: Recebe [BorderSide](./WidgetsTree.md#BorderSide) para definir a formatação da linha da borda.
+  - focusedBorder: Define a formatação da borda quando o campo está selecionado, recebendo `OutlineInputBorder()`, que é composto por:
+    - borderRadius: Recebe [BorderRadius](./WidgetsTree.md#BorderRadius) para definir o raio da borda.
+    - borderSide: Recebe [BorderSide](./WidgetsTree.md#BorderSide) para definir a formatação da linha da borda.
+  - errorBorder: Define a formatação da borda quando há um erro no campo, recebendo `OutlineInputBorder()`, que
+
+ é composto por:
+    - borderRadius: Recebe [BorderRadius](./WidgetsTree.md#BorderRadius) para definir o raio da borda.
+    - borderSide: Recebe [BorderSide](./WidgetsTree.md#BorderSide) para definir a formatação da linha da borda.
 
 ## Align
 
-- Usado para alinhamento de widgets
-- Compoe:
-  - alignment: Recebe Alignment.posicao
-  - child: Recebe o widget que sera alinhado
+- Utilizado para alinhar widgets.
+- Composto por:
+  - alignment: Recebe Alignment.posicao para definir a posição de alinhamento.
+  - child: Recebe o widget que será alinhado.
 
 ## Positioned
 
-- Usado para alinhamento de widget em posições especificas
-- Compoe:
-  - bottom: Recebe um valor da posição debaixo
-  - left: Recebe um valor da posição a esquerda
-  - right: Recebe um valor da posição a direita
-  - top: Recebe um valor da posição do topo
-  - child: Recebe o widget que sera alinhado
+- Utilizado para posicionar um widget em posições específicas.
+- Composto por:
+  - bottom: Recebe um valor para a posição inferior.
+  - left: Recebe um valor para a posição esquerda.
+  - right: Recebe um valor para a posição direita.
+  - top: Recebe um valor para a posição superior.
+  - child: Recebe o widget que será alinhado.
 
 ## BottomNavigationBarItem
 
-- Usado como item do [BottomNavigationBar](./WidgetGeral.md#bottomnavigationbar)
-- Compoe:
-  - icon: Recebe icone comum que sera exibido como botao na barra
-  - label: Recebe uma String que sera exibida na barra
+- Utilizado como item do [BottomNavigationBar](./WidgetGeral.md#bottomnavigationbar).
+- Composto por:
+  - icon: Recebe um ícone que será exibido como botão na barra.
+  - label: Recebe uma String que será exibida na barra.
 
 ## TweenAnimationBuilder
 
-- Usado para passar valores para animações
-- Compoe:
-  - tween: Recebe ```Tween``` passando o valor inicial e final da barra (begin/end)
-  - duration: Recebe o tempo que a barra ira demorar para atualizar
-  - builder: Recebe funcao anonima com 3 paramentros *(contexto, valorfinal, child)* e retorna o widget que sera animado.
+- Utilizado para definir os valores de animações.
+- Composto por:
+  - tween: Recebe `Tween` que define o valor inicial e final da animação (begin/end).
+  - duration: Recebe a duração da animação.
+  - builder: Recebe uma função anônima com 3 parâmetros *(contexto, valorFinal, child)* e retorna o widget que será animado.
