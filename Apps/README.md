@@ -8,3 +8,4 @@
 6. [Frases Motivacionais](https://github.com/JBSilvaDev/frases-do-dia)
 7. [Joken-Pô](https://github.com/JBSilvaDev/jokenpo)
 8. [Cara ou Coroa](https://github.com/JBSilvaDev/cara-coroa)
+9. [App Filmes GetX](https://github.com/JBSilvaDev/App-Filmes-GETX)
