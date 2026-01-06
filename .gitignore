@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Dart/Flutter
+build/
+.dart_tool/
+*.lock
+*.packages
+*.iml
+*.idea

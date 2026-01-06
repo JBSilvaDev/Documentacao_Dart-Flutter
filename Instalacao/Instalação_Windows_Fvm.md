@@ -1,28 +1,70 @@
-Fazer a instalação padrao pelo site ou [aki](Instalacao/Instalação_Windows.md)
-usar comando do dart apos toda configuração
-dart pub global activate fvm
-configurar variavel de ambiente usando o link exibido apos o comando acima
-add variavel de ambiente
-fechar e reabrir o terminal
-rodar fvm --version para verificar se foi instalado corretamente
-rodar comando de configuração para definir pasta onde as versoes do fvm serao instaladas
-fvm config 
+# Instalação e Configuração do FVM (Flutter Version Manager) no Windows
+
+## Pré-requisitos
+
+Fazer a instalação padrão pelo site ou [aqui](./Instalação_Windows.md).
+
+## Instalação
+
+1. Use o comando do Dart após toda a configuração inicial:
+    ```powershell
+    dart pub global activate fvm
+    ```
+
+2. Configure a variável de ambiente:
+    - Copie o caminho exibido no terminal após o comando acima.
+    - Adicione este caminho às variáveis de ambiente do sistema.
+    - Feche e reabra o terminal.
+
+3. Verifique a instalação:
+    ```powershell
+    fvm --version
+    ```
+
+## Configuração
+
+Defina a pasta onde as versões do FVM serão instaladas (cache):
+
+```powershell
 fvm config --cache-path c:\fvm
-comandos basicos
-para instalar
-fvm install {version}
-para listar versoes instaladas
-fvm list
-para vericiar todas as versoes disponiveis do flutter
-fvm releases
-para selecionar uma versao (precisa esta com um projeto flutter aberto e dentro do terminal deste projeto usar o comando para selecionar a versao do flutter que sera usada nele)
-fvm use {version}
-para remover uma versao
-fvm remove {version}
-para configurar o vscode e dizer a versao que ira usar
-https://fvm.app/docs/getting_started/configuration#vs-code
-criar pasta .vscode
-criar arquivo settings.json
+```
+
+## Comandos Básicos
+
+- **Instalar uma versão:**
+    ```powershell
+    fvm install {version}
+    ```
+
+- **Listar versões instaladas:**
+    ```powershell
+    fvm list
+    ```
+
+- **Verificar todas as versões disponíveis do Flutter:**
+    ```powershell
+    fvm releases
+    ```
+
+- **Selecionar uma versão:**
+    (Precisa estar com um projeto Flutter aberto e dentro do terminal deste projeto)
+    ```powershell
+    fvm use {version}
+    ```
+
+- **Remover uma versão:**
+    ```powershell
+    fvm remove {version}
+    ```
+
+## Configuração do VSCode
+
+Para configurar o VSCode e indicar a versão a ser usada, consulte a [documentação oficial](https://fvm.app/docs/getting_started/configuration#vs-code) ou siga os passos abaixo:
+
+1. Crie a pasta `.vscode` na raiz do projeto.
+2. Crie o arquivo `settings.json` dentro dela com o seguinte conteúdo:
+
+```json
 {
   "dart.flutterSdkPath": ".fvm/flutter_sdk",
   // Remove .fvm files from search
@@ -34,7 +76,4 @@ criar arquivo settings.json
     "**/.fvm": true
   }
 }
-
-
-
-
+```

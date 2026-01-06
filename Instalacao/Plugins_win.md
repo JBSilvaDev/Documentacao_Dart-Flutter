@@ -81,15 +81,13 @@ Agora, vamos configurar o PowerShell com os arquivos fornecidos:
    ```powershell
    code $PROFILE
    ```
-   Insira o conteúdo do arquivo [Microsoft.PowerShell_profile.ps1]([./win_plugins/Microsoft.PowerShell_profile.ps1](https://github.com/JBSilvaDev/Documentacao_Dart-Flutter/blob/main/Instalacao/win_plugins/Microsoft.PowerShel_profile.ps1)) no arquivo aberto.
+   
 
 2. Execute o comando abaixo para abrir o arquivo spaceship.omp.json no Visual Studio Code:
    ```powershell
    code $HOME\AppData\Local\oh-my-posh\spaceship.omp.json
    ```
-   Insira o conteúdo do arquivo [
-
-spaceship.omp.json](./win_plugins/spaceship.omp.json) no arquivo aberto.
+   Insira o conteúdo do arquivo [spaceship.omp.json](./win_plugins/spaceship.omp.json) no arquivo aberto.
 
 3. Abra as configurações do PowerShell.
    - Abra o arquivo de configuração JSON.
